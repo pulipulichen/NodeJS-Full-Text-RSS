@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-full-text-rss",
+  "version": "1.0.0",
+  "description": "Convert RSS feeds to full text feeds.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulipulichen/NodeJS-Full-Text-RSS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/NodeJS-Full-Text-RSS/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/NodeJS-Full-Text-RSS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
