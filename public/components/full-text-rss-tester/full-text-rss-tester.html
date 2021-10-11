@@ -29,8 +29,21 @@
     <label for="output">
       Output
     </label>
+    
     <textarea v-model="output"
+              v-if="output !== ''"
               readonly
+              id="output"
+              onfocus="this.select()"></textarea>
+    
+    <input type="text" 
+           v-model="outputTitle" 
+           readonly
+           onfocus="this.select()" />
+    <textarea v-model="outputContent"
+              v-if="outputContent !== ''"
+              readonly
+              id="output"
               onfocus="this.select()"></textarea>
   </div>
 </form>

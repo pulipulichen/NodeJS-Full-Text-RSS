@@ -12,7 +12,9 @@ module.exports = {
       isLoading: false,
       queryTimer: null,
       
-      output: ''
+      output: '',
+      outputTitle: '',
+      outputContent: ''
     }
   },
   async mounted () {
@@ -77,16 +79,25 @@ module.exports = {
         
         
         if (this.query.endsWith('.xml')) {
-          
+          this.loadQueryFeed()
         }
         else {
-          let queryAPI = '/full-text-parser/' + encodeURIComponent(this.query)
-          $.get(queryAPI, (data) => {
-            this.output = data
-          })
+          this.loadQueryFullTextParser()
         }
         
       }, 1000)
+    },
+    loadQueryFeed () {
+      this.outputTitle = ''
+      this.outputContent = ''
+    },
+    loadQueryFullTextParser () {
+      let queryAPI = '/full-text-parser/' + encodeURIComponent(this.query)
+      $.getJSON(queryAPI, (data) => {
+        this.output = ''
+        this.outputTitle = data.title
+        this.outputContent = data.content
+      })
     }
   }
 }
