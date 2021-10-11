@@ -1,13 +1,19 @@
+/* global __dirname */
+
 const moduleRelativePath = './../../../modules/'
 const fs = require('fs')
 const path = require('path')
 
-const ModuleManager = async function (moduleCodes, data) {
+const ModuleManager = async function (data, moduleCodes, prefix) {
   
   moduleCodes = moduleCodes.split(',')
   
   for (let i = 0; i < moduleCodes.length; i++) {
     let code = moduleCodes[i].trim()
+    if (prefix && !code.startsWith(prefix)) {
+      continue
+    }
+    
     let folder
     
     if (code.startsWith('t')) {
