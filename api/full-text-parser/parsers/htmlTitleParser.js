@@ -46,6 +46,11 @@ const htmlTitleParser = async function (html, modules) {
   title = replaceASCIItoChar(title)
   title = decode(title)
 
+  // -----------------
+  // 模組處理
+  
+  title = modules + title
+
   return title
 }
 

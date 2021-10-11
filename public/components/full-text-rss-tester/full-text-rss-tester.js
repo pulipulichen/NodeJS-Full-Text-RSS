@@ -5,10 +5,11 @@ module.exports = {
     
     return {
       cacheKey: 'full-text-rss-tester',
-      cacheAttrs: ['query'],
+      cacheAttrs: ['query', 'modules'],
       inited: false,
       
       query: '',
+      modules: '',
       isLoading: false,
       queryTimer: null,
       
@@ -33,6 +34,10 @@ module.exports = {
   },
   watch: {
     query () {
+      this.dataSave()
+      this.loadOutput()
+    },
+    modules () {
       this.dataSave()
       this.loadOutput()
     },
@@ -112,7 +117,13 @@ module.exports = {
       this.outputContent = ''
     },
     loadQueryFullTextParser () {
-      let queryAPI = '/full-text-parser/' + encodeURIComponent(this.query)
+      let queryAPI
+      if (this.modules === '') {
+        queryAPI = '/full-text-parser/' + encodeURIComponent(this.query)
+      }
+      else {
+        queryAPI = '/full-text-parser/' + this.modules + '/' + encodeURIComponent(this.query)
+      }
       $.getJSON(queryAPI, (data) => {
         this.output = ''
         this.outputTitle = data.title

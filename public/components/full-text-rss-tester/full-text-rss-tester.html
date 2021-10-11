@@ -1,9 +1,11 @@
 
 <form class="ui form segment">
   
+  <demo-dropdown></demo-dropdown>
+  
   <div class="field">
     <label for="query">
-      Input
+      URL
     </label>
     <input type="url" 
            id="query"
@@ -11,7 +13,10 @@
            placeholder="RSS or WebPage" />
   </div>
   
-  <demo-dropdown></demo-dropdown>
+  <div class="field">
+    <label for="modules">Modules</label>
+    <input type="text" v-model="modules" id="modules" />
+  </div>
   
   <hr />
   
