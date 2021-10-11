@@ -2,8 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+const nodeCache = require('./lib/cache/node-cache-sqlite.js')
+
+app.get('/', async (req, res) => {
+  
+  let cached = await nodeCache.get('test', 't', async () => {
+    return 'ok'
+  })
+  
+  
+  res.send('Hello World!' + cached)
 })
 
 app.get('/full/:rss_url', async (req, res) => {
@@ -12,7 +20,11 @@ app.get('/full/:rss_url', async (req, res) => {
   // "https://expressjs.com/zh-tw/starter/hello-world.html"
   // encodeURIComponent
   
-  res.send('Hello World!: ' + rssURL)
+  let cached = await nodeCache.get('test', 't', async () => {
+    return 'ok'
+  })
+  
+  res.send('Hello World!: ' + rssURL + cached)
 })
 
 app.listen(port, () => {
