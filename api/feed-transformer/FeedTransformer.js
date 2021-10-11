@@ -15,7 +15,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   })
   
   moduleCodesString = DetectFeedModule($, moduleCodesString)
-  console.log(moduleCodesString)
+  //console.log(moduleCodesString)
   
   // -----------------------------
   
@@ -37,6 +37,10 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   })
   
   //console.log($('channel > item > title').text())
+  
+  // -----------------------------
+  
+  feedXML = await ModuleManager($, moduleCodesString, 'x')
   
   // -----------------------------
   

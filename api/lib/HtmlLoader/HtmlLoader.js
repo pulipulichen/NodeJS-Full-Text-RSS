@@ -1,5 +1,5 @@
 const request = require("request")
-const nodeCache = require('./../../lib/cache/node-cache-sqlite.js')
+const nodeCache = require('./../cache/node-cache-sqlite.js')
 
 const asyncRequest = function (url) {
   return new Promise(async (resolve, reject) => {

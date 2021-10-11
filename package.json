@@ -22,6 +22,7 @@
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.1",
     "html-entities": "^2.3.2",
+    "puppeteer": "^10.4.0",
     "rss-parser": "^3.12.0",
     "sequelize": "^6.7.0",
     "sqlite3": "^5.0.2"
