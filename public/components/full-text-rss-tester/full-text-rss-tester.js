@@ -65,8 +65,27 @@ module.exports = {
       
       clearTimeout(this.queryTimer)
       this.queryTimer = setTimeout(() => {
+        
+        try {
+          new URL(this.query)
+        }
+        catch (e) {
+          return false
+        }
+        
         clearTimeout(this.queryTimer)
-        this.output = this.query
+        
+        
+        if (this.query.endsWith('.xml')) {
+          
+        }
+        else {
+          let queryAPI = '/full-text-parser/' + encodeURIComponent(this.query)
+          $.get(queryAPI, (data) => {
+            this.output = data
+          })
+        }
+        
       }, 1000)
     }
   }
