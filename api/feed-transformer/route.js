@@ -10,7 +10,7 @@ const route = function (app) {
   app.post('/feed-transformer/:modules', async (req, res) => {
     let feedXML = req.body.feedXML
     let modules = req.params.modules
-    console.log(feedXML)
+    //console.log(feedXML)
     let result = await FeedTransformer(feedXML, modules)
     res.send(result)
   })

@@ -6,12 +6,15 @@ module.exports = {
     return {
     }
   },
-  async mounted () {
-    setTimeout(() => {
-      //console.log('aaa')
-      this.initDropdown()
-    }, 500)
-  },
+//  async mounted () {
+//    $(() => {
+//      setTimeout(() => {
+//        //console.log('aaa')
+//        this.initDropdown()
+//      }, 3000)
+//    })
+//      
+//  },
   methods: {
     initDropdown () {
       let el = $(this.$el)
@@ -21,9 +24,15 @@ module.exports = {
         })
     },
     loadFeed (feedName) {
+      let modules
+      let pos = feedName.lastIndexOf('|')
+      if (pos > -1) {
+        modules = feedName.slice(pos + 1)
+        feedName = feedName.slice(0, pos)
+      }
+      
       //console.log(feedName)
       let url = '/demo/feeds/' + feedName
-      
       $.get(url, (feed) => {
         if (!feed) {
           return false
@@ -35,6 +44,9 @@ module.exports = {
         }
         //console.log(feed)
         this.$parent.feedXML = feed
+        if (modules) {
+          this.$parent.modules = modules
+        }
       })
     }
   }

@@ -4,9 +4,9 @@ const moduleRelativePath = './../../../modules/'
 const fs = require('fs')
 const path = require('path')
 
-const ModuleManager = async function (data, moduleCodes, prefix) {
+const ModuleManager = async function (data, moduleCodesString, prefix) {
   
-  moduleCodes = moduleCodes.split(',')
+  let moduleCodes = moduleCodesString.split(',')
   
   for (let i = 0; i < moduleCodes.length; i++) {
     let code = moduleCodes[i].trim()
@@ -25,6 +25,9 @@ const ModuleManager = async function (data, moduleCodes, prefix) {
     else if (code.startsWith('f')) {
       folder = 'filters/'
     }
+    else if (code.startsWith('x')) {
+      folder = 'xmlTransformers/'
+    }
     
     if (!folder) {
       console.log('Folder not found')
@@ -32,14 +35,14 @@ const ModuleManager = async function (data, moduleCodes, prefix) {
     }
     
     let requirePath = moduleRelativePath + folder + code + '.js'
-    console.log(path.resolve(__dirname, requirePath))
+    //console.log(path.resolve(__dirname, requirePath))
     
     if (fs.existsSync(path.resolve(__dirname, requirePath)) === false) {
       continue
     }
     
     let module = require(requirePath)
-    data = module(data)
+    data = module(data, moduleCodesString)
     
     if (data === false) {
       return false

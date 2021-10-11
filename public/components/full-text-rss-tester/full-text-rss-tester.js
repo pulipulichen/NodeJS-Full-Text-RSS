@@ -31,6 +31,10 @@ module.exports = {
     
     this.loadOutput()
     //this.queryProjectFileList()
+    setTimeout(() => {
+      //console.log('aaa')
+      this.initDropdown()
+    }, 500)
   },
   watch: {
     query () {
@@ -146,6 +150,16 @@ module.exports = {
         this.outputTitle = data.title
         this.outputContent = data.content
       })
-    }
+    },
+    
+    // -----------------------
+    
+    initDropdown () {
+      let el = $(this.$el)
+      el.find('.ui.selection.dropdown')
+        .dropdown({
+          //clearable: true
+        })
+    },
   }
 }
