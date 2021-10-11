@@ -1,10 +1,24 @@
 {
   "elements": {
+    "demo-dropdown-feed": {
+      "attributes": {
+        "ref": {},
+        "v-show": {}
+      }
+    },
+    "demo-dropdown-url": {
+      "attributes": {
+        "v-show": {}
+      }
+    },
     "demo-dropdown": {},
     "full-text-rss-tester": {},
     "app-header": {}
   },
   "attributes": {
+    "v-if": {
+      "context": "div"
+    },
     "v-on:click": {
       "context": "button"
     },

@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const bodyParser = require('body-parser');
 
 //const nodeCache = require('./lib/cache/node-cache-sqlite.js')
 //const inputRSSParser = require('./lib/inputRSSParser/inputRSSParser.js')
 
 app.use(express.static('public'));
+app.use(bodyParser.json({limit : '2100000kb'}));
 
 //app.get('/', async (req, res) => {
 //  
@@ -29,6 +31,9 @@ app.use(express.static('public'));
 
 const fullTextParser = require('./api/full-text-parser/route.js')
 fullTextParser(app)
+
+const FeedTransformer = require('./api/feed-transformer/route.js')
+FeedTransformer(app)
 
 // ------------------------------------------------
 

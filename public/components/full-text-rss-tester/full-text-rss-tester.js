@@ -5,10 +5,12 @@ module.exports = {
     
     return {
       cacheKey: 'full-text-rss-tester',
-      cacheAttrs: ['query', 'modules'],
+      cacheAttrs: ['query', 'modules', 'mode', 'feedXML'],
       inited: false,
       
+      mode: 'url',
       query: '',
+      feedXML: '',
       modules: '',
       isLoading: false,
       queryTimer: null,
@@ -19,7 +21,8 @@ module.exports = {
     }
   },
   components: {
-    'demo-dropdown': httpVueLoader('./demo-dropdown/demo-dropdown.vue')
+    'demo-dropdown-url': httpVueLoader('./demo-dropdown-url/demo-dropdown-url.vue'),
+    'demo-dropdown-feed': httpVueLoader('./demo-dropdown-feed/demo-dropdown-feed.vue'),
   },
   async mounted () {
     this.dataLoad()
@@ -34,6 +37,14 @@ module.exports = {
   },
   watch: {
     query () {
+      this.dataSave()
+      this.loadOutput()
+    },
+    feedXML () {
+      this.dataSave()
+      this.loadOutput()
+    },
+    mode () {
       this.dataSave()
       this.loadOutput()
     },
@@ -85,25 +96,29 @@ module.exports = {
     // ------------------------
     
     loadOutput () {
-      console.log(this.query)
-      if (this.query === '') {
+      //console.log(this.query)
+      if (this.mode === 'url' && this.query === '') {
+        return false
+      }
+      if (this.mode === 'feed' && this.feedXML === '') {
         return false
       }
       
       clearTimeout(this.queryTimer)
       this.queryTimer = setTimeout(() => {
         
-        try {
-          new URL(this.query)
-        }
-        catch (e) {
-          return false
+        if (this.mode === 'url') {
+          try {
+            new URL(this.query)
+          }
+          catch (e) {
+            return false
+          }
         }
         
         clearTimeout(this.queryTimer)
         
-        
-        if (this.query.endsWith('.xml')) {
+        if (this.mode === 'feed' || this.query.endsWith('.xml')) {
           this.loadQueryFeed()
         }
         else {
@@ -115,6 +130,21 @@ module.exports = {
     loadQueryFeed () {
       this.outputTitle = ''
       this.outputContent = ''
+      
+      //this.output = this.feedXML
+      let queryAPI = '/feed-transformer'
+      if (this.modules !== '') {
+        queryAPI = queryAPI + '/' + this.modules
+      }
+      
+      $.post(queryAPI, {
+        feedXML: this.feedXML
+      },
+        (data) => {
+          //console.log(data)
+          this.output = data
+        }
+      )
     },
     loadQueryFullTextParser () {
       let queryAPI

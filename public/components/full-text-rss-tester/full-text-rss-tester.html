@@ -1,16 +1,56 @@
 
 <form class="ui form segment">
   
-  <demo-dropdown></demo-dropdown>
-  
   <div class="field">
+    <label>
+      Mode
+    </label>
+    <div class="ui fluid buttons">
+      <button class="ui button"
+              type="button"
+              v-bind:class="{positive: (mode === 'feed')}"
+              v-on:click="mode = 'feed'">
+        Feed XML
+      </button>
+      <button class="ui button"
+          type="button"
+          v-bind:class="{positive: (mode === 'url')}"
+          v-on:click="mode = 'url'">
+        URL
+      </button>
+    </div>
+  </div>
+ 
+  <!-- ================================== -->
+  
+  <demo-dropdown-feed
+    ref="DemoDropdownFeed"
+    v-show="mode === 'feed'"></demo-dropdown-feed>
+  
+  <demo-dropdown-url 
+    v-show="mode === 'url'"></demo-dropdown-url>
+  
+  <!-- ================================== -->
+  
+  <div class="field" 
+       v-if="mode === 'feed'">
+    <label for="feedXML">
+      Feed XML
+    </label>
+    <textarea id="feedXML"
+              v-model="feedXML"
+              placeholder='<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"...'></textarea>
+  </div>
+  
+  <div class="field" 
+       v-if="mode === 'url'">
     <label for="query">
       URL
     </label>
     <input type="url" 
            id="query"
            v-model="query"
-           placeholder="RSS or WebPage" />
+           placeholder="https://..." />
   </div>
   
   <div class="field">
@@ -25,20 +65,28 @@
       Output
     </label>
     
-    <textarea v-model="output"
-              v-if="output !== ''"
-              readonly
-              id="output"
-              onfocus="this.select()"></textarea>
-    
-    <input type="text" 
-           v-model="outputTitle" 
-           readonly
-           onfocus="this.select()" />
-    <textarea v-model="outputContent"
-              v-if="outputContent !== ''"
-              readonly
-              id="output"
-              onfocus="this.select()"></textarea>
+    <template v-if='mode === "url"'>
+      <textarea v-model="output"
+                v-if="output !== ''"
+                readonly
+                id="output"
+                onfocus="this.select()"></textarea>
+
+      <input type="text" 
+             v-model="outputTitle" 
+             readonly
+             onfocus="this.select()" />
+      <textarea v-model="outputContent"
+                v-if="outputContent !== ''"
+                readonly
+                id="output"
+                onfocus="this.select()"></textarea>
+    </template>
+    <template v-if="mode === 'feed'">
+      <textarea v-model="output"
+                readonly
+                id="output"
+                onfocus="this.select()"></textarea>
+    </template>
   </div>
 </form>
