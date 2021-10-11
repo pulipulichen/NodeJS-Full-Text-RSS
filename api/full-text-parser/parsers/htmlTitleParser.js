@@ -1,4 +1,5 @@
 const decode = require('html-entities').decode
+const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
 /**
  * https://stackoverflow.com/a/64052494/6645399
@@ -49,7 +50,7 @@ const htmlTitleParser = async function (html, modules) {
   // -----------------
   // 模組處理
   
-  title = modules + title
+  title = await ModuleManager(modules, title)
 
   return title
 }
@@ -73,7 +74,7 @@ const replaceASCIItoChar = function (title) {
 //      code = code.slice(0, pos + 1)
 //    }
     let codeNumber = Number(code.slice(2, -1))
-    console.log(code, codeNumber)
+    //console.log(code, codeNumber)
     if (isNaN(codeNumber)) {
       return code
     }
