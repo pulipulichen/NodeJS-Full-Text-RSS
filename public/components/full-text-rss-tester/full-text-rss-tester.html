@@ -10,18 +10,8 @@
            v-model="query"
            placeholder="RSS or WebPage" />
   </div>
-  <div class="ui fluid buttons">
-    <button type="button"
-            class="ui button"
-            v-on:click="query = `https://blog.pulipuli.info/feeds/posts/default`">
-      布丁RSS
-    </button>
-    <button type="button"
-            class="ui button"
-            v-on:click="query = `https://blog.pulipuli.info/2021/09/the-best-learning-partner-asus-chromebook-detachable-cz1.html`">
-      布丁文章
-    </button>
-  </div>
+  
+  <demo-dropdown></demo-dropdown>
   
   <hr />
   

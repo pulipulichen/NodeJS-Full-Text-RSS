@@ -17,12 +17,18 @@ module.exports = {
       outputContent: ''
     }
   },
+  components: {
+    'demo-dropdown': httpVueLoader('./demo-dropdown/demo-dropdown.vue')
+  },
   async mounted () {
     this.dataLoad()
     
     this.inited = true
     
     this.loadOutput()
+    setTimeout(() => {
+      this.initDropdown()
+    }, 500)
     //this.queryProjectFileList()
   },
   watch: {
@@ -60,7 +66,21 @@ module.exports = {
       data = JSON.stringify(data)
       localStorage.setItem(this.cacheKey, data)
     },
+    
+    // -------------------------
+    
+    initDropdown () {
+      let el = $(this.$el)
+      el.find('.ui.selection.dropdown')
+        .dropdown({
+          //clearable: true
+        })
+    },
+    
+    // ------------------------
+    
     loadOutput () {
+      console.log(this.query)
       if (this.query === '') {
         return false
       }
