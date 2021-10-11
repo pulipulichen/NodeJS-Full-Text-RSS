@@ -6,10 +6,10 @@ const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 const xFB = async function (feedXML, moduleCodesString) {
   //console.log('xFB')
   
-  const $ = cheerio.load(feedXML, {
-    xmlMode: true,
-    decodeEntities: false
-  })
+//  const $ = cheerio.load(feedXML, {
+//    xmlMode: true,
+//    decodeEntities: false
+//  })
   
   // -----------------------------
   
@@ -17,18 +17,18 @@ const xFB = async function (feedXML, moduleCodesString) {
   await FeedItemEach($, async (item, i) => {
     await xFBTitle(item, i)
     
-    let title = item.find('title').text()
-    let titleNew = await ModuleManager(title, moduleCodesString, 't')
-    if (title !== titleNew) {
-      item.find('title').text(titleNew)
-    }
+//    let title = item.find('title').text()
+//    let titleNew = await ModuleManager(title, moduleCodesString, 't')
+//    if (title !== titleNew) {
+//      item.find('title').text(titleNew)
+//    }
   })
   
   //console.log($('channel > item > title').text())
   
   // -----------------------------
   
-  feedXML = $.html()
+//  feedXML = $.html()
   
   return feedXML
 }

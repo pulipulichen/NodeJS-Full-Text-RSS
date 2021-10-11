@@ -24,7 +24,7 @@ module.exports = {
         })
     },
     loadFeed (feedName) {
-      let modules
+      let modules = ''
       let pos = feedName.lastIndexOf('|')
       if (pos > -1) {
         modules = feedName.slice(pos + 1)
@@ -44,9 +44,7 @@ module.exports = {
         }
         //console.log(feed)
         this.$parent.feedXML = feed
-        if (modules) {
-          this.$parent.modules = modules
-        }
+        this.$parent.modules = modules
       })
     }
   }
