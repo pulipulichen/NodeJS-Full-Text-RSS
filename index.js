@@ -3,13 +3,13 @@ const app = express()
 const port = 3000
 
 const nodeCache = require('./lib/cache/node-cache-sqlite.js')
+const inputRSSParser = require('./lib/inputRSSParser/inputRSSParser.js')
+
+//app.use(express.static('public'));
 
 app.get('/', async (req, res) => {
   
-  let cached = await nodeCache.get('test', 't', async () => {
-    return 'ok'
-  })
-  
+  let cached = await inputRSSParser('https://blog.pulipuli.info/feeds/posts/default')
   
   res.send('Hello World!' + cached)
 })

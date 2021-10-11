@@ -19,6 +19,7 @@
   "homepage": "https://github.com/pulipulichen/NodeJS-Full-Text-RSS#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "rss-parser": "^3.12.0",
     "sequelize": "^6.7.0",
     "sqlite3": "^5.0.2"
   }
