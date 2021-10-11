@@ -22,6 +22,9 @@
     "v-on:click": {
       "context": "button"
     },
+    "v-html": {
+      "context": "div"
+    },
     "v-model": {
       "context": "input"
     }

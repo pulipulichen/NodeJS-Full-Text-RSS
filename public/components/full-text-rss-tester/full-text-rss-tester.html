@@ -81,6 +81,13 @@
                 readonly
                 id="output"
                 onfocus="this.select()"></textarea>
+      <button type="button"
+              v-if="outputContent !== '' && preview === ''"
+              class="ui fluid button"
+              v-on:click="preview = outputContent">
+        PREVIEW
+      </button>
+      <div class="preview" v-html="preview"></div>
     </template>
     <template v-if="mode === 'feed'">
       <textarea v-model="output"

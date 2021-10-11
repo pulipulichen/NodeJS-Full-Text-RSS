@@ -17,7 +17,8 @@ module.exports = {
       
       output: '',
       outputTitle: '',
-      outputContent: ''
+      outputContent: '',
+      preview: ''
     }
   },
   components: {
@@ -94,6 +95,11 @@ module.exports = {
       if (this.mode === 'feed' && this.feedXML === '') {
         return false
       }
+      
+      this.output = ''
+      this.outputTitle = ''
+      this.outputContent = ''
+      this.preview = ''
       
       clearTimeout(this.queryTimer)
       this.queryTimer = setTimeout(() => {

@@ -2,7 +2,7 @@ const cheerio = require('cheerio')
 
 module.exports = function (html) {
   let $
-  if (typeof(html) === 'object') {
+  if (typeof(html) === 'object' || typeof(html) === 'function') {
     $ = html
   }
   else {
@@ -33,5 +33,6 @@ module.exports = function (html) {
   
   // ---------------------
   
-  return $.html()
+  //return $.html()
+  return $
 }
