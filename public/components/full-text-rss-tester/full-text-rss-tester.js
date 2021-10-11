@@ -30,9 +30,6 @@ module.exports = {
     this.inited = true
     
     this.loadOutput()
-    setTimeout(() => {
-      this.initDropdown()
-    }, 500)
     //this.queryProjectFileList()
   },
   watch: {
@@ -81,16 +78,6 @@ module.exports = {
       
       data = JSON.stringify(data)
       localStorage.setItem(this.cacheKey, data)
-    },
-    
-    // -------------------------
-    
-    initDropdown () {
-      let el = $(this.$el)
-      el.find('.ui.selection.dropdown')
-        .dropdown({
-          //clearable: true
-        })
     },
     
     // ------------------------

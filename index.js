@@ -7,7 +7,8 @@ const bodyParser = require('body-parser');
 //const inputRSSParser = require('./lib/inputRSSParser/inputRSSParser.js')
 
 app.use(express.static('public'));
-app.use(bodyParser.json({limit : '2100000kb'}));
+app.use(bodyParser.json({limit : '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 //app.get('/', async (req, res) => {
 //  
