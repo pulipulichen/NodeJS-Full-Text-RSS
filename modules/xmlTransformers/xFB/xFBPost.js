@@ -1,0 +1,83 @@
+const GetFirstLine = require('./../../../api/lib/stringUtils/GetFirstLine.js')
+
+const wrapCDATA = function (item) {
+  let descriptionModified = false
+  
+  description = item.find('description').text().trim()
+  if (description.indexOf('<br>') === -1) {
+    return false
+  }
+  
+  if (!description.startsWith('<![CDATA[')) {
+    description = '<![CDATA[' + description
+    descriptionModified = true
+  }
+  if (!description.endsWith(']]>')) {
+    description = description + ']]>'
+    descriptionModified = true
+  }
+  
+  if (descriptionModified) {
+    item.find('description').text(description)
+  }
+}
+
+const trimBR = function (item) {
+  let description = item.find('description').text().trim()
+  
+  let descriptionModified = false
+  while (description.startsWith('<br>')) {
+    description = description.slice(4).trim()
+    descriptionModified = true
+  }
+  while (description.endsWith('<br>')) {
+    description = description.slice(0, -4).trim()
+    descriptionModified = true
+  }
+  
+  //console.log(descriptionModified)
+  if (descriptionModified) {
+    item.find('description').text(description)
+  }
+}
+
+const replaceTitleWithDesription = function (item) {
+  let title = item.find('title').text().trim()
+  
+  //console.log(i, 'xFBTitle', 1, title)
+  let description = item.find('description').text().trim()
+  if (title.startsWith('Photos from ') 
+          && title.endsWith(`'s post`)) {
+    title = description
+  }
+  //console.log(i, 'xFBTitle', 2, title)
+  
+  title = GetFirstLine(title)
+  //console.log(title, description.slice(0, 30))
+  if (description.startsWith(title)) {
+    description = description.slice(title.length).trim()
+    
+    item.find('description').text(description)
+  }
+  
+  title = title.replace(/#/ig, '')
+
+  title = '[P]' + title
+  
+  item.find('title').text(title)
+}
+
+const xFBPost = async function (item, i) {
+  replaceTitleWithDesription(item)
+  
+  // ----------------------------
+  trimBR(item)
+  
+  // ------------------------------
+  wrapCDATA(item)
+  
+  
+  //console.log(i, title)
+}
+
+module.exports = xFBPost

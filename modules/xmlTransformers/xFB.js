@@ -4,7 +4,7 @@ const FeedItemEach = require('./../../api/lib/xmlTransformers/FeedItemEach.js')
 const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 
 const xFBType = require('./xFB/xFBType.js')
-const xFBTitle = require('./xFB/xFBTitle.js')
+const xFBPost = require('./xFB/xFBPost.js')
 
 const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
@@ -27,6 +27,8 @@ const xFB = async function ($, moduleCodesString) {
     if (type !== 'video' && type !== 'post') {
       // 讀取全文
       //let {title, content} = await fullTextParser(type, moduleCodesString)
+      let fbLink = item.find('link').text().trim()
+      item.find('link').text(type)
       
       let description = item.find('description').text().trim()
       
@@ -34,7 +36,7 @@ const xFB = async function ($, moduleCodesString) {
       
       item.find('title').text(title)
       if (description !== '') {
-        content = description + '<hr />' + content
+        content = '<![CDATA[' + `<a href="${fbLink}" target="_blank">Facebook Post</a><br>${description}` + '<hr />' + content + ']]>'
       }
       item.find('description').text(content)
       
@@ -43,15 +45,13 @@ const xFB = async function ($, moduleCodesString) {
     }
     else if (type === 'video') {
       let title = item.find('title').text().trim()
-      title = '[V] ' + title
+      title = '[V]' + title
       item.find('title').text(title)
     }
     else if (type === 'post') {
-      await xFBTitle(item, i)
+      await xFBPost(item, i)
       
-      let title = item.find('title').text().trim()
-      title = '[P] ' + title
-      item.find('title').text(title)
+      //console.log(i, title)
     }
     
     // 要怎麼決定要不要取代Item?

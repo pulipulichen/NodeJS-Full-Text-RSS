@@ -1,4 +1,4 @@
-const AddModule = function (moduleCodesString, module) {
+const AddModule = function (moduleCodesString = '', module) {
   if (!module) {
     return moduleCodesString
   }

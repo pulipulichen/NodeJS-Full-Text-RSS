@@ -1,6 +1,6 @@
 const xFBLinkParser = function ($) {
   //console.log(html.indexOf('https://l.facebook.com/l.php'))
-  let aList = $('a[href^="https://l.facebook.com/l.php?u=http"]')
+  let aList = $('._6ks a[href^="https://l.facebook.com/l.php?u=http"]')
   
   let outputURL
   for (let j = 0; j < aList.length; j++) {
