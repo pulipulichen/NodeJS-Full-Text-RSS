@@ -5,7 +5,7 @@ const port = 3000
 const nodeCache = require('./lib/cache/node-cache-sqlite.js')
 const inputRSSParser = require('./lib/inputRSSParser/inputRSSParser.js')
 
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 app.get('/', async (req, res) => {
   

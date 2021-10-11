@@ -1,0 +1,36 @@
+
+<form class="ui form segment">
+  
+  <div class="field">
+    <label for="query">
+      Input
+    </label>
+    <input type="url" 
+           id="query"
+           v-model="query"
+           placeholder="RSS or WebPage" />
+  </div>
+  <div class="ui fluid buttons">
+    <button type="button"
+            class="ui button"
+            v-on:click="query = `https://blog.pulipuli.info/feeds/posts/default`">
+      布丁RSS
+    </button>
+    <button type="button"
+            class="ui button"
+            v-on:click="query = `https://blog.pulipuli.info/2021/09/the-best-learning-partner-asus-chromebook-detachable-cz1.html`">
+      布丁文章
+    </button>
+  </div>
+  
+  <hr />
+  
+  <div class="field">
+    <label for="output">
+      Output
+    </label>
+    <textarea v-model="output"
+              readonly
+              onfocus="this.select()"></textarea>
+  </div>
+</form>

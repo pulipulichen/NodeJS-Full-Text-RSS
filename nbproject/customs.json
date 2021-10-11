@@ -1,0 +1,14 @@
+{
+  "elements": {
+    "full-text-rss-tester": {},
+    "app-header": {}
+  },
+  "attributes": {
+    "v-on:click": {
+      "context": "button"
+    },
+    "v-model": {
+      "context": "input"
+    }
+  }
+}
