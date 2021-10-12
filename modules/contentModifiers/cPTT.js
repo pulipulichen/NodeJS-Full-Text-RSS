@@ -10,7 +10,6 @@ const cPTT = function (content) {
   $('.article-metaline-value').remove()
   $('.article-metaline-right').remove()
   
-  
   // --------------
   
   content = $('body > div').html().trim()
