@@ -25,7 +25,7 @@ module.exports = {
     
     return {
       cacheKey: 'full-text-rss-tester',
-      cacheAttrs: ['query', 'modules', 'mode', 'feedXML'],
+      cacheAttrs: ['query', 'modules', 'mode', 'feedXML', 'autoPreview'],
       inited: false,
       
       mode: 'url',
@@ -34,6 +34,7 @@ module.exports = {
       modules: '',
       isLoading: false,
       queryTimer: null,
+      autoPreview: true,
       
       output: '',
       outputTitle: '',
@@ -74,6 +75,9 @@ module.exports = {
     modules () {
       this.dataSave()
       this.loadOutput()
+    },
+    autoPreview () {
+      this.dataSave()
     },
   },
   computed: {
@@ -162,6 +166,10 @@ module.exports = {
         (data) => {
           //console.log(data)
           this.output = data
+          
+          if (this.autoPreview) {
+            this.parseItemsPreview()
+          }
         }
       )
     },
@@ -177,7 +185,15 @@ module.exports = {
         this.output = ''
         this.outputTitle = data.title
         this.outputContent = data.content
+        
+        if (this.autoPreview) {
+          this.parseItemPreview()
+        }
       })
+    },
+    
+    parseItemPreview () {
+      this.preview = this.outputContent
     },
     
     parseItemsPreview () {

@@ -28,6 +28,9 @@ const ModuleManager = async function (data, moduleCodesString, prefix) {
     else if (code.startsWith('x')) {
       folder = 'xmlTransformers/'
     }
+    else if (code.startsWith('h')) {
+      folder = 'HTMLLoaders/'
+    }
     
     if (!folder) {
       console.log('Folder not found')

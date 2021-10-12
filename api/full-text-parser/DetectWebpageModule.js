@@ -10,6 +10,14 @@ const DetectWebpageModule = function (url, moduleCodesString) {
     addModules.push('cLinuxEden')
   }
   
+  
+  if (url.startsWith('https://www.facebook.com/')) {
+    addModules.push('hFB')
+  }
+  else {
+    addModules.push('hDefault')
+  }
+  
   moduleCodesString = AddModule(moduleCodesString, addModules)
   
   return moduleCodesString

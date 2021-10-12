@@ -58,6 +58,16 @@
     <input type="text" v-model="modules" id="modules" />
   </div>
   
+  <div class="field">
+    
+    <div class="ui checkbox">
+      <input type="checkbox" v-model="autoPreview" id="autoPreview" />
+      <label for="autoPreview">Auto Preview</label>
+    </div>
+  </div>
+  
+  
+  
   <hr />
   
   <div class="field">
@@ -87,7 +97,11 @@
               v-on:click="preview = outputContent">
         PREVIEW
       </button>
-      <div class="preview" v-html="preview"></div>
+      <div class="ui raised segment preview"
+           v-if="preview !== ''">
+        <h1>{{ outputTitle }}</h1>
+        <div v-html="preview"></div>
+      </div>
     </template>
     <template v-if="mode === 'feed'">
       <textarea v-model="output"
