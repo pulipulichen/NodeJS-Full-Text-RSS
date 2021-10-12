@@ -1,7 +1,8 @@
 const FeedItemSetLink = function (item, newLink) {
   let linkElement = item.find('link:first')
   
-  if (linkElement.hasAttr('href')) {
+  let href = linkElement.attr('href')
+  if (typeof(href) === 'string' && href.length > 6) {
     linkElement.attr('href', newLink)
   }
   else if (linkElement.text().trim() !== '') {

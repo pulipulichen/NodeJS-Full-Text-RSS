@@ -8,6 +8,9 @@ const xFBPost = require('./xFB/xFBPost.js')
 
 const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
+const FeedItemGetLink = require('./../../api/lib/xmlTransformers/FeedItemGetLink.js')
+const FeedItemSetLink = require('./../../api/lib/xmlTransformers/FeedItemSetLink.js')
+
 const xFB = async function ($, moduleCodesString) {
   //console.log('xFB')
   
@@ -21,14 +24,21 @@ const xFB = async function ($, moduleCodesString) {
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
     let type = await xFBType(item, i)
-    //console.log(i, item.find('title').text(), type)
+    let fbLink = FeedItemGetLink(item)
+    
+    console.log(i, type, fbLink, item.find('title').text())
     
     
     if (type !== 'video' && type !== 'post') {
       // 讀取全文
       //let {title, content} = await fullTextParser(type, moduleCodesString)
-      let fbLink = item.find('link').text().trim()
-      item.find('link').text(type)
+      //let fbLink = item.find('link').text().trim()
+      
+      
+      // item.find('link').text(type)
+      FeedItemSetLink(item, type)
+      
+      
       
       let description = item.find('description').text().trim()
       

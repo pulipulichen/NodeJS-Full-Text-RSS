@@ -3,7 +3,7 @@ const FeedChannelLink = require('./../lib/xmlTransformers/FeedChannelLink.js')
 
 const DetectFeedModule = function ($, moduleCodesString) {
   let channelLink = FeedChannelLink($)
-  console.log(channelLink)
+  //console.log(channelLink)
   // $('channel > link:first').text().trim()
   //console.log(channelLink)
   
