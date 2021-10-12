@@ -6,6 +6,9 @@ const DetectWebpageModule = function (url, moduleCodesString) {
     addModules.push('tPTT')
     addModules.push('cPTT')
   }
+  else if (url.startsWith('http://www.linuxeden.com/')) {
+    addModules.push('cLinuxEden')
+  }
   
   moduleCodesString = AddModule(moduleCodesString, addModules)
   

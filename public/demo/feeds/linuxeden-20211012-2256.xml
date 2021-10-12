@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Linuxeden开源社区</title>
+	<atom:link href="http://www.linuxeden.com/feed" rel="self" type="application/rss+xml" />
+	<link>http://www.linuxeden.com</link>
+	<description>Linux伊甸园</description>
+	<lastBuildDate>Tue, 12 Oct 2021 14:30:29 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7.2</generator>
+	<item>
+		<title>每日文章精选 2021 10 12</title>
+		<link>http://www.linuxeden.com/a/91433</link>
+		<pubDate>Tue, 12 Oct 2021 14:30:29 +0000</pubDate>
+		<dc:creator><![CDATA[Editor, Kai]]></dc:creator>
+				<category><![CDATA[开源资讯]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91433</guid>
+		<description><![CDATA[Apache trafficcontrol 6.0.0发布 使用 Jekyll 构建你的网站 cdrtools 作者 Jörg Schilling 去世 龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有 Kubuntu Focu [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><a href="http://www.linuxeden.com/a/91428">Apache trafficcontrol 6.0.0发布</a></p>
+<p><a href="http://www.linuxeden.com/a/91423">使用 Jekyll 构建你的网站</a></p>
+<p><a href="http://www.linuxeden.com/a/91419">cdrtools 作者 Jörg Schilling 去世</a></p>
+<p><a href="http://www.linuxeden.com/a/91410">龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有</a></p>
+<p><a href="http://www.linuxeden.com/a/91405">Kubuntu Focus团队宣布第三代M2 Linux移动工作站</a></p>
+<p><a href="http://www.linuxeden.com/a/91396">为物联网而来—你好Ubuntu Frame</a></p>
+<p><a href="http://www.linuxeden.com/a/91381">Windows Subsystem for Linux现以应用形式上架Microsoft Store</a></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Apache trafficcontrol 6.0.0发布</title>
+		<link>http://www.linuxeden.com/a/91428</link>
+		<pubDate>Tue, 12 Oct 2021 14:24:36 +0000</pubDate>
+		<dc:creator><![CDATA[Editor, Kai]]></dc:creator>
+				<category><![CDATA[软件更新资讯]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91428</guid>
+		<description><![CDATA[apache-trafficcontrol-6.0.0.tar.gz        2021-10-11 22:05   46M apache-trafficcontrol-6.0.0.tar.gz.asc    2021-10-11 22 [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-91429" src="http://www.linuxeden.com/wp-content/uploads/2021/10/compressed-3.gif" width="20" height="22" alt="[   ]" /> <a href="https://downloads.apache.org/trafficcontrol/6.0.0/apache-trafficcontrol-6.0.0.tar.gz">apache-trafficcontrol-6.0.0.tar.gz</a>        2021-10-11 22:05   46M<br />
+<img class="alignnone size-full wp-image-91430" src="http://www.linuxeden.com/wp-content/uploads/2021/10/text-24.gif" width="20" height="22" alt="[TXT]" /> <a href="https://downloads.apache.org/trafficcontrol/6.0.0/apache-trafficcontrol-6.0.0.tar.gz.asc">apache-trafficcontrol-6.0.0.tar.gz.asc</a>    2021-10-11 22:05  833<br />
+<img class="alignnone size-full wp-image-91431" src="http://www.linuxeden.com/wp-content/uploads/2021/10/unknown.gif" width="20" height="22" alt="[   ]" /> <a href="https://downloads.apache.org/trafficcontrol/6.0.0/apache-trafficcontrol-6.0.0.tar.gz.b2">apache-trafficcontrol-6.0.0.tar.gz.b2</a>     2021-10-11 22:05  165<br />
+<img class="alignnone size-full wp-image-91430" src="http://www.linuxeden.com/wp-content/uploads/2021/10/text-24.gif" width="20" height="22" alt="[TXT]" /> <a href="https://downloads.apache.org/trafficcontrol/6.0.0/apache-trafficcontrol-6.0.0.tar.gz.sha512">apache-trafficcontrol-6.0.0.tar.gz.sha512</a> 2021-10-11 22:05  165</p>
+<p>转自 https://downloads.apache.org/trafficcontrol/6.0.0/</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>使用 Jekyll 构建你的网站</title>
+		<link>http://www.linuxeden.com/a/91423</link>
+		<pubDate>Tue, 12 Oct 2021 13:19:43 +0000</pubDate>
+		<dc:creator><![CDATA[Editor, Kai]]></dc:creator>
+				<category><![CDATA[开源资讯]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91423</guid>
+		<description><![CDATA[Jekyll 是一个开源的静态网站生成器。你可以使用 Markdown 编写内容，使用 HTML/CSS 来构建和展示，Jekyll 会将其编译为静态的 HTML。 近年来开始流行静态网站生成器和 JAMStack，而且理由很充分，它们不需 [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Jekyll 是一个开源的静态网站生成器。你可以使用 Markdown 编写内容，使用 HTML/CSS 来构建和展示，Jekyll 会将其编译为静态的 HTML。</p>
+<p>近年来开始流行静态网站生成器和 JAMStack，而且理由很充分，它们不需要复杂的后端，只需要静态的 HTML、CSS 和 Javascript。没有后端意味着更好的安全性、更低的运营开销和更便宜的托管。双赢！</p>
+<p>在本文中，我将讨论 Jekyll。在撰写本文时，<a class="ext" href="https://gitlab.com/ayush-sharma/ayushsharma-in" target="_blank" rel="external nofollow">我的个人网站使用的是 Jekyll</a>。Jekyll 使用 Ruby 引擎将用 Markdown 编写的文章转换成 HTML。<a class="ext" href="https://sass-lang.com/" target="_blank" rel="external nofollow">Sass</a> 可以将复杂的 CSS 规则应用到普通文本文件中。<a class="ext" href="https://shopify.github.io/liquid/" target="_blank" rel="external nofollow">Liquid</a> 允许对静态内容进行编程控制。</p>
+<h3 id="%E5%AE%89%E8%A3%85-jekyll" class="mume-header">安装 Jekyll</h3>
+<p><a class="ext" href="https://jekyllrb.com/docs/installation/" target="_blank" rel="external nofollow">Jekyll 网站</a> 提供了 Linux、MacOS 和 Windows 安装说明。安装完成之后，<a class="ext" href="https://jekyllrb.com/docs/" target="_blank" rel="external nofollow">快速引导</a> 将会安装一个基础的 Hello-World 项目。</p>
+<p>现在在你的浏览器访问 <code>http://localhost:4000</code>，你可以看到你的默认“真棒”博客。</p>
+<p class="article_img"><img class="alignnone size-full wp-image-91424" src="http://www.linuxeden.com/wp-content/uploads/2021/10/145400v2l2ezesct52f2e6.png" width="1024" height="931" alt="Default &quot;awesome&quot; blog" title="Default &quot;awesome&quot; blog" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/145400v2l2ezesct52f2e6.png 1024w, http://www.linuxeden.com/wp-content/uploads/2021/10/145400v2l2ezesct52f2e6-300x273.png 300w, http://www.linuxeden.com/wp-content/uploads/2021/10/145400v2l2ezesct52f2e6-768x698.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p class="article_img_desc"><em>Default &#8220;awesome&#8221; blog</em></p>
+<h3 id="%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84" class="mume-header">目录结构</h3>
+<p>这个默认站点包含以下的文件和文件夹：</p>
+<ul>
+<li><code>_posts</code>: 你的博客文章。</li>
+<li><code>_site</code>: 最终编译成的静态网站文件。</li>
+<li><code>about.markdown</code>: “关于页”的内容。</li>
+<li><code>index.markdown</code>: “主页”的内容。</li>
+<li><code>404.html</code>: “404 页”的内容。</li>
+<li><code>_config.yml</code>: Jekyll 的全站配置文件。</li>
+</ul>
+<h3 id="%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B8%96%E5%AD%90" class="mume-header">创建新的博客帖子</h3>
+<p>创建帖子很简单。你需要做的就是在 <code>_post</code> 目录下使用正确的格式和扩展名创建一个新文件，这样就完成了。</p>
+<p>有效的文件名像 <code>2021-08-29-welcome-to-jekyll.markdown</code> 这样。一个博客文件必须包含 Jekyll 所谓的 YAML <ruby>卷首块<rt>Front Matter</rt></ruby>。它是文件开头的一个包含元数据的特殊部分。如果你查看默认的帖子，你可以看到以下内容：</p>
+<ol class="linenums">
+<li class="L0"><code><span class="pun">---</span></code></li>
+<li class="L1"><code><span class="pln">layout</span><span class="pun">:</span><span class="pln"> post</span></code></li>
+<li class="L2"><code><span class="pln">title</span><span class="pun">:</span> <span class="str">"Welcome to Jekyll!"</span></code></li>
+<li class="L3"><code><span class="kwd">date</span><span class="pun">:</span><span class="pln">  </span><span class="lit">2021</span><span class="pun">-</span><span class="lit">08</span><span class="pun">-</span><span class="lit">29</span> <span class="lit">11</span><span class="pun">:</span><span class="lit">28</span><span class="pun">:</span><span class="lit">12</span> <span class="pun">+</span><span class="lit">0530</span></code></li>
+<li class="L4"><code><span class="pln">categories</span><span class="pun">:</span><span class="pln"> jekyll update</span></code></li>
+<li class="L5"><code><span class="pun">---</span></code></li>
+</ol>
+<p>Jekyll 会使用上面的元数据，你也可以自定义 <code>key: value</code> 键值对。如果你需要一些提示，<a class="ext" href="https://gitlab.com/ayush-sharma/ayushsharma-in/-/blob/2.0/_posts/2021-07-15-the-evolution-of-ayushsharma-in.md" target="_blank" rel="external nofollow">请查看我的网站的卷首</a>。除了前面的问题，你还可以 <a class="ext" href="https://jekyllrb.com/docs/variables/" target="_blank" rel="external nofollow">使用内置的 Jekyll 变量</a> 来自定义你的网站。</p>
+<p>让我们创建一个新的帖子。在 <code>_posts</code> 文件夹下创建 <code>2021-08-29-ayushsharma.markdown</code>。内容如下：</p>
+<ol class="linenums">
+<li class="L0"><code><span class="pun">---</span></code></li>
+<li class="L1"><code><span class="pln">layout</span><span class="pun">:</span><span class="pln"> post</span></code></li>
+<li class="L2"><code><span class="pln">title</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Check out ayushsharma.in!"</span></code></li>
+<li class="L3"><code><span class="kwd">date</span><span class="pun">:</span><span class="pln">   </span><span class="lit">2021</span><span class="pun">-</span><span class="lit">08</span><span class="pun">-</span><span class="lit">29</span> <span class="lit">12</span><span class="pun">:</span><span class="lit">00</span><span class="pun">:</span><span class="lit">00</span> <span class="pun">+</span><span class="lit">0530</span></code></li>
+<li class="L4"><code><span class="pln">categories</span><span class="pun">:</span><span class="pln"> mycategory</span></code></li>
+<li class="L5"><code><span class="pun">---</span></code></li>
+<li class="L6"><code><span class="typ">This</span> <span class="kwd">is</span> <span class="kwd">my</span><span class="pln"> first post</span><span class="pun">.</span></code></li>
+<li class="L7"><code></code></li>
+<li class="L8"><code><span class="com">#</span> <span class="typ">This</span> <span class="kwd">is</span><span class="pln"> a heading</span><span class="pun">.</span></code></li>
+<li class="L9"><code></code></li>
+<li class="L0"><code><span class="com">##</span> <span class="typ">This</span> <span class="kwd">is</span><span class="pln"> another heading</span><span class="pun">.</span></code></li>
+<li class="L1"><code></code></li>
+<li class="L2"><code><span class="typ">This</span> <span class="kwd">is</span><span class="pln"> a </span><span class="pun">[</span><span class="kwd">link</span><span class="pun">](&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//notes.ayushsharma.in&gt;)</span></code></li>
+<li class="L3"><code></code></li>
+<li class="L4"><code><span class="typ">This</span> <span class="kwd">is</span> <span class="kwd">my</span><span class="pln"> category</span><span class="pun">:</span></code></li>
+</ol>
+<p>如果 <code>jekyll serve</code> 命令仍在运行，刷新页面，你将看到下面的新帖子。</p>
+<p class="article_img"><img class="alignnone size-full wp-image-91425" src="http://www.linuxeden.com/wp-content/uploads/2021/10/145401thuu8avakvu8hes5.png" width="1024" height="930" alt="New blog entry" title="New blog entry" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/145401thuu8avakvu8hes5.png 1024w, http://www.linuxeden.com/wp-content/uploads/2021/10/145401thuu8avakvu8hes5-300x272.png 300w, http://www.linuxeden.com/wp-content/uploads/2021/10/145401thuu8avakvu8hes5-768x698.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p class="article_img_desc"><em>New blog entry</em></p>
+<p>恭喜你创建了你的第一篇帖子！这个过程看起来很简单，但是你可以通过 Jekyll 做很多事情。使用简单的 Markdown，你可以归档博客、高亮显示代码片段以及分类管理帖子。</p>
+<h3 id="%E8%8D%89%E7%A8%BF" class="mume-header">草稿</h3>
+<p>如果你还没准备好发布你的内容，你可以创建一个 <code>_drafts</code> 文件夹。此文件夹中的 Markdown 文件仅通过传递 <code>--drafts--</code> 参数来呈现。</p>
+<h3 id="%E5%B8%83%E5%B1%80%E5%92%8C%E5%8C%85%E5%90%AB" class="mume-header">布局和包含</h3>
+<p>请注意 <code>_post</code> 文件夹中两篇文章的卷首块，你将在其中看到 <code>layout: post</code>。<code>_layout</code> 文件夹中包含所有布局。你不会在源代码中找到它们，因为 Jekyll 默认加载它们。Jekyll 使用的默认源代码在 <a class="ext" href="https://github.com/jekyll/minima/blob/master/_layouts/post.html" target="_blank" rel="external nofollow">这里</a>。如果你点击该链接，你可以看到 <code>post</code> 的布局使用了默认（<code>default</code>）布局。默认布局包含的代码 <code>{{ content }}</code> 是注入内容的地方。布局文件还将包含 <code>include</code> 指令。它们从 <a class="ext" href="https://github.com/jekyll/minima/tree/master/_includes" target="_blank" rel="external nofollow"><code>include</code> 文件夹</a> 加载文件，并使用不同的组件组成页面。</p>
+<p>总的来说，这就是布局的工作方式：你在卷首块定义它们并将你的内容注入其中。而包含则提供了页面的其它部分以组成整个页面。这是一种标准的网页设计技术：定义页眉、页脚、旁白和内容元素，然后在其中注入内容。这就是静态站点生成器的真正威力，完全以编程的方式控制，将你的网站组装起来并最终编译成静态的 HTML。</p>
+<h3 id="%E9%A1%B5%E9%9D%A2" class="mume-header">页面</h3>
+<p>你网站上的所有内容并不都是文章或博客。你需要“关于”页面、“联系”页面、“项目”页面或“作品”页面。这就是“页面”的用武之地。它们的工作方式与“帖子”完全一样，这意味着它们是带有卷首块的 Markdown 文件。但它们不会放到 <code>_posts</code> 目录。它们要么保留在你的项目根目录中，要么保留在它们自己的文件夹中。对于布局和包含，你可以使用与帖子相同的布局或创建新帖子。 Jekyll 非常灵活，你可以随心所欲地发挥你的创意！你的默认博客已经有 <code>index.markdown</code> 和 <code>about.markdown</code>。请随意自定义它们。</p>
+<h3 id="%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6" class="mume-header">数据文件</h3>
+<p>数据文件位于 <code>_data</code> 目录中，可以是 <code>.yml</code>、<code>.json</code>、<code>.csv</code> 等格式的文件。例如，一个 <code>_data/members.yml</code> 文件可能包含：</p>
+<ol class="linenums">
+<li class="L0"><code><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> A</span></code></li>
+<li class="L1"><code><span class="pln"> github</span><span class="pun">:</span><span class="pln"> a@a</span></code></li>
+<li class="L2"><code></code></li>
+<li class="L3"><code><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> B</span></code></li>
+<li class="L4"><code><span class="pln"> github</span><span class="pun">:</span><span class="pln"> b@b</span></code></li>
+<li class="L5"><code></code></li>
+<li class="L6"><code><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> C</span></code></li>
+<li class="L7"><code><span class="pln"> github</span><span class="pun">:</span><span class="pln"> c@c</span></code></li>
+</ol>
+<p>Jekyll 在网站生成的时候读取这些内容。你可以通过 <code>site.data.members</code> 访问它们。</p>
+<ol class="linenums">
+<li class="L0"><code><span class="tag">&lt;ul&gt;</span></code></li>
+<li class="L1"><code><span class="pln">{ % for member in site.data.members % }</span></code></li>
+<li class="L2"><code><span class="pln"> </span><span class="tag">&lt;li&gt;</span></code></li>
+<li class="L3"><code><span class="pln"> </span><span class="tag">&lt;a</span> <span class="atn">href</span><span class="pun">=</span><span class="atv">"https://github.com"</span><span class="tag">&gt;</span></code></li>
+<li class="L4"><code><span class="pln">      { { member.name } } </span></code></li>
+<li class="L5"><code><span class="pln"> </span><span class="tag">&lt;/a&gt;</span></code></li>
+<li class="L6"><code><span class="pln"> </span><span class="tag">&lt;/li&gt;</span></code></li>
+<li class="L7"><code><span class="pln">{ % endfor %}</span></code></li>
+<li class="L8"><code><span class="tag">&lt;/ul&gt;</span></code></li>
+</ol>
+<h3 id="%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5" class="mume-header">永久链接</h3>
+<p>你的 <code>_config.yml</code> 文件定义了永久链接的格式。你可以使用各种默认变量来组合你自己的自定义永久链接。</p>
+<h3 id="%E6%9E%84%E5%BB%BA%E4%BD%A0%E6%9C%80%E7%BB%88%E7%9A%84%E7%BD%91%E7%AB%99" class="mume-header">构建你最终的网站</h3>
+<p>命令 <code>jekyll serve</code> 非常适合本地测试。但是一旦你完成了本地测试，你将需要构建要发布的最终工作。命令 <code>jekyll build --source source_dir --destination destination_dir</code> 将你的网站构建到 <code>_site</code> 文件夹中。请注意，此文件夹在每次构建之前都会被清理，所以不要将重要的东西放在那里。生成内容后，你可以将其托管在你的静态托管服务上。</p>
+<p>你现在应该对 Jekyll 的功能以及主要部分的功能有一个全面的了解。如果你正在寻找灵感，官方 <a class="ext" href="https://jamstack.org/examples/" target="_blank" rel="external nofollow">JAMStack 网站上有一些很棒的例子</a>。</p>
+<p class="article_img"><img class="alignnone size-full wp-image-91426" src="http://www.linuxeden.com/wp-content/uploads/2021/10/145402i2000sr0y2002gnt.png" width="1024" height="933" alt="Example Jekyll sites from JAMStack" title="Example Jekyll sites from JAMStack" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/145402i2000sr0y2002gnt.png 1024w, http://www.linuxeden.com/wp-content/uploads/2021/10/145402i2000sr0y2002gnt-300x273.png 300w, http://www.linuxeden.com/wp-content/uploads/2021/10/145402i2000sr0y2002gnt-768x700.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p class="article_img_desc"><em>Example Jekyll sites from JAMStack</em></p>
+<p>编码快乐。</p>
+<p>本文首发于<a class="ext" href="https://notes.ayushsharma.in/2021/08/introduction-to-jekyll" target="_blank" rel="external nofollow">作者个人博客</a>，经授权改编。</p>
+<hr />
+<p>via: <a class="ext" href="https://opensource.com/article/21/9/build-website-jekyll" target="_blank" rel="external nofollow">https://opensource.com/article/21/9/build-website-jekyll</a></p>
+<p>作者：Ayush Sharma 选题：lujun9972 译者：perfiffer 校对：wxy</p>
+<p>本文由 LCTT 原创编译，Linux中国 荣誉推出</p>
+<p>转自 https://linux.cn/article-13875-1.html</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>cdrtools 作者 Jörg Schilling 去世</title>
+		<link>http://www.linuxeden.com/a/91419</link>
+		<pubDate>Tue, 12 Oct 2021 12:34:33 +0000</pubDate>
+		<dc:creator><![CDATA[Editor, Kai]]></dc:creator>
+				<category><![CDATA[开源资讯]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91419</guid>
+		<description><![CDATA[资深自由软件开发者 Jörg Schilling 因肾癌相关并发症于上周日去世。他是一位难以打交道的人，但他贡献的代码曾在一段时间内几乎人人都在使用。他是 光盘烧录工具集 cdrtools 的作者，该项目采用的许可证为 CDDL 和 GPL [&#8230;]]]></description>
+				<content:encoded><![CDATA[<div class="talk_time">
+<div class="icon_float"><img class="alignnone size-full wp-image-91420" src="http://www.linuxeden.com/wp-content/uploads/2021/10/topicopensource.png" width="64" height="64" alt="开源" /></div>
+</div>
+<div class="p_mainnew">资深自由软件开发者 Jörg Schilling 因肾癌相关并发症于上周日<u>去世</u>。他是一位难以打交道的人，但他贡献的代码曾在一段时间内几乎人人都在使用。他是 <u>光盘烧录工具集 cdrtools</u> 的作者，该项目采用的许可证为 CDDL 和 GPL，因 CDDL 被认为不兼容于 GPL，主要 Linux 发行版都移除了含有 CDDL 授权代码的 cdrtools，切换到 Debian 创建的 GPL 授权分支 cdrkit。Jörg Schilling 还参与了很多其它开源项目。</div>
+<div class="p_mainnew">转自 https://www.solidot.org/story?sid=69198</div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有</title>
+		<link>http://www.linuxeden.com/a/91410</link>
+		<pubDate>Tue, 12 Oct 2021 12:13:30 +0000</pubDate>
+		<dc:creator><![CDATA[Editor, Kai]]></dc:creator>
+				<category><![CDATA[企鹅看世界]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91410</guid>
+		<description><![CDATA[据龙芯中科官方消息，日前，国产主流杀毒软件已经与龙芯3A5000处理器平台完成适配。 龙芯3A5000是首款基于自主指令系统LoongArch的处理器，代表了我国自主CPU设计领域的最新里程碑。 它在内核级别集成了防止幽灵（Spectre） [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">据龙芯中科官方消息，日前，国产主流杀毒软件已经与龙芯3A5000处理器平台完成适配。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">龙芯3A5000是首款基于自主指令系统LoongArch的处理器，代表了我国自主CPU设计领域的最新里程碑。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong>它在内核级别集成了防止幽灵（Spectre）、熔断（Meltdown）漏洞攻击的专门机制，还支持操作系统内核栈防护等访问控制机制，并集成安全可信模块、硬件加密模块，支持可信计算体系、商密SM2/3/4及以上算法，其中SM3/4密码处理性能达到5Gbps以上。</strong></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">首批与龙芯5000平台适配完成的杀毒软件包括：<strong>360终端安全防护系统、奇安信网神终端安全防护系统、江民信创版杀毒软件、瑞星ESM防病毒系统、辰信领创防病毒系统。</strong></p>
+<p style="margin: 0px; padding: 12px 0px; text-align: center; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><img class="alignnone size-full wp-image-91411" src="http://www.linuxeden.com/wp-content/uploads/2021/10/29736ed3-bce8-4ab7-901d-76ceaeb67e61.jpg" width="600" height="319" alt="龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/29736ed3-bce8-4ab7-901d-76ceaeb67e61.jpg 600w, http://www.linuxeden.com/wp-content/uploads/2021/10/29736ed3-bce8-4ab7-901d-76ceaeb67e61-300x160.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong>360终端安全防护系统</strong></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">致力于为用户提供类似Windows终端安全的一致化体验，客户端作为360安全大脑的神经元，为安全大脑提供安全数据依据，同时响应安全大脑的分析结果，在终端侧执行安全策略。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">该方案还具有终端安全防御、公有/私有云查杀的功能特性，结合云端查杀的多点布防，可实现对已知病毒及恶意代码、未知病毒及恶意代码等安全风险的全面防护。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">它还采用了动静结合的多层次、全生命周期的病毒防御体系。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" align="center"><img class="alignnone size-full wp-image-91412" src="http://www.linuxeden.com/wp-content/uploads/2021/10/s_d9bec633a55b4089a2869ef885b77b24.png" width="552" height="300" alt="龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/s_d9bec633a55b4089a2869ef885b77b24.png 552w, http://www.linuxeden.com/wp-content/uploads/2021/10/s_d9bec633a55b4089a2869ef885b77b24-300x163.png 300w" sizes="(max-width: 552px) 100vw, 552px" /></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong>奇安信网神终端安全防护系统</strong></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">具备病毒和木马查杀功能，在安全能力方面采用了冬奥标准的网络安全防护能力，内置猫头鹰（QOWL）反病毒引擎、深度学习（QDE）引擎、云规则（QCE）引擎，可覆盖百亿病毒木马样本。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">还上线了隐私保护特别模式，保护用户办公、学习等重要文件，以及上网历史记录、聊天软件记录、电子邮件等个人重要信息。</p>
+<p style="margin: 0px; padding: 12px 0px; text-align: center; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><img class="alignnone size-full wp-image-91413" src="http://www.linuxeden.com/wp-content/uploads/2021/10/s_d5a7539a3f9445c0ae6c979472006aa8.png" width="552" height="217" alt="龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/s_d5a7539a3f9445c0ae6c979472006aa8.png 552w, http://www.linuxeden.com/wp-content/uploads/2021/10/s_d5a7539a3f9445c0ae6c979472006aa8-300x118.png 300w" sizes="(max-width: 552px) 100vw, 552px" /></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong>江民信创版杀毒软件</strong></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">集成江民自主研发的新一代反病毒引擎及AI自进化体系，核心引擎100%自主，采用启发式扫描、虚拟机脱壳技术、内核级自防御、智能主动防御等核心技术，可实现病毒深度查杀，对全网进行集中运维管控。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">支持离线断网查杀，支持国密算法通讯加密，支持信创终端一体化管控。</p>
+<p style="margin: 0px; padding: 12px 0px; text-align: center; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><img class="alignnone size-full wp-image-91414" src="http://www.linuxeden.com/wp-content/uploads/2021/10/s_bf99b29c67af4b8690ef47a0c97e173c.png" width="553" height="209" alt="龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/s_bf99b29c67af4b8690ef47a0c97e173c.png 553w, http://www.linuxeden.com/wp-content/uploads/2021/10/s_bf99b29c67af4b8690ef47a0c97e173c-300x113.png 300w" sizes="(max-width: 553px) 100vw, 553px" /></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong>瑞星ESM防病毒系统</strong></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">拥有完全自主知识产权，集终端防病毒、统一化管理、智能查杀防护等多功能于一体。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">采用BS/CS架构，具备国产Al智能反病毒引擎，支持物理机、虚拟机、Linux系统的统一管理和防护，支持三权分立，智能的变频杀毒，图表化日志和报告，部署升级方便快捷。</p>
+<p style="margin: 0px; padding: 12px 0px; text-align: center; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><img class="alignnone size-full wp-image-91415" src="http://www.linuxeden.com/wp-content/uploads/2021/10/s_229d080b4a8c474a8bf80aa46b434ad5.png" width="554" height="236" alt="龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/s_229d080b4a8c474a8bf80aa46b434ad5.png 554w, http://www.linuxeden.com/wp-content/uploads/2021/10/s_229d080b4a8c474a8bf80aa46b434ad5-300x128.png 300w" sizes="(max-width: 554px) 100vw, 554px" /></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong>辰信领创防病毒系统V7.0</strong></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">一款企业级网络防病毒系统，在断网或隔离网环境下依旧具有优秀的检测和防御能力，真正做到检测、清除、防御以及溯源的安全闭环，建立起独立的安全服务运营体系。</p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">基于自主研发的引擎技术可以深度解析各类恶意代码的本质特征，有效地解决加密和混淆等代码级恶意对抗，在文件、进程、网络、服务、动态库、注册表等维度均设计了全面的防护规则，有效地针对操作系统的脆弱点进行防护。</p>
+<p style="margin: 0px; padding: 12px 0px; text-align: center; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><img class="alignnone size-full wp-image-91416" src="http://www.linuxeden.com/wp-content/uploads/2021/10/s_ce4158b9faf9465ba7588aed3d5f1031.png" width="553" height="213" alt="龙芯3A5000处理器完美支持国产杀毒软件：360、瑞星都有" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/s_ce4158b9faf9465ba7588aed3d5f1031.png 553w, http://www.linuxeden.com/wp-content/uploads/2021/10/s_ce4158b9faf9465ba7588aed3d5f1031-300x116.png 300w" sizes="(max-width: 553px) 100vw, 553px" /></p>
+<p style="margin: 0px; padding: 12px 0px; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" align="center">
+<p class="end" style="margin: 0px; padding: 20px 0px; text-align: center; color: #cccccc; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 闂傚倸顭崑鍕洪敃鍌涘仭闁冲搫鎳庨悡姗€鏌熼柇锕€骞楅柛搴ｅ枛閺岀喖鏌囬敃鈧晶鎵磼閻樹警娼愮紒缁樼〒娴狅妇鎷犵拠褎瀚规繝闈涱儏閸ㄥ倿鏌熼鍡嫹闁衡偓閿旀拝鎷烽獮鍨姎婵炴挳鏀辩粋宥夋倻閼恒儳鍘繝鐢靛仧閸嬫捇宕虫导瀛樼厱閻庯綆鍋呯亸顓㈡煃鐠囪尙效妞ゃ垺锚閳藉鈻庨幇顓犲骄闂佽姘﹂～澶愬箰婵犳艾绀勭憸鐗堝笚閸嬪倸銆掑鐐婵犵绱曢崗妯虹暦閹烘垟鍫柛鐙€鍋勯ˇ鐢稿蓟瀹ュ牜妾ㄩ梺绋跨箲閿曘垹鐣烽崫鍕庢棃宕ㄩ搴㈠闁哄稁鍘介崑鎰箾閸喎顕滈柍閿嬬墬缁绘盯骞嬮悙瀵稿弳闂佺懓鍟块ˇ闈涱嚕椤掍胶鐟归柨鐔剁矙瀹曟椽鏁撻懞銉ｄ簻闁瑰搫绉烽崗灞轿斿Δ濠傚籍闁诡喖缍婂畷鍫曞Ψ閵夈儱肖闂備焦鎮堕崐銈嗙椤忓嫷鍤曞┑鐘冲嚬閺佸秹鏌曢崼婵囶棞妞ゅ骏鎷�, 'Microsoft YaHei', 'Arial  Narrow'; font-size: 26px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#8211; THE END &#8211;</p>
+<p class="zhuanzai" style="margin: 0px; padding: 20px 0px; text-align: center; color: #666666; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 20px; font-style: normal; font-weight: bold; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">转载请注明出处：快科技</p>
+<p class="zhuanzai" style="margin: 0px; padding: 20px 0px; text-align: center; color: #666666; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 濠电姵顔栭崰妤勬懌闂佽鎮傜粻鏍х暦閹邦兘鏀介悗锝庝簽椤斿﹪姊洪崨濠傚鐟滄澘鍟扮划濠囧煛閸涱喒鎷洪梺缁樺姌濡嫰宕濋妶鍛斀闁炽儱鍟块弳閬嶆懚閻愮儤鐓熼柟閭﹀枟閸も偓婵犵绱曢崗姗€寮诲鍫闂佸憡鎸诲畝鎼佸箖閻戣棄顫呴柕鍫濇噽閸旓箑顪冮妶鍡楀潑闁稿鎸婚妵鍕敃閿濆洤鈷岄梺绯曟櫇閸嬨倝寮婚妸鈺婃晬婵﹩鍋勯ˉ姘舵⒒娴ｅ憡鎯堥柛濠佺矙婵℃挳鏁撴禒瀣厱閻庯綆鍋呭畷宀勬煙椤旇娅婄€规洟浜堕獮鍥敆閿熻姤鎱ㄦ径鎰拺闂侇偆鍋涢懟顖涙櫠椤栫偞鐓冪痪顓㈩棑缁夘噣鏌熼鑲╀虎闁崇粯鎸鹃幑鍕Ω閵堝棗鈧綁姊绘担铏瑰笡缁炬澘绉堕崚鎺楁晲婢跺﹦顔嗛梺璺ㄥ櫐閹凤拷, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif; font-size: 20px; font-style: normal; font-weight: bold; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">转自 https://news.mydrivers.com/1/788/788437.htm</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Kubuntu Focus团队宣布第三代M2 Linux移动工作站</title>
+		<link>http://www.linuxeden.com/a/91405</link>
+		<pubDate>Tue, 12 Oct 2021 07:07:42 +0000</pubDate>
+		<dc:creator><![CDATA[otto]]></dc:creator>
+				<category><![CDATA[开源资讯]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91405</guid>
+		<description><![CDATA[Kubuntu Focus 团队近日宣布了第三代 M2 Linux 移动工作站，提供最佳的开箱即用 Linux 体验和强大的硬件支持，主要面向机器学习科学家、开发者和创作者。目前 RTX 3080 和 RTX 3070 型号已经上市发售。R [&#8230;]]]></description>
+				<content:encoded><![CDATA[<div class="article-summary">
+<p><strong>Kubuntu Focus 团队近日宣布了第三代 M2 Linux 移动工作站，提供最佳的开箱即用 Linux 体验和强大的硬件支持，主要面向机器学习科学家、开发者和创作者。</strong>目前 RTX 3080 和 RTX 3070 型号已经上市发售。RTX 3060 型号目前接受预订，并于今年 11 月的第 1 周发货。</p>
+</div>
+<div id="artibody" class="article-content">
+<p><img class="alignnone size-full wp-image-91406" src="http://www.linuxeden.com/wp-content/uploads/2021/10/a5bf87710bbf41f.jpg" alt="p98nkoym.jpg" width="700" height="523" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/a5bf87710bbf41f.jpg 700w, http://www.linuxeden.com/wp-content/uploads/2021/10/a5bf87710bbf41f-300x224.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p>第三代 M2 Linux 移动工作站的改进主要有</p>
+<blockquote><p>● 更冷更快的<a href="https://c.duomai.com/track.php?site_id=242986&amp;euid=&amp;t=https://intel.jd.com/" target="_blank" data-link="1">英特尔</a>第 11 代酷睿 i7-11800H。Geekbench 分数提高 19% 和 29%。</p>
+<p>● 采用英特尔 Iris Xe 32EU 图形的 iGPU 性能翻倍。</p>
+<p>● 内存速度从 2933MHz 提高到 3200MHz，最高可达 64GB 双通道。</p>
+<p>● BIOS 可切换 USB-C GPU 输出。</p>
+<p>● 从 Thunderbolt 3 升级到版本 4</p></blockquote>
+<p>GPU 方面可以选择 NVIDIA RTX 3060、3070 或 3080，最高可以选择 16GB 的内存。在<a href="https://kfocus.org/land/m2gen3.html" target="_blank">产品页面</a>上了解更多信息。</p>
+<p>来源：cnbeta</p>
+</div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>基于 MySQL 和 DynamoDB 的强一致性分布式事务实践</title>
+		<link>http://www.linuxeden.com/a/91399</link>
+		<pubDate>Tue, 12 Oct 2021 06:13:30 +0000</pubDate>
+		<dc:creator><![CDATA[otto]]></dc:creator>
+				<category><![CDATA[数据库类]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91399</guid>
+		<description><![CDATA[在单体应用向微服务架构转型的过程中，本地事务已不再满足系统一致性需求，为了解决这一问题，前人在对性能和数据一致性反复权衡的过程中总结了许多典型的协议和算法，各有优劣。本文我们将深入探讨 Freewheel 如何实现无单点故障的可扩展分布式事 [&#8230;]]]></description>
+				<content:encoded><![CDATA[<blockquote data-type="blockquote">
+<p data-type="paragraph">在单体应用向微服务架构转型的过程中，本地事务已不再满足系统一致性需求，为了解决这一问题，前人在对性能和数据一致性反复权衡的过程中总结了许多典型的协议和算法，各有优劣。本文我们将深入探讨 Freewheel 如何实现无单点故障的可扩展分布式事务实现模型。</p>
+</blockquote>
+<h2 data-id="heading0" data-type="heading">为什么需要分布式事务？</h2>
+<p data-type="paragraph"><span data-name="user" data-type="color">当应用程序有严格的数据一致性要求时，ACID 事务是必须的，如果一个事务涉及的所有操作能够放在一个服务内部，且共用一个数据库，那么只用在一个方法里同一个事务下操作数据库即可。然而为了提升系统整体的可靠性，方便各个模块独立演化，系统从单体应用演进为微服务架构。随着数据体量的增长，数据源也从 MySQL 扩展到关系型数据库 Amazon Aurora 和 NoSQL 数据库(Amazon DynamoDB)，基于多样化索引和查询数据的需求，引入了搜素引擎(ApacheSolr 和 ElasticSearch ) ，多服务交互、多数据源并存产生了分布式事务。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">Freewheel 分布式事务应用场景有三个：</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">多服务，同数据源: 业务单元跨越多个独立服务，服务访问同一个数据源，如 MySQL。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">单服务，不同数据源: 业务单元涉及一个独立服务，但这个服务访问多个数据源，如 MySQL，DynamoDB。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">多服务，不同数据源: 业务单元跨越多个独立服务，每个服务访问不同数据源，如 MySQL，DynamoDB。</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">综合考虑 Freewheel 的业务需求后，我们实现了多引擎数据库分布式事务。</span></p>
+<h2 data-id="heading1" data-type="heading">多引擎数据库分布式事务设计</h2>
+<p data-type="paragraph"><span data-name="user" data-type="color">Freewheel 分布式事务方案主要设计目标如下：</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">数据强一致性：</strong>确保该事务范围内的所有操作都可以全部成功或者全部失败，事务具有原子性、一致性、隔离性、持久性 4 个特性。</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">Atomicity（原子性）：一个事务中的所有操作，要么全部完成，要么全部不完成，不会结束在中间某个环节。事务在执行过程中发生错误，会被恢复到事务开始前的状态，就像这个事务从来没有执行过一样。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">Consistency（一致性）：在事务开始之前和事务结束以后，数据库的完整性没有被破坏。完整性包括外键约束、应用定义等约束不会被破坏。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">Isolation（隔离性）：数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">Durability（持久性）：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">系统高可用：</strong>遵循“design for failure”的设计原则，硬件层面，采用服务节点多 region 多 AZ 部署和节点故障快速自恢复的策略来保证系统的高可用。软件层面，设计 failover 机制应对服务异常。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">可扩展：</strong>应用 Auto Scaling 服务，它会基于设定的负载压力，自动进行扩展和缩容，来保证服务正常运行。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">易用性：</strong>分布式事务应用 API：易学，易懂，易记，系统设计上无业务侵入，没有额外的编码或测试工作。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<h2 data-id="heading2" data-type="heading">多引擎数据库分布式事务技术选型</h2>
+<p data-type="paragraph"><span data-name="user" data-type="color">常见分布式事务解决方案对照表:</span></p>
+<div data-type="embedcomp">
+<div>
+<div class="embed-table">
+<div class="mount-point">
+<table>
+<tbody>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="206"><span class="ql-author-72054723">方案</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="205"><span class="ql-author-72054723">优点</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="205"><span class="ql-author-72054723">缺点</span></td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="206"><span class="ql-author-72054723">XA</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">强一致性</span></li>
+<li class=""><span class="ql-author-72054723">无业务侵入</span></li>
+</ul>
+</td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">同步阻塞</span></li>
+<li class=""><span class="ql-author-72054723">有限的数据源支持，比如MySQL, ActiveMQ</span></li>
+<li class=""><span class="ql-author-72054723">5.7.7版本前，客户端退出或者服务宕机事务回滚，服务重启binlog丢失问题</span></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="206"><span class="ql-author-72054723">两阶段提交</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">强一致性</span></li>
+</ul>
+</td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">延迟：同步阻塞</span></li>
+<li class=""><span class="ql-author-72054723">单点问题：协调者在 2PC 中起到非常大的作用，发生故障将会造成很大影响。特别是在阶段二发生故障，所有参与者会一直等待状态，无法完成其它操作</span></li>
+<li class=""><span class="ql-author-72054723 ql-size-11">参与者依赖：任意一个节点失败就会导致整个事务失败</span></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="206"><span class="ql-author-72054723">补充事务（TCC）</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">高可靠</span></li>
+<li class=""><span class="ql-author-72054723">实时高</span></li>
+</ul>
+</td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723 ql-size-11">开发复杂，需带有业务补偿机制</span></li>
+<li class=""><span class="ql-author-72054723">事务状态管理，需要多次DB操作，有一定的性能损失</span></li>
+<li class=""><span class="ql-author-72054723 ql-size-11">最终一致性</span></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="206"><span class="ql-author-72054723">Saga</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">易于理解</span></li>
+<li class=""><span class="ql-author-72054723">松耦合，避免服务间依赖关系</span></li>
+<li class=""><span class="ql-author-72054723">实时高</span></li>
+</ul>
+</td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">开发复杂，需带有业务补偿机制</span></li>
+<li class=""><span class="ql-author-72054723">最终一致性</span></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="206"><span class="ql-author-72054723">Seata</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">高性能</span></li>
+<li class=""><span class="ql-author-72054723">易于使用</span></li>
+<li class=""><span class="ql-author-72054723">支持AT, TCC, SAGA, XA 模式</span></li>
+</ul>
+</td>
+<td class="ql-sheet-cell" spellcheck="false" width="205">
+<ul>
+<li class=""><span class="ql-author-72054723">改造成本大：相关程序都要加入Seata事务</span></li>
+<li class=""><span class="ql-author-72054723">性能损失：Seata本身存在一定的性能损耗</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p data-type="paragraph"><span data-name="user" data-type="color">结合 Freewheel 强一致性业务需求，多数据源分布式事务将由 XA、2PC 和 Seata 这些解决方案组合而成。</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">Seata 框架设计思想</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">基于 XA 的 Aurora 分支事务</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">基于 2PC 的 DynamoDB 分支事务</span></p>
+</li>
+</ul>
+<h2 data-id="heading3" data-type="heading">多数据源分布式事务解决方案</h2>
+<h3 data-id="heading4" data-type="heading">架构解析</h3>
+<p data-type="paragraph"><span data-name="user" data-type="color">Freewheel 分布式事务依托在 Freewheel 数据访问层中间件(DAL)上，这个中间件是由 Freewheel 平台团队自主研发的，它的目标是为上游应用提供更好的数据访问，为下游数据源提供更好的保护。为了方便描述，下文均用 DAL 来作为 Freewheel 数据访问层中间件的简称。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">分布式事务由这三个组件来协商处理：</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">Transaction Coordinator (TC)：</strong> 事务协调器，维护全局事务的运行状态，负责协调并驱动全局事务的提交或回滚。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">Transaction Manager (TM)：</strong> 控制全局事务的边界，负责开启一个全局事务，并最终发起全局提交或全局回滚的决议。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">Resource Manager (RM)：</strong> 控制分支事务，负责分支注册、并接收事务协调器的指令，驱动分支（本地）事务的提交和回滚。</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">为了预防死锁，并且减少 DAL RM 和 TC 之间的 交互，降低对 TC 的依赖，同一个分布式事务操作放在同一个 DAL 节点，由此，DAL RM 可以方便的在单节点控制和协调分支事务，完成全局事务的提交和回滚。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">以多服务，不同数据源(Aurora 与 DynamoDB)为例，描述 Freewheel 分布式事务过程。</span></p>
+<ol data-type="numberedlist">
+<li>
+<p data-number="1" data-type="paragraph"><span data-name="user" data-type="color">A Service TM 向 TC 申请开启一个全局事务，全局事务创建成功并生成一个全局唯一的 XID。</span></p>
+</li>
+<li>
+<p data-number="2" data-type="paragraph"><span data-name="user" data-type="color">XID 在微服务调用链路的上下文中传播。</span></p>
+</li>
+<li>
+<p data-number="3" data-type="paragraph"><span data-name="user" data-type="color">TM 向 TC 发起针对 XID 的全局提交或回滚决议。</span></p>
+</li>
+<li>
+<p data-number="4" data-type="paragraph"><span data-name="user" data-type="color">TC 向 DAL RM 发起全局提交或回滚决议。</span></p>
+</li>
+<li>
+<p data-number="5" data-type="paragraph"><span data-name="user" data-type="color">DAL RM 对 XID 下管辖的全部分支事务完成提交或回滚请求。</span></p>
+</li>
+</ol>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<div data-type="image">
+<div data-content="" data-style-width="75%" data-style-bordertype="none"><img class="alignnone size-full wp-image-91400" src="http://www.linuxeden.com/wp-content/uploads/2021/10/5d78950435a11ad7f7c36486f0c8bc07.png" width="741" height="464" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/5d78950435a11ad7f7c36486f0c8bc07.png 741w, http://www.linuxeden.com/wp-content/uploads/2021/10/5d78950435a11ad7f7c36486f0c8bc07-300x188.png 300w" sizes="(max-width: 741px) 100vw, 741px" /></div>
+</div>
+<h3 data-id="heading5" data-type="heading">数据访问层资源管理器(DAL RM)实现</h3>
+<p data-type="paragraph"><span data-name="user" data-type="color">基于业务需求，DAL 分布式事务支持的数据源为 MySQL 和 AWS DynamoDB，下面章节阐述了这两个数据源 ACID 技术实现。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">分布式事务设计中新建了事务控制表、事务记录表、索引表及业务镜像表：</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">事务控制表：记录事务运行状态开始、提交、回滚。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">事务记录表：存储正在发生事务信息。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">索引表：记录记录主键 ID， 用于实现排它性对其他事务更新与普通更新。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">业务镜像表：存储业务原值。</span></p>
+</li>
+</ul>
+<h4 data-id="heading6" data-type="heading"><span data-name="user" data-type="color">Aurora/MySQL</span></h4>
+<p data-type="paragraph"><span data-name="user" data-type="color">采用 MySQL XA 2PC 来保证 ACID，原因如下:</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">Mysql 5.7 版本已经支持 XA，目前 Aurora 也是 Mysql 5.7.x。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">XA 强一致性。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">不侵入业务，这会减少业务方的工作量。</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">这个时序图描述了 RM 对 MySQL 事务的工作流程：</span></p>
+<div data-type="image">
+<div data-content="" data-style-width="75%" data-style-bordertype="none"><img class="alignnone size-full wp-image-91401" src="http://www.linuxeden.com/wp-content/uploads/2021/10/ff34bd23b43057bb30970c7aa17cf04c.png" width="731" height="731" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/ff34bd23b43057bb30970c7aa17cf04c.png 731w, http://www.linuxeden.com/wp-content/uploads/2021/10/ff34bd23b43057bb30970c7aa17cf04c-150x150.png 150w, http://www.linuxeden.com/wp-content/uploads/2021/10/ff34bd23b43057bb30970c7aa17cf04c-300x300.png 300w" sizes="(max-width: 731px) 100vw, 731px" /></div>
+</div>
+<p data-type="paragraph"><span data-name="user" data-type="color"> 一个事务操作，由同一个 DAL RM 处理，相同 DB 下业务事务处理，放在一个 XA 操作里：</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">节省 XA 连接 fd。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">减少 DAL RM 和 Aurora 之间的 XA 交互次数。</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">避免多个 XA 分支事务上的数据操作冲突。</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color">SQL CRUD 语句应该使用触发行锁的索引操作，否则会触发表锁，影响系统吞吐量。</span></p>
+<h4 data-id="heading7" data-type="heading">AWS DynamoDB</h4>
+<p data-type="paragraph"><span data-name="user" data-type="color">DynamoDB 提供了本地事务接口 TransactGetItems 和 TransactWriteItems, 它等效于 MySQL 批量操作，对于相互间有上下文或者依赖的操作并不可用，这限制了它在应用中的使用场景，详细信息请参考 <a title="" href="https://docs.aws.amazon.com/sdk-for-go/api/service/dynamodb/#DynamoDB.TransactGetItems" target="_blank" data-type="link">TransactGetItems</a> 和 <a title="" href="https://docs.aws.amazon.com/sdk-for-go/api/service/dynamodb/#DynamoDB.TransactWriteItems" target="_blank" data-type="link">TransactWriteItems</a>。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">DynamoDB 本身没有分布式事务机制，DAL 结合 DynamoDB 功能属性，对提供的插入、更新、删除和查询接口，设计 2PC 机制 来满足 DynamoDB 的 事务属性。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">下表显示了分布式事务操作 (DisTxDAL) 和其他操作之间的隔离级别。</span></p>
+<div data-type="embedcomp">
+<div>
+<div class="embed-table">
+<div class="mount-point">
+<table>
+<tbody>
+<tr>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189">
+<p class="ql-vertical-top ql-align-left" align="left"><strong class="ql-author-72054723">Operation</strong></p>
+</td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189">
+<p class="ql-vertical-top ql-align-left" align="left"><strong class="ql-author-72054723">Other Operation</strong></p>
+</td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="237">
+<p class="ql-vertical-top ql-align-left" align="left"><strong class="ql-author-72054723">Isolation Level</strong></p>
+</td>
+</tr>
+<tr>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189"><span class="ql-author-72054723">DisTxDAL</span></td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189">
+<p class="ql-vertical-top ql-align-left" align="left"><span class="ql-author-72054723">DisTxDAL</span></p>
+</td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="237"><span class="ql-author-72054723">可序列化</span></td>
+</tr>
+<tr>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189">
+<p class="ql-vertical-top ql-align-left" align="left"><span class="ql-author-72054723">DisTxDAL</span></p>
+</td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189">
+<p class="ql-vertical-top ql-align-left" align="left"><span class="ql-author-72054723">DAL DDB write interface</span></p>
+</td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="237"><span class="ql-author-72054723">可序列化</span></td>
+</tr>
+<tr>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189">
+<p class="ql-vertical-top ql-align-left" align="left"><span class="ql-author-72054723">DisTxDAL</span></p>
+</td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="189">
+<p class="ql-vertical-top ql-align-left" align="left"><span class="ql-author-72054723">DAL DDB read interface</span></p>
+</td>
+<td class="ql-sheet-cell ql-vertical-top" spellcheck="false" width="237"><span class="ql-author-72054723">读取已提交|读取未提交 （可选）</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">更新接口实现方法</strong></span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">一阶段</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">应用本地事务原子地备份事务记录及备份索引</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">应用本地事务原子地更新附加事务信息业务值及备份业务原值到镜像表</span></p>
+</li>
+</ul>
+<div data-type="image">
+<div data-content="" data-style-width="75%" data-style-bordertype="none"><img class="alignnone size-full wp-image-91402" src="http://www.linuxeden.com/wp-content/uploads/2021/10/dbc816cb3df48e486a50b22b48fb10c9.png" width="448" height="311" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/dbc816cb3df48e486a50b22b48fb10c9.png 448w, http://www.linuxeden.com/wp-content/uploads/2021/10/dbc816cb3df48e486a50b22b48fb10c9-300x208.png 300w" sizes="(max-width: 448px) 100vw, 448px" /></div>
+</div>
+<p data-type="paragraph"><span data-name="user" data-type="color">二阶段</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">如果决议是提交，应用本地事务原子地移除业务记录事务属性、删除镜像记录、删除备份事务记录</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">如果决议是回滚，应用本地事务原子地恢复业务记录、删除镜像记录、删除备份事务记录</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">插入接口实现方法</strong></span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">一阶段</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">应用本地事务原子地备份事务记录及备份索引</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">插入带有事务属性信息的业务记录</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">二阶段</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">如果决议是提交，应用本地事务原子地移除业务事务属性、删除备份记录</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">如果决议是回滚，应用本地事务原子地删除业务记录、删除备份记录</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">删除接口实现方法</strong></span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">一阶段</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">应用本地事务原子地备份事物记录及备份索引</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">更新带有事务属性信息的业务记录， 标注为删除操作</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">二阶段</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">如果决议是提交，应用本地事务原子地删除事务记录、删除业务记录</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">如果决议是回滚，应用本地事务原子地恢复业务记录、删除备份记录</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">查询接口实现方法</strong></span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">事务进行中的数据含有事务属性信息，xid 表示事务全局事务 ID， operation 表示事务操作接口 create、update、delete，这里 item 表示业务数据元素。</span></p>
+<div data-type="embedcomp">
+<div>
+<div class="embed-table">
+<div class="mount-point">
+<table>
+<tbody>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="124"><span class="ql-author-72054723">操作接口</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="120"><span class="ql-author-72054723">事务开始</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="138"><span class="ql-author-72054723">事务进行</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="111"><span class="ql-author-72054723">事务结束(提交)</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="123"><span class="ql-author-72054723">事务结束(回滚)</span></td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="124"><span class="ql-author-72054723"> create</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="120"><span class="ql-author-72054723">None</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="138">
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">item: item value</span></p>
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">operation:create</span></p>
+<p><span class="ql-author-72054723">xid: xid value</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="111">
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">item: item value</span></p>
+<p class="ql-align-left" align="left"><s class="ql-author-72054723">operation:create</s></p>
+<p><s class="ql-author-72054723">xid: value</s></td>
+<td class="ql-sheet-cell" spellcheck="false" width="123"><span class="ql-author-72054723">None</span></td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="124"><span class="ql-author-72054723">update</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="120"><span class="ql-author-72054723">item: item value</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="138">
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">item: item new value</span></p>
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">operation:update</span></p>
+<p><span class="ql-author-72054723">xid: xid value</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="111">
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">item: item new value</span></p>
+<p class="ql-align-left" align="left"><s class="ql-author-72054723">operation:update</s></p>
+<p><s class="ql-author-72054723">xid: xid value</s></td>
+<td class="ql-sheet-cell" spellcheck="false" width="123"><span class="ql-author-72054723">item: item value</span></td>
+</tr>
+<tr>
+<td class="ql-sheet-cell" spellcheck="false" width="124"><span class="ql-author-72054723">delete</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="120"><span class="ql-author-72054723">item: item value</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="138">
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">item: item value</span></p>
+<p class="ql-align-left" align="left"><span class="ql-author-72054723">operation:delete</span></p>
+<p><span class="ql-author-72054723">xid: xid value</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="111"><span class="ql-author-72054723">None</span></td>
+<td class="ql-sheet-cell" spellcheck="false" width="123"><span class="ql-author-72054723">item: item value</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p data-type="paragraph"><span data-name="user" data-type="color">基于业务数据变更表及写接口实现方法，实现了在读提交与读未提及查询方法：</span></p>
+<ol data-type="numberedlist">
+<li>
+<p data-number="1" data-type="paragraph"><span data-name="user" data-type="color">判断记录是否含有事务属性，如果无，返回记录，否则到步骤 2</span></p>
+</li>
+<li>
+<p data-number="2" data-type="paragraph"><span data-name="user" data-type="color">判读隔离级别，如果读提交，步骤 3，如果读未提交，步骤 5</span></p>
+</li>
+<li>
+<p data-number="3" data-type="paragraph"><span data-name="user" data-type="color">记录事务操作是 create,返回空，否则如果是 delete，去除事物属性信息，然后返回，否则步骤 4</span></p>
+</li>
+<li>
+<p data-number="4" data-type="paragraph"><span data-name="user" data-type="color">本地事务原子地读取镜像表与业务表，如果镜像表值存在，返回，否则返回业务表值，都不存在返回空</span></p>
+</li>
+<li>
+<p data-number="5" data-type="paragraph"><span data-name="user" data-type="color">如果记录事务操作是 delete，返回空，否则返回记录</span></p>
+</li>
+</ol>
+<h3 data-id="heading8" data-type="heading">数据访问层事务管理器(DAL TM)实现</h3>
+<p data-type="paragraph"><span data-name="user" data-type="color">为了方便用户使用，分布式事务 API 里封装了与事务协调器及 DAL 资源管理器的交互过程，交互过程对应用是透明的，下面是分布式事务 API：</span></p>
+<div data-type="codeblock">
+<div data-codeblock-wrap="">
+<div data-codeblock-codes="">
+<div class="simplebar" data-simplebar="init">
+<div class="simplebar-wrapper">
+<div class="simplebar-height-auto-observer-wrapper"></div>
+<div class="simplebar-mask">
+<div class="simplebar-offset">
+<div class="simplebar-content-wrapper">
+<div class="simplebar-content">
+<div>
+<pre lang="go" data-origin="pm_code_preview"><code data-type="codeline"><span class="hljs-keyword" data-type="markclass">type</span> DistributedTransApi <span class="hljs-keyword" data-type="markclass">interface</span> {</code><code data-type="codeline">        DisTxDAL(ctx context.Context, fn TranFunc) error</code><code data-type="codeline">}</code><code data-type="codeline"><span class="hljs-keyword" data-type="markclass">type</span> TranFunc <span class="hljs-function" data-type="markclass"><span class="hljs-keyword" data-type="markclass">func</span><span class="hljs-params" data-type="markclass">(ctx context.Context)</span> <span class="hljs-title" data-type="markclass">error</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="simplebar-placeholder"></div>
+</div>
+<div class="simplebar-track simplebar-horizontal"></div>
+<div class="simplebar-track simplebar-vertical"></div>
+</div>
+</div>
+<div data-codeblock-copy="">复制代码</div>
+<div data-codeblock-index=""></div>
+</div>
+</div>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">微服务之间，微服务与数据库访问层之间采用 google rpc 调用，服务之间关键数据都是基于 context metadata，如果经过两层服务交互,就会导致 context metadata 丢失。举例来说，A 服务调用 B 服务，B 服务调用 C 服务，那么 C 服务就会缺失 A 服务 context metadata，针对这种情况，DAL 提供了通用函数用于提取 DAL 相关的元数据，供应用方按需添加。</span></p>
+<div data-type="codeblock">
+<div data-codeblock-wrap="">
+<div data-codeblock-codes="">
+<div class="simplebar" data-simplebar="init">
+<div class="simplebar-wrapper">
+<div class="simplebar-height-auto-observer-wrapper"></div>
+<div class="simplebar-mask">
+<div class="simplebar-offset">
+<div class="simplebar-content-wrapper">
+<div class="simplebar-content">
+<div>
+<pre lang="go" data-origin="pm_code_preview"><code data-type="codeline"><span class="hljs-function" data-type="markclass"><span class="hljs-keyword" data-type="markclass">func</span> <span class="hljs-title" data-type="markclass">ExtractDalMetadata</span><span class="hljs-params" data-type="markclass">(ctx context.Context)</span> <span class="hljs-params" data-type="markclass">(metadata.MD, error)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="simplebar-placeholder"></div>
+</div>
+<div class="simplebar-track simplebar-horizontal"></div>
+<div class="simplebar-track simplebar-vertical"></div>
+</div>
+</div>
+<div data-codeblock-copy="">复制代码</div>
+<div data-codeblock-index=""></div>
+</div>
+</div>
+<h3 data-id="heading9" data-type="heading">数据访问层事务协调器(DAL TC)实现</h3>
+<p data-type="paragraph"><span data-name="user" data-type="color">协调器主要功能点：</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">分配事务 XID，维护全局事务的运行状态，负责协调和驱动全局事务的提交或回滚；</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">故障转移：提交/回滚。</span></p>
+</li>
+</ul>
+<h4 data-id="heading10" data-type="heading">分配事务 XID</h4>
+<p data-type="paragraph"><span data-name="user" data-type="color">全局分配唯一事务 ID，供 DAL TM 获取，此数据需要在同一事务的业务服务间传输共享。</span></p>
+<h4 data-id="heading11" data-type="heading">事务协调</h4>
+<p data-type="paragraph"><span data-name="user" data-type="color">维护全局事务的运行状态，负责协调和驱动全局事务的提交或回滚。</span></p>
+<h4 data-id="heading12" data-type="heading">故障转移</h4>
+<p data-type="paragraph"><span data-name="user" data-type="color">DAL TC 是 HA 多节点实例，引入 ETCD leader 选举机制来保证只有一个 TC 实例承担 failover 功能，详细信息在系统高可用章节软件层面 failover。</span></p>
+<h3 data-id="heading13" data-type="heading">系统高可用</h3>
+<h4 data-id="heading14" data-type="heading">硬件层面</h4>
+<p data-type="paragraph"><span data-name="user" data-type="color">为了预防硬件故障对高可用的影响，DAL，TC 和 ETCD 服务均是多 Region 多 AZ 部署，并且基于服务的特性配置了相应的服务策略：</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">ETCD 采用自恢复策略</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">DAL 和 TC 服务采用了弹性伸缩策略</span></p>
+</li>
+</ul>
+<p data-type="paragraph"><span data-name="user" data-type="color">美东美西均部署相应服务作为服务灾备策略，下图是美东地区的解释图（美西类似）。</span></p>
+<div data-type="image">
+<div data-content="" data-style-width="75%" data-style-bordertype="none"><img class="alignnone size-full wp-image-91403" src="http://www.linuxeden.com/wp-content/uploads/2021/10/2e2bbc30ede6742272f755c8c17a6f25.png" width="431" height="567" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/2e2bbc30ede6742272f755c8c17a6f25.png 431w, http://www.linuxeden.com/wp-content/uploads/2021/10/2e2bbc30ede6742272f755c8c17a6f25-228x300.png 228w" sizes="(max-width: 431px) 100vw, 431px" /></div>
+</div>
+<h4 data-id="heading15" data-type="heading">软件层面 Failover</h4>
+<p data-type="paragraph"><span data-name="user" data-type="color">在 DAL 应用或者业务应用遇到异常退出时，软件层面 Failover 机制是为了能不发生死锁，并且继续处理未完成分布式事务，实现方法如下：</span></p>
+<ul data-type="bulletedlist">
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">DAL TM 接口添加超时控制，由应用设置事务的超时时间，默认是 60 秒</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">DAL RM 在事物开始、提交或者回滚阶段存储 xid 信息，如过期时间，运行状态等，在业务接口调用里存储业务处理记录</span></p>
+</li>
+<li>
+<p data-type="paragraph"><span data-name="user" data-type="color">DAL TC 轮询地从事务控制表里获取超时事务。基于事务状态处理：如果 start or rollback：触发 Rollback，如果 commit：触发 commit</span></p>
+</li>
+</ul>
+<h2 data-id="heading16" data-type="heading">未来展望</h2>
+<p data-type="paragraph"><span data-name="user" data-type="color">Freewheel 强一致性分布式事务未来会支撑更多的数据源，如 Redis、Solr 和 ElasticSearch 等，目前的数据库访问层 API 是基于 gRPC，这对数据库访问层使用方带来了一定技术语言限制，未来会探究 GraphQL 在数据库访问层分布式事务应用的可行性。</span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"><strong data-type="strong">作者简介：</strong></span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color"> </span></p>
+<p data-type="paragraph"><span data-name="user" data-type="color">李长城，Lead Software Engineer，目前就职于 Comcast FreeWheel 架构平台团队。研究方向为微服务架构、数据库中间件、云计算等领域。</span></p>
+<p data-type="paragraph">来源：infoQ</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>为物联网而来&#8212;你好Ubuntu Frame</title>
+		<link>http://www.linuxeden.com/a/91396</link>
+		<pubDate>Tue, 12 Oct 2021 06:06:14 +0000</pubDate>
+		<dc:creator><![CDATA[otto]]></dc:creator>
+				<category><![CDATA[开源资讯]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91396</guid>
+		<description><![CDATA[我们一直在桌面、服务器和云上使用 Canonical 的 Ubuntu Linux。但是 Ubuntu 也找到了进入更狭窄目的的方法。例如，Ubuntu Core Linux 经常用于物联网 (IoT) 设备。现在，有了 Ubuntu Fr [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-91397" src="http://www.linuxeden.com/wp-content/uploads/2021/10/canonical-ubuntu-frame1.jpg" width="640" height="259" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/canonical-ubuntu-frame1.jpg 640w, http://www.linuxeden.com/wp-content/uploads/2021/10/canonical-ubuntu-frame1-300x121.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>我们一直在桌面、服务器和云上使用 Canonical 的 Ubuntu Linux。但是 Ubuntu 也找到了进入更狭窄目的的方法。例如，Ubuntu Core Linux 经常用于物联网 (IoT) 设备。现在，有了 Ubuntu Frame，Ubuntu 有了一个更加专业的角色：数字标牌和用户信息亭。<br />
+Ubuntu Frame 可以轻松地为交互式信息亭、数字标牌或任何其他需要图形输出的产品构建和部署图形应用程序。除了仅提供 Ubuntu Linux 基础外，它还带有集成的直接渲染管理器 (DRM) 和内核模式设置 (KMS)，以备份显示。这意味着您需要管理的代码更少，未测试代码中出现错误和漏洞的机会也更少。所有这些反过来又让程序员有更多时间处理显示内容，而不是微调显示本身。</p>
+<p>Frame 的目标是最大限度地缩短为边缘设备构建图形解决方案的开发和部署时间。它通过利用现有应用程序和强化安全技术来做到这一点。它与 Flutter、Qt、GTK、Electron 和 Simple DirectMedia Layer (SDL) 2 等工具包兼容。它还支持 HTML5 和 Java。</p>
+<p>您可以使用 snaps（Ubuntu 的下一代包格式）将图形应用程序部署到基于 Frame 的硬件。快照是容器化的软件包。Linux伊甸园发现：根据设计，Ubuntu Frame 和在其上运行的应用程序彼此隔离，并且它们可以从硬件访问的资源受到限制。它们还受到控制和操作，以便自动阻止对特权系统 API、操作系统部分或非应用程序特定用户数据的计划外或未经授权的访问。</p>
+<p>Linuxeden认为将所有这些组合在一起并且开箱即用，Ubuntu Frame 为开发人员提供了部署完全交互式应用程序所需的一切。它还支持图形界面，因此您无需担心手工编写应用程序编程接口 (API) 来处理特定的硬件驱动程序。它还自动启用数字显示功能，例如支持多种手势的触摸屏输入。</p>
+<p>“Ubuntu Frame 的可靠性已经在现场得到了广泛的测试。它的技术已经开发了 7 年多，生产了 5 年，使用最先进的技术，并在生产中部署到 Linux 桌面和移动用户。因此，Ubuntu Frame 是当今可用于嵌入式设备的最成熟的图形服务器之一。” Michał Sawicz，Canonical 的智能显示器工程经理。</p>
+<p>Ubuntu Frame 还带有内置的安全性。 Shell 提供基于 Wayland 协议的安全客户端-服务器通信。客户端和服务器快照位于单独的安全容器中，因此应用程序只能通过安全套接字与 Ubuntu Frame 通信。这减少了恶意代码可用的攻击向量。最后，快照软件发行商还可以从安全漏洞的自动通知中受益。 Snaps 还使使用最新的安全修复程序更新已部署的软件变得简单。</p>
+<p>与 Ubuntu Core 一起，Ubuntu Frame 支持长达 10 年。由于嵌入式设备已部署多年，这使您能够部署和支持安全设备的时间比大多数物联网和嵌入式操作系统允许的时间长得多。随着物联网安全变得越来越令人担忧，这将使基于 Ubuntu Frame 的硬件对买家和最终用户更具吸引力。</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>/e/ 云：一个去谷歌化的 Google Drive 替代方案</title>
+		<link>http://www.linuxeden.com/a/91389</link>
+		<pubDate>Tue, 12 Oct 2021 05:50:32 +0000</pubDate>
+		<dc:creator><![CDATA[otto]]></dc:creator>
+				<category><![CDATA[使用经验]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91389</guid>
+		<description><![CDATA[/e/ 云是 e.foundation 使用 Nextcloud 等开源工具创立的，以作为 Google Drive 和 Gmail 的替代品。 Google Drive 是一种流行的云存储服务，在大多数情况下效果很好。 然而，它可能不是最 [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p class="article_img"><img class="alignnone size-full wp-image-91390" src="http://www.linuxeden.com/wp-content/uploads/2021/10/122933awf0z9vnqdzslv1q.jpg" alt="" width="1280" height="720" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/122933awf0z9vnqdzslv1q.jpg 1280w, http://www.linuxeden.com/wp-content/uploads/2021/10/122933awf0z9vnqdzslv1q-300x169.jpg 300w, http://www.linuxeden.com/wp-content/uploads/2021/10/122933awf0z9vnqdzslv1q-768x432.jpg 768w, http://www.linuxeden.com/wp-content/uploads/2021/10/122933awf0z9vnqdzslv1q-1024x576.jpg 1024w" sizes="(max-width: 1280px) 100vw, 1280px" /></p>
+<blockquote><p>/e/ 云是 e.foundation 使用 Nextcloud 等开源工具创立的，以作为 Google Drive 和 Gmail 的替代品。</p></blockquote>
+<p class="article_img"><img class="alignnone size-full wp-image-91391" src="http://www.linuxeden.com/wp-content/uploads/2021/10/122940to6rre7ekmi8ksxs.png" alt="" width="1200" height="868" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/122940to6rre7ekmi8ksxs.png 1200w, http://www.linuxeden.com/wp-content/uploads/2021/10/122940to6rre7ekmi8ksxs-300x217.png 300w, http://www.linuxeden.com/wp-content/uploads/2021/10/122940to6rre7ekmi8ksxs-768x556.png 768w, http://www.linuxeden.com/wp-content/uploads/2021/10/122940to6rre7ekmi8ksxs-1024x741.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" /></p>
+<p>Google Drive 是一种流行的云存储服务，在大多数情况下效果很好。</p>
+<p>然而，它可能不是最关注隐私的选择。因此，要完全控制你的数据，最好的办法是启动一个 <a class="ext" href="https://itsfoss.com/nextcloud/" target="_blank" rel="external nofollow">Nextcloud</a><span class="sup">[1]</span> 实例，存储你的基本数据，并可以访问其他协作工具。</p>
+<p>虽然这听起来不错，但不是每个人都能投入精力来创建和维护他们的实例。这就是 /e/ 云上场的时候了，它是由 <a class="ext" href="https://itsfoss.com/e-os-review/" target="_blank" rel="external nofollow">去谷歌化的安卓操作系统 /e/ 操作系统</a><span class="sup">[2]</span> 背后的同一个团队建立的。</p>
+<p>/e/ 云主要将自己定位为一个新的 Google Drive 私人替代品，并提供一个取代 Gmail 的邮箱。</p>
+<h3 id="e-%E4%BA%91%E5%B8%A6%E6%9C%89%E9%82%AE%E7%AE%B1%E7%9A%84-nextcloud-%E5%8F%8A-onlyoffice" class="mume-header">/e/ 云：带有邮箱的 Nextcloud 及 OnlyOffice</h3>
+<p class="article_img"><img class="alignnone size-full wp-image-91392" src="http://www.linuxeden.com/wp-content/uploads/2021/10/122941axxs9kxocq2512zx.png" alt="" width="1568" height="772" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/122941axxs9kxocq2512zx.png 1568w, http://www.linuxeden.com/wp-content/uploads/2021/10/122941axxs9kxocq2512zx-300x148.png 300w, http://www.linuxeden.com/wp-content/uploads/2021/10/122941axxs9kxocq2512zx-768x378.png 768w, http://www.linuxeden.com/wp-content/uploads/2021/10/122941axxs9kxocq2512zx-1024x504.png 1024w" sizes="(max-width: 1568px) 100vw, 1568px" /></p>
+<p>当你创建一个 /e/ 账户时，它会给你一个私人电子邮件地址 <a class="ext" href="mailto:xyz@e.email" target="_blank" rel="external nofollow">xyz@e.email</a><span class="sup">[3]</span>。</p>
+<p>而且，同邮箱地址一起，你会得到 1GB 的免费 /e/ 云存储空间和一个由 Nextcloud 和 OnlyOffice 为核心的协作平台。</p>
+<p>因此，如果你想利用 Nextcloud 和 OnlyOffice 来取代谷歌的工具套件，而不需要自己全部设置，/e/ 云可以成为一个引人注目的以隐私为中心的选择。</p>
+<p class="article_img"><img class="alignnone size-full wp-image-91393" src="http://www.linuxeden.com/wp-content/uploads/2021/10/122943xcbc4oed4bx0tqqq.png" alt="" width="1568" height="787" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/122943xcbc4oed4bx0tqqq.png 1568w, http://www.linuxeden.com/wp-content/uploads/2021/10/122943xcbc4oed4bx0tqqq-300x151.png 300w, http://www.linuxeden.com/wp-content/uploads/2021/10/122943xcbc4oed4bx0tqqq-768x385.png 768w, http://www.linuxeden.com/wp-content/uploads/2021/10/122943xcbc4oed4bx0tqqq-1024x514.png 1024w" sizes="(max-width: 1568px) 100vw, 1568px" /></p>
+<p>除了 OnlyOffice 的文件存储和文档支持外，你还可以使用日历，存储笔记，并添加任务。</p>
+<p>因此，它也可以成为一个正式的以隐私为中心的协作平台，你可以免费使用。</p>
+<p>如果你想要更多的存储空间，你可以将你的订阅升级到付费计划，你可以根据需要选择 20 到 1TB 的存储空间，并按月/年计费。定价计划起价低至 3 美元/月。</p>
+<p>毫无疑问，如果你在手机上使用 /e/ 操作系统或使用一个 /e/ 智能电话，这应该是一种无缝体验。</p>
+<p>但是，你也可以使用第三方邮件客户端和 Nextcloud 移动应用在任何设备上使用它。</p>
+<ul>
+<li><a class="ext" href="https://e.foundation/e-email-invite/" target="_blank" rel="external nofollow">注册 /e/ 云</a><span class="sup">[4]</span></li>
+</ul>
+<h3 id="%E6%80%BB%E7%BB%93" class="mume-header">总结</h3>
+<p>考虑到它相对较新，正计划增加几个功能，包括端到端加密，从 Google Drive 迁移等。</p>
+<p>你可以注册一个帐户并免费试用。</p>
+<p>对于像 /e/ 云这样以 Nextcloud 为核心的主流解决方案，除了电子邮件和协作服务外，还能帮助你安全地管理/存储文件，你觉得怎么样？</p>
+<hr />
+<p>via: <a class="ext" href="https://news.itsfoss.com/e-cloud/" target="_blank" rel="external nofollow">https://news.itsfoss.com/e-cloud/</a></p>
+<p>作者：Ankush Das<span class="sup">[5]</span> 选题：lujun9972<span class="sup">[6]</span> 译者：geekpi<span class="sup">[7]</span> 校对：wxy<span class="sup">[8]</span></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Windows Subsystem for Linux现以应用形式上架Microsoft Store</title>
+		<link>http://www.linuxeden.com/a/91381</link>
+		<pubDate>Tue, 12 Oct 2021 02:42:58 +0000</pubDate>
+		<dc:creator><![CDATA[otto]]></dc:creator>
+				<category><![CDATA[开源资讯]]></category>
+
+		<guid isPermaLink="false">http://www.linuxeden.com/?p=91381</guid>
+		<description><![CDATA[微软今天宣布 Windows Subsystem for Linux (WSL) 作为一款应用上架 Windows 11 端的 Microsoft Store。也就是说，现在 WSL 以应用的方式通过 Microsoft Store 进行分 [&#8230;]]]></description>
+				<content:encoded><![CDATA[<div class="article-summary">
+<p><strong>微软今天宣布 <a href="https://www.microsoft.com/zh-cn/p/windows-subsystem-for-linux-preview/9p9tqf7mrm4r#activetab=pivot:overviewtab" target="_blank">Windows Subsystem for Linux (WSL) </a>作为一款应用上架 Windows 11 端的 Microsoft Store。</strong>也就是说，现在 WSL 以应用的方式通过 Microsoft Store 进行分发，并不会跟随系统更迭进行更新，这样用户能更快地获取 WSL 更新和功能。</p>
+</div>
+<div id="artibody" class="article-content">
+<p><img class="alignnone size-full wp-image-91382" src="http://www.linuxeden.com/wp-content/uploads/2021/10/63b3f90884d1981.jpg" width="700" height="292" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/63b3f90884d1981.jpg 700w, http://www.linuxeden.com/wp-content/uploads/2021/10/63b3f90884d1981-300x125.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p><img class="alignnone size-full wp-image-91383" src="http://www.linuxeden.com/wp-content/uploads/2021/10/29a4cca51280c7b.jpg" width="700" height="394" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/29a4cca51280c7b.jpg 700w, http://www.linuxeden.com/wp-content/uploads/2021/10/29a4cca51280c7b-300x169.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p><img class="alignnone size-full wp-image-91384" src="http://www.linuxeden.com/wp-content/uploads/2021/10/f5fad24296f5f7d.jpg" width="700" height="375" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/f5fad24296f5f7d.jpg 700w, http://www.linuxeden.com/wp-content/uploads/2021/10/f5fad24296f5f7d-300x161.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p><img class="alignnone size-full wp-image-91385" src="http://www.linuxeden.com/wp-content/uploads/2021/10/713f43adda7df19.jpg" width="700" height="448" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/713f43adda7df19.jpg 700w, http://www.linuxeden.com/wp-content/uploads/2021/10/713f43adda7df19-300x192.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p><img class="alignnone size-full wp-image-91386" src="http://www.linuxeden.com/wp-content/uploads/2021/10/d335c3ac5fcfbaf.jpg" width="700" height="394" srcset="http://www.linuxeden.com/wp-content/uploads/2021/10/d335c3ac5fcfbaf.jpg 700w, http://www.linuxeden.com/wp-content/uploads/2021/10/d335c3ac5fcfbaf-300x169.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p><strong>更新日志</strong></p>
+<div id="cbhahaha" class="otherContent_01"></div>
+<p><strong>WSL 应用现在整合了 WSLg（<a href="https://microsoft.pvxt.net/x9Vg1" target="_blank" data-link="1">Windows</a> Subsystem for Linux GUI）</strong></p>
+<p>● 升级 Microsoft.WSLg 至 1.0.29 版本</p>
+<p>● 为 WSLg 切换到 msrdc.exe</p>
+<p>● 为 ARM64 启用 virtio，以启用 WSLg 共享内存</p>
+<p>● 允许 WSLg 使用的环境变量被 WSLENV 覆盖</p>
+<p><strong>全新的 wsl.exe 功能&#8211; mount 挂载功能</strong></p>
+<p>● 新增挂载 &#8211;vhd 参数，从而使挂载 VHD 文件更容易。</p>
+<p>● 为 wsl.exe &#8211;mount 实现文件系统检测。如果在使用 wsl.exe -mount 时没有指定&#8211;type，这一改变实现了文件系统类型检测。</p>
+<p>● 为 wsl.exe &#8211;mount 增加 -name 功能。这项修改增加了对通过 WSL 挂载磁盘时可选择命名挂载点的支持。</p>
+<p><strong>升级 Linux Kernel 至 5.10.60.1</strong></p>
+<p>● 启用额外的 USB 内核配置选项，以便通过 USB 与 Arduino 进行交互。</p>
+<p>● 更新到上游稳定内核版本 5.10.60</p>
+<p>● 启用 virtio-pmem，支持PCI BAR相关地址</p>
+<p>● 在 Hyper-V 下启用 ARM64 的 vPCI 支持</p>
+<p>● 启用 io_uring 支持</p>
+<p>● 启用 USB over IP 支持</p>
+<p>● 启用 x86_64 的准虚拟化自旋锁支持</p>
+<p>● 清理 dxgkrnl 驱动程序，以获得错误修复和代码清理。</p>
+<p>● 启用对 NFSv4.1 的 NFS 客户端支持* 改进9p或fstab挂载失败时的错误信息</p>
+<p><strong>其他改进</strong></p>
+<p>● 在 ARM64 上修复 \wsl $\ 和 \wsl.localhost\ 问题</p>
+<p>● 切换到mkfs.ext4而不是预先格式化的ext4 VHD。</p>
+<p>● 切换到使用mkswap和swapon而不是自定义交换文件逻辑。[GH 5476]</p>
+<p>● 添加逻辑，动态更新NAT网络的MTU。</p>
+<p>● 修复/etc/wsl.conf generateResolvConf不能按预期工作的问题 [GH 6977]</p>
+<p>● 增加了进度指示器辅助功能，用于在转换过程中显示带有动画圆点的请等待信息，向用户显示WSL仍在运行。</p>
+<p>● 将wslhost.exe转换为win32应用程序。</p>
+<p>● 将wsl.exe &#8211;install切换为不需要-distribution参数。这个改动将wsl.exe &#8211;install切换为不需要-distribution参数，但保留了对它的支持，以避免破坏现有的脚本。</p>
+<p>● 添加wsl.exe &#8211;version命令</p>
+<p>● 在wsl.exe &#8211;status和wsl.exe &#8211;version中增加了Windows版本。</p>
+<p>● 清理了wsl.exe的无效参数处理，使语法错误更容易自我诊断。</p>
+<p>● 如果应用程序是通过瓦片启动的，在关闭控制台窗口前提示用户进行输入。</p>
+<p>● 为wslg.exe添加错误信息对话框</p>
+<p>● 简化不支持的命令行参数的打印。</p>
+<p>● 如果用户在已经安装了WSL的情况下运行wsl.exe -install，则打印一个更好的错误信息</p>
+<p>● 为不存在自定义内核和不支持自定义内核（ARM64）添加特殊的错误代码</p>
+<p>● 更新wsl.exe &#8211;update，以便与已解除的软件包一起工作&#8211;这就启动了商店页面。</p>
+<p>● 改进了localhost relay的稳定性和性能。</p>
+<p>● 额外的性能和稳定性改进。</p>
+<p>来源：IT之家</p>
+</div>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

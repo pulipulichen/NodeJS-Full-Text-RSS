@@ -100,7 +100,8 @@
               v-on:click="parseItemsPreview">
         PREVIEW
       </button>
-      <div class="ui segment" v-if='itemsPreview.length > 0'>
+      <div class="ui secondary segment" v-if='itemsPreview.length > 0'
+           id="toc">
         <ul>
           <li v-for="{title, link} in itemsPreview">
             <a v-bind:href="'#anchor' + encodeURIComponent(link)">{{ title }}</a>
@@ -108,11 +109,12 @@
         </ul>
       </div>
       <hr v-if='itemsPreview.length > 0' />
-      <div class="ui segment" 
+      <div class="ui raised segment" 
            v-for="{title, link, content} in itemsPreview"
            v-bind:id="'anchor' + encodeURIComponent(link)">
         <h1><a v-bind:href="link" target="_blank" v-html="title"></a></h1>
         <div v-html="content"></div>
+        <a class="ui fluid button" href="#toc">[回到目錄]</a>
       </div>
     </template>
   </div>

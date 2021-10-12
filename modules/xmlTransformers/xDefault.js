@@ -6,10 +6,8 @@ const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 
 const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
-const xPTT = async function ($, moduleCodesString) {
+const xDefault = async function ($, moduleCodesString) {
   await FeedItemEach($, async (item, i) => {
-    //console.log(i, item.find('title').text())
-    //item.remove()
     
     let link = FeedItemGetLink(item)
     let {content} = await fullTextParser(link, moduleCodesString)
@@ -20,4 +18,4 @@ const xPTT = async function ($, moduleCodesString) {
   return $
 }
 
-module.exports = xPTT
+module.exports = xDefault

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+    <title>OSCHINA 社区最新新闻</title>
+    <link>https://www.oschina.net/news/rss</link>
+    <description>OSCHINA - 中文开源技术交流社区</description>
+    <language>zh-CN</language>
+    <pubDate>Tue, 12 Oct 2021 18:20:31 +0800</pubDate>
+	<image>
+		<link>https://www.oschina.net</link>
+		<url>https://www.oschina.net/img/logo.gif</url>
+		<title>OsChina.NET</title>
+	</image>
+	<item>
+        <title>Intel 发布最新 DG2/Alchemist 的 Linux 补丁，最低要求为 64K 页面</title>
+        <link>https://www.oschina.net/news/163758/intel-dg2-alchemist-linux-patches</link>
+        <category>综合新闻</category>
+        <description><![CDATA[近日，Intel 发布了 DG2/Alchemist 显卡在 Linux 平台的最新系列补丁，主要调整了显卡对本地内存的处理方式。 DG2 的新特性是硬件只支持 64K 或以上的页面，就算在 64 位系统上使用 4K 内核页面的设备，如果要用于 DG2 和 i915 的独显，也需要支持 64K 或者更大的 GTT 页面大小。 除了强制专用显存的大小至少为 64K 外，...]]></description>
+        <pubDate>Tue, 12 Oct 2021 18:20:31 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163758/intel-dg2-alchemist-linux-patches</guid>
+    </item>
+	<item>
+        <title>中国工商银行浙江分行正式加入龙蜥社区，打造 Linux 操作系统平台</title>
+        <link>https://www.oschina.net/news/163741</link>
+        <category>综合新闻</category>
+        <description><![CDATA[近日，龙蜥社区（OpenAnolis）在理事成员单位综合评估中国工商银行股份有限公司浙江省分行公司的发展、行业口碑等多维度企业实力后，经过一致评审讨论，决定正式接受中国工商银行浙江省分行加入龙蜥社区，与行业生态伙伴共建龙蜥社区（OpenAnolis），共同打造 Linux 操作系统平台。 龙蜥社区本着开放、合作的宗旨：一方面...]]></description>
+        <pubDate>Tue, 12 Oct 2021 17:12:40 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163741</guid>
+    </item>
+	<item>
+        <title>云原生爱好者周刊：VMware Tanzu 社区版发布，无任何限制！</title>
+        <link>https://my.oschina.net/u/4197945/blog/5277153</link>
+        <category>综合新闻</category>
+        <description><![CDATA[VMware Tanzu 推出社区版 世界正在向基于 Kubernetes 构建的云原生基础设施发展。这就是 VMware 创建 VMware Tanzu 的原因。但是，仅有技术本身是不够的，如果没有开发人员、基础设施和平台操作员、站点可靠性工程师以及其他拥有使用技术所需知识和技能的人，即使有再好的技术也无济于事。 Tanzu 社区版包含了利用 Kube...]]></description>
+        <pubDate>Tue, 12 Oct 2021 15:55:42 +0800</pubDate>
+        <guid>https://my.oschina.net/u/4197945/blog/5277153</guid>
+    </item>
+	<item>
+        <title>Firefox 在地址栏展示“建议”广告引发争议</title>
+        <link>https://www.oschina.net/news/163658/ads-in-firefox-address-bar-suggestions</link>
+        <category>综合新闻</category>
+        <description><![CDATA[Firefox 近期上线的「Firefox Suggest」新功能引发了巨大争议。简单来说，这是一项会在地址栏展示“建议”广告的功能。启用后，用户在地址栏输入内容时会看到由「Firefox Suggest」提供的建议网站，如下图所示： 根据 Mozilla 的帮助页描述，用户在地址栏输入内容时便会触发 Firefox Suggest 功能，它会提供相关的网站建...]]></description>
+        <pubDate>Tue, 12 Oct 2021 08:53:08 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163658/ads-in-firefox-address-bar-suggestions</guid>
+    </item>
+	<item>
+        <title>微软或将在 Edge 96 中提供新的 PWA 管理中心</title>
+        <link>https://www.oschina.net/news/163655/edge-96-will-provide-new-pwa-hub</link>
+        <category>综合新闻</category>
+        <description><![CDATA[Edge 浏览器在其 Canary 测试频道中已经更新到了 96 版本，该版本推出了一个新的网络应用程序管理页面，将已安装的 PWA 作为应用程序列出。 渐进式网络应用程序（PWA）是一种通过 Web 交付的应用软件，使用常见的 Web 技术，包括 HTML、CSS 和 JavaScript 构建，可以在任何使用符合标准的浏览器的平台上运行，包括桌面和...]]></description>
+        <pubDate>Tue, 12 Oct 2021 08:35:45 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163655/edge-96-will-provide-new-pwa-hub</guid>
+    </item>
+	<item>
+        <title>张亮：为发展 ShardingSphere 创办 SphereEx，看好云上订阅制</title>
+        <link>https://my.oschina.net/u/4489239/blog/5276877</link>
+        <category>综合新闻</category>
+        <description><![CDATA[年初，张亮作为创始人，与潘娟联合创办了 SphereEx 公司，以开源项目 Apache ShardingSphere（后文简称 ShardingSphere）为基础，提供商业解决方案]]></description>
+        <pubDate>Tue, 12 Oct 2021 07:59:22 +0800</pubDate>
+        <guid>https://my.oschina.net/u/4489239/blog/5276877</guid>
+    </item>
+	<item>
+        <title>WSL 在 Windows 11 的应用商店中发布</title>
+        <link>https://www.oschina.net/news/163652/wsl-published-in-win11-store</link>
+        <category>综合新闻</category>
+        <description><![CDATA[微软在其 Windows 11 的应用商店用发布了 Windows Subsystem for Linux（WSL），用户可通过商店安装和更新 WSL，而无需修改 Windows 版本。 一般来说，WSL 是作为一个可选组件安装在 Windows中 的，这意味着启用它时需要重新启动电脑。在该可选组件中构成 WSL 逻辑的实际二进制文件是 Windows 镜像的一部分，并作为 Wind...]]></description>
+        <pubDate>Tue, 12 Oct 2021 07:50:54 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163652/wsl-published-in-win11-store</guid>
+    </item>
+	<item>
+        <title>使用卷积神经网络进行图像分类</title>
+        <link>https://www.paddlepaddle.org.cn/documentation/docs/zh/tutorial/cv_case/convnet_image_classification/convnet_image_classification.html</link>
+        <category>综合新闻</category>
+        <description><![CDATA[本示例教程将会演示如何使用飞桨的卷积神经网络来完成图像分类任务。这是一个较为简单的示例，将会使用一个由三个卷积层组成的网络完成cifar10数据集的图像分类任务。]]></description>
+        <pubDate>Tue, 12 Oct 2021 07:28:27 +0800</pubDate>
+        <guid>https://www.paddlepaddle.org.cn/documentation/docs/zh/tutorial/cv_case/convnet_image_classification/convnet_image_classification.html</guid>
+    </item>
+	<item>
+        <title>httpbeast —— Nim 实现的高性能多线程 HTTP 服务器</title>
+        <link>https://www.oschina.net/p/httpbeast</link>
+        <category>综合新闻</category>
+        <description><![CDATA[httpbeast 是使用 Nim 语言编写的高性能、多线程 HTTP 1.1 服务器，基于 Nimselectors模块构建，可以有效地利用 Linux 上的 epoll 和 macOS 上的 kqueue]]></description>
+        <pubDate>Tue, 12 Oct 2021 07:26:17 +0800</pubDate>
+        <guid>https://www.oschina.net/p/httpbeast</guid>
+    </item>
+	<item>
+        <title>每日一博 | 说一说 Web 端侧 AI</title>
+        <link>https://my.oschina.net/o2team/blog/5272350</link>
+        <category>综合新闻</category>
+        <description><![CDATA[本文为大家介绍什么是端智能，端智能的应用场景以及 Web 端侧实现 AI 的基本原理概念]]></description>
+        <pubDate>Tue, 12 Oct 2021 07:23:15 +0800</pubDate>
+        <guid>https://my.oschina.net/o2team/blog/5272350</guid>
+    </item>
+	<item>
+        <title>Gitee 推荐 | 移动端跨平台 UI 开发框架 vase</title>
+        <link>https://gitee.com/fanx-dev/vase</link>
+        <category>综合新闻</category>
+        <description><![CDATA[vase 是全新的移动端跨平台 UI 开发框架，一份代码同时编译运行在 Android，iOS，Web 浏览器，桌面端]]></description>
+        <pubDate>Tue, 12 Oct 2021 07:17:06 +0800</pubDate>
+        <guid>https://gitee.com/fanx-dev/vase</guid>
+    </item>
+	<item>
+        <title>ESLint v8.0.0 正式发布</title>
+        <link>https://www.oschina.net/news/163647/eslint-8-0-0-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[ESLint v8.0.0 已正式发布，此版本属于重大更新升级——增加了新功能，如支持 ES2022 语法，以及修复在旧版本中发现的错误，不过也引入了部分破坏性的变更。 更新要点 ESLint 的默认解析器和所有核心规则完全支持以下 ES2022 语法： Class public instance fields and private instance fields Class public static fie...]]></description>
+        <pubDate>Tue, 12 Oct 2021 07:08:22 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163647/eslint-8-0-0-released</guid>
+    </item>
+	<item>
+        <title>谷歌扩招 Fuchsia 人才，以扩展至更多设备平台</title>
+        <link>https://www.oschina.net/news/163643/google-jobs-fuchsia-expanding</link>
+        <category>综合新闻</category>
+        <description><![CDATA[谷歌发布的最新招聘信息显示，其正在寻求“Fuchsia Devices 高级软件工程师”人才；以致力于将 Fuchsia 操作系统从当前的 Nest Hub 设备上扩展到&quot;更多的智能设备和其他产品规格&quot;。 招聘内容指出，该公司已经在 2020 年成功的将 Fuchsia 推送到了数百万个谷歌智能显示器上，现在正是扩展到更多其他设备的时候。 尽管 Fuch...]]></description>
+        <pubDate>Tue, 12 Oct 2021 06:43:50 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163643/google-jobs-fuchsia-expanding</guid>
+    </item>
+	<item>
+        <title>Krita 5.0 公开测试第 2 版已经推出</title>
+        <link>https://www.oschina.net/news/163610/second-beta-for-krita-5-0</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[2021年10月11日 Krita 5.0 的第二个公开测试版正式发布。此次发布比原计划的要晚，原因是因为一些开发人员在长达一年半的隔离解封后迫不及待地线下碰头，却不小心得了重感冒。 Krita 公开测试第 2 版与第 1 版一样存在一些需要旧版用户注意的事项，请在充分了解情况后才进行使用。 公开测试第 2 版在第 1 版的基础上修复...]]></description>
+        <pubDate>Mon, 11 Oct 2021 20:52:08 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163610/second-beta-for-krita-5-0</guid>
+    </item>
+	<item>
+        <title>Android 12 正式发布 | 开发者们的全新舞台</title>
+        <link>https://my.oschina.net/androiddevs/blog/5276868</link>
+        <category>综合新闻</category>
+        <description><![CDATA[10 月 4 日，我们已经将源代码推送至 Android 开源项目 (AOSP)，并正式发布最新版本的 Android。Android 12 会在接下来的几周内推送至 Pixel 设备，并在今年晚些时候覆盖三星 Galaxy、一加、OPPO、realme、TECNO、Vivo 和小米设备。]]></description>
+        <pubDate>Mon, 11 Oct 2021 18:21:16 +0800</pubDate>
+        <guid>https://my.oschina.net/androiddevs/blog/5276868</guid>
+    </item>
+	<item>
+        <title>淘系前端架构周刊：ESLint v8.0.0 发布、React 成立</title>
+        <link>https://www.oschina.net/news/163547</link>
+        <category>综合新闻</category>
+        <description><![CDATA[:rolled_up_newspaper: News ESLint v8.0.0 发布 重要新特性： ESLint 默认的 parser 和核心规则已完全支持以下 ES2022 语法： 类公共实例字段和私有实例字段 类公共静态字段和私有静态字段 类私有实例方法和访问器 类私有静态方法和访问器 正则表达式匹配指标 Top-level await &etc. Release Blog：eslint-v8.0.0-relea...]]></description>
+        <pubDate>Mon, 11 Oct 2021 14:44:36 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163547</guid>
+    </item>
+	<item>
+        <title>Diboot 2.3.1 发布，易上手的企业级低代码开发平台</title>
+        <link>https://www.oschina.net/news/163545/diboot-2-3-1-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[Diboot是为开发者所打造的一个低代码开发平台，一个数倍提效的赋能工具。 Diboot不但拥有从前端到后端的整个基础架构，帮你更快开展项目。而且还拥有开发过程中的前后端一系列已有组件，助你少造轮子。还具有一套自动化工具，在开发过程中，前后端方面都可以帮您提质增效。 Diboot将致力于有效提高软件的代码质量、开发效...]]></description>
+        <pubDate>Mon, 11 Oct 2021 14:38:17 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163545/diboot-2-3-1-released</guid>
+    </item>
+	<item>
+        <title>云原生周报 | Linkerd 2.11 授权策略升级；国内首个《中国混沌工程调查报告》即将发布</title>
+        <link>https://www.oschina.net/news/163543</link>
+        <category>综合新闻</category>
+        <description><![CDATA[1 业界要闻 1. 2021年中国 KubeCon 虚拟大会日程公布 摘要：此活动超过 105 个环节，包括主题演讲和专题介绍，以及 16 个由项目维护者主持的演讲。从非技术和最终用户的案例研究到高级工程的深入研究，会议的内容适合所有对开源和云原生技术感兴趣的人。 2. 国内首个《中国混沌工程调查报告》即将发布！ 摘要：从目前披露...]]></description>
+        <pubDate>Mon, 11 Oct 2021 14:29:38 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163543</guid>
+    </item>
+	<item>
+        <title>J2PaaS 低代码平台，正式发布开源版！</title>
+        <link>https://www.oschina.net/news/163489</link>
+        <category>综合新闻</category>
+        <description><![CDATA[J2PaaS是吉鼎科技基于20年技术沉淀和项目经验而研发的综合性开发平台，覆盖了软件项目需求分析、设计、开发、测试、运行、维护与管理等全过程。 平台为开发者提供开发引擎、运行引擎、项目管理，实现低成本、高效率的软件系统定制开发及应用，是“把编程变简单，甚至不需要编程”作为核心理念， 打破传统开发用“代码编程...]]></description>
+        <pubDate>Mon, 11 Oct 2021 10:23:52 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163489</guid>
+    </item>
+	<item>
+        <title>FontOnLake 恶意软件通过合规的实用程序感染 Linux 系统</title>
+        <link>https://www.oschina.net/news/163475/linux-fontonlake-rootkit</link>
+        <category>综合新闻</category>
+        <description><![CDATA[近日来自 ESET 的研究人员发现了一个恶意软件，该恶意软件一直在通过合规的 Linux 实用程序来感染 Linux 系统。该恶意软件被称为 FontOnLake，得益于该恶意软件的先进设计，以及不断升级新的功能，使其能够在受感染的系统上持续保持活跃状态。 FontOnLake 有多个模块，它们相互作用，并能与恶意软件的操作者进行通信来窃...]]></description>
+        <pubDate>Mon, 11 Oct 2021 08:50:39 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163475/linux-fontonlake-rootkit</guid>
+    </item>
+	<item>
+        <title>IBM 为 Linux 内核提出新的命名空间机制</title>
+        <link>https://www.oschina.net/news/163474/ibm-linux-cpu-namespace</link>
+        <category>综合新闻</category>
+        <description><![CDATA[命名空间（Namespace）是 Linux 内核的一个特性，它对内核资源进行分区，使得一组进程看到一组资源，而另一组进程看到一组不同的资源。该功能的工作原理是为一组资源和进程使用相同的命名空间，但这些命名空间引用不同的资源。资源可能存在于多个空间中。此类资源的示例包括进程 ID、主机名、用户 ID、文件名以及一些与网...]]></description>
+        <pubDate>Mon, 11 Oct 2021 08:32:00 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163474/ibm-linux-cpu-namespace</guid>
+    </item>
+	<item>
+        <title>Windows 新版记事本泄露图：采用 Fluent Design、支持选择主题</title>
+        <link>https://www.oschina.net/news/163473/new-notepad-for-windows-11</link>
+        <category>综合新闻</category>
+        <description><![CDATA[根据 Windows Latest 的报道，微软员工在推特意外泄露了 Windows 新版记事本的截图。虽然原推文已在发布后被作者迅速删除，但截图仍被手速极快的网友保存了下来。 如下图所示，新版记事本的窗口和 Windows 11 一样引入了圆角设计，并将这种设计元素应用到菜单、弹出窗口和其他区域。 据介绍，新版记事本采用了微软自家的...]]></description>
+        <pubDate>Mon, 11 Oct 2021 08:31:37 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163473/new-notepad-for-windows-11</guid>
+    </item>
+	<item>
+        <title>英特尔为 Linux 图形驱动的 multi-tile 硬件支持做准备</title>
+        <link>https://www.oschina.net/news/163472/intel-linux-multi-tile</link>
+        <category>综合新闻</category>
+        <description><![CDATA[英特尔于近日发布了一个 Xe HP 方面相关的重要补丁系列，主要是围绕 multi-tile 支持的初步工作。实际上，英特尔近几个月一直在致力于 Xe HP 的 Linux 图形驱动程序堆栈的基础工作，其中还涵盖了独显/加速卡产品线。 英特尔 Xe-HP/Ponte Vecchio 引入了 multi-tile/chiplet 的设计理念。在此之前，英特尔 Linux 图形驱动...]]></description>
+        <pubDate>Mon, 11 Oct 2021 08:27:10 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163472/intel-linux-multi-tile</guid>
+    </item>
+	<item>
+        <title>PyStan —— 贝叶斯推理的软件包</title>
+        <link>https://www.oschina.net/p/pystan</link>
+        <category>综合新闻</category>
+        <description><![CDATA[PyStan 为 Stan 提供了一个 Python 接口，这是一个使用 No-U-Turn 采样器进行贝叶斯推理的软件包，这是Hamiltonian Monte Carlo 的一种变体。]]></description>
+        <pubDate>Mon, 11 Oct 2021 08:12:11 +0800</pubDate>
+        <guid>https://www.oschina.net/p/pystan</guid>
+    </item>
+	<item>
+        <title>Gitee 推荐 | 腾讯自主研发的 Android 插件框架 Shadow</title>
+        <link>https://gitee.com/Tencent/Shadow</link>
+        <category>综合新闻</category>
+        <description><![CDATA[Shadow是一个腾讯自主研发的Android插件框架，经过线上亿级用户量检验]]></description>
+        <pubDate>Mon, 11 Oct 2021 08:06:59 +0800</pubDate>
+        <guid>https://gitee.com/Tencent/Shadow</guid>
+    </item>
+	<item>
+        <title>每日一博 | 前端插件化架构的探索和实践</title>
+        <link>https://my.oschina.net/u/4273516/blog/4619459</link>
+        <category>综合新闻</category>
+        <description><![CDATA[babel插件、webpack插件、vue-cli插件，为啥这么多的优秀框架都是使用插件系统？插件化架构是什么？带来了什么好处？可以应用到什么场景呢？]]></description>
+        <pubDate>Mon, 11 Oct 2021 08:01:43 +0800</pubDate>
+        <guid>https://my.oschina.net/u/4273516/blog/4619459</guid>
+    </item>
+	<item>
+        <title>pgAdmin 4 v6.0 发布，PostgreSQL 的开源图形化管理工具</title>
+        <link>https://www.oschina.net/news/163465/pgadmin-4-6-0-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[pgAdmin 是 PostgreSQL 领先的开源图形化管理工具。pgAdmin 4 旨在满足新手和有经验的 Postgres 用户的需求，提供强大的图形界面，简化了数据库对象的创建、维护和使用。 pgAdmin 4 v6.0 版本正式发布。本次版本更新中值得注意的变化包括： 在 pgAdmin 4 中引入 ReactJS 框架 ReactJS 拥有强大的开发者社区和知名度，它的...]]></description>
+        <pubDate>Mon, 11 Oct 2021 07:31:48 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163465/pgadmin-4-6-0-released</guid>
+    </item>
+	<item>
+        <title>MKVToolNix v62.0.0 发布，MKV 视频编辑工具</title>
+        <link>https://www.oschina.net/news/163463/mkvtoolnix-62-0-0-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[MKVToolNix 62.0.0 发布了。MKVToolNix 是一套功能强大的 mkv 格式制作和处理的工具，支持将多种视频、音频、字幕等格式封装成 mkv 格式。 新功能和改进 MKVToolNix GUI：多路复用器：当添加新文件为附件时，GUI 会检查是否有其他同名的附件。如果有，GUI 会询问是否跳过受影响的文件，或者无论如何都要添加它们。现在在...]]></description>
+        <pubDate>Mon, 11 Oct 2021 07:17:31 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163463/mkvtoolnix-62-0-0-released</guid>
+    </item>
+	<item>
+        <title>Kodi 19.2 正式发布，开源媒体播放器</title>
+        <link>https://www.oschina.net/news/163461/kodi-19-2-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[Kodi 是由 XBMC 基金会开发的开源媒体播放器，原名 XBMC（最后一个以 XBMC 命名的版本是 13.2 Gotham，14.0 Helix 是第一个以 Kodi 命名的版本），Kodi 可以运行在多种操作系统和硬件平台。 它可以让用户播放本地或网络存储设备中的大多数视频、音乐、播客及各种常见的媒体文件。 该软件最初是为计划运行在 Xbox 上的，名...]]></description>
+        <pubDate>Mon, 11 Oct 2021 07:01:53 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163461/kodi-19-2-released</guid>
+    </item>
+	<item>
+        <title>Ampere Computing 将以每月为周期发布开源固件</title>
+        <link>https://www.oschina.net/news/163383/ampere-monthly-oss-firmware</link>
+        <category>综合新闻</category>
+        <description><![CDATA[今年年初，Ampere Computing 宣布将致力于支持固件生态系统中的开源，并为他们的 Ampere Altra 处理器和 Mount Jade 平台开发开源固件，如今他们承诺将每月发布一次开源固件。 Ampere Computing（以下简称 Ampere）是一家由 Renee James（英特尔前总裁） 在 2017 年于美国成立的半导体公司，总部设在圣克拉拉。专注于开发...]]></description>
+        <pubDate>Sun, 10 Oct 2021 08:44:33 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163383/ampere-monthly-oss-firmware</guid>
+    </item>
+	<item>
+        <title>IBM Research 创建了衡量 AI 的新基准：AGENT</title>
+        <link>https://www.oschina.net/news/163382/ibm-agent-evaluating-common-sense-in-ai</link>
+        <category>综合新闻</category>
+        <description><![CDATA[IBM Research 宣布创建了 AGENT，一个评估 AI 模型核心心理推理能力或常识的基准。“它将使我们能够构建和测试 AI 模型，以与人类相同的方式推理和学习其他思维。” IBM 研究软件工程师 Abishek Bhandwaldar 和 MIT 博士后 Tianmin Shu 在一篇博客中表示，“我们已经在构建可以推断心理状态、预测未来行为甚至与人类合作...]]></description>
+        <pubDate>Sun, 10 Oct 2021 08:29:05 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163382/ibm-agent-evaluating-common-sense-in-ai</guid>
+    </item>
+	<item>
+        <title>Trivy —— 使用 Go 语言开发的容器漏洞扫描工具</title>
+        <link>https://www.oschina.net/p/trivy</link>
+        <category>综合新闻</category>
+        <description><![CDATA[Trivy 是一个简单而且功能完整的容器漏洞扫描工具，特别使用用于持续集成。]]></description>
+        <pubDate>Sun, 10 Oct 2021 08:06:00 +0800</pubDate>
+        <guid>https://www.oschina.net/p/trivy</guid>
+    </item>
+	<item>
+        <title>Gitee 推荐 | 去中心化微服务框架 go-doudou</title>
+        <link>https://gitee.com/unionj-cloud/go-doudou</link>
+        <category>综合新闻</category>
+        <description><![CDATA[go-doudou（兜兜）是一个基于 gossip 协议和 OpenAPI 3.0 规范的去中心化微服务框架。它同时支持单体应用。只支持 restful 服务。]]></description>
+        <pubDate>Sun, 10 Oct 2021 08:03:09 +0800</pubDate>
+        <guid>https://gitee.com/unionj-cloud/go-doudou</guid>
+    </item>
+	<item>
+        <title>每日一博 | 最全总结！聊聊 Python 操作 PDF 的几种方法</title>
+        <link>https://my.oschina.net/u/4579171/blog/4591888</link>
+        <category>综合新闻</category>
+        <description><![CDATA[大家好，有关Python操作PDF的案例之前已经写过一个 PDF 批量合并，这个案例初衷只是给大家提供一个便利的脚本，并没有太多讲解原理,其中涉及的就是PDF处理很实用的模块PyPDF2，本文就好好剖析一下这个模块，主要将涉及 os 模块综合应用 glob 模块综合应用 PyPDF2 模块操作]]></description>
+        <pubDate>Sun, 10 Oct 2021 08:01:05 +0800</pubDate>
+        <guid>https://my.oschina.net/u/4579171/blog/4591888</guid>
+    </item>
+	<item>
+        <title>大规模微服务想上 K8s？用 Zadig 实在香！</title>
+        <link>https://my.oschina.net/koderover/blog/5275582</link>
+        <category>综合新闻</category>
+        <description><![CDATA[大家对 CI/CD 的概念并不陌生，但真实世界的 CI/CD 绝不是一段代码做「构建-&gt;部署-&gt;发布」那么简单，大部分情况下一个产品是由若干个微服务组成的，而微服务之间互相有依赖，不同角色基于不同测试环境进行协作。这里给大家介绍一个典型的微服务架构项目，如何用 Zadig 实现全流程自动化、持续交付。该项目包含 Python, ...]]></description>
+        <pubDate>Sun, 10 Oct 2021 07:07:37 +0800</pubDate>
+        <guid>https://my.oschina.net/koderover/blog/5275582</guid>
+    </item>
+	<item>
+        <title>Forest v1.5.5 版本发布，轻量级 HTTP 客户端框架</title>
+        <link>https://www.oschina.net/news/163331/forest-1-5-5-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[Forest v1.5.5 版本发布了，此版本主要支持了Protobuf，以及修改了若干Bug 项目介绍： Forest是一个高层的、极简的轻量级HTTP调用API框架。 相比于直接使用Httpclient您不再用写一大堆重复的代码了，而是像调用本地方法一样去发送HTTP请求。 文档和示例： 项目主页 仓库地址 中文文档 JavaDoc Demo工程 Forest有哪些特性...]]></description>
+        <pubDate>Sat, 09 Oct 2021 17:57:50 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163331/forest-1-5-5-released</guid>
+    </item>
+	<item>
+        <title>龙蜥社区助力中国联通完成核心业务 CentOS 试点替换</title>
+        <link>https://my.oschina.net/u/5265430/blog/5275276</link>
+        <category>综合新闻</category>
+        <description><![CDATA[2020 年 12 月 8 日，CentOS 社区宣布 CentOS 8 将于 2021 年底停止维护，CentOS 7 将于 2024 年 6 月 30 日停止维护，未来将不会提供稳定的 CentOS 系统。当前，中国联通集约业务系统 CentOS 使用占比超 90%，一旦停止稳定版本维护，将会对企业未来 IT 系统安全生产运营带来严重影响。中国联通软件研究院为提前应对 Ce...]]></description>
+        <pubDate>Sat, 09 Oct 2021 16:26:06 +0800</pubDate>
+        <guid>https://my.oschina.net/u/5265430/blog/5275276</guid>
+    </item>
+	<item>
+        <title>openGauss 社区成立 DCF SIG</title>
+        <link>https://www.oschina.net/news/163293</link>
+        <category>综合新闻</category>
+        <description><![CDATA[openGauss社区技术委员会决议通过openGauss社区成立DCF SIG的申请，openGauss社区正式成DCF SIG。 DCF，全称是Distributed Consensus Framework，即分布式一致性共识框架。DCF提供分布式一致性框架，使能openGauss DN数据复制和仲裁，实现高可用。 Maintainer 王焕卓 GiteeID:@wanghuanzhuo Email:wanghuanzhuo@huawei....]]></description>
+        <pubDate>Sat, 09 Oct 2021 13:54:36 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163293</guid>
+    </item>
+	<item>
+        <title>Apache APISIX 2.10.0 正式发布，带来第一个 LTS 版本！</title>
+        <link>https://www.oschina.net/news/163269/apisix-2-10-0-lts</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[Apache APISIX 2.10 版本正式发布！这是Apache APISIX 首个 LTS 版本，同时支持 10+ 个新功能和新插件。快速阅读了解 2.10.0 版本的新特性吧！ 里程碑：第一个 LTS 版本 对于 Apache APISIX 来说，本次发布的 2.10.0 是一个具有里程碑意义的版本，因为 Apache APISIX 2.10.0 是我们的第一个 LTS （Long Time Support）的...]]></description>
+        <pubDate>Sat, 09 Oct 2021 11:21:01 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163269/apisix-2-10-0-lts</guid>
+    </item>
+	<item>
+        <title>Jboot v3.11.2 发布，基于 JFinal 类似 Spring Cloud 的框架</title>
+        <link>https://www.oschina.net/news/163265/jboot-3-11-2-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[Jboot 一个更简单的分布式、微服务框架。 Jboot是一个基于 JFinal、JFinal-Undertow、Dubbo、Seata、Sentinel、ShardingSphere、Nacos 等开发的微服务框架，帮助开发者降低微服务、分布式开发门槛。爽爽开发，快乐生活。 到目前为止，Jboot 已经开源超过了 5 年的时间，迭代了 200+ 个版本，已经被超过 1000+ 公司在使用...]]></description>
+        <pubDate>Sat, 09 Oct 2021 11:05:43 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163265/jboot-3-11-2-released</guid>
+    </item>
+	<item>
+        <title>Polar Signals 开源 Parca 以优化代码并减少云账单</title>
+        <link>https://www.oschina.net/news/163238/polar-signals-open-sources-parca</link>
+        <category>综合新闻</category>
+        <description><![CDATA[Polar Signals 宣布推出 Parca 项目，一个开源的持续分析存储、查询引擎和一个基于 eBPF 的 profiler。旨在通过系统地测量代码性能将可观察性空间提升到一个新的水平，使每个人都能够优化他们的代码。目前，该项目尚处于非公开测试阶段。 同时 Polar Signals 还透露，其已经从 Alphabet 的风险投资部门 GV 和 Lightspeed...]]></description>
+        <pubDate>Sat, 09 Oct 2021 08:43:41 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163238/polar-signals-open-sources-parca</guid>
+    </item>
+	<item>
+        <title>Facebook 使用机器学习优化编译器</title>
+        <link>https://www.oschina.net/news/163236/facebook-compiler-gym</link>
+        <category>综合新闻</category>
+        <description><![CDATA[Facebook 近日宣布了 CompilerGym 项目，这是一个用于执行编译器优化任务的高性能、易于使用的强化学习 (Reinforcement Learning, RL) 环境库，用于解决生产环境中的编译器优化问题。 CompilerGym 由 Facebook 的 AI 团队在 OpenAI Gym 之上构建，并最终致力于帮助提高代码编译器的性能。他们在公告中表示：“CompilerG...]]></description>
+        <pubDate>Sat, 09 Oct 2021 08:30:10 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163236/facebook-compiler-gym</guid>
+    </item>
+	<item>
+        <title>索尼计划加速对开源/Linux 的贡献</title>
+        <link>https://www.oschina.net/news/163235/sony-open-source</link>
+        <category>综合新闻</category>
+        <description><![CDATA[索尼在上周的 Linux 基金会开源峰会/嵌入式 Linux 会议上介绍了该公司与开源/Linux 的历史，以及其自去年以来在&quot;加速&quot;开源贡献方面的举措。 索尼公司的 HiroyukiFukuchi 和 KazumiSato 在演讲中介绍了，在过去 20 年里他们在消费电子产品中使用开源软件代码以及 Linux 的方式，以及他们与开源的关系在此期间的演变。同时...]]></description>
+        <pubDate>Sat, 09 Oct 2021 08:21:49 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163235/sony-open-source</guid>
+    </item>
+	<item>
+        <title>GitHub Advisory Database 现已支持 npm audit</title>
+        <link>https://www.oschina.net/news/163234/github-advisory-database-npm-audit</link>
+        <category>综合新闻</category>
+        <description><![CDATA[供应链安全是当今软件开发中最重要的部分之一，GitHub 为了让开发者能够轻松实现安全开发，此前推出了一个名为 Advisory Database 的开放安全咨询数据库，它专注于为开发者提供高质量、可操作的漏洞信息。 继上个月 Advisory Database 扩展了对 Rust 编程语言的支持后（点击查看报道），Advisory Database 的覆盖范围扩大...]]></description>
+        <pubDate>Sat, 09 Oct 2021 08:17:57 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163234/github-advisory-database-npm-audit</guid>
+    </item>
+	<item>
+        <title>gnet —— 高性能和轻量级的网络库</title>
+        <link>https://www.oschina.net/p/gnet</link>
+        <category>综合新闻</category>
+        <description><![CDATA[gnet 是一个基于事件驱动的高性能和轻量级网络框架。它直接使用 epoll 和 kqueue 系统调用而非标准 Golang 网络包：net 来构建网络应用，它的工作原理类似两个开源的网络库：netty 和 libuv。]]></description>
+        <pubDate>Sat, 09 Oct 2021 08:10:13 +0800</pubDate>
+        <guid>https://www.oschina.net/p/gnet</guid>
+    </item>
+	<item>
+        <title>Gitee 推荐 | HTTP 反向代理中间件 Module Proxy</title>
+        <link>https://gitee.com/dyf029/module-proxy</link>
+        <category>综合新闻</category>
+        <description><![CDATA[Module Proxy是一款HTTP反向代理中间件，突出的靓点是将HTTP协议代理为TCP Socket协议，特别适合Web前后台分离的编程架构项目，使用Module Proxy可以让后端编程从HTTP技术体系中抽身出来，这将带来两个重要的改变：]]></description>
+        <pubDate>Sat, 09 Oct 2021 08:05:29 +0800</pubDate>
+        <guid>https://gitee.com/dyf029/module-proxy</guid>
+    </item>
+	<item>
+        <title>每日一博 | 遗传算法如何模拟大自然的进化？</title>
+        <link>https://my.oschina.net/u/4584682/blog/4561239</link>
+        <category>综合新闻</category>
+        <description><![CDATA[遗传算法（Genetic Algorithm，GA）的算法思想来源于达尔文的进化论学说和Mendel的遗传理论，本质是模拟种群个体不断进化以逐渐适应环境的过程。遗传算法通过自然选择、交叉、变异等遗传操作模拟种群进化过程，使种群中个体的优良基因得以保留，提高个体的适应能力，进而不断增强对环境的适应能力。见下表：...]]></description>
+        <pubDate>Sat, 09 Oct 2021 08:02:17 +0800</pubDate>
+        <guid>https://my.oschina.net/u/4584682/blog/4561239</guid>
+    </item>
+	<item>
+        <title>Delphi 11 "Alexandria" 发布</title>
+        <link>https://www.oschina.net/news/163225/delphi-11-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[Delphi 11, C++Builder 11 和 RAD Studio 11 已正式发布，代号 &quot;Alexandria&quot;，新版本引入了许多重要的新特性和增强功能，改进了 IDE 的用户体验，旨在提升开发者的生产力。例如支持高分屏（4k+ 显示器）；支持 Windows 11、Android 30 API 和 macOS 64 位 ARM M1 处理器；引入 C++ 格式化程序；增强的 Delphi 和 C++ 之间...]]></description>
+        <pubDate>Sat, 09 Oct 2021 07:20:10 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163225/delphi-11-released</guid>
+    </item>
+	<item>
+        <title>Opera 80 稳定版发布，新增阅读模式</title>
+        <link>https://www.oschina.net/news/163222/opera-80-stable-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[Opera 80 稳定版已正式发布，该版本为 Opera 引入了内置的阅读模式选项。Opera 将会在地址栏中放置一个「书本」的图标，用户可以根据需要打开并获得更纯粹的阅读体验。 除阅读模式以外，其他的更新内容包括： CHR-8590：将 Chromium 更新至 94.0.4606.61 DNA-95420：修复地址栏中的第一个建议经常不突出显示的问题 DNA-...]]></description>
+        <pubDate>Sat, 09 Oct 2021 07:02:13 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163222/opera-80-stable-released</guid>
+    </item>
+	<item>
+        <title>OneFlow v0.5.0 正式上线：四大特性实现轻快上手，高效、易用从此兼得</title>
+        <link>https://www.oschina.net/news/163122/oneflow-0-5-0-released</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[9月27日，在中关村论坛国际技术交易大会上，一流科技创始人&CEO袁进辉宣布深度学习框架OneFlow v0.5.0正式上线GitHub，他重点介绍了OneFlow v0.5.0的四大特性。自2020年7月31日开源以来，本次产品升级是OneFlow功能发布最重磅的版本。 高效、易用、完备是任一深度学习框架在未来竞争中胜出的必由之路。在用三年时间攻关最...]]></description>
+        <pubDate>Fri, 08 Oct 2021 11:25:22 +0800</pubDate>
+        <guid>https://www.oschina.net/news/163122/oneflow-0-5-0-released</guid>
+    </item>
+</channel>
+</rss>
+<!-- Generated by oschina (init:2[ms],page:25[ms],ip:140.119.100.196) //-->

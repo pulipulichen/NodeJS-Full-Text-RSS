@@ -1,4 +1,7 @@
 const ModuleManager = require('./../lib/ModuleManager/ModuleManager.js')
+const HasModuleType = require('./../lib/ModuleManager/HasModuleType.js')
+const AddModule = require('./../lib/ModuleManager/AddModule.js')
+
 const cheerio = require('cheerio')
 
 const FeedItemEach = require('./../lib/xmlTransformers/FeedItemEach.js')
@@ -24,6 +27,14 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
     
+    let match = await ModuleManager(item, moduleCodesString, 'f')
+    if (match === false) {
+      item.remove()
+      return false
+    }
+    
+    // ------------------------
+    
     let title = item.find('title').text()
     let titleNew = await ModuleManager(title, moduleCodesString, 't')
     //console.log(title, '||==||', titleNew)
@@ -41,6 +52,10 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   //console.log($('channel > item > title').text())
   
   // -----------------------------
+  
+  if (HasModuleType(moduleCodesString, 'x') === false) {
+    moduleCodesString = AddModule(moduleCodesString, 'xDefault')
+  }
   
   feedXML = await ModuleManager($, moduleCodesString, 'x')
   

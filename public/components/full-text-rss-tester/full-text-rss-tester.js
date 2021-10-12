@@ -193,16 +193,31 @@ module.exports = {
         let content = decodeEntities($entry.find('content').html())
         let link = $entry.find('link').attr('href')
         //console.log(i, ele.innerHTML)
-        console.log($entry.find('title').length, title, link)
+        //console.log($entry.find('title').length, title, link)
         this.itemsPreview.push({
           title,
           content,
           link
         })
       })
-      $xml.find('entry > content').each((i, ele) => {
+      
+      $xml.find('item').each((i, item) => {
+        let $item = $(item)
         
+        let title = $item.find('title').text()
+        let contentElement = $item.find('description')
+        //console.log(contentElement, contentElement.text(), contentElement.html())
+        let content = contentElement.text()
+        let link = $item.find('link').text()
+        //console.log(i, ele.innerHTML)
+        //console.log(title, link)
+        this.itemsPreview.push({
+          title,
+          content,
+          link
+        })
       })
+      
     },
     
     // -----------------------
