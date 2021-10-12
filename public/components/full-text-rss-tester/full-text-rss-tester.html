@@ -94,6 +94,26 @@
                 readonly
                 id="output"
                 onfocus="this.select()"></textarea>
+      <button type="button"
+              v-if="output !== '' && itemsPreview.length === 0"
+              class="ui fluid button"
+              v-on:click="parseItemsPreview">
+        PREVIEW
+      </button>
+      <div class="ui segment" v-if='itemsPreview.length > 0'>
+        <ul>
+          <li v-for="{title, link} in itemsPreview">
+            <a v-bind:href="'#anchor' + encodeURIComponent(link)">{{ title }}</a>
+          </li>
+        </ul>
+      </div>
+      <hr v-if='itemsPreview.length > 0' />
+      <div class="ui segment" 
+           v-for="{title, link, content} in itemsPreview"
+           v-bind:id="'anchor' + encodeURIComponent(link)">
+        <h1><a v-bind:href="link" target="_blank" v-html="title"></a></h1>
+        <div v-html="content"></div>
+      </div>
     </template>
   </div>
 </form>

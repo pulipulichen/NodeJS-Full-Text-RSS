@@ -1,5 +1,25 @@
 /* global ClipboardUtils, ipcRenderer, ElectronUtils, dayjs, FileUtils, shell */
 
+let decodeEntities = (function() {
+  // this prevents any overhead from creating the object each time
+  var element = document.createElement('div');
+
+  function decodeHTMLEntities (str) {
+    if(str && typeof str === 'string') {
+      // strip script/html tags
+      str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+      str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+      element.innerHTML = str;
+      str = element.textContent;
+      element.textContent = '';
+    }
+
+    return str;
+  }
+
+  return decodeHTMLEntities;
+})();
+
 module.exports = {
   data () {
     
@@ -18,7 +38,8 @@ module.exports = {
       output: '',
       outputTitle: '',
       outputContent: '',
-      preview: ''
+      preview: '',
+      itemsPreview: []
     }
   },
   components: {
@@ -100,6 +121,7 @@ module.exports = {
       this.outputTitle = ''
       this.outputContent = ''
       this.preview = ''
+      this.itemsPreview = []
       
       clearTimeout(this.queryTimer)
       this.queryTimer = setTimeout(() => {
@@ -155,6 +177,31 @@ module.exports = {
         this.output = ''
         this.outputTitle = data.title
         this.outputContent = data.content
+      })
+    },
+    
+    parseItemsPreview () {
+      let feed = this.output
+      
+      let xmlDoc = $.parseXML( feed )
+      let $xml = $( xmlDoc )
+      
+      $xml.find('entry').each((i, entry) => {
+        let $entry = $(entry)
+        
+        let title = $entry.find('title').text()
+        let content = decodeEntities($entry.find('content').html())
+        let link = $entry.find('link').attr('href')
+        //console.log(i, ele.innerHTML)
+        console.log($entry.find('title').length, title, link)
+        this.itemsPreview.push({
+          title,
+          content,
+          link
+        })
+      })
+      $xml.find('entry > content').each((i, ele) => {
+        
       })
     },
     

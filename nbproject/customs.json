@@ -22,9 +22,13 @@
     "v-on:click": {
       "context": "button"
     },
+    "v-bind:href": {
+      "context": "a"
+    },
     "v-html": {
       "context": "div"
     },
+    "v-for": {},
     "v-model": {
       "context": "input"
     }
