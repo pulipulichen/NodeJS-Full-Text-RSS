@@ -8,6 +8,8 @@ const DetectFeedModule = require('./DetectWebpageModule.js')
 const fullTextParser = async function (url, modules) {
   modules = DetectFeedModule(url, modules)
   
+  //console.log(modules)
+  
   let html = await HtmlLoader(url)
   
   let title = await htmlTitleParser(html, modules)
