@@ -4,6 +4,8 @@ const cheerio = require('cheerio')
 const FeedItemEach = require('./../lib/xmlTransformers/FeedItemEach.js')
 const DetectFeedModule = require('./DetectFeedModule.js')
 
+const format = require('xml-formatter')
+
 const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -------------------------------
@@ -44,7 +46,9 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -----------------------------
   
-  feedXML = $.html()
+  feedXML = format($.html(), {
+    collapseContent: true, 
+  })
   
   // -------------------------------
   
