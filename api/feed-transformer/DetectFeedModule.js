@@ -8,6 +8,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.startsWith('https://www.facebook.com/')) {
     addModules.push('xFB')
   }
+  if (channelLink.startsWith('https://www.ptt.cc/bbs/')) {
+    addModules.push('xPTT')
+  }
   
   moduleCodesString = AddModule(moduleCodesString, addModules)
   
