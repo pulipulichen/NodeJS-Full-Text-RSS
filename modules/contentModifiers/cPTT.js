@@ -28,7 +28,7 @@ const cPTT = function (content) {
       line = line.trim()
       //console.log(line.length)
       if (i > 0 && lines[i - 1].trim().length > 40) {
-        console.log(line.length, lines[i - 1].trim().length, line)
+        //console.log(line.length, lines[i - 1].trim().length, line)
         
         let lastLine = outputLines[outputLines.length - 1]
         lastLine = lastLine + line
