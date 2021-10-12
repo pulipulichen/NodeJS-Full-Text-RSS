@@ -13,7 +13,7 @@ const initBrowser = async function () {
   }
   
   browser = await puppeteer.launch({
-    headless: false,
+    //headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--window-size=800,600'],
     ignoreHTTPSErrors: true,
     

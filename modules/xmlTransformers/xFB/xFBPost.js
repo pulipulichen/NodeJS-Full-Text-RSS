@@ -68,6 +68,31 @@ const replaceTitleWithDesription = function (item) {
   item.find('title').text(title)
 }
 
+const bracketList = [
+  ['【', '】']
+]
+const removeTitleBracket = function (item) {
+  let title = item.find('title').text().trim()
+  
+  let changed = false
+  bracketList.forEach(pair => {
+    let posL = title.indexOf(pair[0])
+    let posR = title.indexOf(pair[1])
+    if (posL > -1 
+            && posR > -1
+            && posL < posR) {
+      title = title.split(pair[0]).join('')
+      title = title.split(pair[1]).join('')
+      title = title.trim()
+      changed = true
+    }
+  })
+  
+  if (changed) {
+    item.find('title').text(title)
+  }
+}
+
 const xFBPost = async function (item, i) {
   replaceTitleWithDesription(item)
   
@@ -77,6 +102,7 @@ const xFBPost = async function (item, i) {
   // ------------------------------
   wrapCDATA(item)
   
+  removeTitleBracket(item)
   
   //console.log(i, title)
 }

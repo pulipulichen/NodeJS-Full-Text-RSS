@@ -7,7 +7,7 @@ const xFBLinkParser = function ($) {
   
   let outputURL
   for (let j = 0; j < aList.length; j++) {
-    //console.log(j, aList.eq(j).attr('href'))
+    console.log(j, aList.eq(j).attr('href'))
     let href = aList.eq(j).attr('href')
     linkToURL = href.slice(href.indexOf('l.php?u=') + 8)
     linkToURL = decodeURIComponent(linkToURL)

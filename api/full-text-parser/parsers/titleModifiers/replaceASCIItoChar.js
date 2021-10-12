@@ -1,4 +1,7 @@
 module.exports = function (title) {
+  if (!title) {
+    return title
+  }
   
   // 課堂學習的最佳Chromebook&#65306;ASUS Chromebook Detachable CZ1 / The Best&#160;Learning partner:&#160;ASUS Chromebook Detachable CZ1 - 布丁布丁吃什麼&#65311;
   //console.log(title)
