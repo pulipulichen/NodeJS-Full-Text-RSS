@@ -46,16 +46,16 @@ const htmlTitleParser = async function (html, modules) {
   
   // --------------
   
-  console.log(1, title)
+  //console.log(1, title)
   
   title = MailToBlogger(title)
   
-  console.log(2, title)
+  //console.log(2, title)
   
   //title = decodeURIComponent(title)
   title = replaceASCIItoChar(title)
   
-  console.log(3, title)
+  //console.log(3, title)
   
   //console.log(title)
   
