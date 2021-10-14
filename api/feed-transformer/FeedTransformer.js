@@ -8,16 +8,6 @@ const FeedItemEach = require('./../lib/xmlTransformers/FeedItemEach.js')
 const DetectFeedModule = require('./DetectFeedModule.js')
 
 const format = require('xml-formatter')
-const iconv = require("iconv-lite");
-
-const mimeWordDecode = require('emailjs-mime-codec').mimeWordDecode
-//let str = '=?UTF-8?Q?See_on_=C3=B5hin_test?='
-//let str = '=?BIG-5?Q?=B2=C4=A4Q=A4=AD=B4=C1=AC=E3=B5o=B9q=A4l=B3=F8?='
-let str = '=?BIG-5?Q?=B8?='
-let a = mimeWordDecode(str)
-console.log(a)
-a = iconv.decode(Buffer(a), "utf8")
-console.log('iconv', a)
 
 const FeedTransformer = async function (feedXML, moduleCodesString) {
   

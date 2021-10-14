@@ -12,6 +12,8 @@ const htmlContentParser = async function (html, modules) {
   
   let selectors = [
     'section.article-content__editor:first',
+    'article .post-body',
+    '.post-body',
     'article:first',
     '#main-container',
     'body'

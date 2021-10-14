@@ -2,6 +2,7 @@ const decode = require('html-entities').decode
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
 const replaceASCIItoChar = require('./titleModifiers/replaceASCIItoChar.js')
+const MailToBlogger = require('./titleModifiers/MailToBlogger.js')
 
 /**
  * https://stackoverflow.com/a/64052494/6645399
@@ -45,8 +46,19 @@ const htmlTitleParser = async function (html, modules) {
   
   // --------------
   
+  console.log(1, title)
+  
+  title = MailToBlogger(title)
+  
+  console.log(2, title)
+  
   //title = decodeURIComponent(title)
   title = replaceASCIItoChar(title)
+  
+  console.log(3, title)
+  
+  //console.log(title)
+  
   title = decode(title)
 
   // -----------------
