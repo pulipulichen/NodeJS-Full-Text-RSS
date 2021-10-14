@@ -26,7 +26,7 @@ const xFB = async function ($, moduleCodesString) {
     let type = await xFBType(item, i)
     let fbLink = FeedItemGetLink(item)
     
-    console.log(i, type, fbLink, item.find('title').text())
+    //console.log(i, type, fbLink, item.find('title').text())
     
     
     if (type !== 'video' && type !== 'post') {

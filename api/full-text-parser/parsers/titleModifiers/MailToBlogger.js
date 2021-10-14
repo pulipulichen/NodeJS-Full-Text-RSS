@@ -9,7 +9,7 @@ const mimeWordDecode = require('emailjs-mime-codec').mimeWordDecode
 
 
 const tMailToBlogger = function (title) {
-  console.log(title)
+  //console.log(title)
   if (!title || typeof(title) !== 'string') {
     return title
   }
