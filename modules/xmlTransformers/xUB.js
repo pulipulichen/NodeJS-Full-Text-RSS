@@ -43,6 +43,21 @@ const appendPuncToSentence = function (sentence, punc) {
 
 const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
 
+function median(values){
+  if(values.length ===0) throw new Error("No inputs");
+
+  values.sort(function(a,b){
+    return a-b;
+  });
+
+  var half = Math.floor(values.length / 2);
+  
+  if (values.length % 2)
+    return values[half];
+  
+  return (values[half - 1] + values[half]) / 2.0;
+}
+
 const xUB = async function ($, moduleCodesString) {
   
   await FeedItemEach($, async (item, i) => {
@@ -129,14 +144,14 @@ const xUB = async function ($, moduleCodesString) {
       lastEndTime = Number($text.attr('start')) + Number($text.attr('dur'))
     }
     
-    let avg = average(intervals)
+    let base = median(intervals)
     //console.log(avg)
-    if (avg < 0.01) {
-      avg = 0.01
+    if (base < 0.02) {
+      base = 0.02
     }
     
-    let newHeaderInterval = avg * 3
-    let newParagraphInterval = avg * 1.5
+    let newHeaderInterval = base * 20
+    let newParagraphInterval = base * 10
     
     for (let j = 0; j < captionsLines.length; j++) {
       let $text = captionsLines.eq(j)
@@ -149,7 +164,8 @@ const xUB = async function ($, moduleCodesString) {
         let currentStart = Number($text.attr('start'))
         let hasNewLine = false
         //console.log((currentStart - lastEndTime), $text.text())
-        if ((currentStart - lastEndTime) > newHeaderInterval) {
+        if ((currentStart - lastEndTime) > newHeaderInterval
+                || $text.text().startsWith('【')) {
           //lines.push('')
           hasNewLine = true
         } 
@@ -160,7 +176,7 @@ const xUB = async function ($, moduleCodesString) {
           if (sentences === '') {
             sentences = $text.text()
           }
-          else if ((currentStart - lastEndTime) < 0.01) {
+          else if ((currentStart - lastEndTime) < 0.005) {
             sentences = appendPuncToSentence(sentences, '，') + $text.text()
           }
           else {
@@ -168,11 +184,11 @@ const xUB = async function ($, moduleCodesString) {
           }
           
           let minInterval = newParagraphInterval - (sentences.length * 0.001)
-          if (minInterval < 0.02) {
-            minInterval = 0.02
+          if (minInterval < 0) {
+            minInterval = 0
           }
-          if ((currentStart - lastEndTime) > minInterval) {
-            lines.push('<p>' + sentences + '。</p>')
+          if ((currentStart - lastEndTime) >= minInterval) {
+            lines.push('<p>' + appendPuncToSentence(sentences, '。') + '</p>')
             sentences = ''
           }
         }
