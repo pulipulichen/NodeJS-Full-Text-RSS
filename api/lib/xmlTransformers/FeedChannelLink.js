@@ -1,7 +1,11 @@
 const FeedChannelLink = function ($) {
   let link = $('channel > link:first')
   if (link.length === 1) {
-    return link.text().trim()
+    let href = link.text().trim()
+    if (href === '') {
+      href = link.attr('href').trim()
+    }
+    return href
   }
   
   link = $('feed > link:first')

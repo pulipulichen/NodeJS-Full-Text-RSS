@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/pvpoke/pvpoke/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/pvpoke/pvpoke/commits/master.atom"/>
+  <title>Recent Commits to pvpoke:master</title>
+  <updated>2021-10-13T22:44:40Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/dc0ce6a31eb8f7e3b593e6d8161db5f0e2bd8a12</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/dc0ce6a31eb8f7e3b593e6d8161db5f0e2bd8a12"/>
+    <title>
+        Updated Gourgeist and Pumpkaboo stats
+    </title>
+    <updated>2021-10-13T22:44:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated Gourgeist and Pumpkaboo stats
+
+Made 4 separate Pokemon entries for Gourgeist and Pumpkaboo sizes.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d3b931557149fc3afa95054ab5fd2d9e9f180012</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/d3b931557149fc3afa95054ab5fd2d9e9f180012"/>
+    <title>
+        Updated Great League top performers
+    </title>
+    <updated>2021-10-11T20:18:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated Great League top performers&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ceb12a43991aaa614455a54eb623d7f6dc6f34df</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/ceb12a43991aaa614455a54eb623d7f6dc6f34df"/>
+    <title>
+        Updated Ninetales moveset for Halloween
+    </title>
+    <updated>2021-10-10T20:36:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated Ninetales moveset for Halloween&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/28e19233a95cdf44ac40389b179c3e2d3a264c71</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/28e19233a95cdf44ac40389b179c3e2d3a264c71"/>
+    <title>
+        Restored Factions, updated Halloween movesets
+    </title>
+    <updated>2021-10-10T20:31:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Restored Factions, updated Halloween movesets&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9fc6b092a352f4b5f0a75ca07f3e6120690cc7ee</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/9fc6b092a352f4b5f0a75ca07f3e6120690cc7ee"/>
+    <title>
+        Fixed issue with Halloween Cup training
+    </title>
+    <updated>2021-10-08T17:31:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed issue with Halloween Cup training&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e409d1037c04280e3e3d71655ea49671deb2f54e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/e409d1037c04280e3e3d71655ea49671deb2f54e"/>
+    <title>
+        Updated Shadow Dusclops moveset
+    </title>
+    <updated>2021-10-07T16:13:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated Shadow Dusclops moveset&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3db80b440b65e55056a26ac45a18942accd63294</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/3db80b440b65e55056a26ac45a18942accd63294"/>
+    <title>
+        Added Shadow Ball Dusknoir
+    </title>
+    <updated>2021-10-07T15:58:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added Shadow Ball Dusknoir&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/65df2db94709d720dbec0649069faaded5643529</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/65df2db94709d720dbec0649069faaded5643529"/>
+    <title>
+        Updated Zarude default IV&#39;s
+    </title>
+    <updated>2021-09-30T20:36:49Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated Zarude default IV&amp;#39;s&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/94824c1bef6b60bf5aa9694d929f4156993ae560</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/94824c1bef6b60bf5aa9694d929f4156993ae560"/>
+    <title>
+        Added Zarude to ML meta group
+    </title>
+    <updated>2021-09-30T20:01:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added Zarude to ML meta group&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/25a701b61272ae4193f64aa7dd1f769acf3eac4e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/25a701b61272ae4193f64aa7dd1f769acf3eac4e"/>
+    <title>
+        Added Douse Genesect and Zarude
+    </title>
+    <updated>2021-09-30T19:59:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added Douse Genesect and Zarude&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c118e1ecd2d418c9a4324308d423c6f1c9b80875</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/c118e1ecd2d418c9a4324308d423c6f1c9b80875"/>
+    <title>
+        Fixed Meloetta moveset in Master League
+    </title>
+    <updated>2021-09-29T21:38:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed Meloetta moveset in Master League&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1c1524968e7129fc10a7794419b6e58519253ca1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/1c1524968e7129fc10a7794419b6e58519253ca1"/>
+    <title>
+        Lunar Cup training, fixed training team issue
+    </title>
+    <updated>2021-09-28T14:29:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Lunar Cup training, fixed training team issue
+
+Fixed issue with selecting training teams for 3v3 in 6v6 formats.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cef7317be3bdf76bed85f3b3bcaca34a45af955b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/cef7317be3bdf76bed85f3b3bcaca34a45af955b"/>
+    <title>
+        Fixed font color for select options
+    </title>
+    <updated>2021-09-27T20:20:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed font color for select options&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4b45105d28e51682f098efec41a0ac75fe933178</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/4b45105d28e51682f098efec41a0ac75fe933178"/>
+    <title>
+        Updated top performers for Master League and Little Jungle Cup
+    </title>
+    <updated>2021-09-26T21:28:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated top performers for Master League and Little Jungle Cup&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d532cf6769ee59c2acd22db07be089401c1943fb</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/d532cf6769ee59c2acd22db07be089401c1943fb"/>
+    <title>
+        Left aligned summary text
+    </title>
+    <updated>2021-09-26T15:32:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Left aligned summary text&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d26acb723200c64d6ef28373c5777b603bd0534e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/d26acb723200c64d6ef28373c5777b603bd0534e"/>
+    <title>
+        Additional update notes
+    </title>
+    <updated>2021-09-26T15:28:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Additional update notes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/64b0e0f4cc12ed337936f20010f05578b9aa3b02</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/64b0e0f4cc12ed337936f20010f05578b9aa3b02"/>
+    <title>
+        Update notes
+    </title>
+    <updated>2021-09-26T15:26:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update notes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a1de092c2edd78335f5ee55916d9f62ea837368a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/a1de092c2edd78335f5ee55916d9f62ea837368a"/>
+    <title>
+        Battle tweaks, styling adjustments
+    </title>
+    <updated>2021-09-26T15:17:59Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Battle tweaks, styling adjustments&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/19ca99eaf2d3883b8fedd55957e4cc75b524aeaf</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/19ca99eaf2d3883b8fedd55957e4cc75b524aeaf"/>
+    <title>
+        Timeline fixes
+    </title>
+    <updated>2021-09-26T04:11:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Timeline fixes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/50cf4cf5ad8d8f2c37abd11dea7c69ba3bce938e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/pvpoke/pvpoke/commit/50cf4cf5ad8d8f2c37abd11dea7c69ba3bce938e"/>
+    <title>
+        Fixed histogram styling conflicts
+    </title>
+    <updated>2021-09-26T04:03:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/46719444?s=30&amp;v=4"/>
+    <author>
+      <name>pvpoke</name>
+      <uri>https://github.com/pvpoke</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed histogram styling conflicts&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

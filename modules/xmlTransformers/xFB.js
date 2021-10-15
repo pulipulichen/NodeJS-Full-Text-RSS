@@ -1,4 +1,4 @@
-const cheerio = require('cheerio')
+//const cheerio = require('cheerio')
 
 const FeedItemEach = require('./../../api/lib/xmlTransformers/FeedItemEach.js')
 const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')

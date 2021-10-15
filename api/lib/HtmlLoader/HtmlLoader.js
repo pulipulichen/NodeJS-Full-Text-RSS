@@ -15,10 +15,10 @@ const asyncRequest = function (url) {
   })
 }
 
-const htmlLoader = async function (url) {
+const htmlLoader = async function (url, cacheMS) {
   return await nodeCache.get('html-loader', url, async () => {
     return await asyncRequest(url)
-  })
+  }, cacheMS)
 }
 
 module.exports = htmlLoader
