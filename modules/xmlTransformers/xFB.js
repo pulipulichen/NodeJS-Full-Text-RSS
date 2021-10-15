@@ -23,7 +23,7 @@ const xFB = async function ($, moduleCodesString) {
   
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
-    let type = await xFBType(item, i)
+    let type = await xFBType(item, moduleCodesString)
     let fbLink = FeedItemGetLink(item)
     
     //console.log(i, type, fbLink, item.find('title').text())

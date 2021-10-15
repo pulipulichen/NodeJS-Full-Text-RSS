@@ -1,4 +1,5 @@
 const GetFirstLine = require('./../../../api/lib/stringUtils/GetFirstLine.js')
+const linkifyHtml = require('linkify-html')
 
 const wrapCDATA = function (item) {
   let descriptionModified = false
@@ -69,6 +70,16 @@ const replaceTitleWithDesription = function (item) {
   title = '[P]' + title
   
   item.find('title').text(title)
+  
+  TransformDescriptionLink(description, item)
+}
+
+const TransformDescriptionLink = function (description, item) {
+  let linkifyDescription = linkifyHtml(description) 
+  //console.log(linkifyDescription)
+  if (description !== linkifyDescription) {
+    item.find('description').text(linkifyDescription)
+  }
 }
 
 const bracketList = [

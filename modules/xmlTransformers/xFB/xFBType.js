@@ -9,7 +9,7 @@ const xFBIsVideo = require('./xFBIsVideo.js')
 
 const FeedItemGetLink = require('./../../../api/lib/xmlTransformers/FeedItemGetLink.js')
 
-const xFBType = async function (item, i) {
+const xFBType = async function (item, moduleCodesString) {
   //let link = item.find('link:first').text().trim()
   let link = FeedItemGetLink(item)
   
@@ -22,7 +22,7 @@ const xFBType = async function (item, i) {
   let html = await htmlLoader(link)
   
   const $ = cheerio.load(html) // 載入 body
-  let outputURL = xFBLinkParser($)
+  let outputURL = xFBLinkParser($, moduleCodesString)
   
   if (outputURL) {
     if (outputURL.startsWith('https://m.facebook.com/')) {
