@@ -15,11 +15,15 @@ const DetectFeedModule = function ($, moduleCodesString) {
   else if (channelLink.startsWith('https://github.com/')) {
     addModules.push('xGitHub')
   }
+  else if (channelLink.startsWith('https://www.y' + 'out' + 'ube.com/')
+          || channelLink.startsWith('http://www.y' + 'out' + 'ube.com/')) {
+    addModules.push('xUB')
+  }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }
   
-  //console.log(addModules)
+  //console.log(channelLink, addModules)
   
   moduleCodesString = AddModule(moduleCodesString, addModules)
   

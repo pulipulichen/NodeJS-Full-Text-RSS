@@ -206,7 +206,25 @@ module.exports = {
         let $entry = $(entry)
         
         let title = $entry.find('title').text()
-        let content = decodeEntities($entry.find('content').html())
+        let content
+        let contentElement = $entry.find('content')
+        if (contentElement.length > 0) {
+          content = decodeEntities(contentElement.html())
+        }
+        else {
+          contentElement = $entry.find('description')
+          if (contentElement.length > 0) {
+            content = decodeEntities(contentElement.html())
+          }
+          else {
+            contentElement = $entry.find('media\\:description:first')
+            if (contentElement.length > 0) {
+              let contentHTML = contentElement.html()
+              //console.log(contentHTML)
+              content = contentHTML
+            }
+          }
+        }
         let link = $entry.find('link').attr('href')
         //console.log(i, ele.innerHTML)
         //console.log($entry.find('title').length, title, link)
