@@ -32,7 +32,15 @@ const closeBrowser = function () {
   
 }
 
-const PuppeterHTMLLoader = async function (url) {
+let maxCacheYear = 1
+let maxCacheTime = maxCacheYear * 365 * 24 * 60 * 60 * 1000
+
+
+const PuppeterHTMLLoader = async function (url, cacheMS) {
+  if (!cacheMS) {
+    cacheMS = maxCacheTime
+  }
+  
   return await nodeCache.get('puppeter-html-loader', url, async () => {
     while (isLoading) {
       await sleep(100)
@@ -85,7 +93,7 @@ const PuppeterHTMLLoader = async function (url) {
     closeBrowser()
     isLoading = false
     return html
-  })
+  }, cacheMS)
 }
 
 module.exports = PuppeterHTMLLoader
