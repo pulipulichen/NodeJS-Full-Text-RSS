@@ -1,3 +1,5 @@
+const cheerio = require('cheerio')
+
 const xFBLinkParser = function ($) {
   //console.log(html.indexOf('https://l.facebook.com/l.php'))
   let aList = $('._6ks a[href^="https://l.facebook.com/l.php?u=http"]')
