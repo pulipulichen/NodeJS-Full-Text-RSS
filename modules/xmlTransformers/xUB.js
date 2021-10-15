@@ -22,8 +22,26 @@ const preferCode = [
   'zh-Hans',
 ]
 
-const newHeaderInterval = 0.5
-const newParagraphInterval = 0.3
+const appendPuncToSentence = function (sentence, punc) {
+  if (sentence.endsWith('。')
+          || sentence.endsWith('？')
+          || sentence.endsWith('~')
+          || sentence.endsWith('～')
+          || sentence.endsWith('！')
+          || sentence.endsWith('...')
+          || sentence.endsWith('、')) {
+    return sentence
+  }
+  else {
+    return sentence + punc
+  }
+    
+}
+
+//const newHeaderInterval = 0.5
+//const newParagraphInterval = 0.3
+
+const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
 
 const xUB = async function ($, moduleCodesString) {
   
@@ -96,10 +114,29 @@ const xUB = async function ($, moduleCodesString) {
       //`<p><img src="https://img.youtube.com/vi/${videoID}/0.jpg" style="max-width:100%;height: auto;" /></p>`,
       `<p><img src="https://img.youtube.com/vi/${videoID}/1.jpg" style="max-width:100%;height: auto;" /><img src="https://img.youtube.com/vi/${videoID}/2.jpg" style="max-width:100%;height: auto;" /><img src="https://img.youtube.com/vi/${videoID}/3.jpg" style="max-width:100%;height: auto;" /></p>`,
     ]
-    let sentences = []
+    let sentences = ''
     let lastEndTime
     
     //console.log(captionsLines.length)
+    
+    let intervals = []
+    for (let j = 0; j < captionsLines.length; j++) {
+      let $text = captionsLines.eq(j)
+      if (j > 0) {
+        let currentStart = Number($text.attr('start'))
+        intervals.push(currentStart - lastEndTime)
+      }
+      lastEndTime = Number($text.attr('start')) + Number($text.attr('dur'))
+    }
+    
+    let avg = average(intervals)
+    //console.log(avg)
+    if (avg < 0.01) {
+      avg = 0.01
+    }
+    
+    let newHeaderInterval = avg * 3
+    let newParagraphInterval = avg * 1.5
     
     for (let j = 0; j < captionsLines.length; j++) {
       let $text = captionsLines.eq(j)
@@ -119,19 +156,30 @@ const xUB = async function ($, moduleCodesString) {
         
         if (hasNewLine === false) {
           //lines.push('<p>' + $text.text() + '</p>')
-          sentences.push($text.text())
+          //sentences.push($text.text())
+          if (sentences === '') {
+            sentences = $text.text()
+          }
+          else if ((currentStart - lastEndTime) < 0.01) {
+            sentences = appendPuncToSentence(sentences, '，') + $text.text()
+          }
+          else {
+            sentences = appendPuncToSentence(sentences, '。') + $text.text()
+          }
           
-          if ((currentStart - lastEndTime) > (newParagraphInterval - (sentences.length * 0.015))) {
-            if (sentences.length > 0) {
-              lines.push('<p>' + sentences.join('。') + '。</p>')
-              sentences = []
-            }
-          } 
+          let minInterval = newParagraphInterval - (sentences.length * 0.001)
+          if (minInterval < 0.02) {
+            minInterval = 0.02
+          }
+          if ((currentStart - lastEndTime) > minInterval) {
+            lines.push('<p>' + sentences + '。</p>')
+            sentences = ''
+          }
         }
         else {
           if (sentences.length > 0) {
-            lines.push('<p>' + sentences.join('。') + '。</p>')
-            sentences = []
+            lines.push('<p>' + appendPuncToSentence(sentences, '。') + '</p>')
+            sentences = ''
           }
           
           let sec = Math.floor(currentStart)
@@ -142,7 +190,7 @@ const xUB = async function ($, moduleCodesString) {
     }
     
     if (sentences.length > 0) {
-      lines.push('<p>' + sentences.join('。') + '。</p>')
+      lines.push('<p>' + appendPuncToSentence(sentences, '。') + '</p>')
     }
     
     //console.log(lines.length)
