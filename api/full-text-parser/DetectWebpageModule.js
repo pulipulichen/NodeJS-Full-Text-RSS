@@ -9,6 +9,15 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   else if (url.startsWith('http://www.linuxeden.com/')) {
     addModules.push('cLinuxEden')
   }
+  else if (url.startsWith('https://www.oschina.net/news/')) {
+    addModules.push('cOSChinaNews')
+  }
+  else if (url.startsWith('https://www.paddlepaddle.org.cn/documentation/docs/')) {
+    addModules.push('cPaddlePaddleDocumentation')
+  }
+  
+  
+  
    
   if (url.startsWith('https://www.facebook.com/')) {
     addModules.push('hFB')

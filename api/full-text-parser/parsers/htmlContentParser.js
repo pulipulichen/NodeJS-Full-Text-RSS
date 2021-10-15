@@ -5,6 +5,7 @@ const PrependProtocol = require('./contentModifiers/PrependProtocol.js')
 const PrependRelativeURI = require('./contentModifiers/PrependRelativeURI.js')
 const TrimEmptyElement = require('./contentModifiers/TrimEmptyElement.js')
 const RemoveComments = require('./contentModifiers/RemoveComments.js')
+const DelazyLoadingImg = require('./contentModifiers/DelazyLoadingImg.js')
 
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
@@ -19,6 +20,11 @@ const htmlContentParser = async function (html, modules, url) {
     'section.article-content__editor:first',
     'article .post-body',
     '.post-body',
+    '.article-detail > .content',
+    '.user-comment-block',  // https://www.eprice.com.tw/mobile/talk/4693/5681359/1/
+    '#git-readme .file_content.markdown-body:first',
+    '[itemprop="articleBody"] > div.section',
+    '[itemprop="articleBody"]',
     'article:first',
     '#main-container',
     'body'
@@ -43,6 +49,7 @@ const htmlContentParser = async function (html, modules, url) {
   content = PrependRelativeURI(content, url)
   content = TrimEmptyElement(content)
   content = RemoveComments(content)
+  content = DelazyLoadingImg(content)
   
   // -----------------
   // 模組處理

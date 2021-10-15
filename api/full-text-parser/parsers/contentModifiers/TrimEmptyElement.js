@@ -16,7 +16,8 @@ const TrimEmptyElement = function (html) {
   let children = $("body > div > *")
   for (let i = 0; i < children.length; i++) {
     let child = children.eq(i)
-    if (child.find('img:first').length > 0) {
+    let tagName = child.prop('tagName')
+    if (tagName === 'IMG' || child.find('img:first').length > 0) {
       continue
     }
     

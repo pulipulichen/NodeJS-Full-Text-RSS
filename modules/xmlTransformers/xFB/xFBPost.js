@@ -47,9 +47,11 @@ const replaceTitleWithDesription = function (item) {
   
   //console.log(i, 'xFBTitle', 1, title)
   let description = item.find('description').text().trim()
+  //console.log(title)
   if (description !== '') {
     if ( (title.startsWith('Photos from ') && title.endsWith(`'s post`))
-            // || (title.endsWith(`'s cover photo`)) 
+             || (title === 'Timeline Photos')
+             || title.endsWith('.mp4')
             ) {
       title = description
     }
