@@ -16,7 +16,7 @@ const fullTextParser = async function (url, modules) {
   let html = await ModuleManager(url, modules, 'h')
   
   let title = await htmlTitleParser(html, modules)
-  let content = await htmlContentParser(html, modules)
+  let content = await htmlContentParser(html, modules, url)
   
   return {
     title,

@@ -2,12 +2,13 @@
 const cheerio = require('cheerio')
 
 const PrependProtocol = require('./contentModifiers/PrependProtocol.js')
+const PrependRelativeURI = require('./contentModifiers/PrependRelativeURI.js')
 const TrimEmptyElement = require('./contentModifiers/TrimEmptyElement.js')
 const RemoveComments = require('./contentModifiers/RemoveComments.js')
 
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
-const htmlContentParser = async function (html, modules) {
+const htmlContentParser = async function (html, modules, url) {
   if (typeof(html) === 'object' && typeof(html.content) === 'string') {
     html = html.content
   }
@@ -39,6 +40,7 @@ const htmlContentParser = async function (html, modules) {
   // 基本處理
   
   content = PrependProtocol(content)
+  content = PrependRelativeURI(content, url)
   content = TrimEmptyElement(content)
   content = RemoveComments(content)
   

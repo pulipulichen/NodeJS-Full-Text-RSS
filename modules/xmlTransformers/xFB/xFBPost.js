@@ -46,11 +46,14 @@ const replaceTitleWithDesription = function (item) {
   
   //console.log(i, 'xFBTitle', 1, title)
   let description = item.find('description').text().trim()
-  if (title.startsWith('Photos from ') 
-          && title.endsWith(`'s post`)
-          && description !== '') {
-    title = description
+  if (description !== '') {
+    if ( (title.startsWith('Photos from ') && title.endsWith(`'s post`))
+            // || (title.endsWith(`'s cover photo`)) 
+            ) {
+      title = description
+    }
   }
+  
   //console.log(i, 'xFBTitle', 2, title)
   
   title = GetFirstLine(title)
