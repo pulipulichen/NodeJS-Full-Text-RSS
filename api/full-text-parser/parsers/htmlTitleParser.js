@@ -17,31 +17,40 @@ const parseTitle = (body) => {
 const cheerio = require('cheerio')
 
 const htmlTitleParser = async function (html, modules) {
+  
   let title
-  try {
-    title = parseTitle(html)
+  
+  
+  if (typeof(html) === 'object' && typeof(html.title) === 'string') {
+    title = html.title
   }
-  catch (e) {
-    const $ = cheerio.load(html); // 載入 body
-    
-    let selectors = [
-      'h1:first',
-      'h2:first',
-      'h3:first',
-      'h4:first',
-      'p:first'
-    ]
+  else {
+    //console.log('htmlTitleParser', html)
 
-    let title
-    for (let i = 0; i < selectors.length; i++) {
-      let element = $(selectors[i])
-      if (element.length === 0) {
-        continue
-      }
-
-      title = element.html().trim()
+    try {
+      title = parseTitle(html)
     }
-    
+    catch (e) {
+      const $ = cheerio.load(html); // 載入 body
+
+      let selectors = [
+        'h1:first',
+        'h2:first',
+        'h3:first',
+        'h4:first',
+        'p:first'
+      ]
+
+      let title
+      for (let i = 0; i < selectors.length; i++) {
+        let element = $(selectors[i])
+        if (element.length === 0) {
+          continue
+        }
+
+        title = element.html().trim()
+      }
+    }
   }
   
   // --------------

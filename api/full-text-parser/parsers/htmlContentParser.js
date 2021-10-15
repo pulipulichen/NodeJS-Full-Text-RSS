@@ -8,6 +8,10 @@ const RemoveComments = require('./contentModifiers/RemoveComments.js')
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
 const htmlContentParser = async function (html, modules) {
+  if (typeof(html) === 'object' && typeof(html.content) === 'string') {
+    html = html.content
+  }
+  
   const $ = cheerio.load(html); // 載入 body
   
   let selectors = [
