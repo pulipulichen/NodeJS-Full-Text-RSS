@@ -44,11 +44,16 @@ const xFB = async function ($, moduleCodesString) {
       
       let {title, content} = await fullTextParser(type, moduleCodesString)
       
-      item.find('title').text(title)
-      if (description !== '') {
-        content = '<![CDATA[' + `<a href="${fbLink}" target="_blank">Facebook Post</a><br>${description}` + '<hr />' + content + ']]>'
+      if (title !== '') {
+        item.find('title').text(title)
       }
-      item.find('description').text(content)
+      
+      if (content !== '') {
+        if (description !== '') {
+          content = '<![CDATA[' + `<a href="${fbLink}" target="_blank">Facebook Post</a><br>${description}` + '<hr />' + content + ']]>'
+        }
+        item.find('description').text(content)
+      }
       
       //console.log(i, content.slice(0, 200))
       //console.log(description)

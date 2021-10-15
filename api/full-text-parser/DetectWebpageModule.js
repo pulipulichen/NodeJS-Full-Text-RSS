@@ -13,6 +13,11 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   if (url.startsWith('https://www.facebook.com/')) {
     addModules.push('hFB')
   }
+  else if (url.startsWith('https://ani.gamer.com.tw/animeVideo.php?sn=')
+          || url.startsWith('https://www.youtube.com/watch?v=')
+          || url.startsWith('https://youtu.be/')) {
+    addModules.push('hSkip')
+  }
   else {
     addModules.push('hDefault')
   }

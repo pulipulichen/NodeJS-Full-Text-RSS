@@ -15,6 +15,14 @@ const fullTextParser = async function (url, modules) {
   //let html = await HtmlLoader(url)
   let html = await ModuleManager(url, modules, 'h')
   
+  if (html === '') {
+    console.log('[fullTextParser]', 'SKIP', url)
+    return {
+      title: '',
+      content: '',
+    }
+  }
+  
   let title = await htmlTitleParser(html, modules)
   let content = await htmlContentParser(html, modules, url)
   
