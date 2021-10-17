@@ -6,21 +6,14 @@ const FeedItemSetContent = require('./../../api/lib/xmlTransformers/FeedItemSetC
 const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 
 const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
-const HtmlLoader = require('./../../api/lib/HtmlLoader/HtmlLoader.js')
+
 const GetJSON = require('./../../api/lib/HtmlLoader/GetJSON.js')
 
+const xUBGetCaptions = require('./xUB/xUBGetCaptions.js')
+const xUBFormatDescription = require('./xUB/xUBFormatDescription.js')
+const xUBExtractSections = require('./xUB/xUBExtractSections.js')
 const UBVideoIDParser = require('./xUB/UBVideoIDParser.js')
 
-const captionCacheHour = 24
-const captionCacheTime = captionCacheHour * 60 * 60 * 1000
-
-const cheerio = require('cheerio')
-
-const preferCode = [
-  'zh-Hant',
-  'zh-HK',
-  'zh-Hans',
-]
 
 const appendPuncToSentence = function (sentence, punc) {
   if (sentence.endsWith('。')
@@ -68,75 +61,39 @@ const xUB = async function ($, moduleCodesString) {
     //let {content} = await fullTextParser(link, moduleCodesString)
     //let title = item.find('title').text().trim()
     let content = FeedItemGetContent(item)
+    //console.log('content', content)
     let link = FeedItemGetLink(item)
     let videoID = UBVideoIDParser(link)
     
+    let formattedContent = xUBFormatDescription(videoID, content)
+    //console.log(formattedContent)
+    //throw Error('todo')
+    
+    let sections = xUBExtractSections(content)
+    let captions = await xUBGetCaptions(videoID)
+    
+    let captionArticle = xUBBuildCaptionArticle(sections, captions)
+    
+    
     //console.log(link)
     
-    // --------------------------
-    
-    let listURL = `https://video.google.com/timedtext?v=${videoID}&type=list`
-    let listXML = await HtmlLoader(listURL, captionCacheTime)
-    
-    //console.log(listURL)
-    
-    const $list = cheerio.load(listXML, {
-      xmlMode: true,
-      decodeEntities: false
-    })
-    
-    let langCodeList = []
-    let tracks = $list('track[lang_code]')
-    for (let i = 0; i < tracks.length; i++) {
-      let code = tracks.eq(i).attr('lang_code')
-      langCodeList.push(code)
-    }
-    
-    let queryCode = langCodeList[0]
-    for (let i = 0; i < preferCode.length; i++) {
-      let code = preferCode[i]
-      if (langCodeList.indexOf(code) > -1) {
-        queryCode = code
-        break
-      }
-    }
-    
-    //console.log(queryCode, langCodeList)
-    
-    //console.log(queryCode)
-    
-    if (!queryCode) {
-      item.remove()
-      return false
-    }
-    
-    // --------------------------
-    
-    let captionURL = `https://video.google.com/timedtext?type=track&v=${videoID}&id=0&lang=${queryCode}`
-    const captionXML = await HtmlLoader(captionURL)
-    
-    const $caption = cheerio.load(captionXML, {
-      xmlMode: true,
-      decodeEntities: false
-    })
-    
-    //console.log(captionURL)
-    //console.log(captionXML)
-    
-    let captionsLines = $caption('transcript > text')
-    let lines = [
-      `<p><img src="http://i3.ytimg.com/vi/${videoID}/maxresdefault.jpg" style="max-width:100%;height: auto;" /></p>`,
-      //`<p><img src="https://img.youtube.com/vi/${videoID}/0.jpg" style="max-width:100%;height: auto;" /></p>`,
-      `<p><img src="https://img.youtube.com/vi/${videoID}/1.jpg" style="max-width:100%;height: auto;" /><img src="https://img.youtube.com/vi/${videoID}/2.jpg" style="max-width:100%;height: auto;" /><img src="https://img.youtube.com/vi/${videoID}/3.jpg" style="max-width:100%;height: auto;" /></p>`,
-    ]
+    let lines = []
     let sentences = ''
     let lastEndTime
+    let thumbnails = `<p>
+  <img src="http://i3.ytimg.com/vi/${videoID}/maxresdefault.jpg" style="max-width:100%;height: auto;" />
+</p>
+<p>
+  <img src="https://img.youtube.com/vi/${videoID}/1.jpg" style="max-width:100%;height: auto;" />
+  <img src="https://img.youtube.com/vi/${videoID}/2.jpg" style="max-width:100%;height: auto;" />
+  <img src="https://img.youtube.com/vi/${videoID}/3.jpg" style="max-width:100%;height: auto;" />
+</p>`
     
     //console.log(captionsLines.length)
     
     let intervals = []
     for (let j = 0; j < captionsLines.length; j++) {
-      let $text = captionsLines.eq(j)
+      let $text = captionsLines[j]
       if (j > 0) {
         let currentStart = Number($text.attr('start'))
         intervals.push(currentStart - lastEndTime)
@@ -212,7 +169,14 @@ const xUB = async function ($, moduleCodesString) {
     //console.log(lines.length)
     
     if (content && content !== '' && lines.length > 0) {
-      content = `${content}\n<hr />\n${lines.join('\n')}`
+      //if (i === 0) {
+      //  console.log(timestampify(content))
+      //}
+      
+      
+      //console.log(linkifyHTMLContent)
+      
+      content = `${thumbnails}${linkifyHTMLContent}\n<hr />\n${lines.join('\n')}`
       //console.log(1, content)
       FeedItemSetContent(item, content)
     }

@@ -205,7 +205,8 @@ module.exports = {
       $xml.find('entry').each((i, entry) => {
         let $entry = $(entry)
         
-        let title = $entry.find('title').text()
+        let title = $entry.find('title:first').text()
+        console.log(title)
         let content
         let contentElement = $entry.find('content')
         if (contentElement.length > 0) {

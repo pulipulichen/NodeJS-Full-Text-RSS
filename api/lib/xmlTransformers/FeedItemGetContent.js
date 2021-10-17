@@ -11,6 +11,13 @@ const FeedItemGetContent = function (item) {
   if (element.length === 1) {
     return decode(element.text())
   }
+  
+  element = item.find('media\\:description')
+  if (element.length === 1) {
+    return element.text()
+  }
+  
+  throw Error('Content is not found. ', item.html())
 }
 
 module.exports = FeedItemGetContent
