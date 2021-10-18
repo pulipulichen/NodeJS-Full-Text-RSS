@@ -15,7 +15,7 @@ const xUBBuildSectionFromCaptions = function (captions) {
   
   for (let i = 0; i < captions.length; i++) {
     let caption = captions[i]
-    console.log(i, caption.interval, caption.text)
+    //console.log(i, caption.interval, caption.text)
     if (caption.interval >= newHeaderInterval) {
       sections.push({
         header: caption.text,

@@ -85,12 +85,16 @@
       <input type="text" 
              v-model="outputTitle" 
              readonly
+             class="output-title"
+             v-if="outputTitle !== ''"
              onfocus="this.select()" />
       <textarea v-model="outputContent"
                 v-if="outputContent !== ''"
                 readonly
                 id="output"
                 onfocus="this.select()"></textarea>
+      
+      
       <button type="button"
               v-if="outputContent !== '' && preview === ''"
               class="ui fluid button"
@@ -102,12 +106,39 @@
         <h1>{{ outputTitle }}</h1>
         <div v-html="preview"></div>
       </div>
+      
+      <!-- ========================== -->
+      
+      <button type="button"
+              v-if="output !== '' && preview === ''"
+              class="ui fluid button"
+              v-on:click="preview = output">
+        PREVIEW
+      </button>
+      <div class="ui secondary segment" v-if='itemsPreview.length > 0'
+           id="toc">
+        <ul>
+          <li v-for="{title, link} in itemsPreview">
+            <a v-bind:href="'#anchor' + encodeURIComponent(link)">{{ title }}</a>
+          </li>
+        </ul>
+      </div>
+      <hr v-if='itemsPreview.length > 0' />
+      <div class="ui raised segment" 
+           v-for="{title, link, content} in itemsPreview"
+           v-bind:id="'anchor' + encodeURIComponent(link)">
+        <h1><a v-bind:href="link" target="_blank" v-html="title"></a></h1>
+        <div v-html="content"></div>
+        <a class="ui fluid button" href="#toc">[回到目錄]</a>
+      </div>
+      
     </template>
     <template v-if="mode === 'feed'">
       <textarea v-model="output"
                 readonly
                 id="output"
                 onfocus="this.select()"></textarea>
+      
       <button type="button"
               v-if="output !== '' && itemsPreview.length === 0"
               class="ui fluid button"

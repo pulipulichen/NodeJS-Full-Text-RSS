@@ -17,7 +17,7 @@ module.exports = {
   methods: {
     initDropdown () {
       let el = $(this.$el)
-      console.log(el)
+      //console.log(el)
       el.find('.ui.selection.dropdown')
         .dropdown({
           //clearable: true

@@ -1,5 +1,5 @@
 module.exports = {
-  cacheLimitHour: {
-    inputRSSParser: 4
+  FeedCrawler: {
+    cacheLimitHour: 4
   }
 }

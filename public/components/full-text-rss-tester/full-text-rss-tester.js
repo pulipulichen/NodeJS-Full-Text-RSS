@@ -141,8 +141,14 @@ module.exports = {
         
         clearTimeout(this.queryTimer)
         
-        if (this.mode === 'feed' || this.query.endsWith('.xml')) {
+        if (this.mode === 'feed') {
           this.loadQueryFeed()
+        }
+        else if (this.query.endsWith('.xml') 
+                || this.query.endsWith('.atom') 
+                || this.query.indexOf('/feeds/videos.xml?channel_id=') > -1 // https://www.youtube.com/feeds/videos.xml?channel_id=UCiWXd0nmBjlKROwzMyPV-Nw
+          ) {
+          this.loadQueryFeedFromURL()
         }
         else {
           this.loadQueryFullTextParser()
@@ -172,6 +178,26 @@ module.exports = {
           }
         }
       )
+    },
+    loadQueryFeedFromURL () {
+      this.outputTitle = ''
+      this.outputContent = ''
+      
+      //this.output = this.feedXML
+      if (this.modules === '') {
+        queryAPI = '/f/' + encodeURIComponent(this.query)
+      }
+      else {
+        queryAPI = '/f/' + this.modules + '/' + encodeURIComponent(this.query)
+      }
+      
+      $.get(queryAPI, (xml) => {
+        this.output = xml
+        //console.log(xml)
+        if (this.autoPreview) {
+          this.parseItemsPreview()
+        }
+      })
     },
     loadQueryFullTextParser () {
       let queryAPI
@@ -203,15 +229,17 @@ module.exports = {
       let $xml = $( xmlDoc )
       
       let entryList = $xml.find('feed > entry')
+      //console.log('entry list count', entryList.length)
       for (let i = 0; i < entryList.length; i++) {
         let $entry = $(entryList[i])
         
-        let title = $entry.find('title:first').text()
+        let title = $entry.find('title:first').text().trim()
         //console.log(title)
         let content
         let contentElement = $entry.find('content:first')
         if (contentElement.length > 0) {
           content = decodeEntities(contentElement.html())
+          //console.log(content)
         }
         else {
           contentElement = $entry.find('description:first')
@@ -236,6 +264,8 @@ module.exports = {
         //console.log(i, ele.innerHTML)
         //console.log($entry.find('title').length, title, link)
         //console.log(i, content.length)
+        
+        //console.log(i, title)
         
         this.itemsPreview.push({
           title,

@@ -1,35 +1,23 @@
-const nodeCache = require('./../lib/cache/node-cache-sqlite.js')
-//const HtmlLoader = require('./../lib/HtmlLoader/HtmlLoader.js')
-const htmlTitleParser = require('./parsers/htmlTitleParser.js')
-const htmlContentParser = require('./parsers/htmlContentParser.js')
+const FeedItemEach = require('./../../api/lib/xmlTransformers/FeedItemEach.js')
+const FeedItemGetLink = require('./../../api/lib/xmlTransformers/FeedItemGetLink.js')
+const FeedItemSetContent = require('./../../api/lib/xmlTransformers/FeedItemSetContent.js')
 
-const DetectFeedModule = require('./DetectWebpageModule.js')
+const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 
-const ModuleManager = require('./../lib/ModuleManager/ModuleManager.js')
+const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
-const fullTextParser = async function (url, modules) {
-  modules = DetectFeedModule(url, modules)
+const xPTT = async function ($, moduleCodesString) {
+  await FeedItemEach($, async (item, i) => {
+    //console.log(i, item.find('title').text())
+    //item.remove()
+    
+    let link = FeedItemGetLink(item)
+    let {content} = await fullTextParser(link, moduleCodesString)
+    //console.log(i, content)
+    FeedItemSetContent(item, content)
+  })
   
-  //console.log(modules)
-  
-  //let html = await HtmlLoader(url)
-  let html = await ModuleManager(url, modules, 'h')
-  
-  if (html === '') {
-    console.log('[fullTextParser]', 'SKIP', url)
-    return {
-      title: '',
-      content: '',
-    }
-  }
-  
-  let title = await htmlTitleParser(html, modules)
-  let content = await htmlContentParser(html, modules, url)
-  
-  return {
-    title,
-    content
-  }
+  return $
 }
 
-module.exports = fullTextParser
+module.exports = xPTT

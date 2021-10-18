@@ -14,7 +14,20 @@ const FeedItemSetContent = function (item, content) {
       content = content + ']]>'
     }
     
-    console.log(1)
+    //console.log(1)
+    return element.text(content)
+  } 
+  
+  element = item.find('item > description:first')
+  if (element.length === 1) {
+    if (!content.startsWith('<![CDATA[')) {
+      content = '<![CDATA[' + content
+    }
+    if (!content.endsWith(']]>')) {
+      content = content + ']]>'
+    }
+    
+    //console.log(1)
     return element.text(content)
   } 
   
@@ -23,7 +36,7 @@ const FeedItemSetContent = function (item, content) {
   element = item.find('entry > content:first')
   if (element.length === 1) {
     content = encode(content)
-    console.log(2)
+    //console.log(2)
     return element.text(content)
   }
   

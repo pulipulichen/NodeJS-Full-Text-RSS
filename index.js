@@ -36,6 +36,9 @@ fullTextParser(app)
 const FeedTransformer = require('./api/feed-transformer/route.js')
 FeedTransformer(app)
 
+const FeedCrawler = require('./api/feed-crawler/route.js')
+FeedCrawler(app)
+
 // ------------------------------------------------
 
 app.listen(port, () => {
