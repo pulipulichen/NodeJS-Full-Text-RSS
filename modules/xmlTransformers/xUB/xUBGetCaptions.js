@@ -22,7 +22,7 @@ const xUBGetCaptions = async function (videoID) {
 
   const $list = cheerio.load(listXML, {
     xmlMode: true,
-    decodeEntities: false
+    decodeEntities: true
   })
 
   let langCodeList = []
@@ -63,7 +63,7 @@ const xUBGetCaptions = async function (videoID) {
 
   const $caption = cheerio.load(captionXML, {
     xmlMode: true,
-    decodeEntities: false
+    decodeEntities: true
   })
 
   //console.log(captionURL)

@@ -16,6 +16,11 @@ const appendPuncToSentence = function (sentence, punc) {
 }
 
 const buildCaptionParagraph = function (captions) {
+  if (!captions) {
+    //throw Error('captions are not defined.')
+    return []
+  }
+  
   //console.log('buildCaptionParagraph', captions.length)
   if (captions.length === 1) {
     return [buildCaptionParagraphToArtcile(captions)]
