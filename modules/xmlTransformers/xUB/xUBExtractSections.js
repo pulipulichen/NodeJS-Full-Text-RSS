@@ -24,7 +24,7 @@ const xUBExtractSections = function (description) {
     
     output.push({
       timestamp,
-      second,
+      start: second,
       header
     })
   })

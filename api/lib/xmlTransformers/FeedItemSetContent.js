@@ -5,7 +5,7 @@ const FeedItemSetContent = function (item, content) {
     return false
   }
   
-  let element = item.find('description:first')
+  let element = item.find('entry > description:first')
   if (element.length === 1) {
     if (!content.startsWith('<![CDATA[')) {
       content = '<![CDATA[' + content
@@ -14,23 +14,36 @@ const FeedItemSetContent = function (item, content) {
       content = content + ']]>'
     }
     
-    element.text(content)
+    console.log(1)
+    return element.text(content)
   } 
   
   // -------------
   
-  element = item.find('content:first')
+  element = item.find('entry > content:first')
   if (element.length === 1) {
     content = encode(content)
-    element.text(content)
+    console.log(2)
+    return element.text(content)
   }
   
   // -------------
   
   element = item.find('media\\:description:first')
   if (element.length === 1) {
-    element.text(content)
+    //console.log(3, content)
+    if (!content.startsWith('<![CDATA[')) {
+      content = '<![CDATA[' + content
+    }
+    if (!content.endsWith(']]>')) {
+      content = content + ']]>'
+    }
+    
+    return element.text(content)
   }
+  
+  //console.log(item.html())
+  throw Error('selector is not found')
 }
 
 module.exports = FeedItemSetContent

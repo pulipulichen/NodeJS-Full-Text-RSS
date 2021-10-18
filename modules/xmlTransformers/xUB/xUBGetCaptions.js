@@ -88,12 +88,27 @@ const xUBGetCaptions = async function (videoID) {
       interval = info.start - lastEnd
     }
     
+    if (interval < 0) {
+      interval = 0
+    }
+    
     lastEnd = end
     
     info.end = end
     info.interval = interval
+    
+    if (i > 0) {
+      let prevCaption = captions[(captions.length - 1)]
+      prevCaption.nextInterval = interval
+    }
+    
+    //console.log(info.interval, info.start, info.text)
+    
     captions.push(info)
   }
+  
+  
+  //console.log('count captions: ', captions.length)
   
   return captions
 }

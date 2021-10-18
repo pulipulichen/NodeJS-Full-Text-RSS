@@ -202,25 +202,31 @@ module.exports = {
       let xmlDoc = $.parseXML( feed )
       let $xml = $( xmlDoc )
       
-      $xml.find('entry').each((i, entry) => {
-        let $entry = $(entry)
+      let entryList = $xml.find('feed > entry')
+      for (let i = 0; i < entryList.length; i++) {
+        let $entry = $(entryList[i])
         
         let title = $entry.find('title:first').text()
-        console.log(title)
+        //console.log(title)
         let content
-        let contentElement = $entry.find('content')
+        let contentElement = $entry.find('content:first')
         if (contentElement.length > 0) {
           content = decodeEntities(contentElement.html())
         }
         else {
-          contentElement = $entry.find('description')
+          contentElement = $entry.find('description:first')
           if (contentElement.length > 0) {
             content = decodeEntities(contentElement.html())
           }
           else {
             contentElement = $entry.find('media\\:description:first')
             if (contentElement.length > 0) {
-              let contentHTML = contentElement.html()
+              let contentHTML = contentElement.html().trim()
+              
+              //console.log(contentHTML.slice(-5))
+              if (contentHTML.endsWith(']]>')) {
+                contentHTML = contentHTML.slice(0, -3)
+              }
               //console.log(contentHTML)
               content = contentHTML
             }
@@ -229,12 +235,14 @@ module.exports = {
         let link = $entry.find('link').attr('href')
         //console.log(i, ele.innerHTML)
         //console.log($entry.find('title').length, title, link)
+        console.log(i, content.length)
+        
         this.itemsPreview.push({
           title,
           content,
           link
         })
-      })
+      }
       
       $xml.find('item').each((i, item) => {
         let $item = $(item)
