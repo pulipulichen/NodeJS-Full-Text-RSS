@@ -143,14 +143,19 @@ module.exports = {
         
         clearTimeout(this.queryTimer)
         
+        //console.log(this.query, this.query.startsWith('http://feeds.feedburner.com/') )
+        
         if (this.mode === 'feed') {
           this.loadQueryFeed()
         }
         else if (this.query.endsWith('.xml') 
                 || this.query.endsWith('.atom') 
                 || this.query.endsWith('.rss') 
+                || (this.query.indexOf('rssfeed') > -1 )
+                || this.query.startsWith('http://feeds.feedburner.com/') 
                 || this.query.indexOf('/feeds/videos.xml?channel_id=') > -1 // https://www.youtube.com/feeds/videos.xml?channel_id=UCiWXd0nmBjlKROwzMyPV-Nw
           ) {
+          
           this.loadQueryFeedFromURL()
         }
         else {

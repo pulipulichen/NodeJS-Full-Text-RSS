@@ -6,11 +6,11 @@ const cheerio = require('cheerio')
 
 const FeedItemEach = require('./../lib/xmlTransformers/FeedItemEach.js')
 const DetectFeedModule = require('./DetectFeedModule.js')
+const DetectDuplateItem = require('./DetectDuplateItem.js')
 
 const format = require('xml-formatter')
 
 const FeedTransformer = async function (feedXML, moduleCodesString) {
-  
   
   // -------------------------------
   // 先處理基本的
@@ -27,6 +27,12 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
+    
+    if (await DetectDuplateItem($, item)) {
+      return item.remove()
+    }
+    
+    // ------------------------
     
     let match = await ModuleManager({
       item,

@@ -19,6 +19,21 @@ const DelazyLoadingImg = function (html) {
     img.attr('src', img.attr('data-original'))
   }
   
+  // -------------------
+  
+  imgList = $(`img[src$="loading.gif"][data-original]`)
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    img.attr('src', img.attr('data-original'))
+  }
+  
+  // -------------------
+  
+  imgList = $(`img.lazyload[data-src]`)
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    img.attr('src', img.attr('data-src'))
+  }
   // ------------------------------
   
   return $
