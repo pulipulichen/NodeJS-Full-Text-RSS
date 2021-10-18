@@ -16,6 +16,8 @@ const xUBExtractSections = require('./xUB/xUBExtractSections.js')
 const xUBGroupCaptionsToSections = require('./xUB/xUBGroupCaptionsToSections.js')
 const xUBBuildCaptionArticle = require('./xUB/xUBBuildCaptionArticle.js')
 const xUBBuildSectionTOC = require('./xUB/xUBBuildSectionTOC.js')
+const xUBBuildSectionFromCaptions = require('./xUB/xUBBuildSectionFromCaptions.js')
+
 
 //const newHeaderInterval = 0.5
 //const newParagraphInterval = 0.3
@@ -41,6 +43,16 @@ const xUB = async function ($, moduleCodesString) {
     
     let sections = xUBExtractSections(content)
     let captions = await xUBGetCaptions(videoID)
+    
+    if (!captions || captions.length === 0) {
+      return item.remove()
+    }
+    
+    if (sections.length < 2) {
+      let result = xUBBuildSectionFromCaptions(captions)
+      sections = result.sections
+      captions = result.captions
+    }
     
     sections = xUBGroupCaptionsToSections(sections, captions)
 //    sections.forEach(s => {

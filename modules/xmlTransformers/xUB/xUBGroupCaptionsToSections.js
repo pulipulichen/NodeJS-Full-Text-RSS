@@ -1,6 +1,12 @@
 
 
 const xUBGroupCaptionsToSections = function (sections, captions) {
+  
+  if (!Array.isArray(captions) || captions.length === 0) {
+    //console.log(captions)
+    throw Error('captions are not defined.')
+  }
+  
   if (sections.length < 1) {
     return [{
         header: captions[0].text,

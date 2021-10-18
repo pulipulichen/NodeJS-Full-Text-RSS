@@ -50,6 +50,7 @@ const xUBGetCaptions = async function (videoID) {
   //console.log(queryCode)
 
   if (!queryCode) {
+    //console.log(langCodeList)
     //item.remove()
     return false
   }
@@ -57,6 +58,7 @@ const xUBGetCaptions = async function (videoID) {
   // --------------------------
 
   let captionURL = `https://video.google.com/timedtext?type=track&v=${videoID}&id=0&lang=${queryCode}`
+  //console.log(captionURL)
   const captionXML = await HtmlLoader(captionURL)
 
   const $caption = cheerio.load(captionXML, {

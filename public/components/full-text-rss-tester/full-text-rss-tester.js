@@ -235,7 +235,7 @@ module.exports = {
         let link = $entry.find('link').attr('href')
         //console.log(i, ele.innerHTML)
         //console.log($entry.find('title').length, title, link)
-        console.log(i, content.length)
+        //console.log(i, content.length)
         
         this.itemsPreview.push({
           title,

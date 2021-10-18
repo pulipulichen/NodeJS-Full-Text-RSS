@@ -1,3 +1,5 @@
+const xUBCalcBaseInterval = require('./xUBCalcBaseInterval.js')
+
 const appendPuncToSentence = function (sentence, punc) {
   if (sentence.endsWith('。')
           || sentence.endsWith('？')
@@ -13,49 +15,13 @@ const appendPuncToSentence = function (sentence, punc) {
   }
 }
 
-
-function median(values){
-  if (values.length === 0) {
-    return 0
-  }
-
-  values.sort(function(a,b){
-    return a-b;
-  });
-
-  var half = Math.floor(values.length / 2);
-  
-  if (values.length % 2)
-    return values[half];
-  
-  return (values[half - 1] + values[half]) / 2.0;
-}
-
-function getStandardDeviation (array) {
-  if (array.length === 0) {
-    return 0
-  }
-  
-  const n = array.length
-  const mean = array.reduce((a, b) => a + b) / n
-  return Math.sqrt(array.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n)
-}
-
 const buildCaptionParagraph = function (captions) {
   //console.log('buildCaptionParagraph', captions.length)
   if (captions.length === 1) {
     return [buildCaptionParagraphToArtcile(captions)]
   }
   
-  let intervals = captions.map(c => c.nextInterval)
-  intervals = intervals.splice(0, (intervals.length - 1))
-  //console.log(captions.splice(0, (captions.length - 1)).length)
-  //console.log(intervals.length)
-  //console.log('buildCaptionParagraph C', captions.length)
-  
-  let med = median(intervals)
-  let stdev = getStandardDeviation(intervals)
-  let newParagraphInterval = med + stdev
+  let newParagraphInterval = xUBCalcBaseInterval(captions)
   if (newParagraphInterval < 0.01) {
     newParagraphInterval = 0.01
   }
@@ -118,15 +84,18 @@ const mergeArticle = function (sections, videoID) {
 }
 
 const xUBBuildCaptionArticle = function (sections, videoID) {
+  //console.log(sections.length, videoID)
+  
   for (let i = 0; i < sections.length; i++) {
     let section = sections[i]
     let captions = section.captions
-    
+
     sections[i].paragraphs = buildCaptionParagraph(captions)
     //console.log(section.header, captions.length, sections[i].paragraphs.length)
   }
-  
+
   return mergeArticle(sections, videoID)
+  
 }
 
 module.exports = xUBBuildCaptionArticle
