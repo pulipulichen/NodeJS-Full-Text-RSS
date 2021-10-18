@@ -17,18 +17,19 @@ const tMailToBlogger = function (title) {
   // ------------------
   
   
-  let oldBig5Pos = title.indexOf('=?BIG-5?Q?=')
+  let oldBig5Pos = title.indexOf('=?BIG-5?Q?')
   if (oldBig5Pos > -1
           && title.endsWith('?=')) {
-    title = title.slice(0, oldBig5Pos) + '=?big5?Q?=' + title.slice(oldBig5Pos + 11)
+    title = title.slice(0, oldBig5Pos) + '=?big5?Q?' + title.slice(oldBig5Pos + 10)
   }
   
   // -----------------
-  
+  //console.log(title)
   if (title.indexOf('=?') > -1
-          && title.indexOf('?Q?=') > -1
+          && title.indexOf('?Q?') > -1
           && title.endsWith('?=')) {
     let pos = title.indexOf('=?')
+    
     let extractMimeWordCode = title.slice(pos)
     
     try {

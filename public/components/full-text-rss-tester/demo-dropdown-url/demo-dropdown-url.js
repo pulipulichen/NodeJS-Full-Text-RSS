@@ -23,5 +23,17 @@ module.exports = {
           //clearable: true
         })
     },
+    loadFeed (feedName) {
+      //console.log(feedName)
+      let modules = ''
+      let pos = feedName.lastIndexOf('|')
+      if (pos > -1) {
+        modules = feedName.slice(pos + 1)
+        feedName = feedName.slice(0, pos)
+      }
+      
+      this.$parent.query = feedName
+      this.$parent.modules = modules
+    }
   }
 }

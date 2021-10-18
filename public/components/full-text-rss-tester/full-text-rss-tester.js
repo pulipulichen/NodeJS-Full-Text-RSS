@@ -40,7 +40,8 @@ module.exports = {
       outputTitle: '',
       outputContent: '',
       preview: '',
-      itemsPreview: []
+      itemsPreview: [],
+      subURL: ''
     }
   },
   components: {
@@ -126,6 +127,7 @@ module.exports = {
       this.outputContent = ''
       this.preview = ''
       this.itemsPreview = []
+      this.subURL = ''
       
       clearTimeout(this.queryTimer)
       this.queryTimer = setTimeout(() => {
@@ -192,7 +194,13 @@ module.exports = {
         queryAPI = '/f/' + this.modules + '/' + encodeURIComponent(this.query)
       }
       
+      let baseURL = new URL(location.href)
+      this.subURL = baseURL.origin + queryAPI
+      
       $.get(queryAPI, (xml) => {
+        if (typeof(xml) === 'object') {
+          xml = (new XMLSerializer()).serializeToString(xml)
+        }
         this.output = xml
         //console.log(xml)
         if (this.autoPreview) {

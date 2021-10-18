@@ -97,20 +97,27 @@ const hFB = async function (url) {
   // 我需要取出原本的內容
   let $ = cheerio.load(html)
   let contentElement = $('._5rgt ._1-sk:first') 
-  //console.log(contentElement.length)
+  //console.log(0, contentElement.length)
   if (contentElement.length === 0) {
     contentElement = $('._5rgt > div')
+    //console.log(1, contentElement.length)
   }
-  else if (contentElement.length === 0) {
+  if (contentElement.length === 0) {
     contentElement = $('._9dj5 > ._9dgu > div')
+    //console.log(2, contentElement.length)
   }
+  if (contentElement.length === 0) {
+    contentElement = $('#u_0_13_PH')
+    //console.log(3, contentElement.length)
+  }
+  
   let content = contentElement.html()
 
   //console.log(link)
-  //console.log(content)
+  //console.log('[CONTENT]', content)
   
   if (link) {
-    //console.log(link)
+    //console.log('[LINK]', link)
     let linkedData = await fullTextParser(link)
     //console.log(linkedData)
     if (linkedData) {
@@ -122,7 +129,7 @@ const hFB = async function (url) {
         + '\n<hr />\n' + extendHTML
     }
   }
-  else {
+  else if (content) {
     let output = ExtractTitleFromContent(content)
     title = output.title
     content = output.content

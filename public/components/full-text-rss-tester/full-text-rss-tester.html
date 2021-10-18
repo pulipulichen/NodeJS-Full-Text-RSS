@@ -28,6 +28,7 @@
     v-show="mode === 'feed'"></demo-dropdown-feed>
   
   <demo-dropdown-url 
+    ref="DemoDropdownURL"
     v-show="mode === 'url'"></demo-dropdown-url>
   
   <!-- ================================== -->
@@ -76,12 +77,16 @@
     </label>
     
     <template v-if='mode === "url"'>
+      <template v-if="output !== ''">
       <textarea v-model="output"
                 v-if="output !== ''"
                 readonly
                 id="output"
                 onfocus="this.select()"></textarea>
-
+        <h2><a v-bind:href="subURL" style="word-break: break-all;" target="_blank">{{ subURL }}</a></h2>
+      </template>
+      
+      
       <input type="text" 
              v-model="outputTitle" 
              readonly

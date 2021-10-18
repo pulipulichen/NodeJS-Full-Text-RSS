@@ -6,15 +6,18 @@ const xFBLinkParser = function ($) {
   }
   
   //console.log(html.indexOf('https://l.facebook.com/l.php'))
-  let aList = $('._6ks a[href^="https://l.facebook.com/l.php?u=http"]')
+  let aList = $('._6ks:first a[href^="https://l.facebook.com/l.php?u=http"]')
   if (aList.length === 0) {
-    aList = $('._5rgu a[href^="https://lm.facebook.com/l.php?u=http"]')
+    aList = $('._5rgu:first a[href^="https://lm.facebook.com/l.php?u=http"]')
   }
+  
+  //console.log($.html())
   
   let outputURL
   for (let j = 0; j < aList.length; j++) {
-    //console.log(j, aList.eq(j).attr('href'))
-    let href = aList.eq(j).attr('href')
+    ///console.log(j, aList.eq(j).attr('href'), aList.eq(j).text())
+    let aTag = aList.eq(j)
+    let href = aTag.attr('href')
     linkToURL = href.slice(href.indexOf('l.php?u=') + 8)
     linkToURL = decodeURIComponent(linkToURL)
 
