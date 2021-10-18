@@ -25,6 +25,7 @@ const htmlContentParser = async function (html, modules, url) {
     '#git-readme .file_content.markdown-body:first',
     '[itemprop="articleBody"] > div.section',
     '[itemprop="articleBody"]',
+    'div.p_mainnew',
     'article:first',
     '#main-container',
     'body'

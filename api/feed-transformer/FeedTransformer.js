@@ -28,7 +28,10 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
     
-    let match = await ModuleManager(item, moduleCodesString, 'f')
+    let match = await ModuleManager({
+      item,
+      channel: $
+    }, moduleCodesString, 'f')
     if (match === false) {
       item.remove()
       return false

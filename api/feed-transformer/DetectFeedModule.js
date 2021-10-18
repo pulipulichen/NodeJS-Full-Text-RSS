@@ -18,6 +18,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   else if (channelLink.startsWith('https://github.com/')) {
     addModules.push('xGitHub')
   }
+  else if (channelLink.startsWith('https://soundcloud.com/')) {
+    addModules.push('xPodcast')
+  }
   else if (channelLink.startsWith('https://www.y' + 'out' + 'ube.com/')
           || channelLink.startsWith('http://www.y' + 'out' + 'ube.com/')) {
     addModules.push('xUB')

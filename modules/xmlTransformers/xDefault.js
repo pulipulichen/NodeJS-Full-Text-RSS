@@ -10,6 +10,7 @@ const xDefault = async function ($, moduleCodesString) {
   await FeedItemEach($, async (item, i) => {
     
     let link = FeedItemGetLink(item)
+    //console.log('xDefault', link)
     let {content} = await fullTextParser(link, moduleCodesString)
     //console.log(i, content)
     FeedItemSetContent(item, content)

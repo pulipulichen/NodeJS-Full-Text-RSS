@@ -146,6 +146,7 @@ module.exports = {
         }
         else if (this.query.endsWith('.xml') 
                 || this.query.endsWith('.atom') 
+                || this.query.endsWith('.rss') 
                 || this.query.indexOf('/feeds/videos.xml?channel_id=') > -1 // https://www.youtube.com/feeds/videos.xml?channel_id=UCiWXd0nmBjlKROwzMyPV-Nw
           ) {
           this.loadQueryFeedFromURL()

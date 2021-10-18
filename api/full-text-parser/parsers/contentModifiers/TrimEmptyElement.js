@@ -17,7 +17,10 @@ const TrimEmptyElement = function (html) {
   for (let i = 0; i < children.length; i++) {
     let child = children.eq(i)
     let tagName = child.prop('tagName')
-    if (tagName === 'IMG' || child.find('img:first').length > 0) {
+    
+    if (tagName === 'IMG' 
+            || tagName === 'BR'
+            || child.find('img:first').length > 0) {
       continue
     }
     
@@ -37,6 +40,11 @@ const TrimEmptyElement = function (html) {
     if (child.find('img:first').length > 0) {
       continue
     }
+    let tagName = child.prop('tagName')
+    if (tagName === 'BR') {
+      continue
+    }
+    
     
     if (child.text().trim() === '') {
       child.remove()
