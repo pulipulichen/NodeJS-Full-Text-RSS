@@ -23,7 +23,7 @@ const xUBBuildSectionFromCaptions = function (captions) {
     }
   }
   
-  console.log(sections)
+  //console.log(sections)
   
   return {
     sections,
