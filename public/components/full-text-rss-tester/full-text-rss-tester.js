@@ -153,6 +153,7 @@ module.exports = {
                 || this.query.endsWith('.rss') 
                 || (this.query.indexOf('rssfeed') > -1 )
                 || this.query.startsWith('http://feeds.feedburner.com/') 
+                || this.query.startsWith('https://www.youtube.com/channel/') 
                 || this.query.indexOf('/feeds/videos.xml?channel_id=') > -1 // https://www.youtube.com/feeds/videos.xml?channel_id=UCiWXd0nmBjlKROwzMyPV-Nw
           ) {
           
