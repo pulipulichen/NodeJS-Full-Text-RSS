@@ -1,25 +1,37 @@
 
 <form class="ui form segment">
   
-  <div class="field">
-    <label>
-      Mode
-    </label>
-    <div class="ui fluid buttons">
-      <button class="ui button"
-              type="button"
-              v-bind:class="{positive: (mode === 'feed')}"
-              v-on:click="mode = 'feed'">
-        Feed XML
-      </button>
-      <button class="ui button"
-          type="button"
-          v-bind:class="{positive: (mode === 'url')}"
-          v-on:click="mode = 'url'">
-        URL
-      </button>
+  <div class="fields">
+    <div class="twelve wide field">
+      <label>
+        Mode
+      </label>
+      <div class="ui fluid buttons">
+        <button class="ui button"
+                type="button"
+                v-bind:class="{positive: (mode === 'feed')}"
+                v-on:click="mode = 'feed'">
+          Feed XML
+        </button>
+        <button class="ui button"
+            type="button"
+            v-bind:class="{positive: (mode === 'url')}"
+            v-on:click="mode = 'url'">
+          URL
+        </button>
+      </div>
+    </div>
+    
+    <div class="four wide field">
+      <label>
+        Git
+      </label>
+      <a class="ui fluid button" href="/git-pull" target="_blank">
+        pull
+      </a>
     </div>
   </div>
+    
  
   <!-- ================================== -->
   
