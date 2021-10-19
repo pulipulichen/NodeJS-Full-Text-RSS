@@ -45,6 +45,9 @@ SubscribeList(app)
 const GitPull = require('./api/git-pull/route.js')
 GitPull(app)
 
+const OPMLParser = require('./api/opml-parser/route.js')
+OPMLParser(app)
+
 // ------------------------------------------------
 
 app.listen(port, () => {
