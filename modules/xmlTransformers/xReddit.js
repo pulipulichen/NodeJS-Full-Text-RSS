@@ -3,6 +3,7 @@ const FeedItemGetContent = require('./../../api/lib/xmlTransformers/FeedItemGetC
 const FeedItemSetContent = require('./../../api/lib/xmlTransformers/FeedItemSetContent.js')
 
 const xReddit = async function ($, moduleCodesString) {
+  /*
   await FeedItemEach($, async (item, i) => {
     let content = FeedItemGetContent(item)
     
@@ -13,6 +14,7 @@ const xReddit = async function ($, moduleCodesString) {
       FeedItemSetContent(item, content)
     }
   })
+  */
   return $
 }
 

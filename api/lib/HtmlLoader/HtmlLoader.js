@@ -1,5 +1,6 @@
 const request = require("request")
 const nodeCache = require('./../cache/node-cache-sqlite.js')
+const sleep = require('./../async/sleep.js')
 
 let isLoading = false
 const asyncRequest = function (url) {

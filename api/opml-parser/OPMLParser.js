@@ -5,6 +5,10 @@ const path = require('path')
 const cheerio = require('cheerio')
 
 const decode = require('html-entities').decode
+const urlExists = require("url-exists")
+
+const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
+const HtmlLoader = require('./../lib/HtmlLoader/HtmlLoader.js')
 
 const OPMLParser = async function () {
   let feedPath = path.resolve(__dirname, './feedly-c52706de-117c-4c58-b21d-75e935448738-2021-10-12.opml')
@@ -19,6 +23,7 @@ const OPMLParser = async function () {
   // 200 https://blog.miniasp.com/post/2008/03/26/syndication.axd
   // 404 https://www.zdnet.com.tw/rss/news_webapps.htm
   //console.log(await isURLAvailable(''))
+  //console.log(await isURLAvailable('https://www.zdnet.com.tw/rss/news_webapps.htm'))
   
   let urlList = await parseAvailableURL($)
   
@@ -35,7 +40,19 @@ const parseAvailableURL = async function ($) {
     let title = outline.attr('title').trim()
     let url = outline.attr('xmlUrl')
     
+    while (url.startsWith('http://exp-full-text-rss-2013.dlll.nccu.edu.tw/full-text-rss/makefulltextfeed.php?url=exp-full-text-rss-2013.dlll.nccu.edu.tw/full-text-rss/feed_reformator.php?url=')) {
+      url = url.slice(164).trim()
+    }
+    
+    while (url.startsWith('http://pulipuli.gopagoda.com/full-text-rss/makefulltextfeed.php?url=')) {
+      url = url.slice(68).trim()
+    }
+    
     while (url.startsWith('http://exp-full-text-rss-2013.dlll.nccu.edu.tw/full-text-rss/makefulltextfeed.php?url=')) {
+      url = url.slice(86).trim()
+    }
+    
+    while (url.startsWith('https://exp-full-text-rss-2013.dlll.nccu.edu.tw/full-text-rss/feed_reformator.php?url=')) {
       url = url.slice(86).trim()
     }
     
@@ -102,9 +119,34 @@ const parseAvailableURL = async function ($) {
       url = 'https://' + url
     }
     
-    //if (await isURLAvailable(url) === false) {
-    //  continue
-    //}
+    if (await isURLAvailable(url) === false) {
+      if (url.startsWith('https://')) {
+        url = 'http://' + url.slice(8)
+        
+        if (await isURLAvailable(url) === false) {
+          continue
+        }
+      }
+      else {
+        continue
+      }
+    }
+    
+    if (await isXML(url) === false) {
+      continue
+    }
+    
+    // -------------
+    
+    if (title.endsWith('(まるごとRSS)')) {
+      title = title.slice(0, -9).trim()
+    }
+    
+    if (title.endsWith(' [expanded by feedex.net]')) {
+      title = title.slice(0, -25).trim()
+    }
+    
+    // -------------
     
     urlList.push({
       title,
@@ -116,16 +158,72 @@ const parseAvailableURL = async function ($) {
 }
 
 const isURLAvailable = async function (url) {
-  if (url.startsWith('https://script.googleusercontent.com/macros/echo?')
-          || url.startsWith('http://page2rss.com/rss/')) {
-    return false
-  }
-  if (url.startsWith('http://www.emeraldinsight.com/')
-          || url.startsWith('https://www.youtube.com/feeds/')) {
+  //return true
+  return await NodeCacheSQLite.get('url-available', url, async () => {
+    if (url.startsWith('https://script.googleusercontent.com/macros/echo?')
+            || url.startsWith('http://page2rss.com/rss/')
+            || url.startsWith('https://twitrss.me/')
+            || url.startsWith('https://teacherlibrarian.lib.ntnu.edu.tw/')
+            || url.startsWith('https://www.facebook.com/feeds/page.php?format=')) {
+      return false
+    }
+    if (url.startsWith('http://www.emeraldinsight.com/')
+            || url.startsWith('https://www.youtube.com/feeds/')) {
+      return true
+    }
+
+    //return await urlExists(url) 
+    return new Promise((resolve) => {
+      let isTimeout = false
+      let isChecked = false
+      setTimeout(() => {
+        if (isChecked) {
+          return true
+        }
+        //process.stdout.write('timeout false')
+        console.log('timeout false', url)
+        resolve(false)
+        isTimeout = true
+      }, 10000)
+      
+      //process.stdout.write('Testing ' + url + '...')
+      console.log('Testing ' + url + '...')
+      urlExists(url, (_, exists) => {
+        // Handle result
+        
+        if (isTimeout) {
+          return false
+        }
+        //process.stdout.write(exists)
+        console.log(exists, url)
+        
+        resolve(exists)
+        isChecked = true
+      })
+    })
+  })
+}
+
+const isXML = async function (url) {
+  return await NodeCacheSQLite.get('is-xml', url, async () => {
+    if (url.startsWith('http://gphonefans.net/forum.php?mod=rss')
+            || url.startsWith('http://www.apprcn.com/feed')) {
+      return false
+    }
+
+    console.log('Check XML ' + url + ' ...')
+    let xml = await HtmlLoader(url, 24 * 60 * 60 * 1000)
+
+    if (!xml.startsWith('<?xml')) {
+      console.log(false)
+      return false
+    }
+    if (xml.startsWith('<!DOCTYPE html>')) {
+      return false
+    }
+    console.log(true)
     return true
-  }
-  
-  return true
+  })
 }
 
 module.exports = OPMLParser
