@@ -18,6 +18,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   else if (channelLink.startsWith('https://github.com/')) {
     addModules.push('xGitHub')
   }
+  else if (channelLink.startsWith('https://www.emerald.com/insight/publication/')) {
+    addModules.push('xEmerald')
+  }
   else if (channelLink.startsWith('https://soundcloud.com/')) {
     addModules.push('xPodcast')
   }

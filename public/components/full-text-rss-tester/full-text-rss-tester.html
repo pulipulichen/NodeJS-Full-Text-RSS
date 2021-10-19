@@ -95,8 +95,11 @@
                 readonly
                 id="output"
                 onfocus="this.select()"></textarea>
-        <h2><a v-bind:href="subURL" style="word-break: break-all;" target="_blank">{{ subURL }}</a></h2>
+        
       </template>
+      <h2 v-if="subURL && subURL !== ''">
+        <a v-bind:href="subURL" style="word-break: break-all;" target="_blank">{{ subURL }}</a>
+      </h2>
       
       
       <input type="text" 

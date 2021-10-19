@@ -33,6 +33,7 @@
     "sequelize": "^6.7.0",
     "sqlite3": "^5.0.2",
     "xml-beautifier": "^0.5.0",
-    "xml-formatter": "^2.4.1"
+    "xml-formatter": "^2.4.1",
+    "xmlchecker": "^0.1.0"
   }
 }

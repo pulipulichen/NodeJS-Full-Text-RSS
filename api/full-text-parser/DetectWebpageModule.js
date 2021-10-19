@@ -24,7 +24,8 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   }
   else if (url.startsWith('https://ani.gamer.com.tw/animeVideo.php?sn=')
           || url.startsWith('https://www.youtube.com/watch?v=')
-          || url.startsWith('https://youtu.be/')) {
+          || url.startsWith('https://youtu.be/')
+          || url.startsWith('https://www.emerald.com/')) {
     addModules.push('hSkip')
   }
   else if (url.startsWith('https://github.com/')) {

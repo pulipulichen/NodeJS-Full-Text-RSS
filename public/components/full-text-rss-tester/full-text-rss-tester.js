@@ -150,14 +150,35 @@ module.exports = {
         }
         else if (this.query.endsWith('.xml') 
                 || this.query.endsWith('.atom') 
+                || this.query.endsWith('.axd') 
                 || this.query.endsWith('.rss') 
+                || this.query.endsWith('/rss.php') 
+                || this.query.endsWith('/rss') 
+                || this.query.endsWith('/feed') 
+                || this.query.endsWith('/feed/') 
+                || this.query.endsWith('feed/') 
+                || this.query.endsWith('/showFeed?') 
+                || this.query.endsWith('?format=feed&type=rss') 
+                || this.query.endsWith('-feed') 
+                || this.query.endsWith('?feed=rss2') 
                 || (this.query.indexOf('rssfeed') > -1 )
                 || this.query.startsWith('http://feeds.feedburner.com/') 
+                || this.query.startsWith('http://feeds2.feedburner.com/') 
+                || this.query.startsWith('http://feedproxy.google.com/')
+                || this.query.startsWith('https://feedpress.me/')
+                || this.query.startsWith('http://feed.')
+                || this.query.startsWith('https://feed.')
+                || this.query.startsWith('http://feeds.')
                 || (this.query.indexOf('/feeds/posts/') > -1)
+                || (this.query.indexOf('/posts/atom/') > -1)
+                || (this.query.indexOf('/posts/rss/') > -1)
+                || (this.query.indexOf('/feeds/') > -1)
+                || (this.query.indexOf('/rssfeed/') > -1)
+                || (this.query.indexOf('/rss/') > -1)
+                || (this.query.indexOf('/feed/') > -1)
                 || this.query.startsWith('https://www.youtube.com/channel/') 
                 || this.query.indexOf('/feeds/videos.xml?channel_id=') > -1 // https://www.youtube.com/feeds/videos.xml?channel_id=UCiWXd0nmBjlKROwzMyPV-Nw
           ) {
-          
           this.loadQueryFeedFromURL()
         }
         else {
@@ -203,8 +224,9 @@ module.exports = {
       
       let baseURL = new URL(location.href)
       this.subURL = baseURL.origin + queryAPI
-      
+      //console.log(queryAPI)
       $.get(queryAPI, (xml) => {
+        //console.log(xml)
         if (typeof(xml) === 'object') {
           xml = (new XMLSerializer()).serializeToString(xml)
         }

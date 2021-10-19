@@ -1,8 +1,13 @@
 module.exports = [
   {
+    title: 'Database',
+    feedURL: 'https://www.emerald.com/insight/rss/2398-6263/latest',
+    //modules: ''
+  },
+  {
     title: '布丁布丁吃什麼？',
     feedURL: 'https://blog.pulipuli.info/feeds/posts/default',
-    modules: ''
+    //modules: ''
   },
   {
     title: '志祺七七 X 圖文不符',

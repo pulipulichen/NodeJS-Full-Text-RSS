@@ -1,4 +1,5 @@
 const encode = require('html-entities').encode
+const decode = require('html-entities').decode
 
 const FeedItemSetContent = function (item, content) {
   if (!content || content.trim() === '') {
@@ -20,6 +21,12 @@ const FeedItemSetContent = function (item, content) {
   
   element = item.find('item > description:first')
   if (element.length === 1) {
+    content = decode(content)
+    
+    while (content.indexOf('&nbsp;') > -1) {
+      content = content.split('&nbsp;').join(' ')
+    }
+    
     if (!content.startsWith('<![CDATA[')) {
       content = '<![CDATA[' + content
     }
