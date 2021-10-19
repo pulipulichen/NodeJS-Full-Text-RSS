@@ -56,8 +56,8 @@ module.exports = {
     // ------------------------
     
     loadFeeds () {
-      let urlOPML = '/opml'
-      let urlSub = '/subscription-list'
+      let urlOPML = './opml'
+      let urlSub = './subscription-list'
       
       $.getJSON(urlSub, (json) => {
         this.feeds = json
@@ -75,10 +75,10 @@ module.exports = {
       let encodedURL = encodeURIComponent(feed.feedURL)
       
       if (!feed.modules || feed.modules === '') {
-        return `/fc/` + encodedURL
+        return `./fc/` + encodedURL
       }
       else {
-        return `/fc/` + feed.modules + '/' + encodedURL
+        return `./fc/` + feed.modules + '/' + encodedURL
       }
     }
   }
