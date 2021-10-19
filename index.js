@@ -39,6 +39,9 @@ FeedTransformer(app)
 const FeedCrawler = require('./api/feed-crawler/route.js')
 FeedCrawler(app)
 
+const SubscribeList = require('./api/subscribe-list/route.js')
+SubscribeList(app)
+
 // ------------------------------------------------
 
 app.listen(port, () => {

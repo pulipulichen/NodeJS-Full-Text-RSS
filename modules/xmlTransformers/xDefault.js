@@ -1,13 +1,20 @@
 const FeedItemEach = require('./../../api/lib/xmlTransformers/FeedItemEach.js')
 const FeedItemGetLink = require('./../../api/lib/xmlTransformers/FeedItemGetLink.js')
 const FeedItemSetContent = require('./../../api/lib/xmlTransformers/FeedItemSetContent.js')
+const FeedItemGetContent = require('./../../api/lib/xmlTransformers/FeedItemGetContent.js')
 
 const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 
 const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
+const needToLoadFullText = 1500
+
 const xDefault = async function ($, moduleCodesString) {
   await FeedItemEach($, async (item, i) => {
+    if (FeedItemGetContent(item).length > needToLoadFullText) {
+      return true
+    }
+    
     
     let link = FeedItemGetLink(item)
     //console.log('xDefault', link)

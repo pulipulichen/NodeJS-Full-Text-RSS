@@ -1,8 +1,15 @@
 <div class="ui fluid search selection dropdown">
-    <input type="hidden" name="query" onchange='app.$refs.FullTextRSSTester.$refs.DemoDropdownURL.loadFeed(this.value)'>
+    <input type="hidden" name="query" onchange='app.$refs.FullTextRSSTester.$refs.DemoDropdownURL.loadURL(this.value)'>
     <i class="dropdown icon"></i>
     <div class="default text">Example</div>
     <div class="menu">
+      <div v-for="item in subscribeList"
+        class="positive item" 
+        v-bind:data-value="buildRequestAPIURL(item.feedURL, item.modules)">
+        <i class="rss square icon"></i>
+        {{ item.title }}
+      </div>
+      <div class="divider" v-if="subscribeList.length > 0"></div>
       <div class="item" data-value="http://www.phonedaily.com/news/rss/news.xml">
         feed dedup ePrice 比價王 綜合新聞
       </div>

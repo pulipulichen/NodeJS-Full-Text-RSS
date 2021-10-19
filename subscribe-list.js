@@ -1,7 +1,7 @@
 module.exports = [
   {
     title: '布丁布丁吃什麼？',
-    feedURL: 'http://rss.blog.pulipuli.info/',
+    feedURL: 'https://blog.pulipuli.info/feeds/posts/default',
     modules: ''
   },
   {

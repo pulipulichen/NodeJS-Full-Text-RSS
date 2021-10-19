@@ -4,7 +4,11 @@ module.exports = {
   data () {
     
     return {
+      subscribeList: []
     }
+  },
+  mounted () {
+    this.loadSubscribeList()
   },
 //  async mounted () {
 //    $(() => {
@@ -23,7 +27,14 @@ module.exports = {
           //clearable: true
         })
     },
-    loadFeed (feedName) {
+    loadSubscribeList () {
+      //console.log('/subscribe-list')
+      $.get('/subscribe-list', (list) => {
+        //console.log(list)
+        this.subscribeList = list
+      })
+    },
+    loadURL (feedName) {
       //console.log(feedName)
       let modules = ''
       let pos = feedName.lastIndexOf('|')
@@ -34,6 +45,13 @@ module.exports = {
       
       this.$parent.query = feedName
       this.$parent.modules = modules
+    },
+    buildRequestAPIURL (feedURL, modules) {
+      let url = feedURL
+      if (modules && modules !== '') {
+        url = url + '|' + modules
+      }
+      return url
     }
   }
 }
