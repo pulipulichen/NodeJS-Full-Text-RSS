@@ -61,6 +61,12 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   //console.log($('channel > item > title').text())
   
+  $('channel:first').append(`<image>
+    <url>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</url>
+    <title>example image</title>
+    <link>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</link>
+  </image>`)
+  
   // -----------------------------
   
   if (HasModuleType(moduleCodesString, 'x') === false) {
