@@ -68,8 +68,8 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     <link>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</link>
   </image>`)
    */
-  $('feed:first').append(`<icon>https://www.iconninja.com/ico/128/pencil-251548.ico</icon>`)
-  $('feed:first').append(`<atom:icon>https://www.iconninja.com/ico/128/pencil-251548.ico</atom:icon>`)
+  $('feed:first').append(`<icon>https://iconarchive.com/download/i46591/saki/nuoveXT/Apps-demo.ico</icon>`)
+  $('feed:first').append(`<atom:icon>https://iconarchive.com/download/i38830/google/chrome/Google-Chrome.ico</atom:icon>`)
   $('feed:first').append(`<logo>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</logo>`)
   
   // -----------------------------
