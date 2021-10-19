@@ -39,8 +39,8 @@ FeedTransformer(app)
 const FeedCrawler = require('./api/feed-crawler/route.js')
 FeedCrawler(app)
 
-const SubscribeList = require('./api/subscribe-list/route.js')
-SubscribeList(app)
+const SubscriptionList = require('./api/subscription-list/route.js')
+SubscriptionList(app)
 
 const GitPull = require('./api/git-pull/route.js')
 GitPull(app)

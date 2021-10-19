@@ -29,7 +29,7 @@ module.exports = {
     },
     loadSubscribeList () {
       //console.log('/subscribe-list')
-      $.get('/subscribe-list', (list) => {
+      $.get('/subscription-list', (list) => {
         //console.log(list)
         this.subscribeList = list
       })

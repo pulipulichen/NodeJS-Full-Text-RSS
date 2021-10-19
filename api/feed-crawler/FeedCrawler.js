@@ -9,7 +9,7 @@ let parseIsLoading = false
 let cacheExpireHour = require('./../../config.js').cacheLimitHour.inputRSSParser
 */
 const nodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
-const cacheExpireHour = require('./../../config.js').FeedCrawler.cacheLimitHour
+const cacheExpireHour = require('./../../mount/config.js').FeedCrawler.cacheLimitHour
 const cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
 
 const XMLLoader = require('./../lib/HtmlLoader/XMLLoader.js')

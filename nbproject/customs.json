@@ -12,6 +12,11 @@
         "v-show": {}
       }
     },
+    "subscribe-list": {
+      "attributes": {
+        "ref": {}
+      }
+    },
     "demo-dropdown": {},
     "full-text-rss-tester": {},
     "app-header": {}
