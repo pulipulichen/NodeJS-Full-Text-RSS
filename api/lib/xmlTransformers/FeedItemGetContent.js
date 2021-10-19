@@ -17,7 +17,10 @@ const FeedItemGetContent = function (item) {
     return element.text()
   }
   
-  throw Error('Content is not found. ', item.html())
+  //console.log(item.html())
+  //throw Error('Content is not found. ', item.html())
+  //console.log('[INFO] Content is not found. ' + item.html())
+  return ''
 }
 
 module.exports = FeedItemGetContent

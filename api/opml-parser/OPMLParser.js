@@ -116,8 +116,13 @@ const parseAvailableURL = async function ($) {
 }
 
 const isURLAvailable = async function (url) {
-  if (url.startsWith('https://script.googleusercontent.com/macros/echo?')) {
+  if (url.startsWith('https://script.googleusercontent.com/macros/echo?')
+          || url.startsWith('http://page2rss.com/rss/')) {
     return false
+  }
+  if (url.startsWith('http://www.emeraldinsight.com/')
+          || url.startsWith('https://www.youtube.com/feeds/')) {
+    return true
   }
   
   return true

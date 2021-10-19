@@ -1,8 +1,10 @@
 const AddModule = require('./../lib/ModuleManager/AddModule.js')
 const FeedChannelLink = require('./../lib/xmlTransformers/FeedChannelLink.js')
+const FeedFeedGeneratorURI = require('./../lib/xmlTransformers/FeedFeedGeneratorURI.js')
 
 const DetectFeedModule = function ($, moduleCodesString) {
   let channelLink = FeedChannelLink($)
+  let feedGeneratorURI = FeedFeedGeneratorURI($)
   //console.log(channelLink)
   // $('channel > link:first').text().trim()
   //console.log(channelLink)
@@ -24,6 +26,12 @@ const DetectFeedModule = function ($, moduleCodesString) {
   else if (channelLink.startsWith('https://soundcloud.com/')) {
     addModules.push('xPodcast')
   }
+  else if (channelLink.startsWith('https://www.reddit.com/r/')) {
+    addModules.push('xReddit')
+  }
+//  else if (feedGeneratorURI === 'https://www.joomla.org') {
+//    addModules.push('xSkip')
+//  }
   else if (channelLink.startsWith('https://www.y' + 'out' + 'ube.com/')
           || channelLink.startsWith('http://www.y' + 'out' + 'ube.com/')) {
     addModules.push('xUB')

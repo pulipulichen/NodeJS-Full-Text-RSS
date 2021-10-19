@@ -12,7 +12,7 @@ const nodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 const cacheExpireHour = require('./../../config.js').FeedCrawler.cacheLimitHour
 const cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
 
-const HtmlLoader = require('./../lib/HtmlLoader/HtmlLoader.js')
+const XMLLoader = require('./../lib/HtmlLoader/XMLLoader.js')
 const FeedTransformer = require('./../feed-transformer/FeedTransformer.js')
 
 const FeedURLFilter = require('./FeedURLFilter.js')
@@ -23,11 +23,14 @@ const RepairXML = require('./RepairXML.js')
  */
 const FeedCrawler = async function (feedURL, moduleCodesString) {
 
+  if (feedURL.startsWith('http://rss.sciencedirect.com/')) {
+    throw Error('RSS link is unavailable: ' + feedURL)
+  }
+
   feedURL = FeedURLFilter(feedURL)
   
   //console.log(feedURL)
-
-  let feedXML = await HtmlLoader(feedURL, cacheExpireTime)
+  let feedXML = await XMLLoader(feedURL, 10)
   //console.log(feedXML)
   
   let output = await FeedTransformer(feedXML, moduleCodesString)

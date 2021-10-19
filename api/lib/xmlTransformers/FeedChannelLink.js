@@ -1,4 +1,5 @@
 const FeedChannelLink = function ($) {
+  //console.log($.html())
   let link = $('channel > link:first')
   if (link.length === 1) {
     let href = link.text().trim()
@@ -17,6 +18,7 @@ const FeedChannelLink = function ($) {
     } 
   }
   
+  //console.log($.html())
   throw Error('Link is not found')
 }
 

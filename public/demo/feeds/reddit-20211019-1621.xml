@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+	xmlns="http://www.w3.org/2005/Atom"
+	xmlns:media="http://search.yahoo.com/mrss/">
+	<category term="pokemongo" label="r/pokemongo"/>
+	<updated>2021-10-19T08:21:00+00:00</updated>
+	<icon>https://www.redditstatic.com/icon.png/</icon>
+	<id>/r/pokemongo/.rss</id>
+	<link rel="self" href="https://www.reddit.com/r/pokemongo/.rss" type="application/atom+xml" />
+	<link rel="alternate" href="https://www.reddit.com/r/pokemongo/" type="text/html" />
+	<logo>https://b.thumbs.redditmedia.com/55FeYa69O8XDsp4DrLEjumjO1JZFfy5aY6G8nEuCaMk.png</logo>
+	<title>Pokémon GO - Discover Pokémon in the Real World!</title>
+	<entry>
+		<author>
+			<name>/u/AutoModerator</name>
+			<uri>https://www.reddit.com/user/AutoModerator</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.reddit.com/r/PokemonGo/wiki/rules&quot;&gt;Rules&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://niantic.helpshift.com/a/pokemon-go/?p=web&amp;amp;s=release-notes-known-issues&quot;&gt;Bugs&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt; &lt;p&gt;&lt;strong&gt;Instruction Manual&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_main_map&quot;&gt;Main Map&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;strong&gt;Menus&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_user_menu&quot;&gt;User Menu&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_settings_menu&quot;&gt;Settings Menu&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_pok.E9dex&quot;&gt;Pokédex&lt;/a&gt; (Updated 29 Jul for number of available Pokémon)&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_shop&quot;&gt;Shop&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_items&quot;&gt;Items&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_pok.E9mon_storage&quot;&gt;Pokémon Storage&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_pok.E9mon_screen&quot;&gt;Pokémon screen&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_catching_pok.E9mon&quot;&gt;Catching Pokémon&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;strong&gt;Gym Battling&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_pok.E9mon_types&quot;&gt;Pokémon Types&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_controls&quot;&gt;Controls&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_team_selection&quot;&gt;Team Selection&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_gyms&quot;&gt;Gyms&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_raids&quot;&gt;Raids&lt;/a&gt; (Updated 29 Jul for changes upon Legendary release)&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/wiki/manual#wiki_easter_eggs&quot;&gt;Easter Eggs&lt;/a&gt;&lt;/strong&gt; (Includes Eevee evolutions) &lt;/p&gt;&lt;/li&gt; &lt;/ul&gt; &lt;hr/&gt; &lt;p&gt;&lt;strong&gt;Useful Links&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://pokemon.gameinfo.io/&quot;&gt;Pokémon GO Info&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://pokemongo.gamepress.gg/&quot;&gt;Gamepress&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://thesilphroad.com/&quot;&gt;The Silph Road&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.nestmigration.com/&quot;&gt;Time Until Nest Migration&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;Which Pokémon should I evolve? &lt;a href=&quot;/r/PokemonGoIVs&quot;&gt;/r/PokemonGoIVs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt; &lt;/ul&gt; &lt;hr/&gt; &lt;p&gt;&lt;strong&gt;I&amp;#39;m sick of the memes here, I want the discussion posts!&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;try &lt;a href=&quot;http://nr.reddit.com/r/pokemongo&quot;&gt;http://nr.reddit.com/r/pokemongo&lt;/a&gt; for desktop users or &lt;a href=&quot;https://www.reddit.com/r/pokemongo/search?q=flair%3A%28Discussion%29+OR+flair%3A%28Suggestion%29+OR+flair%3A%28Art%29+OR+flair%3A%28Other%29+OR+flair%3A%28Megathread%29+OR+flair%3A%28News%29+OR+flair%3A%28Meta%29+OR+flair%3A%28Tip%2FAdvice%29+OR+flair%3A%28Idea%29&amp;amp;restrict_sr=on&amp;amp;sort=hot&amp;amp;t=day&quot;&gt;this&lt;/a&gt; for mobile/app users.&lt;/p&gt; &lt;hr/&gt; &lt;p&gt;Niantic support : &lt;a href=&quot;https://support.pokemongo.nianticlabs.com/hc/en-us&quot;&gt;https://support.pokemongo.nianticlabs.com/hc/en-us&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;/r/PokemonGO&quot;&gt;/r/PokemonGO&lt;/a&gt; FAQ: &lt;a href=&quot;/r/PokemonGo/wiki/FAQ&quot;&gt;/r/PokemonGo/wiki/FAQ&lt;/a&gt;&lt;/p&gt; &lt;hr/&gt; &lt;p&gt;&lt;strong&gt;There&amp;#39;s this Pokéstop/Gym near me which seems inappropriate. Can I report it?&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Use &lt;a href=&quot;http://support.pokemongo.nianticlabs.com/hc/en-us/requests/new?ticket_form_id=319928&quot;&gt;this&lt;/a&gt; link. However, Niantic seems to be preoccupied with other things now, so don&amp;#39;t expect too much.&lt;/p&gt; &lt;p&gt;We have Niantic representatives on both here and &lt;a href=&quot;/r/TheSilphRoad&quot;&gt;/r/TheSilphRoad&lt;/a&gt; - please &lt;strong&gt;do not&lt;/strong&gt; ping them for bugs which are in the known issues page unless you have found a niche yet gamebreaking issue/exploit.&lt;/p&gt; &lt;hr/&gt; &lt;p&gt;&lt;strong&gt;Where can I find other players in my area?&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Try our &lt;a href=&quot;http://www.reddit.com/r/pokemongo/wiki/regionalsubs&quot;&gt;regional subreddits list&lt;/a&gt;! Also, see the &lt;a href=&quot;http://www.reddit.com/r/pokemongo/wiki/relatedsubreddits&quot;&gt;related subreddits&lt;/a&gt; or &lt;a href=&quot;https://thesilphroad.com/map#2/&quot;&gt;TSR&amp;#39;s community map&lt;/a&gt;!&lt;/p&gt; &lt;hr/&gt; &lt;p&gt;&lt;strong&gt;If you have any suggestions for FAQs to append to this thread or for meta questions, &lt;a href=&quot;http://www.reddit.com/message/compose?to=%2Fr%2Fpokemongo&quot;&gt;message the moderators&lt;/a&gt; or mention &lt;a href=&quot;/u/PokemonGoMods&quot;&gt;/u/PokemonGoMods&lt;/a&gt;!&lt;/strong&gt;&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/AutoModerator&quot;&gt; /u/AutoModerator &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/q1117k/weekly_questions_bugs_and_gameplay_megathread/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/q1117k/weekly_questions_bugs_and_gameplay_megathread/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content>
+		<id>t3_q1117k</id>
+		<link href="https://www.reddit.com/r/pokemongo/comments/q1117k/weekly_questions_bugs_and_gameplay_megathread/" />
+		<updated>2021-10-04T08:00:15+00:00</updated>
+		<published>2021-10-04T08:00:15+00:00</published>
+		<title>Weekly questions, bugs, and gameplay megathread - October 2021</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Imshinypokemon</name>
+			<uri>https://www.reddit.com/user/Imshinypokemon</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Hello everyone! I&amp;#39;m &lt;a href=&quot;/u/Imshinypokemon&quot;&gt;u/Imshinypokemon&lt;/a&gt;, best known in here as &amp;quot;That one guy with the shiny survey&amp;quot;, and I&amp;#39;m coming here today, with the approval of the mod team of &lt;a href=&quot;/r/pokemongo&quot;&gt;r/pokemongo&lt;/a&gt;, to ask for your help regarding a research I&amp;#39;m doing for my thesis, which involves Pokemon Go.&lt;/p&gt; &lt;p&gt;I talked before about the Shiny Survey, and I&amp;#39;ll go a little in depth about it now. Back in 2018, when shinies were being released, there were many projects that tried to measure how rare they were among the players (Not to be confused with the shiny odds, whose investigations were completely different). For that reason, many started asking the players if they had X shiny or not. But while I think that is a valid way of going about it, I believe that way of measuring is flawed. For that reason, I started my own survey, which I&amp;#39;ve been updating for more than two years by now, and currently has more than 8000 participants, and more than 1.4 million shinies counted.&lt;/p&gt; &lt;p&gt;So, how is this project different from the other surveys I mentioned? Well, unlike those, I don&amp;#39;t ask you only if you have certain shiny or not, but how many of them you have. With that information, the rarity is more accurate, since you know the proportion of shinies per player, and it&amp;#39;s much easier to compare. You can help the &lt;a href=&quot;https://survey.pogoshiny.com&quot;&gt;the survey by clicking this link&lt;/a&gt;, or if you are only interested in the data, &lt;a href=&quot;https://data.pogoshiny.com&quot;&gt;you can check the analysis right here!&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Now that you know about the survey, I&amp;#39;m going to go in depth about the reason of this post: The investigation that I&amp;#39;m doing for my thesis. The title of this research is &amp;quot;Analysis about changes in interest regarding technology subjects after being a part on a crowdsourcing project&amp;quot;. In this, I try to measure how has a crowdsourcing project, as is my shiny survey, has affected the way people see statistics, math, engineering, and other subjects, and is for that reason that I need your help. Since it&amp;#39;s a requirement for this investigation to have previously been a part of a crowdsourcing project, I have to ask more players to answer my survey. Once you do, I&amp;#39;ll send an email to you, with the link to the second survey, which is meant to measure those changes, and shouldn&amp;#39;t take you more than five minutes. This is in order to make sure that every participant of the study has already been in at least one crowdsourcing project, so that the results are more significant.&lt;/p&gt; &lt;p&gt;I thank everyone one of you for your time and atention, and if you have any question about this, I&amp;#39;ll be happy to answer them for you! And if you think any of this could be interesting to some of your friends, feel free to share it with them!&lt;/p&gt; &lt;p&gt;I have to deliver my findings by December, in order to graduate this year so, if you guys think it&amp;#39;s a good idea, I could share the results once that happens! Have a great day, and once again thank you for your time!&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Imshinypokemon&quot;&gt; /u/Imshinypokemon &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qas2t9/help_me_with_an_study_regarding_pokemon_go_and/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qas2t9/help_me_with_an_study_regarding_pokemon_go_and/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content>
+		<id>t3_qas2t9</id>
+		<link href="https://www.reddit.com/r/pokemongo/comments/qas2t9/help_me_with_an_study_regarding_pokemon_go_and/" />
+		<updated>2021-10-18T17:56:57+00:00</updated>
+		<published>2021-10-18T17:56:57+00:00</published>
+		<title>Help me with an study regarding Pokemon Go and crowdsourcing projects</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/DSA5</name>
+			<uri>https://www.reddit.com/user/DSA5</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaw0mz/i_have_waited_2_months_for_this_notification/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/a2ezx8msx9u71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=fd1b18a445d72cf2ac1d08fa8bf6d048b67f4b0c&quot; alt=&quot;i have waited 2 months for this notification&quot; title=&quot;i have waited 2 months for this notification&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/DSA5&quot;&gt; /u/DSA5 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/a2ezx8msx9u71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaw0mz/i_have_waited_2_months_for_this_notification/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qaw0mz</id>
+		<media:thumbnail url="https://preview.redd.it/a2ezx8msx9u71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=fd1b18a445d72cf2ac1d08fa8bf6d048b67f4b0c" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qaw0mz/i_have_waited_2_months_for_this_notification/" />
+		<updated>2021-10-18T21:09:12+00:00</updated>
+		<published>2021-10-18T21:09:12+00:00</published>
+		<title>i have waited 2 months for this notification</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Confident_Ad_5599</name>
+			<uri>https://www.reddit.com/user/Confident_Ad_5599</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaxh9s/hmmm_i_caught_a_weird_looking_shundo/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/f71liilqaau71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=f7ac9e0e55648d255e1ddfe3329d3fc60f14f974&quot; alt=&quot;hmmm i caught a weird looking shundo&quot; title=&quot;hmmm i caught a weird looking shundo&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Confident_Ad_5599&quot;&gt; /u/Confident_Ad_5599 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/f71liilqaau71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaxh9s/hmmm_i_caught_a_weird_looking_shundo/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qaxh9s</id>
+		<media:thumbnail url="https://preview.redd.it/f71liilqaau71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=f7ac9e0e55648d255e1ddfe3329d3fc60f14f974" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qaxh9s/hmmm_i_caught_a_weird_looking_shundo/" />
+		<updated>2021-10-18T22:21:51+00:00</updated>
+		<published>2021-10-18T22:21:51+00:00</published>
+		<title>hmmm i caught a weird looking shundo</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/pneumoniahawk519</name>
+			<uri>https://www.reddit.com/user/pneumoniahawk519</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaqxli/is_spinarak_boosted_or_am_i_just_stupid_lucky_im/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/v7n7a73tp8u71.png?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=9018632d96f1b905380a5389fa1c94548e91e99d&quot; alt=&quot;Is spinarak boosted or am I just stupid lucky? I'm tired of clocking them&quot; title=&quot;Is spinarak boosted or am I just stupid lucky? I'm tired of clocking them&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/pneumoniahawk519&quot;&gt; /u/pneumoniahawk519 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/v7n7a73tp8u71.png&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaqxli/is_spinarak_boosted_or_am_i_just_stupid_lucky_im/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qaqxli</id>
+		<media:thumbnail url="https://preview.redd.it/v7n7a73tp8u71.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9018632d96f1b905380a5389fa1c94548e91e99d" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qaqxli/is_spinarak_boosted_or_am_i_just_stupid_lucky_im/" />
+		<updated>2021-10-18T17:02:39+00:00</updated>
+		<published>2021-10-18T17:02:39+00:00</published>
+		<title>Is spinarak boosted or am I just stupid lucky? I'm tired of clocking them</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/JumboSnausage</name>
+			<uri>https://www.reddit.com/user/JumboSnausage</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaldbd/i_just_caught_40_ghost_pokémon_for_the_same_damn/&quot;&gt; &lt;img src=&quot;https://b.thumbs.redditmedia.com/IB2wyW5arzDcVaB0T7UORO4ythAy9Ok8fu5U0-Ramyk.jpg&quot; alt=&quot;I just caught 40 ghost Pokémon for the same damn challenge&quot; title=&quot;I just caught 40 ghost Pokémon for the same damn challenge&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/JumboSnausage&quot;&gt; /u/JumboSnausage &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/gallery/qaldbd&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaldbd/i_just_caught_40_ghost_pokémon_for_the_same_damn/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qaldbd</id>
+		<media:thumbnail url="https://b.thumbs.redditmedia.com/IB2wyW5arzDcVaB0T7UORO4ythAy9Ok8fu5U0-Ramyk.jpg" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qaldbd/i_just_caught_40_ghost_pokémon_for_the_same_damn/" />
+		<updated>2021-10-18T12:07:42+00:00</updated>
+		<published>2021-10-18T12:07:42+00:00</published>
+		<title>I just caught 40 ghost Pokémon for the same damn challenge</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/tamusquirrel</name>
+			<uri>https://www.reddit.com/user/tamusquirrel</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaz8a0/research_tasks_be_like/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/i189o1farau71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=1aff1c6659b8430ec46eb36ccb595b0291068600&quot; alt=&quot;Research tasks be like- 🕷&quot; title=&quot;Research tasks be like- 🕷&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/tamusquirrel&quot;&gt; /u/tamusquirrel &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/i189o1farau71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaz8a0/research_tasks_be_like/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qaz8a0</id>
+		<media:thumbnail url="https://preview.redd.it/i189o1farau71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=1aff1c6659b8430ec46eb36ccb595b0291068600" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qaz8a0/research_tasks_be_like/" />
+		<updated>2021-10-18T23:54:31+00:00</updated>
+		<published>2021-10-18T23:54:31+00:00</published>
+		<title>Research tasks be like- 🕷</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/mikidarling</name>
+			<uri>https://www.reddit.com/user/mikidarling</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb5h8e/my_perfect_eevee_i_never_post_here_but_happy/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/8fzsgfgjncu71.png?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=1a7ef5a53e39821a24669f2c90c923ea3683c454&quot; alt=&quot;My perfect eevee. I never post here but happy early birthday to me.&quot; title=&quot;My perfect eevee. I never post here but happy early birthday to me.&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/mikidarling&quot;&gt; /u/mikidarling &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/8fzsgfgjncu71.png&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb5h8e/my_perfect_eevee_i_never_post_here_but_happy/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb5h8e</id>
+		<media:thumbnail url="https://preview.redd.it/8fzsgfgjncu71.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=1a7ef5a53e39821a24669f2c90c923ea3683c454" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb5h8e/my_perfect_eevee_i_never_post_here_but_happy/" />
+		<updated>2021-10-19T06:17:25+00:00</updated>
+		<published>2021-10-19T06:17:25+00:00</published>
+		<title>My perfect eevee. I never post here but happy early birthday to me.</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Pumpkin_Kisses</name>
+			<uri>https://www.reddit.com/user/Pumpkin_Kisses</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qamxfu/sent_this_to_my_dad_after_an_egg_hatch_wish_i/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/ntiykc4yp7u71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=ebc6c7a4721a5421a4cf59b51eb89ec47d0c122a&quot; alt=&quot;Sent this to my dad after an egg hatch. Wish I could say his response surprised me.&quot; title=&quot;Sent this to my dad after an egg hatch. Wish I could say his response surprised me.&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Pumpkin_Kisses&quot;&gt; /u/Pumpkin_Kisses &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/ntiykc4yp7u71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qamxfu/sent_this_to_my_dad_after_an_egg_hatch_wish_i/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qamxfu</id>
+		<media:thumbnail url="https://preview.redd.it/ntiykc4yp7u71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=ebc6c7a4721a5421a4cf59b51eb89ec47d0c122a" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qamxfu/sent_this_to_my_dad_after_an_egg_hatch_wish_i/" />
+		<updated>2021-10-18T13:41:38+00:00</updated>
+		<published>2021-10-18T13:41:38+00:00</published>
+		<title>Sent this to my dad after an egg hatch. Wish I could say his response surprised me.</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Rcheez</name>
+			<uri>https://www.reddit.com/user/Rcheez</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qam9dv/46_dratini_in_one_go_from_a_wild_dragonite/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/ud9cdg2ii7u71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=4d004d7e352b7bdef5440a239083bbf1829cf035&quot; alt=&quot;46 dratini in one go from a wild dragonite&quot; title=&quot;46 dratini in one go from a wild dragonite&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Rcheez&quot;&gt; /u/Rcheez &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/ud9cdg2ii7u71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qam9dv/46_dratini_in_one_go_from_a_wild_dragonite/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qam9dv</id>
+		<media:thumbnail url="https://preview.redd.it/ud9cdg2ii7u71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=4d004d7e352b7bdef5440a239083bbf1829cf035" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qam9dv/46_dratini_in_one_go_from_a_wild_dragonite/" />
+		<updated>2021-10-18T13:02:44+00:00</updated>
+		<published>2021-10-18T13:02:44+00:00</published>
+		<title>46 dratini in one go from a wild dragonite</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Ianjcurt</name>
+			<uri>https://www.reddit.com/user/Ianjcurt</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qau5r9/the_grind_has_officially_come_to_an_end/&quot;&gt; &lt;img src=&quot;https://a.thumbs.redditmedia.com/2R8EJvJaYJ0aRfPs48Jrg5sUOYg0lc1jvh5eN0iMUk0.jpg&quot; alt=&quot;The grind has officially come to an end😭&quot; title=&quot;The grind has officially come to an end😭&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Ianjcurt&quot;&gt; /u/Ianjcurt &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/gallery/qau5r9&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qau5r9/the_grind_has_officially_come_to_an_end/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qau5r9</id>
+		<media:thumbnail url="https://a.thumbs.redditmedia.com/2R8EJvJaYJ0aRfPs48Jrg5sUOYg0lc1jvh5eN0iMUk0.jpg" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qau5r9/the_grind_has_officially_come_to_an_end/" />
+		<updated>2021-10-18T19:34:41+00:00</updated>
+		<published>2021-10-18T19:34:41+00:00</published>
+		<title>The grind has officially come to an end😭</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Valiumvalkyrie</name>
+			<uri>https://www.reddit.com/user/Valiumvalkyrie</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qassjn/i_doodled_my_partner_and_i_facing_off_against/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/y12x28je59u71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=4dff66ada60c3719db57292016d8c5bd184eca05&quot; alt=&quot;I doodled my partner and I facing off against mega gengar!&quot; title=&quot;I doodled my partner and I facing off against mega gengar!&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Valiumvalkyrie&quot;&gt; /u/Valiumvalkyrie &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/y12x28je59u71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qassjn/i_doodled_my_partner_and_i_facing_off_against/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qassjn</id>
+		<media:thumbnail url="https://preview.redd.it/y12x28je59u71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=4dff66ada60c3719db57292016d8c5bd184eca05" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qassjn/i_doodled_my_partner_and_i_facing_off_against/" />
+		<updated>2021-10-18T18:30:03+00:00</updated>
+		<published>2021-10-18T18:30:03+00:00</published>
+		<title>I doodled my partner and I facing off against mega gengar!</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/NicoNicoKneesWeak</name>
+			<uri>https://www.reddit.com/user/NicoNicoKneesWeak</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb2yoq/boyfriends_first_raid/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/gakmaa9qtbu71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=14241a8fb9b809fc77a6c2e57ca4d68d585d4436&quot; alt=&quot;Boyfriends first raid...&quot; title=&quot;Boyfriends first raid...&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/NicoNicoKneesWeak&quot;&gt; /u/NicoNicoKneesWeak &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/gakmaa9qtbu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb2yoq/boyfriends_first_raid/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb2yoq</id>
+		<media:thumbnail url="https://preview.redd.it/gakmaa9qtbu71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=14241a8fb9b809fc77a6c2e57ca4d68d585d4436" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb2yoq/boyfriends_first_raid/" />
+		<updated>2021-10-19T03:29:58+00:00</updated>
+		<published>2021-10-19T03:29:58+00:00</published>
+		<title>Boyfriends first raid...</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Usiel_</name>
+			<uri>https://www.reddit.com/user/Usiel_</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb3urb/finally_maxed_my_only_perfect_pokemon_so_happy_lol/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/wx6wggw63cu71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=338771c07c087a3fe2c3a66dd4c72af3cdc8e105&quot; alt=&quot;Finally Maxed my Only Perfect Pokemon. So happy lol.&quot; title=&quot;Finally Maxed my Only Perfect Pokemon. So happy lol.&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Usiel_&quot;&gt; /u/Usiel_ &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/wx6wggw63cu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb3urb/finally_maxed_my_only_perfect_pokemon_so_happy_lol/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb3urb</id>
+		<media:thumbnail url="https://preview.redd.it/wx6wggw63cu71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=338771c07c087a3fe2c3a66dd4c72af3cdc8e105" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb3urb/finally_maxed_my_only_perfect_pokemon_so_happy_lol/" />
+		<updated>2021-10-19T04:24:54+00:00</updated>
+		<published>2021-10-19T04:24:54+00:00</published>
+		<title>Finally Maxed my Only Perfect Pokemon. So happy lol.</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Ticklebunzz</name>
+			<uri>https://www.reddit.com/user/Ticklebunzz</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb1ktl/my_mans_been_posting_up_at_the_gym_for_nearly_52/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/vrrpes0dfbu71.jpg?width=320&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=7466fc0e4890c588bce1c2d28a0d58626e1a6035&quot; alt=&quot;My man’s been posting up at the gym for nearly 52 YEARS.&quot; title=&quot;My man’s been posting up at the gym for nearly 52 YEARS.&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Ticklebunzz&quot;&gt; /u/Ticklebunzz &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/vrrpes0dfbu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb1ktl/my_mans_been_posting_up_at_the_gym_for_nearly_52/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb1ktl</id>
+		<media:thumbnail url="https://preview.redd.it/vrrpes0dfbu71.jpg?width=320&amp;crop=smart&amp;auto=webp&amp;s=7466fc0e4890c588bce1c2d28a0d58626e1a6035" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb1ktl/my_mans_been_posting_up_at_the_gym_for_nearly_52/" />
+		<updated>2021-10-19T02:09:25+00:00</updated>
+		<published>2021-10-19T02:09:25+00:00</published>
+		<title>My man’s been posting up at the gym for nearly 52 YEARS.</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Blade1708</name>
+			<uri>https://www.reddit.com/user/Blade1708</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb3r67/my_first_in_pokémon_go/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/rdw5rzjd2cu71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=86a45b219c7b0bf2b6afbc7a95d8737236c72b96&quot; alt=&quot;My first in Pokémon Go!&quot; title=&quot;My first in Pokémon Go!&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Blade1708&quot;&gt; /u/Blade1708 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/rdw5rzjd2cu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb3r67/my_first_in_pokémon_go/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb3r67</id>
+		<media:thumbnail url="https://preview.redd.it/rdw5rzjd2cu71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=86a45b219c7b0bf2b6afbc7a95d8737236c72b96" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb3r67/my_first_in_pokémon_go/" />
+		<updated>2021-10-19T04:18:27+00:00</updated>
+		<published>2021-10-19T04:18:27+00:00</published>
+		<title>My first in Pokémon Go!</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/s0nnieeee</name>
+			<uri>https://www.reddit.com/user/s0nnieeee</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qax3jy/my_first_100_what_should_i_evolve_it_into/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/5amqkxbd7au71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=6b7a536eaa9bf6f8555661714e6cdd2282eb04b4&quot; alt=&quot;My first 100%!!! What should I evolve it into?&quot; title=&quot;My first 100%!!! What should I evolve it into?&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/s0nnieeee&quot;&gt; /u/s0nnieeee &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/5amqkxbd7au71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qax3jy/my_first_100_what_should_i_evolve_it_into/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qax3jy</id>
+		<media:thumbnail url="https://preview.redd.it/5amqkxbd7au71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=6b7a536eaa9bf6f8555661714e6cdd2282eb04b4" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qax3jy/my_first_100_what_should_i_evolve_it_into/" />
+		<updated>2021-10-18T22:02:51+00:00</updated>
+		<published>2021-10-18T22:02:51+00:00</published>
+		<title>My first 100%!!! What should I evolve it into?</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/TotalSlice6</name>
+			<uri>https://www.reddit.com/user/TotalSlice6</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qadmtt/do_they_think_were_out_here_not_throwing/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/emqmyndhg4u71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=2e31c4d322ca7a0fe7d49cb9cb21b67eb3bc2688&quot; alt=&quot;Do they think we’re out here not throwing curveballs?&quot; title=&quot;Do they think we’re out here not throwing curveballs?&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/TotalSlice6&quot;&gt; /u/TotalSlice6 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/emqmyndhg4u71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qadmtt/do_they_think_were_out_here_not_throwing/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qadmtt</id>
+		<media:thumbnail url="https://preview.redd.it/emqmyndhg4u71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=2e31c4d322ca7a0fe7d49cb9cb21b67eb3bc2688" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qadmtt/do_they_think_were_out_here_not_throwing/" />
+		<updated>2021-10-18T02:43:14+00:00</updated>
+		<published>2021-10-18T02:43:14+00:00</published>
+		<title>Do they think we’re out here not throwing curveballs?</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/BigSkoonChungus</name>
+			<uri>https://www.reddit.com/user/BigSkoonChungus</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb0f9w/caught_this_bad_boy_on_the_map_today_look_out/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/rk7otxnd3bu71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=af231bd92ab8555c9154232504f68e32a16a6d06&quot; alt=&quot;Caught this bad boy on the map today, look out battle league.&quot; title=&quot;Caught this bad boy on the map today, look out battle league.&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/BigSkoonChungus&quot;&gt; /u/BigSkoonChungus &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/rk7otxnd3bu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb0f9w/caught_this_bad_boy_on_the_map_today_look_out/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb0f9w</id>
+		<media:thumbnail url="https://preview.redd.it/rk7otxnd3bu71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=af231bd92ab8555c9154232504f68e32a16a6d06" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb0f9w/caught_this_bad_boy_on_the_map_today_look_out/" />
+		<updated>2021-10-19T01:02:16+00:00</updated>
+		<published>2021-10-19T01:02:16+00:00</published>
+		<title>Caught this bad boy on the map today, look out battle league.</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/R4KD05</name>
+			<uri>https://www.reddit.com/user/R4KD05</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaoxo5/dont_normally_share_these_but_im_so_excited_for/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/h48802am88u71.png?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=873cc89e42890e1b1d776c8f89f9044c96d7822a&quot; alt=&quot;Don't normally share these, but I'm so excited for the mega! Finally maxed out my Heracross, that I got from a raid one of my buddies invited me to! 🥰&quot; title=&quot;Don't normally share these, but I'm so excited for the mega! Finally maxed out my Heracross, that I got from a raid one of my buddies invited me to! 🥰&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/R4KD05&quot;&gt; /u/R4KD05 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/h48802am88u71.png&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaoxo5/dont_normally_share_these_but_im_so_excited_for/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qaoxo5</id>
+		<media:thumbnail url="https://preview.redd.it/h48802am88u71.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=873cc89e42890e1b1d776c8f89f9044c96d7822a" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qaoxo5/dont_normally_share_these_but_im_so_excited_for/" />
+		<updated>2021-10-18T15:26:25+00:00</updated>
+		<published>2021-10-18T15:26:25+00:00</published>
+		<title>Don't normally share these, but I'm so excited for the mega! Finally maxed out my Heracross, that I got from a raid one of my buddies invited me to! 🥰</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/OverNightOats_</name>
+			<uri>https://www.reddit.com/user/OverNightOats_</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qau8ic/whelpat_least_they_tried/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/0d7qcx6mh9u71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=1899ab8adcb0d1d788cb254a3106256a9b2e2253&quot; alt=&quot;Whelp…at least they tried.&quot; title=&quot;Whelp…at least they tried.&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/OverNightOats_&quot;&gt; /u/OverNightOats_ &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/0d7qcx6mh9u71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qau8ic/whelpat_least_they_tried/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qau8ic</id>
+		<media:thumbnail url="https://preview.redd.it/0d7qcx6mh9u71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=1899ab8adcb0d1d788cb254a3106256a9b2e2253" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qau8ic/whelpat_least_they_tried/" />
+		<updated>2021-10-18T19:38:31+00:00</updated>
+		<published>2021-10-18T19:38:31+00:00</published>
+		<title>Whelp…at least they tried.</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/pizzapizza7</name>
+			<uri>https://www.reddit.com/user/pizzapizza7</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qazuq9/first_wild_encounter/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/ccotmp8gxau71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=dfa5887b9d6589157658a365d2c4b4badd854262&quot; alt=&quot;First wild ✨ encounter 🤟🏼&quot; title=&quot;First wild ✨ encounter 🤟🏼&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/pizzapizza7&quot;&gt; /u/pizzapizza7 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/ccotmp8gxau71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qazuq9/first_wild_encounter/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qazuq9</id>
+		<media:thumbnail url="https://preview.redd.it/ccotmp8gxau71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=dfa5887b9d6589157658a365d2c4b4badd854262" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qazuq9/first_wild_encounter/" />
+		<updated>2021-10-19T00:29:04+00:00</updated>
+		<published>2021-10-19T00:29:04+00:00</published>
+		<title>First wild ✨ encounter 🤟🏼</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/sevenproxies07</name>
+			<uri>https://www.reddit.com/user/sevenproxies07</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb0c8f/had_no_clue_perfect_shadow_was_a_thing/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/fzfrslwl2bu71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=a3e094697194b8540e4f4e68518c756bbaca57aa&quot; alt=&quot;had no clue perfect shadow was a thing!&quot; title=&quot;had no clue perfect shadow was a thing!&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/sevenproxies07&quot;&gt; /u/sevenproxies07 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/fzfrslwl2bu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb0c8f/had_no_clue_perfect_shadow_was_a_thing/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb0c8f</id>
+		<media:thumbnail url="https://preview.redd.it/fzfrslwl2bu71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=a3e094697194b8540e4f4e68518c756bbaca57aa" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb0c8f/had_no_clue_perfect_shadow_was_a_thing/" />
+		<updated>2021-10-19T00:57:57+00:00</updated>
+		<published>2021-10-19T00:57:57+00:00</published>
+		<title>had no clue perfect shadow was a thing!</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/drwpwr</name>
+			<uri>https://www.reddit.com/user/drwpwr</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb1nvb/its_official_ill_see_u_guys_at_the_next_pink_gym/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/yk2fga17gbu71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=89bf5018b4da5f0e6ddb9bf07279a2d1c8025125&quot; alt=&quot;its official, i’ll see u guys at the next pink gym party&quot; title=&quot;its official, i’ll see u guys at the next pink gym party&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/drwpwr&quot;&gt; /u/drwpwr &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/yk2fga17gbu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb1nvb/its_official_ill_see_u_guys_at_the_next_pink_gym/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb1nvb</id>
+		<media:thumbnail url="https://preview.redd.it/yk2fga17gbu71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=89bf5018b4da5f0e6ddb9bf07279a2d1c8025125" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb1nvb/its_official_ill_see_u_guys_at_the_next_pink_gym/" />
+		<updated>2021-10-19T02:14:06+00:00</updated>
+		<published>2021-10-19T02:14:06+00:00</published>
+		<title>its official, i’ll see u guys at the next pink gym party</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Legion420420</name>
+			<uri>https://www.reddit.com/user/Legion420420</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb0spy/when_pokémon_go_glitches_and_becomes_a_tool_album/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/e2tnuk787bu71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=cd59f823c79e7bddc01643a4be438b3eb05f4bcf&quot; alt=&quot;When Pokémon go glitches and becomes a tool album cover&quot; title=&quot;When Pokémon go glitches and becomes a tool album cover&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Legion420420&quot;&gt; /u/Legion420420 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/e2tnuk787bu71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qb0spy/when_pokémon_go_glitches_and_becomes_a_tool_album/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qb0spy</id>
+		<media:thumbnail url="https://preview.redd.it/e2tnuk787bu71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=cd59f823c79e7bddc01643a4be438b3eb05f4bcf" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qb0spy/when_pokémon_go_glitches_and_becomes_a_tool_album/" />
+		<updated>2021-10-19T01:23:51+00:00</updated>
+		<published>2021-10-19T01:23:51+00:00</published>
+		<title>When Pokémon go glitches and becomes a tool album cover</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/Apollo2001</name>
+			<uri>https://www.reddit.com/user/Apollo2001</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qami8h/im_level_16_saw_a_raid_going_on_joined_got/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/gegoc2vil7u71.jpg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=aadb61f21a7c7683f8446fe9f2ca0bd055d9fddb&quot; alt=&quot;I'm level 16, saw a raid going on, joined, got carried and got this :)&quot; title=&quot;I'm level 16, saw a raid going on, joined, got carried and got this :)&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Apollo2001&quot;&gt; /u/Apollo2001 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/gegoc2vil7u71.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qami8h/im_level_16_saw_a_raid_going_on_joined_got/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qami8h</id>
+		<media:thumbnail url="https://preview.redd.it/gegoc2vil7u71.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=aadb61f21a7c7683f8446fe9f2ca0bd055d9fddb" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qami8h/im_level_16_saw_a_raid_going_on_joined_got/" />
+		<updated>2021-10-18T13:16:52+00:00</updated>
+		<published>2021-10-18T13:16:52+00:00</published>
+		<title>I'm level 16, saw a raid going on, joined, got carried and got this :)</title>
+	</entry>
+	<entry>
+		<author>
+			<name>/u/HamsterHam</name>
+			<uri>https://www.reddit.com/user/HamsterHam</uri>
+		</author>
+		<category term="pokemongo" label="r/pokemongo"/>
+		<content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaw1kx/went_to_get_a_hundo_ghastly_but_it_turned_into_a/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/jo9j8lmvx9u71.png?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=d062d7fac9f8f265b3f8335b45ec31e040680bdd&quot; alt=&quot;Went to get a hundo Ghastly but it turned into a hundo Ditto!&quot; title=&quot;Went to get a hundo Ghastly but it turned into a hundo Ditto!&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/HamsterHam&quot;&gt; /u/HamsterHam &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/jo9j8lmvx9u71.png&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/pokemongo/comments/qaw1kx/went_to_get_a_hundo_ghastly_but_it_turned_into_a/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content>
+		<id>t3_qaw1kx</id>
+		<media:thumbnail url="https://preview.redd.it/jo9j8lmvx9u71.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=d062d7fac9f8f265b3f8335b45ec31e040680bdd" />
+		<link href="https://www.reddit.com/r/pokemongo/comments/qaw1kx/went_to_get_a_hundo_ghastly_but_it_turned_into_a/" />
+		<updated>2021-10-18T21:10:59+00:00</updated>
+		<published>2021-10-18T21:10:59+00:00</published>
+		<title>Went to get a hundo Ghastly but it turned into a hundo Ditto!</title>
+	</entry>
+</feed>

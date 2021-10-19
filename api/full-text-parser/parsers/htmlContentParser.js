@@ -27,6 +27,7 @@ const htmlContentParser = async function (html, modules, url) {
     '[itemprop="articleBody"] > div.section',
     '[itemprop="articleBody"]',
     'div.p_mainnew',
+    'div.item-page.blog',
     'article:first',
     '#main-container',
     'body'

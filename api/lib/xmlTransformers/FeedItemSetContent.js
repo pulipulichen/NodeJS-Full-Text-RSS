@@ -63,7 +63,11 @@ const FeedItemSetContent = function (item, content) {
   }
   
   //console.log(item.html())
-  throw Error('selector is not found')
+  //throw Error('selector is not found')
+  //console.log('[INFO] FeedItemSetContent: content selector is not found.')
+  
+  content = encode(content)
+  item.append(`<content>${content}</content>`)
 }
 
 module.exports = FeedItemSetContent
