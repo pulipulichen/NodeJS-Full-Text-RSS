@@ -11,7 +11,7 @@ const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 const HtmlLoader = require('./../lib/HtmlLoader/HtmlLoader.js')
 
 const OPMLParser = async function () {
-  let feedPath = path.resolve(__dirname, './feedly-c52706de-117c-4c58-b21d-75e935448738-2021-10-12.opml')
+  let feedPath = path.resolve(__dirname, './feedly.opml')
   //console.log(feedPath)
   let feedXML = fs.readFileSync(feedPath, 'utf8')
   //console.log(feedXML)
