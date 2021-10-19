@@ -47,7 +47,16 @@ const FeedItemSetContent = function (item, content) {
     return element.text(content)
   }
   else {
-    content = encode(content)
+    //content = encode(content)
+    //return item.append(`<content>${content}</content>`)
+    
+    if (!content.startsWith('<![CDATA[')) {
+      content = '<![CDATA[TYPE4' + content
+    }
+    if (!content.endsWith(']]>')) {
+      content = content + ']]>'
+    }
+    
     return item.append(`<content>${content}</content>`)
   }
   
