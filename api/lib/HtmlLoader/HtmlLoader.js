@@ -4,6 +4,7 @@ const sleep = require('./../async/sleep.js')
 
 let isLoading = false
 const asyncRequest = function (url) {
+  
   return new Promise(async (resolve, reject) => {
     while (isLoading) {
       await sleep(100)
@@ -31,6 +32,7 @@ const htmlLoader = async function (url, cacheMS) {
   if (!cacheMS) {
     cacheMS = maxCacheTime
   }
+  
   return await nodeCache.get('html-loader', url, async () => {
     return await asyncRequest(url)
   }, cacheMS)

@@ -1,8 +1,60 @@
 <div>
-<h1 class="ui horizontal divider header">
-  Subscribe List
-</h1>
-<div class="ui form segment">
-  hello world.
-</div>
+  <h1 class="ui horizontal divider header">
+    Subscribe List
+  </h1>
+  <div class="ui form segment">
+    
+    <div class="field">
+      <a href="/"
+         class="ui fluid button">
+        TEST
+      </a>
+    </div>
+    
+    <div class="field">
+      <label>
+        Filter
+      </label>
+      <div class="ui input">
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+    
+    <table class="ui unstackable celled table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th class="center aligned">Original</th>
+          <th class="center aligned">Full Text</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="feed in feeds">
+          <td data-label="Title">
+            <a v-bind:href="feed.feedURL" target="_blank">
+              <strong class="feed-title">{{ feed.title }}</strong>
+              <span v-if="feed.modules && feed.modules !== ''">({{ feed.modules }})</span>
+              <div class="feed-url">{{ feed.feedURL }}</div>
+            </a>
+          </td>
+          <td data-label="Original RSS Feed"
+              class="center aligned">
+            <a v-bind:href="feed.feedURL"
+               class="ui icon button"
+               target="_blank">
+              <i class="rss icon"></i>
+            </a>
+          </td>
+          <td data-label="Full Text RSS Feed"
+              class="center aligned">
+            <a v-bind:href="buildFullTextURL(feed)"
+               class="ui positive icon button"
+               target="_blank">
+              <i class="rss icon"></i>
+              </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

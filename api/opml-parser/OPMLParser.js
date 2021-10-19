@@ -146,6 +146,20 @@ const parseAvailableURL = async function ($) {
       title = title.slice(0, -25).trim()
     }
     
+    if (title.endsWith('[WizardRss]')) {
+      title = title.slice(0, -11).trim()
+    }
+    
+    if (title.endsWith(' :: 痞客邦 PIXNET ::')) {
+      title = title.slice(0, -17).trim()
+    }
+    
+    if (title.endsWith(' :: 隨意窩 Xuite ::')) {
+      title = title.slice(0, -16).trim()
+    }
+    
+    // 
+    
     // -------------
     
     urlList.push({
