@@ -69,6 +69,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   </image>`)
    */
   $('feed:first').append(`<icon>https://www.iconninja.com/ico/128/pencil-251548.ico</icon>`)
+  $('feed:first').append(`<atom:icon>https://www.iconninja.com/ico/128/pencil-251548.ico</atom:icon>`)
   $('feed:first').append(`<logo>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</logo>`)
   
   // -----------------------------
