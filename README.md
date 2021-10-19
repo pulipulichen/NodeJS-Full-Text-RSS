@@ -1,7 +1,7 @@
 # NodeJS-Full-Text-RSS
 Convert RSS feeds to full text feeds.
 
-# TODO
+npm run start --prefix /app/NodeJS-Full-Text-RSS
 
 ----
 
