@@ -46,6 +46,10 @@ const FeedItemSetContent = function (item, content) {
     //console.log(2)
     return element.text(content)
   }
+  else {
+    content = encode(content)
+    return item.append(`<content>${content}</content>`)
+  }
   
   // -------------
   
