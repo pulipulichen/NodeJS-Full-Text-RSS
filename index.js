@@ -42,6 +42,9 @@ FeedCrawler(app)
 const SubscribeList = require('./api/subscribe-list/route.js')
 SubscribeList(app)
 
+const GitPull = require('./api/git-pull/route.js')
+GitPull(app)
+
 // ------------------------------------------------
 
 app.listen(port, () => {
