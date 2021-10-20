@@ -1,6 +1,11 @@
 const express = require('express')
+const compression = require('compression')
+
 const app = express()
-const port = 3000
+
+app.use(compression())
+
+const port = 80
 const bodyParser = require('body-parser');
 
 //const nodeCache = require('./lib/cache/node-cache-sqlite.js')
