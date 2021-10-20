@@ -16,7 +16,8 @@
         Filter
       </label>
       <div class="ui input">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..."
+               v-model="filter">
       </div>
     </div>
     
@@ -29,7 +30,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="feed in feeds">
+        <tr v-for="feed in filteredFeed">
           <td data-label="Title">
             <a v-bind:href="feed.feedURL" target="_blank">
               <strong class="feed-title">{{ feed.title }}</strong>

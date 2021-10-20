@@ -6,10 +6,13 @@ module.exports = {
     
     return {
       cacheKey: 'subscription-list',
-      cacheAttrs: [],
+      cacheAttrs: ['filter'],
       inited: false,
       
-      feeds: []
+      feeds: [],
+      filter: '',
+      filteredFeeds: [],
+      filterTimer: null
     }
   },
 //  components: {
@@ -21,8 +24,14 @@ module.exports = {
     
     this.loadFeeds()
   },
-//  watch: {
-//  },
+  watch: {
+    feeds () {
+      this.setupFilteredFeeds()
+    },
+    filter () {
+      this.setupFilteredFeeds()
+    },
+  },
 //  computed: {
 //  },
   methods: {
@@ -80,6 +89,18 @@ module.exports = {
       else {
         return `./fc/` + feed.modules + '/' + encodedURL
       }
+    },
+    
+    setupFilteredFeeds () {
+      clearTimeout(this.filterTimer)
+      
+      this.filterTimer = setTimeout(() => {
+        this.filteredFeed = this.feeds.filter(({title, feedURL}) => {
+          return (this.filter === ''
+                  || title.indexOf(this.filter) > -1 
+                  || feedURL.indexOf(this.filter) > -1 )
+        })
+      }, 500)
     }
   }
 }
