@@ -5,7 +5,7 @@ const app = express()
 
 app.use(compression())
 
-const port = 80
+const port = 3000
 const bodyParser = require('body-parser');
 
 //const nodeCache = require('./lib/cache/node-cache-sqlite.js')
@@ -56,5 +56,5 @@ OPMLParser(app)
 // ------------------------------------------------
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })

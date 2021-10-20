@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>布丁 subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="test" title="test">
+            <outline type="rss" text="TAAZE" title="TAAZE" xmlUrl="http://pc-aiec-2021.pulipuli.info:3000/ft/20211019-2052/feeds/posts/default" htmlUrl="http://pc-aiec-2021.pulipuli.info:3000/ft/20211019-2052/feeds/posts/default"/>
+            
+        </outline>
+    </body>
+</opml>
