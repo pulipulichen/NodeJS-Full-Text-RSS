@@ -7,6 +7,7 @@ local dir
 /app/NodeJS-Full-Text-RSS/mount
 
 tmp dir
+304-full-text-rss-cache
 /app/NodeJS-Full-Text-RSS/cache
 
 ----
