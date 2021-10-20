@@ -6,6 +6,11 @@ let decodeEntities = (function() {
 
   function decodeHTMLEntities (str) {
     if(str && typeof str === 'string') {
+      str = str.trim()
+      if (str.startsWith('<![CDATA[') && str.endsWith(']]>')) {
+        return str.slice(9, -3)
+      }
+      
       // strip script/html tags
       str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
       str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
@@ -51,6 +56,16 @@ module.exports = {
   async mounted () {
     this.dataLoad()
     
+    let parameters = this.getParamters()
+    //console.log(parameters)
+    if (parameters.u) {
+      this.mode = 'url'
+      this.query = decodeURIComponent(parameters.u)
+      if (parameters.m) {
+        this.modules = parameters.m
+      }
+    }
+    
     this.inited = true
     
     this.loadOutput()
@@ -58,6 +73,11 @@ module.exports = {
     setTimeout(() => {
       //console.log('aaa')
       this.initDropdown()
+      
+      if (parameters.u) {
+        
+        this.loadOutput()
+      }
     }, 500)
   },
   watch: {
@@ -81,8 +101,8 @@ module.exports = {
       this.dataSave()
     },
   },
-  computed: {
-  },
+//  computed: {
+//  },
   methods: {
     dataLoad () {
       let projectFileListData = localStorage.getItem(this.cacheKey)
@@ -113,12 +133,20 @@ module.exports = {
     
     // ------------------------
     
+    getParamters () {
+      let search = location.search.substring(1);
+      return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+    },
+    
     loadOutput () {
       //console.log(this.query)
+      
       if (this.mode === 'url' && this.query === '') {
+        console.log(this.mode, this.query)
         return false
       }
       if (this.mode === 'feed' && this.feedXML === '') {
+        console.log(this.mode, this.query)
         return false
       }
       
@@ -280,6 +308,7 @@ module.exports = {
         let contentElement = $entry.find('content:first')
         if (contentElement.length > 0) {
           content = decodeEntities(contentElement.html())
+          console.log(contentElement.html())
           //console.log(content)
         }
         else {

@@ -31,18 +31,18 @@ const route = function (app) {
     res.set('Content-Type', 'application/atom+xml');
     res.set('Age', '0');
     res.set('Cache-Control', 'public, must-revalidate, proxy-revalidate, max-age=1');
-    //res.set('Content-Encoding', ' gzip');
-    res.set('Content-Length', ' 24918');
-    res.set('Content-Type', ' application/atom+xml; charset=UTF-8');
-    res.set('Cross-Origin-Resource-Policy', ' cross-origin');
-    res.set('Date', ' Tue, 19 Oct 2021 12:45:04 GMT');
-    res.set('ETag', ' W/"24f22978dac24abab47721de102958df1c2955495a330cc4035327afc7d38ee6"');
-    res.set('Expires', ' Tue, 19 Oct 2021 12:45:05 GMT');
-    res.set('Last-Modified', ' Thu, 30 Sep 2021 12:41:52 GMT');
-    res.set('Server', ' blogger-renderd');
-    res.set('Vary', ' Accept-Encoding');
-    res.set('X-Content-Type-Options', ' nosniff');
-    res.set('X-XSS-Protection', ' 0');
+    //res.set('Content-Encoding', 'gzip');
+    res.set('Content-Length', '24918');
+    res.set('Content-Type', 'application/atom+xml; charset=UTF-8');
+    res.set('Cross-Origin-Resource-Policy', 'cross-origin');
+    res.set('Date', 'Tue, 19 Oct 2021 12:45:04 GMT');
+    res.set('ETag', 'W/"24f22978dac24abab47721de102958df1c2955495a330cc4035327afc7d38ee6"');
+    res.set('Expires', 'Tue, 19 Oct 2021 12:45:05 GMT');
+    res.set('Last-Modified', 'Thu, 30 Sep 2021 12:41:52 GMT');
+    res.set('Server', 'blogger-renderd');
+    res.set('Vary', 'Accept-Encoding');
+    res.set('X-Content-Type-Options', 'nosniff');
+    res.set('X-XSS-Protection', '0');
   }
   
   app.get('/f/:url', async (req, res) => {
@@ -68,7 +68,7 @@ const route = function (app) {
     res.send(result)
   })
   
-  app.get('/ft/20211019-2052/feeds/posts/default', async (req, res) => {
+  app.get('/ft/20211019-2116/feeds/posts/default', async (req, res) => {
     setHeader(res)
     
     let p = path.resolve(__dirname, './test/ori.xml')

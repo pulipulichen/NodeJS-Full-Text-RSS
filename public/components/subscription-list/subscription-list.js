@@ -94,13 +94,45 @@ module.exports = {
     setupFilteredFeeds () {
       clearTimeout(this.filterTimer)
       
+      //console.log(this.feeds)
+      
       this.filterTimer = setTimeout(() => {
-        this.filteredFeed = this.feeds.filter(({title, feedURL}) => {
+        this.filteredFeeds = this.feeds.filter(({title, feedURL}) => {
           return (this.filter === ''
                   || title.indexOf(this.filter) > -1 
                   || feedURL.indexOf(this.filter) > -1 )
         })
+        //console.log(this.filteredFeeds)
       }, 500)
-    }
+    },
+    buildRowClassName (feed) {
+      let classNames = []
+      
+      if (feed.status && feed.status !== 'Subscribable') {
+        if (feed.status === 'Unreachable') {
+          classNames.push('negative')
+        }
+        else if (feed.status === 'Not RSS') {
+          classNames.push('warning')
+        }
+        
+      }
+      
+      return classNames.join(' ')
+    },
+    
+    buildTestURL (feed) {
+      let encodedURL = encodeURIComponent(feed.feedURL)
+      
+      let parameters = [
+        'u=' + encodedURL
+      ]
+      
+      if (feed.modules && feed.modules !== '') {
+        parameters.push('m=' + feed.modules)
+      }
+      
+      return './test.html?' + parameters.join('&')
+    },
   }
 }

@@ -1,5 +1,10 @@
 const express = require('express')
+const compression = require('compression')
+
 const app = express()
+
+app.use(compression())
+
 const port = 3000
 const bodyParser = require('body-parser');
 
@@ -48,8 +53,12 @@ GitPull(app)
 const OPMLParser = require('./api/opml-parser/route.js')
 OPMLParser(app)
 
+app.get('/', async (req, res) => {
+  res.redirect('/sub.html')
+})
+
 // ------------------------------------------------
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })
