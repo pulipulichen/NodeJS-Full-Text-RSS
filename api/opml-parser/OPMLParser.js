@@ -111,34 +111,36 @@ const parseAvailableURL = async function ($) {
     }
     
     // -------------
-    let status = 'Subscribable'
-    
-    if (url.startsWith('//')) {
-      url = 'https:' + url
-    }
-    else if (!url.startsWith('https://') && !url.startsWith('http://')) {
-      url = 'https://' + url
-    }
-    
-    if (await isURLAvailable(url) === false) {
-      if (url.startsWith('https://')) {
-        url = 'http://' + url.slice(8)
-        
-        if (await isURLAvailable(url) === false) {
+    let status = await NodeCacheSQLite.get('feed-status', url, async () => {
+      let status = 'Subscribable'
+
+      if (url.startsWith('//')) {
+        url = 'https:' + url
+      }
+      else if (!url.startsWith('https://') && !url.startsWith('http://')) {
+        url = 'https://' + url
+      }
+
+      if (await isURLAvailable(url) === false) {
+        if (url.startsWith('https://')) {
+          url = 'http://' + url.slice(8)
+
+          if (await isURLAvailable(url) === false) {
+            status = 'Unreachable'
+            //continue
+          }
+        }
+        else {
           status = 'Unreachable'
-          //continue
         }
       }
-      else {
-        status = 'Unreachable'
+
+      if (status === 'Subscribable'
+              && await isXML(url) === false) {
+        status = 'Not RSS'
       }
-    }
-    
-    if (status === 'Subscribable'
-            && await isXML(url) === false) {
-      status = 'Not RSS'
-    }
-    
+    }, 30 * 24 * 60 * 60 * 1000)
+      
     // -------------
     
     if (title.endsWith('(まるごとRSS)')) {

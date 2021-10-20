@@ -2,7 +2,12 @@
 Convert RSS feeds to full text feeds.
 
 npm run start --prefix /app/NodeJS-Full-Text-RSS
+
+local dir
 /app/NodeJS-Full-Text-RSS/mount
+
+tmp dir
+/app/NodeJS-Full-Text-RSS/cache
 
 ----
 

@@ -1,4 +1,5 @@
 /* global path, __dirname, cacheClass, sequelize, databases, databaseName */
+const cachePath = './../../../cache/'
 
 const {Sequelize, Model, DataTypes, Op} = require('sequelize')
 const sqlite3 = require('sqlite3')
@@ -123,7 +124,7 @@ _this.getDatabase = async function (databaseName) {
         acquire: 30000,
         idle: 10000
       },
-      storage: path.resolve(__dirname, 'node-cache_' + databaseName + '.sqlite'),
+      storage: path.resolve(__dirname, cachePath, 'node-cache_' + databaseName + '.sqlite'),
       operatorsAliases: 0,
       logging: false,
       transactionType: 'IMMEDIATE'
