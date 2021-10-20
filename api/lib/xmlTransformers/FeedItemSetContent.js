@@ -52,6 +52,7 @@ const FeedItemSetContent = function (item, content) {
   element = item.find('media\\:description:first')
   if (element.length === 1) {
     //console.log(3, content)
+    /*
     if (!content.startsWith('<![CDATA[')) {
       content = '<![CDATA[' + content
     }
@@ -60,6 +61,19 @@ const FeedItemSetContent = function (item, content) {
     }
     
     return element.text(content)
+    */
+    //return element.text(encode(content))
+    //content = encode(content)
+    //return item.append(`<content>${content}</content>`)
+    
+    if (!content.startsWith('<![CDATA[')) {
+      content = '<![CDATA[' + content
+    }
+    if (!content.endsWith(']]>')) {
+      content = content + ']]>'
+    }
+    
+    return item.append(`<content>${content}</content>`)
   }
   
   //console.log(item.html())

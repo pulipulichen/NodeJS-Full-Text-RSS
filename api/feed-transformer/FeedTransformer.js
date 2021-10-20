@@ -61,6 +61,17 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   //console.log($('channel > item > title').text())
   
+  /*
+  $('feed:first').append(`<image>
+    <url>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</url>
+    <title>example image</title>
+    <link>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</link>
+  </image>`)
+   */
+//  $('feed:first').prepend(`<icon>https://iconarchive.com/download/i46591/saki/nuoveXT/Apps-demo.ico</icon>`)
+//  $('feed:first').prepend(`<atom:icon>https://iconarchive.com/download/i38830/google/chrome/Google-Chrome.ico</atom:icon>`)
+//  $('feed:first').prepend(`<logo>https://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=64&d=identicon&r=PG</logo>`)
+//  
   // -----------------------------
   
   if (HasModuleType(moduleCodesString, 'x') === false) {

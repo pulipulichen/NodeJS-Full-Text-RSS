@@ -1,6 +1,10 @@
 const FeedTransformer = require('./FeedTransformer.js')
+const path = require('path')
+const favicon = require('serve-favicon');
 
 const route = function (app) {
+  app.use(favicon(path.resolve(__dirname, './Saki-NuoveXT-Apps-demo.ico')));
+  
   app.post('/feed-transformer', async (req, res) => {
     let feedXML = req.body.feedXML
     let result = await FeedTransformer(feedXML)
