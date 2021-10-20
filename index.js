@@ -53,6 +53,10 @@ GitPull(app)
 const OPMLParser = require('./api/opml-parser/route.js')
 OPMLParser(app)
 
+app.get('/', async (req, res) => {
+  res.redirect('/sub.html')
+})
+
 // ------------------------------------------------
 
 app.listen(port, () => {

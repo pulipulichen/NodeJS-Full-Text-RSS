@@ -80,6 +80,35 @@ module.exports = {
       else {
         return `./fc/` + feed.modules + '/' + encodedURL
       }
-    }
+    },
+    buildRowClassName (feed) {
+      let classNames = []
+      
+      if (feed.status && feed.status !== 'Subscribable') {
+        if (feed.status === 'Unreachable') {
+          classNames.push('negative')
+        }
+        else if (feed.status === 'Not RSS') {
+          classNames.push('warning')
+        }
+        
+      }
+      
+      return classNames.join(' ')
+    },
+    
+    buildTestURL (feed) {
+      let encodedURL = encodeURIComponent(feed.feedURL)
+      
+      let parameters = [
+        'u=' + encodedURL
+      ]
+      
+      if (feed.modules && feed.modules !== '') {
+        parameters.push('m=' + feed.modules)
+      }
+      
+      return './test.html?' + parameters.join('&')
+    },
   }
 }

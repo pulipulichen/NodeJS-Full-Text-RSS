@@ -4,12 +4,23 @@
   </h1>
   <div class="ui form segment">
     
-    <div class="field">
-      <a href="/"
-         class="ui fluid button">
-        TEST
-      </a>
+    <div class="fields">
+      <div class="six wide field">
+        <a href="/test.html"
+           class="ui fluid button">
+          TEST
+        </a>
+      </div>
+      <div class="six wide field">
+        <label>
+          Git
+        </label>
+        <a class="ui fluid button" href="./git-pull" target="_blank">
+          pull
+        </a>
+      </div>
     </div>
+    
     
     <div class="field">
       <label>
@@ -26,14 +37,19 @@
           <th>Title</th>
           <th class="center aligned">Original</th>
           <th class="center aligned">Full Text</th>
+          <th class="center aligned">Test</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="feed in feeds">
+        <tr v-for="feed in feeds"
+            v-bind:class="buildRowClassName(feed)">
           <td data-label="Title">
             <a v-bind:href="feed.feedURL" target="_blank">
               <strong class="feed-title">{{ feed.title }}</strong>
               <span v-if="feed.modules && feed.modules !== ''">({{ feed.modules }})</span>
+              <span v-if="feed.status">
+                [{{ feed.status }}]
+              </span>
               <div class="feed-url">{{ feed.feedURL }}</div>
             </a>
           </td>
@@ -51,6 +67,14 @@
                class="ui positive icon button"
                target="_blank">
               <i class="rss icon"></i>
+              </a>
+          </td>
+          <td data-label="Test"
+              class="center aligned">
+            <a v-bind:href="buildTestURL(feed)"
+               class="ui warning icon button"
+               target="_blank">
+              <i class="question circle outline icon"></i>
               </a>
           </td>
         </tr>

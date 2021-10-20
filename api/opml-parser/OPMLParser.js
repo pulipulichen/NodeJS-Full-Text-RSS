@@ -111,6 +111,7 @@ const parseAvailableURL = async function ($) {
     }
     
     // -------------
+    let status = 'Subscribable'
     
     if (url.startsWith('//')) {
       url = 'https:' + url
@@ -124,16 +125,18 @@ const parseAvailableURL = async function ($) {
         url = 'http://' + url.slice(8)
         
         if (await isURLAvailable(url) === false) {
-          continue
+          status = 'Unreachable'
+          //continue
         }
       }
       else {
-        continue
+        status = 'Unreachable'
       }
     }
     
-    if (await isXML(url) === false) {
-      continue
+    if (status === 'Subscribable'
+            && await isXML(url) === false) {
+      status = 'Not RSS'
     }
     
     // -------------
@@ -150,12 +153,20 @@ const parseAvailableURL = async function ($) {
       title = title.slice(0, -11).trim()
     }
     
-    if (title.endsWith(' :: 痞客邦 PIXNET ::')) {
-      title = title.slice(0, -17).trim()
+    if (title.endsWith(' [feedex]')) {
+      title = title.slice(0, -9).trim()
     }
     
-    if (title.endsWith(' :: 隨意窩 Xuite ::')) {
+    if (title.endsWith('(PIXNET)')) {
+      title = title.slice(0, -8).trim()
+    }
+    
+    if (title.endsWith(':: 痞客邦 PIXNET ::')) {
       title = title.slice(0, -16).trim()
+    }
+    
+    if (title.endsWith(':: 隨意窩 Xuite ::')) {
+      title = title.slice(0, -15).trim()
     }
     
     // 
@@ -164,7 +175,8 @@ const parseAvailableURL = async function ($) {
     
     urlList.push({
       title,
-      feedURL: url
+      feedURL: url,
+      status
     })
   }
   
