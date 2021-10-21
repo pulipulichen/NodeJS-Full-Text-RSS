@@ -77,38 +77,49 @@ const PuppeterHTMLLoader = async function (url, cacheMS) {
       await sleep(100)
     }
     isLoading = true
-    await initBrowser()
     
-    await page.goto(url, {waitUntil: 'load'})
-    
-    let {html, href} = await page.evaluate(() => {
-        return {
-          html: document.body.innerHTML,
-          href: location.href
+    while (true) {
+      try {
+        await initBrowser()
+
+        await page.goto(url, {waitUntil: 'load'})
+
+        let {html, href} = await page.evaluate(() => {
+            return {
+              html: document.body.innerHTML,
+              href: location.href
+            }
+        })
+
+        let validConfList = [
+          ({href}) => href.startsWith('https://www.facebook.com/login/?next='),
+          ({html}) => html.indexOf('Checking your browser before accessing') > -1
+        ]
+
+        for (let i = 0; i < validConfList.length; i++) {
+          let result = await validateReload(url, {html, href}, validConfList[i])
+          html = result.html
+          href = result.href
         }
-    })
-    
-    let validConfList = [
-      ({href}) => href.startsWith('https://www.facebook.com/login/?next='),
-      ({html}) => html.indexOf('Checking your browser before accessing') > -1
-    ]
-    
-    for (let i = 0; i < validConfList.length; i++) {
-      let result = await validateReload(url, {html, href}, validConfList[i])
-      html = result.html
-      href = result.href
+
+        await sleep(1000)
+
+        //console.log(href)
+        //await sleep(10)
+
+    //    let html = await page.evaluate(() => {
+    //        return document.body.innerHTML
+    //    })
+
+        closeBrowser()
+        break
+      }
+      catch (e) {
+        console.error(e)
+        await sleep(10000)
+      }
+      
     }
-    
-    await sleep(1000)
-    
-    //console.log(href)
-    //await sleep(10)
-    
-//    let html = await page.evaluate(() => {
-//        return document.body.innerHTML
-//    })
-    
-    closeBrowser()
     isLoading = false
     return html
   }, cacheMS)
