@@ -30,7 +30,7 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   feedURL = FeedURLFilter(feedURL)
   
   //console.log(feedURL)
-  let feedXML = await XMLLoader(feedURL, 10)
+  let feedXML = await XMLLoader(feedURL, 10000)
   //console.log(feedXML)
   
   let output = await FeedTransformer(feedXML, moduleCodesString)
