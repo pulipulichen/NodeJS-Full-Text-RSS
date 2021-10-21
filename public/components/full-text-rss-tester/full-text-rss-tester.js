@@ -233,7 +233,7 @@ module.exports = {
       this.outputContent = ''
       
       //this.output = this.feedXML
-      let queryAPI = '/feed-transformer'
+      let queryAPI = './feed-transformer'
       if (this.modules !== '') {
         queryAPI = queryAPI + '/' + this.modules
       }
@@ -257,14 +257,18 @@ module.exports = {
       
       //this.output = this.feedXML
       if (this.modules === '') {
-        queryAPI = '/f/' + encodeURIComponent(this.query)
+        queryAPI = './f/' + encodeURIComponent(this.query)
       }
       else {
-        queryAPI = '/f/' + this.modules + '/' + encodeURIComponent(this.query)
+        queryAPI = './f/' + this.modules + '/' + encodeURIComponent(this.query)
       }
       
-      let baseURL = new URL(location.href)
-      this.subURL = baseURL.origin + queryAPI
+      //let baseURL = new URL(location.href)
+      //this.subURL = baseURL.origin + queryAPI
+      let href = location.href
+      let baseURL = href.slice(0, href.indexOf('/test.html'))
+      this.subURL = baseURL + queryAPI.slice(1)
+      
       //console.log(queryAPI)
       $.get(queryAPI, (xml) => {
         //console.log(xml)
@@ -281,10 +285,10 @@ module.exports = {
     loadQueryFullTextParser () {
       let queryAPI
       if (this.modules === '') {
-        queryAPI = '/full-text-parser/' + encodeURIComponent(this.query)
+        queryAPI = './full-text-parser/' + encodeURIComponent(this.query)
       }
       else {
-        queryAPI = '/full-text-parser/' + this.modules + '/' + encodeURIComponent(this.query)
+        queryAPI = './full-text-parser/' + this.modules + '/' + encodeURIComponent(this.query)
       }
       $.getJSON(queryAPI, (data) => {
         this.output = ''
