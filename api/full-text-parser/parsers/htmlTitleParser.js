@@ -28,11 +28,17 @@ const htmlTitleParser = async function (html, modules) {
     //console.log('htmlTitleParser', html)
 
     try {
+      //console.log('[test]')
       title = parseTitle(html)
+      //console.log(title)
+      if (!title || title === '') {
+        
+        throw Error('no <title>')
+      }
     }
     catch (e) {
-      const $ = cheerio.load(html); // 載入 body
-
+      const $ = cheerio.load(`<div>${html}</div>`); // 載入 body
+      //console.log(html)
       let selectors = [
         'h1:first',
         'h2:first',
@@ -41,14 +47,17 @@ const htmlTitleParser = async function (html, modules) {
         'p:first'
       ]
 
-      let title
+      //let title
       for (let i = 0; i < selectors.length; i++) {
         let element = $(selectors[i])
+        //console.log(selectors[i], element.length)
         if (element.length === 0) {
           continue
         }
 
-        title = element.html().trim()
+        title = element.text().trim()
+        //console.log(title)
+        break
       }
     }
   }
@@ -74,7 +83,7 @@ const htmlTitleParser = async function (html, modules) {
   // 模組處理
   
   title = await ModuleManager(title, modules, 't')
-
+  //console.log(title)
   return title
 }
 

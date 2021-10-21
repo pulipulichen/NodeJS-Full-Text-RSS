@@ -39,6 +39,34 @@ let maxCacheYear = 1
 let maxCacheTime = maxCacheYear * 365 * 24 * 60 * 60 * 1000
 
 
+const validateReload = async function (url, result, validCond) {
+  let reloadCounter = 0
+  while (validCond(result)) {
+    //console.log('href is login', url, reloadCounter, href)
+    reloadCounter++
+    if (reloadCounter >= 10) {
+      break
+    }
+    await sleep(1000)
+
+    //await page.goto('https://www.facebook.com/pulipuli.blogspot/posts/6734089429949788', {waitUntil: 'load'})
+
+    await page.goto(url, {waitUntil: 'load'})
+    result = await page.evaluate(() => {
+        return {
+          html: document.body.innerHTML,
+          href: location.href
+        }
+    })
+
+    if (!validCond(result)) {
+      break;
+    }
+  }
+  
+  return result
+}
+
 const PuppeterHTMLLoader = async function (url, cacheMS) {
   if (!cacheMS) {
     cacheMS = maxCacheTime
@@ -60,31 +88,18 @@ const PuppeterHTMLLoader = async function (url, cacheMS) {
         }
     })
     
-    let reloadCounter = 0
-    while (href.startsWith('https://www.facebook.com/login/?next=')) {
-      //console.log('href is login', url, reloadCounter, href)
-      reloadCounter++
-      if (reloadCounter >= 10) {
-        break
-      }
-      await sleep(1000)
-      
-      //await page.goto('https://www.facebook.com/pulipuli.blogspot/posts/6734089429949788', {waitUntil: 'load'})
-      
-      await page.goto(url, {waitUntil: 'load'})
-      let result = await page.evaluate(() => {
-          return {
-            html: document.body.innerHTML,
-            href: location.href
-          }
-      })
-      
-      href = result.href
+    let validConfList = [
+      ({href}) => href.startsWith('https://www.facebook.com/login/?next='),
+      ({html}) => html.indexOf('Checking your browser before accessing') > -1
+    ]
+    
+    for (let i = 0; i < validConfList.length; i++) {
+      let result = await validateReload(url, {html, href}, validConfList[i])
       html = result.html
-      if (!href.startsWith('https://www.facebook.com/login/?next=')) {
-        break;
-      }
+      href = result.href
     }
+    
+    await sleep(1000)
     
     //console.log(href)
     //await sleep(10)

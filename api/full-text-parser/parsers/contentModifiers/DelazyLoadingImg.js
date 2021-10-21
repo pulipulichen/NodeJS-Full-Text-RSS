@@ -34,6 +34,15 @@ const DelazyLoadingImg = function (html) {
     let img = imgList.eq(i)
     img.attr('src', img.attr('data-src'))
   }
+  
+  // -------------------
+  
+  imgList = $(`img.lazy[data-src]`)
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    img.attr('src', img.attr('data-src'))
+  }
+  
   // ------------------------------
   
   return $

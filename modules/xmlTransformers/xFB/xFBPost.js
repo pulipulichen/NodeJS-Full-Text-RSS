@@ -1,5 +1,7 @@
 const GetFirstLine = require('./../../../api/lib/stringUtils/GetFirstLine.js')
 const linkifyHtml = require('linkify-html')
+//const DesafeImg = require('./../../../api/full-text-parser/parsers/contentModifiers/DesafeImg.js')
+const cheerio = require('cheerio')
 
 const wrapCDATA = function (item) {
   let descriptionModified = false
@@ -25,21 +27,58 @@ const wrapCDATA = function (item) {
 
 const trimBR = function (item) {
   let description = item.find('description').text().trim()
-  
-  let descriptionModified = false
+  let originalDescription = description
+  //let descriptionModified = false
   while (description.startsWith('<br>')) {
     description = description.slice(4).trim()
-    descriptionModified = true
+    //descriptionModified = true
   }
   while (description.endsWith('<br>')) {
     description = description.slice(0, -4).trim()
-    descriptionModified = true
+    //descriptionModified = true
   }
   
+  description = DesafeImg(description)
+  
   //console.log(descriptionModified)
-  if (descriptionModified) {
+  if (originalDescription !== description) {
     item.find('description').text(description)
   }
+}
+
+
+const DesafeImg = function (html) {
+  //console.log(html)
+  
+  let $
+  if (typeof(html) === 'object' || typeof(html) === 'function') {
+    $ = html
+  }
+  else {
+    $ = cheerio.load('<div>' + html + '</div>'); // 載入 body
+  }
+  
+  // -------------------
+  //console.log('aaaa')
+  
+  // https://external-dus1-1.xx.fbcdn.net/safe_image.php?d=AQHD89UyTzKBNIVC&url=https%3A%2F%2Fp2.bahamut.com.tw%2FB%2F2KU%2F86%2F239deeb3a7486b476315bfe0c11dz525.JPG&ext=emg0&_nc_oe=6ed7d&_nc_sid=64c8fc&ccb=3-5&_nc_hash=AQFV1ICQpL9W2Tpx
+  let imgList = $(`img[src*=".fbcdn.net/safe_image.php"][src*="&url="]`)
+  //console.log(imgList.length)
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    let src = img.attr('src')
+    
+    let urlParams = new URLSearchParams(src);
+    let url = urlParams.get('url')
+    url = decodeURIComponent(url)
+    
+    img.attr('src', url)
+  }
+  
+  let output = $('body > div').html()
+  //console.log(output)
+  
+  return output
 }
 
 const replaceTitleWithDesription = function (item) {

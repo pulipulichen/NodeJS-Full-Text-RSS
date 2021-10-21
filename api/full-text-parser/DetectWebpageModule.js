@@ -20,7 +20,7 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   }
   
   
-   
+  
   if (url.startsWith('https://www.facebook.com/')) {
     addModules.push('hFB')
   }
@@ -35,6 +35,9 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   }
   else if (url.startsWith('https://github.com/')) {
     addModules.push('hGitHub')
+  }
+  else if (url.startsWith('https://www.mobile01.com/')) {
+    addModules.push('hPuppeter')
   }
   else {
     addModules.push('hDefault')

@@ -10,7 +10,20 @@ const FeedItemGetLink = function (item) {
     return href
   }
   else if (linkElement.text().trim() !== '') {
-    return linkElement.text().trim()
+    let link = linkElement.text().trim()
+    
+    if (link.startsWith('<!CDATA[')
+            && link.endsWith(']]>')) {
+      link = link.slice(8, -3)
+    }
+    try {
+      new URL(link)
+      return link
+    }
+    catch (e) {
+      console.error('Link is invalid: ' + link)
+      return false
+    }
   } 
 }
 

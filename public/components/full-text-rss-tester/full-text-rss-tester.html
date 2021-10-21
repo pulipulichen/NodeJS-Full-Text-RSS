@@ -60,10 +60,16 @@
     <label for="query">
       URL
     </label>
-    <input type="url" 
-           id="query"
-           v-model="query"
-           placeholder="https://..." />
+    <div class="ui action input">
+      <input type="url" 
+             id="query"
+             v-model="query"
+             placeholder="https://..." />
+      <button type="button" class="ui button"
+              v-on:click="window.open(query, '_blank')">
+        OPEN
+      </button>
+    </div>
   </div>
   
   <div class="field">

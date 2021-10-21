@@ -6,6 +6,7 @@ const PrependRelativeURI = require('./contentModifiers/PrependRelativeURI.js')
 const TrimEmptyElement = require('./contentModifiers/TrimEmptyElement.js')
 const RemoveComments = require('./contentModifiers/RemoveComments.js')
 const DelazyLoadingImg = require('./contentModifiers/DelazyLoadingImg.js')
+const DesafeImg = require('./contentModifiers/DesafeImg.js')
 const RemoveAds = require('./contentModifiers/RemoveAds.js')
 
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
@@ -53,6 +54,7 @@ const htmlContentParser = async function (html, modules, url) {
   content = TrimEmptyElement(content)
   content = RemoveComments(content)
   content = DelazyLoadingImg(content)
+  content = DesafeImg(content)
   content = RemoveAds(content)
   
   
