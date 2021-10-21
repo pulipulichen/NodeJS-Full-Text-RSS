@@ -51,12 +51,29 @@ const htmlContentParser = async function (html, modules, url) {
   
   content = PrependProtocol(content)
   content = PrependRelativeURI(content, url)
-  content = TrimEmptyElement(content)
+  
+//  
+//  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
+//    console.log(content)
+//  }
+//  
+  
+  //content = TrimEmptyElement(content)
+  
+  
   content = RemoveComments(content)
+  
+  
   content = DelazyLoadingImg(content)
   content = DesafeImg(content)
-  content = RemoveAds(content)
   
+//  
+//  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
+//    console.log(content.html())
+//  }
+//  
+  
+  content = RemoveAds(content)
   
   // -----------------
   // 模組處理
@@ -65,8 +82,18 @@ const htmlContentParser = async function (html, modules, url) {
     content = content('body > div').html()
   }
   
+//  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
+//    console.log(content)
+//  }
+  
+  
   content = await ModuleManager(content, modules, 'c')
 
+//  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
+//    console.log(content)
+//  }
+  
+  
   return content
 }
 

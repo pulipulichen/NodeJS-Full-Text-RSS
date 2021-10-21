@@ -312,6 +312,10 @@ module.exports = {
       let $xml = $( xmlDoc )
       
       let entryList = $xml.find('feed > entry')
+      if (entryList.length === 0) {
+        entryList = $xml.find('channel > item')
+      }
+      
       //console.log('entry list count', entryList.length)
       for (let i = 0; i < entryList.length; i++) {
         let $entry = $(entryList[i])

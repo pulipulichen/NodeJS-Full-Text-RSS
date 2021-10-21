@@ -11,6 +11,8 @@ const TrimEmptyElement = function (html) {
     $ = cheerio.load('<div>' + html + '</div>'); // 載入 body
   }
   
+  //return $
+  
   // -------------------
   
   let children = $("body > div > *")

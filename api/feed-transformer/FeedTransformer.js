@@ -8,6 +8,9 @@ const FeedItemEach = require('./../lib/xmlTransformers/FeedItemEach.js')
 const DetectFeedModule = require('./DetectFeedModule.js')
 const DetectDuplateItem = require('./DetectDuplateItem.js')
 
+const FeedItemGetContent = require('./../lib/xmlTransformers/FeedItemGetContent.js')
+const FeedItemSetContent = require('./../lib/xmlTransformers/FeedItemSetContent.js')
+
 const format = require('xml-formatter')
 
 const FeedTransformer = async function (feedXML, moduleCodesString) {
@@ -52,10 +55,12 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
       item.find('title').text(titleNew)
     }
     
-    let content = item.find('content').text()
+    let content = FeedItemGetContent(item)
+    //console.log(content)
     let contentNew = await ModuleManager(content, moduleCodesString, 'c')
     if (content !== contentNew) {
-      item.find('content').text(contentNew)
+      //item.find('content').text(contentNew)
+      FeedItemSetContent(item, contentNew)
     }
   })
   
@@ -77,7 +82,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   if (HasModuleType(moduleCodesString, 'x') === false) {
     moduleCodesString = AddModule(moduleCodesString, 'xDefault')
   }
-  
+  //console.log(moduleCodesString)
   feedXML = await ModuleManager($, moduleCodesString, 'x')
   
   // -----------------------------
@@ -85,7 +90,8 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   feedXML = format($.html(), {
     collapseContent: true, 
   })
-  
+  //feedXML = $.html()
+  //console.log(feedXML)
   // -------------------------------
   
   return feedXML

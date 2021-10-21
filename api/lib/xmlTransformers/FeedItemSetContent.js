@@ -35,7 +35,12 @@ const FeedItemSetContent = function (item, content) {
     }
     
     //console.log(1)
-    return element.text(content)
+    //console.log('[[[', content, ']]]')
+    
+    element.html(content)
+     
+    //console.log('[[[', element.text(), ']]]')
+    return true
   } 
   
   // -------------

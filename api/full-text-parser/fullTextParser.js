@@ -24,6 +24,10 @@ const fullTextParser = async function (url, modules) {
   //let html = await HtmlLoader(url)
   let html = await ModuleManager(url, modules, 'h')
   
+//  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
+//    console.log(html)
+//  }
+  
   if (html === '') {
     console.log('[fullTextParser]', 'SKIP', url)
     return {
@@ -34,7 +38,11 @@ const fullTextParser = async function (url, modules) {
   
   let title = await htmlTitleParser(html, modules)
   let content = await htmlContentParser(html, modules, url)
-  
+//  
+//  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
+//    console.log(content)
+//  }
+//  
   return {
     title,
     content

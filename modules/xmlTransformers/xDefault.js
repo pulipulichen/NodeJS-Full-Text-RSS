@@ -24,7 +24,7 @@ const xDefault = async function ($, moduleCodesString) {
     
     let title = item.find('title:first').text().trim()
     content = xDefaultRemoveTitle(content, title)
-    //console.log(i, content)
+    //console.log(i, '<<<', content, '>>>')
     FeedItemSetContent(item, content)
   })
   
