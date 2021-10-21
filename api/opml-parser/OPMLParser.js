@@ -139,7 +139,7 @@ const parseAvailableURL = async function ($) {
               && await isXML(url) === false) {
         status = 'Not RSS'
       }
-    }, 30 * 24 * 60 * 60 * 1000)
+    }, 365 * 24 * 60 * 60 * 1000)
       
     // -------------
     
