@@ -77,19 +77,22 @@ const PuppeterHTMLLoader = async function (url, cacheMS) {
       await sleep(100)
     }
     isLoading = true
-    
+    let html
+    let href
     while (true) {
       try {
         await initBrowser()
 
         await page.goto(url, {waitUntil: 'load'})
 
-        let {html, href} = await page.evaluate(() => {
+        let result = await page.evaluate(() => {
             return {
               html: document.body.innerHTML,
               href: location.href
             }
         })
+        html = result.html
+        href = result.href
 
         let validConfList = [
           ({href}) => href.startsWith('https://www.facebook.com/login/?next='),
