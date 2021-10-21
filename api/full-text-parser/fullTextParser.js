@@ -6,8 +6,17 @@ const htmlContentParser = require('./parsers/htmlContentParser.js')
 const DetectFeedModule = require('./DetectWebpageModule.js')
 
 const ModuleManager = require('./../lib/ModuleManager/ModuleManager.js')
+const IsURL = require('./../lib/stringUtils/IsURL.js')
 
 const fullTextParser = async function (url, modules) {
+  if (IsURL(url) === false) {
+    console.error('Not a URL: ' + url)
+    return {
+      title: '',
+      content: '',
+    }
+  }
+  
   modules = DetectFeedModule(url, modules)
   
   //console.log(modules)

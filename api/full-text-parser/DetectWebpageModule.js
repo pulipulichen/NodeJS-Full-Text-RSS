@@ -15,7 +15,9 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   else if (url.startsWith('https://www.paddlepaddle.org.cn/documentation/docs/')) {
     addModules.push('cPaddlePaddleDocumentation')
   }
-  
+  else if (url.startsWith('https://www.solidot.org/')) {
+    addModules.push('tSolidot')
+  }
   
   
    
@@ -27,7 +29,8 @@ const DetectWebpageModule = function (url, moduleCodesString) {
           || url.startsWith('https://youtu.be/')
           || url.startsWith('https://www.emerald.com/')
           || url.startsWith('https://www.sciencedirect.com/science/article/')
-          || url.startsWith('https://www.reddit.com/r/')) {
+          || url.startsWith('https://www.reddit.com/r/')
+          || url.startsWith('https://www.plurk.com/')) {
     addModules.push('hSkip')
   }
   else if (url.startsWith('https://github.com/')) {
@@ -37,6 +40,7 @@ const DetectWebpageModule = function (url, moduleCodesString) {
     addModules.push('hDefault')
   }
   
+  //console.log(addModules)
   moduleCodesString = AddModule(moduleCodesString, addModules)
   
   return moduleCodesString

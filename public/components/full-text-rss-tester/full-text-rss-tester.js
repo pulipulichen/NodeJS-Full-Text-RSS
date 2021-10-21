@@ -54,6 +54,7 @@ module.exports = {
     'demo-dropdown-feed': httpVueLoader('./demo-dropdown-feed/demo-dropdown-feed.vue'),
   },
   async mounted () {
+    
     this.dataLoad()
     
     let parameters = this.getParamters()
@@ -109,8 +110,12 @@ module.exports = {
       if (!projectFileListData) {
         return false
       }
-      
-      projectFileListData = JSON.parse(projectFileListData)
+      try {
+        projectFileListData = JSON.parse(projectFileListData)
+      }
+      catch (e) {
+        
+      }
       for (let key in projectFileListData) {
         this[key] = projectFileListData[key]
       }
@@ -135,7 +140,12 @@ module.exports = {
     
     getParamters () {
       let search = location.search.substring(1);
-      return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+      try {
+        return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+      }
+      catch (e) {
+        return {}
+      }
     },
     
     loadOutput () {
@@ -308,7 +318,7 @@ module.exports = {
         let contentElement = $entry.find('content:first')
         if (contentElement.length > 0) {
           content = decodeEntities(contentElement.html())
-          console.log(contentElement.html())
+          //console.log(contentElement.html())
           //console.log(content)
         }
         else {

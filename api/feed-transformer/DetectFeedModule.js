@@ -29,9 +29,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   else if (channelLink.startsWith('https://www.reddit.com/r/')) {
     addModules.push('xReddit')
   }
-//  else if (feedGeneratorURI === 'https://www.joomla.org') {
-//    addModules.push('xSkip')
-//  }
+  else if (feedGeneratorURI === 'https://www.plurk.com/user/') {
+    addModules.push('xSkip')
+  }
   else if (channelLink.startsWith('https://www.y' + 'out' + 'ube.com/')
           || channelLink.startsWith('http://www.y' + 'out' + 'ube.com/')) {
     addModules.push('xUB')
