@@ -18,7 +18,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   // -------------------------------
   // 先處理基本的
   
-  const $ = cheerio.load(feedXML, {
+  let $ = cheerio.load(feedXML, {
     xmlMode: true,
     decodeEntities: false
   })
@@ -87,7 +87,20 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -----------------------------
   
-  feedXML = $.html()
+  //console.log($("feed").length)
+  if ($("feed").length > 0) {
+    $ = $("feed:first")
+    feedXML = $.prop('outerHTML')
+  }
+  else {
+    feedXML = $.html()
+  }
+  //console.log($(":root > div").length)
+  
+  
+  
+  //console.log(feedXML.slice(0, 300))
+  //console.log(feedXML.slice(-300))
   try {
     feedXML = format(feedXML, {
       collapseContent: true, 
