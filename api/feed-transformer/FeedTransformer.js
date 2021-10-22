@@ -87,9 +87,15 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -----------------------------
   
-  feedXML = format($.html(), {
-    collapseContent: true, 
-  })
+  feedXML = $.html()
+  try {
+    feedXML = format(feedXML, {
+      collapseContent: true, 
+    })
+  }
+  catch (e) {
+    console.error(e)
+  }
   //feedXML = $.html()
   //console.log(feedXML)
   // -------------------------------
