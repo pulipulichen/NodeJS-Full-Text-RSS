@@ -6,8 +6,14 @@ const cacheYear = 1
 const cacheTime = cacheYear * 365 * 24 * 60 * 60 * 1000
 
 const DetectDuplateItem = async function ($, item) {
+  //return false
+  
   let channelTitle = FeedChannelTitle($)
   let channelLink = FeedChannelLink($)
+  
+  //console.log(channelTitle)
+  //console.log(channelLink)
+  //console.log(channelLink.trim(), channelTitle.trim())
   
   let title = item.find('title:first').text().trim()
   

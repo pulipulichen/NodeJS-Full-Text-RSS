@@ -12,6 +12,8 @@ const xDefaultRemoveTitle = require('./xDefault/xDefaultRemoveTitle.js')
 const needToLoadFullText = 1500
 
 const xDefault = async function ($, moduleCodesString) {
+  //console.log('xDefault')
+  //console.log($.html())
   await FeedItemEach($, async (item, i) => {
     if (FeedItemGetContent(item).length > needToLoadFullText) {
       return true

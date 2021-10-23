@@ -18,10 +18,15 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   // -------------------------------
   // 先處理基本的
   
+  //console.log(feedXML)
+  
   let $ = cheerio.load(feedXML, {
     xmlMode: true,
     decodeEntities: false
   })
+  
+  //console.log('================')
+  console.log($.html())
   
   moduleCodesString = DetectFeedModule($, moduleCodesString)
   //console.log(moduleCodesString)
@@ -31,11 +36,13 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
     
+    //console.log('DetectDuplateItem', await DetectDuplateItem($, item))
     if (await DetectDuplateItem($, item)) {
       return item.remove()
     }
     
     // ------------------------
+    
     
     let match = await ModuleManager({
       item,
@@ -58,6 +65,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     let content = FeedItemGetContent(item)
     //console.log(content)
     let contentNew = await ModuleManager(content, moduleCodesString, 'c')
+    //console.log(contentNew)
     if (content !== contentNew) {
       //item.find('content').text(contentNew)
       FeedItemSetContent(item, contentNew)
@@ -85,6 +93,8 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   //console.log(moduleCodesString)
   feedXML = await ModuleManager($, moduleCodesString, 'x')
   
+  //console.log(feedXML)
+  
   // -----------------------------
   
   //console.log($("feed").length)
@@ -93,7 +103,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     feedXML = $.prop('outerHTML')
   }
   else {
-    feedXML = $.html()
+    feedXML = $(':root').html()
   }
   //console.log($(":root > div").length)
   

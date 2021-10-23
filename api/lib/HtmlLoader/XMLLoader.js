@@ -23,14 +23,17 @@ const XMLLoader = async function (url, cacheMS) {
       $ = cheerio.load(feedXML)
 
       if ($('rss:first').length === 1) {
-        feedXML = $('rss:first').prop('outerHTML')
+        //feedXML = $('rss:first').prop('outerHTML')
+        feedXML = feedXML.slice(feedXML.indexOf('<rss'), feedXML.indexOf('</rss>') + 6)
       }
 
-      //console.log(feedXML)
+      console.log('============')
+      console.log(feedXML)
+      console.log('============')
     }
 
     return feedXML
-  }, cacheMS)
+  }, 1)
 }
 
 module.exports = XMLLoader

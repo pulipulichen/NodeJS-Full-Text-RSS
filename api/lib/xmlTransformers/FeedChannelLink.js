@@ -14,7 +14,7 @@ const FeedChannelLink = function ($) {
     let href = link.attr('href')
     
     if (typeof(href) === 'string' && href.length > 6) {
-      return href
+      return href.trim()
     } 
   }
   
