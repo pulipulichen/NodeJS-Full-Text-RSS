@@ -10,10 +10,10 @@ const XMLLoader = async function (url, cacheMS) {
     
     let feedXML = await HtmlLoader(url, cacheMS)
     let $ = cheerio.load(feedXML)
-    console.log('~~~', feedXML, '~~~')
-    console.log('need puppeter', ($('rss').length === 0
-            && $('atom').length === 0
-            && $('feed').length === 0))
+    //console.log('~~~', feedXML, '~~~')
+    //console.log('need puppeter', ($('rss').length === 0
+    //        && $('atom').length === 0
+    //        && $('feed').length === 0))
     if ($('rss').length === 0
             && $('atom').length === 0
             && $('feed').length === 0) {
