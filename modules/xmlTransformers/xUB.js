@@ -18,13 +18,15 @@ const xUBBuildCaptionArticle = require('./xUB/xUBBuildCaptionArticle.js')
 const xUBBuildSectionTOC = require('./xUB/xUBBuildSectionTOC.js')
 const xUBBuildSectionFromCaptions = require('./xUB/xUBBuildSectionFromCaptions.js')
 
+const DesafeImg = require('./../../api/full-text-parser/parsers/contentModifiers/DesafeImg.js')
+
 
 //const newHeaderInterval = 0.5
 //const newParagraphInterval = 0.3
 
 
 const xUB = async function ($, moduleCodesString) {
-  
+  //console.log('xUB')
   await FeedItemEach($, async (item, i) => {
     //console.log(i, item.find('title').text())
     //item.remove()
@@ -33,6 +35,7 @@ const xUB = async function ($, moduleCodesString) {
     //let {content} = await fullTextParser(link, moduleCodesString)
     //let title = item.find('title').text().trim()
     let content = FeedItemGetContent(item)
+    content = DesafeImg(content)
     //console.log('content', content)
     let link = FeedItemGetLink(item)
     let videoID = UBVideoIDParser(link)

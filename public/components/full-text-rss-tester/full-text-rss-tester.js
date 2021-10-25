@@ -370,7 +370,7 @@ module.exports = {
         //console.log($entry.find('title').length, title, link)
         //console.log(i, content.length)
         
-        console.log(i, title, link)
+        //console.log(i, title, link)
         
         this.itemsPreview.push({
           title,

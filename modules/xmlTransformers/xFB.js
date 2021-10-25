@@ -44,7 +44,7 @@ const xFB = async function ($, moduleCodesString) {
       
       let {title, content} = await fullTextParser(type, moduleCodesString)
       
-      //description = DesafeImg(description)
+      
       
       if (title !== '') {
         item.find('title').text(title)
@@ -52,6 +52,7 @@ const xFB = async function ($, moduleCodesString) {
       
       if (content !== '') {
         if (description !== '') {
+          description = DesafeImg(description)
           content = '<![CDATA[' + `<a href="${fbLink}" target="_blank">Facebook Post</a><br>${description}` + '<hr />' + content + ']]>'
         }
         item.find('description').text(content)
