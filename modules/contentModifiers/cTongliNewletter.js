@@ -1,8 +1,5 @@
 const cheerio = require('cheerio')
 
-let needle = `
-<span class="f2">※ 發信站: 批踢踢實業坊(ptt.cc), 來自: `
-
 const cTongliNewletter = function (content) {
   const $ = cheerio.load(content)
   $('img[src$="/epaper/logo.gif"]').remove()

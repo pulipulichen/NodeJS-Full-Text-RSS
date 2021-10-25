@@ -28,6 +28,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('tTongliNewletter')
     addModules.push('cTongliNewletter')
   }
+  else if (channelLink.startsWith('https://sub-steam-wishlist-2017.blogspot.com/')) {
+    addModules.push('cSteamOnSale')
+  }
   else if (channelLink.startsWith('https://soundcloud.com/')) {
     addModules.push('xPodcast')
   }
