@@ -269,18 +269,29 @@ module.exports = {
       let baseURL = href.slice(0, href.indexOf('/test.html'))
       this.subURL = baseURL + queryAPI.slice(1)
       
-      //console.log(queryAPI)
-      $.get(queryAPI, (xml) => {
-        //console.log(xml)
-        if (typeof(xml) === 'object') {
-          xml = (new XMLSerializer()).serializeToString(xml)
-        }
-        this.output = xml
-        //console.log(xml)
-        if (this.autoPreview) {
-          this.parseItemsPreview()
-        }
-      })
+//      console.log(queryAPI)
+//      $.get(queryAPI, (xml) => {
+//        
+//      })
+      
+      $.ajax({
+          type: "GET",
+          url: queryAPI,
+          cache: false,
+          dataType: "xml",
+          success: (xml) => {
+            //console.log('return')
+            //console.log(xml)
+            if (typeof(xml) === 'object') {
+              xml = (new XMLSerializer()).serializeToString(xml)
+            }
+            this.output = xml
+            //console.log(xml)
+            if (this.autoPreview) {
+              this.parseItemsPreview()
+            }
+          }
+      });
     },
     loadQueryFullTextParser () {
       let queryAPI

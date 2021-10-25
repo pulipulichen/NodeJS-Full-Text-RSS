@@ -10,6 +10,7 @@ const DetectDuplateItem = require('./DetectDuplateItem.js')
 
 const FeedItemGetContent = require('./../lib/xmlTransformers/FeedItemGetContent.js')
 const FeedItemSetContent = require('./../lib/xmlTransformers/FeedItemSetContent.js')
+const FeedChannelAppendTitle = require('./../lib/xmlTransformers/FeedChannelAppendTitle.js')
 
 const format = require('xml-formatter')
 
@@ -24,6 +25,10 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     xmlMode: true,
     decodeEntities: false
   })
+  
+  FeedChannelAppendTitle($)
+  
+  //console.log($.html())
   
   //console.log('================')
   //console.log($.html())
@@ -94,9 +99,12 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     moduleCodesString = AddModule(moduleCodesString, 'xDefault')
   }
   //console.log(moduleCodesString)
-  feedXML = await ModuleManager($, moduleCodesString, 'x')
+  //console.log($(':root').html())
+  //console.log($.html())
   
-  //console.log(feedXML)
+  $ = await ModuleManager($, moduleCodesString, 'x')
+  
+  //console.log($.html())
   
   // -----------------------------
   
@@ -104,9 +112,12 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   if ($("feed").length > 0) {
     $ = $("feed:first")
     feedXML = $.prop('outerHTML')
+    //console.log('first feed')
   }
   else {
-    feedXML = $(':root').html()
+    //console.log('root feed')
+    //feedXML = $(':root').html()
+    feedXML = $.html()
   }
   //console.log($(":root > div").length)
   

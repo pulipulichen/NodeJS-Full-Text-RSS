@@ -6,6 +6,7 @@ const cheerio = require('cheerio')
 const NodeCacheSQLite = require('./../cache/node-cache-sqlite.js')
 
 const XMLLoader = async function (url, cacheMS) {
+  //console.log('XMLLoader')
   return await NodeCacheSQLite.get('xml-loader', url, async () => {
     
     let feedXML = await HtmlLoader(url, cacheMS)
@@ -27,13 +28,13 @@ const XMLLoader = async function (url, cacheMS) {
         feedXML = feedXML.slice(feedXML.indexOf('<rss'), feedXML.indexOf('</rss>') + 6)
       }
 
-      console.log('============')
-      console.log(feedXML)
-      console.log('============')
+      //console.log('============')
+      //console.log(feedXML)
+      //console.log('============')
     }
 
     return feedXML
-  }, 1)
+  }, 0)
 }
 
 module.exports = XMLLoader
