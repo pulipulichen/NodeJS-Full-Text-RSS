@@ -124,7 +124,7 @@
               v-if="outputContent !== '' && preview === ''"
               class="ui fluid button"
               v-on:click="preview = outputContent">
-        PREVIEW
+        PREVIEW PAGE
       </button>
       <div class="ui raised segment preview"
            v-if="preview !== ''">
@@ -137,8 +137,8 @@
       <button type="button"
               v-if="output !== '' && preview === ''"
               class="ui fluid button"
-              v-on:click="preview = output">
-        PREVIEW
+              v-on:click="parseItemsPreview">
+        PREVIEW FEED
       </button>
       <div class="ui secondary segment" v-if='itemsPreview.length > 0'
            id="toc">
@@ -168,7 +168,7 @@
               v-if="output !== '' && itemsPreview.length === 0"
               class="ui fluid button"
               v-on:click="parseItemsPreview">
-        PREVIEW
+        PREVIEW ITEMS
       </button>
       <div class="ui secondary segment" v-if='itemsPreview.length > 0'
            id="toc">
