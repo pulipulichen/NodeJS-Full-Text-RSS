@@ -26,7 +26,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   })
   
   //console.log('================')
-  console.log($.html())
+  //console.log($.html())
   
   moduleCodesString = DetectFeedModule($, moduleCodesString)
   //console.log(moduleCodesString)
@@ -56,6 +56,9 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     // ------------------------
     
     let title = item.find('title').text()
+    
+    console.log(i, title)
+    
     let titleNew = await ModuleManager(title, moduleCodesString, 't')
     //console.log(title, '||==||', titleNew)
     if (title !== titleNew) {

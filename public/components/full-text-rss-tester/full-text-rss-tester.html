@@ -143,11 +143,11 @@
       </button>
       <div class="ui secondary segment" v-if='itemsPreview.length > 0'
            id="toc">
-        <ul>
+        <ol>
           <li v-for="{title, link} in itemsPreview">
             <a v-bind:href="'#anchor' + encodeURIComponent(link)">{{ title }}</a>
           </li>
-        </ul>
+        </ol>
       </div>
       <hr v-if='itemsPreview.length > 0' />
       <div class="ui raised segment" 

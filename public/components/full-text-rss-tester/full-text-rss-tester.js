@@ -316,6 +316,8 @@ module.exports = {
         entryList = $xml.find('channel > item')
       }
       
+      //console.log('entryList.length', entryList.length, this.itemsPreview.length)
+      
       //console.log('entry list count', entryList.length)
       for (let i = 0; i < entryList.length; i++) {
         let $entry = $(entryList[i])
@@ -362,23 +364,24 @@ module.exports = {
         })
       }
       
-      $xml.find('item').each((i, item) => {
-        let $item = $(item)
-        
-        let title = $item.find('title').text()
-        let contentElement = $item.find('description')
-        //console.log(contentElement, contentElement.text(), contentElement.html())
-        let content = contentElement.text()
-        let link = $item.find('link').text()
-        //console.log(i, ele.innerHTML)
-        //console.log(title, link)
-        this.itemsPreview.push({
-          title,
-          content,
-          link
+      if (entryList.length === 0) {
+        $xml.find('item').each((j, item) => {
+          let $item = $(item)
+
+          let title = $item.find('title').text()
+          let contentElement = $item.find('description')
+          //console.log(contentElement, contentElement.text(), contentElement.html())
+          let content = contentElement.text()
+          let link = $item.find('link').text()
+          //console.log(i, ele.innerHTML)
+          //console.log(title, link)
+          this.itemsPreview.push({
+            title,
+            content,
+            link
+          })
         })
-      })
-      
+      }
     },
     
     // -----------------------
