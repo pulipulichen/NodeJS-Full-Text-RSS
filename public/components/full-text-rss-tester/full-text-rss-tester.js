@@ -361,12 +361,16 @@ module.exports = {
             }
           }
         }
-        let link = $entry.find('link').attr('href')
+        let linkElement = $entry.find('link')
+        let link = linkElement.attr('href')
+        if (!link) {
+          link = linkElement.text().trim()
+        }
         //console.log(i, ele.innerHTML)
         //console.log($entry.find('title').length, title, link)
         //console.log(i, content.length)
         
-        //console.log(i, title)
+        console.log(i, title, link)
         
         this.itemsPreview.push({
           title,

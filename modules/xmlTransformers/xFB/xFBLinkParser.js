@@ -10,8 +10,15 @@ const xFBLinkParser = function ($) {
   if (aList.length === 0) {
     aList = $('._5rgu:first a[href^="https://lm.facebook.com/l.php?u=http"]')
   }
+  if (aList.length === 0) {
+    aList = $('a._4qxt[href^="https://lm.facebook.com/l.php?u=http"]:first')
+  }
+  //console.log($.html().indexOf('ani.gamer.com'))
+  //console.log(aList.length)
   
+  //console.log('=============================')
   //console.log($.html())
+  //console.log('=============================')
   
   let outputURL
   for (let j = 0; j < aList.length; j++) {

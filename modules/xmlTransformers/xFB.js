@@ -11,6 +11,8 @@ const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 const FeedItemGetLink = require('./../../api/lib/xmlTransformers/FeedItemGetLink.js')
 const FeedItemSetLink = require('./../../api/lib/xmlTransformers/FeedItemSetLink.js')
 
+const DesafeImg = require('./xFB/xFBDesafeImg.js')
+
 const xFB = async function ($, moduleCodesString) {
   //console.log('xFB')
   
@@ -35,14 +37,14 @@ const xFB = async function ($, moduleCodesString) {
       //let fbLink = item.find('link').text().trim()
       
       
-      // item.find('link').text(type)
+      item.find('link').text(type)
       FeedItemSetLink(item, type)
-      
-      
       
       let description = item.find('description').text().trim()
       
       let {title, content} = await fullTextParser(type, moduleCodesString)
+      
+      //description = DesafeImg(description)
       
       if (title !== '') {
         item.find('title').text(title)
@@ -53,6 +55,10 @@ const xFB = async function ($, moduleCodesString) {
           content = '<![CDATA[' + `<a href="${fbLink}" target="_blank">Facebook Post</a><br>${description}` + '<hr />' + content + ']]>'
         }
         item.find('description').text(content)
+      }
+      else {
+        //item.find('description').html(description)
+        await xFBPost(item, i)
       }
       
       //console.log(i, content.slice(0, 200))
