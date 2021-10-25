@@ -135,7 +135,7 @@
       <!-- ========================== -->
       
       <button type="button"
-              v-if="output !== '' && preview === ''"
+              v-if="output !== '' && itemsPreview.length === 0"
               class="ui fluid button"
               v-on:click="parseItemsPreview">
         PREVIEW FEED
