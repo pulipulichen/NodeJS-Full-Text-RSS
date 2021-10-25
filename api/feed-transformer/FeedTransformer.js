@@ -14,6 +14,8 @@ const FeedChannelAppendTitle = require('./../lib/xmlTransformers/FeedChannelAppe
 
 const format = require('xml-formatter')
 
+const MailToBlogger = require('./../full-text-parser/parsers/titleModifiers/MailToBlogger.js')
+
 const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -------------------------------
@@ -65,6 +67,9 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     //console.log(i, title)
     
     let titleNew = await ModuleManager(title, moduleCodesString, 't')
+    
+    titleNew = MailToBlogger(titleNew)
+    
     //console.log(title, '||==||', titleNew)
     if (title !== titleNew) {
       item.find('title').text(titleNew)

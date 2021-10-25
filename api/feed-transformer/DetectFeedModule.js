@@ -23,6 +23,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
   else if (channelLink.startsWith('https://www.emerald.com/insight/publication/')) {
     addModules.push('xEmerald')
   }
+  else if (channelLink.startsWith('https://sub-tongli-2020.blogspot.com/')) {
+    addModules.push('tMailToBlogger')
+    addModules.push('tTongliNewletter')
+  }
   else if (channelLink.startsWith('https://soundcloud.com/')) {
     addModules.push('xPodcast')
   }

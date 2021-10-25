@@ -361,7 +361,10 @@ module.exports = {
             }
           }
         }
-        let linkElement = $entry.find('link')
+        let linkElement = $entry.find('link[type="text/html"]')
+        if (linkElement.length === 0) {
+          linkElement = $entry.find('link')
+        }
         let link = linkElement.attr('href')
         if (!link) {
           link = linkElement.text().trim()

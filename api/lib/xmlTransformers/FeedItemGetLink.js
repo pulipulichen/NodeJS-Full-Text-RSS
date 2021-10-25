@@ -1,5 +1,8 @@
 const FeedItemGetLink = function (item) {
-  let linkElement = item.find('link:first')
+  let linkElement = item.find('link[type="text/html"]:first')
+  if (linkElement.length === 0) {
+    linkElement = item.find('link:first')
+  }
   
   if (linkElement.length === 0) {
     throw Error('no link tag: ' + item.html())
