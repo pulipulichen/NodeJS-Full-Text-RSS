@@ -26,6 +26,7 @@ const DetectFeedModule = function ($, moduleCodesString) {
   else if (channelLink.startsWith('https://sub-tongli-2020.blogspot.com/')) {
     addModules.push('tMailToBlogger')
     addModules.push('tTongliNewletter')
+    addModules.push('cTongliNewletter')
   }
   else if (channelLink.startsWith('https://soundcloud.com/')) {
     addModules.push('xPodcast')
