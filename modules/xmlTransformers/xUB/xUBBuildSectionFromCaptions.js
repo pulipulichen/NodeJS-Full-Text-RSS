@@ -29,10 +29,10 @@ const xUBBuildSectionFromCaptions = function (captions) {
   
   //console.log(sections)
   
-  if (sections.length > 10) {
-    console.log('newHeaderInterval', newHeaderInterval)
-    //throw Error('Too many sections')
-  }
+//  if (sections.length > 10) {
+//    console.log('newHeaderInterval', newHeaderInterval)
+//    //throw Error('Too many sections')
+//  }
   
   return {
     sections,
