@@ -36,6 +36,11 @@ const DetectFeedModule = function ($, moduleCodesString) {
           || channelLink.startsWith('http://www.y' + 'out' + 'ube.com/')) {
     addModules.push('xUB')
   }
+  
+  
+  if (channelLink.endsWith('videos.xml?channel_id=UCLgGLSFMZQB8c0WGcwE49Gw')) {
+    addModules.push('tGamker')
+  }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }
