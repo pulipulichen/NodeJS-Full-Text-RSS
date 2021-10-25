@@ -32,7 +32,7 @@ module.exports = {
       }
       
       //console.log(feedName)
-      let url = '/demo/feeds/' + feedName
+      let url = './demo/feeds/' + feedName
       $.get(url, (feed) => {
         if (!feed) {
           return false
