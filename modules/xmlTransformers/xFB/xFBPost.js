@@ -68,6 +68,19 @@ const replaceTitleWithDesription = function (item) {
   //console.log(i, 'xFBTitle', 2, title)
   
   title = GetFirstLine(title)
+  
+  if (title.length > 40) {
+    if (title.indexOf('。') > 20) {
+      title = title.slice(0, title.indexOf('。') + 1).trim()
+    }
+    else if (title.indexOf('...') > 20) {
+      title = title.slice(0, title.indexOf('...') + 3).trim()
+    }
+    else if (title.indexOf('，', 20) > 20) {
+      title = title.slice(0, title.indexOf('，', 20) + 1).trim()
+    }
+  }
+  
   //console.log(title, description.slice(0, 30))
   if (description.startsWith(title)) {
     description = description.slice(title.length).trim()
