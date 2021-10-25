@@ -12,7 +12,11 @@ const xFBLinkParser = function ($) {
   }
   if (aList.length === 0) {
     aList = $('a._4qxt[href^="https://lm.facebook.com/l.php?u=http"]:first')
-  }
+  } 
+//  else {
+//    aList = $('a[href^="https://lm.facebook.com/l.php?u=http"]')
+//  }
+  
   //console.log($.html().indexOf('ani.gamer.com'))
   //console.log(aList.length)
   
@@ -22,7 +26,7 @@ const xFBLinkParser = function ($) {
   
   let outputURL
   for (let j = 0; j < aList.length; j++) {
-    ///console.log(j, aList.eq(j).attr('href'), aList.eq(j).text())
+    //console.log(j, aList.eq(j).attr('href'), aList.eq(j).text())
     let aTag = aList.eq(j)
     let href = aTag.attr('href')
     linkToURL = href.slice(href.indexOf('l.php?u=') + 8)

@@ -29,7 +29,7 @@ const DesafeImg = function (html) {
   }
   
   let output = $('body > div').html()
-  console.log(output)
+  //console.log(output)
   
   return output
 }
