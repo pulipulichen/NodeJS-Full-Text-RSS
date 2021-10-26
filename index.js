@@ -61,5 +61,6 @@ app.get('/', async (req, res) => {
 
 app.listen(port, () => {
   let dateString = (new Date()) + ''
-  console.log(`App listening at http://localhost:${port} at ${dateString}` )
+  console.log(dateString)
+  console.log(`http://localhost:${port}` )
 })

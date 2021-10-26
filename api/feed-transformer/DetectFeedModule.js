@@ -49,6 +49,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.endsWith('videos.xml?channel_id=UCLgGLSFMZQB8c0WGcwE49Gw')) {
     addModules.push('tGamker')
   }
+  if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg') {
+    addModules.push('tSH')
+  }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }

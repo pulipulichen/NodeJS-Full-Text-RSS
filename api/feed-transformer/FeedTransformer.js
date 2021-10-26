@@ -126,8 +126,6 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   }
   //console.log($(":root > div").length)
   
-  
-  
   //console.log(feedXML.slice(0, 300))
   //console.log(feedXML.slice(-300))
   try {

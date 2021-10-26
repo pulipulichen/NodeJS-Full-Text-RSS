@@ -1,6 +1,7 @@
 const timestampify = require('./timestampify.js')
 
 const xUBExtractSections = function (description) {
+  //console.log(description)
   description = timestampify(description)
   
   let lines = description.split('\n')

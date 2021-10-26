@@ -45,6 +45,8 @@ const xUB = async function ($, moduleCodesString) {
     //throw Error('todo')
     
     let sections = xUBExtractSections(content)
+    //console.log(sections)
+    
     let captions = await xUBGetCaptions(videoID)
     
     if (!captions || captions.length === 0) {
@@ -58,6 +60,8 @@ const xUB = async function ($, moduleCodesString) {
     }
     
     sections = xUBGroupCaptionsToSections(sections, captions)
+    
+    
 //    sections.forEach(s => {
 //      console.log(s.header, '[' + s.captions.length + ']\t', s.captions.map(c => c.text).join(' '))
 //    })
