@@ -5,7 +5,7 @@ const cSoft4fun = function (content) {
   
   
   $('div[style="text-align:center;margin: 0 auto;background-color: #EEEE;color: gray;font-size: 12px;padding: 15px;clear: both;display: inline-table;width: 95%;"]').remove()
-  
+  $('noscript').remove()
   
   let imgList = $(`img[loading="lazy"][data-lazy-src]`)
   //console.log(imgList.length)
