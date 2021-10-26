@@ -99,8 +99,8 @@ module.exports = {
       this.filterTimer = setTimeout(() => {
         this.filteredFeeds = this.feeds.filter(({title, feedURL}) => {
           return (this.filter === ''
-                  || title.indexOf(this.filter) > -1 
-                  || feedURL.indexOf(this.filter) > -1 )
+                  || title.toLowerCase().indexOf(this.filter.toLowerCase()) > -1 
+                  || feedURL.toLowerCase().indexOf(this.filter.toLowerCase()) > -1 )
         })
         //console.log(this.filteredFeeds)
       }, 500)
