@@ -8,7 +8,7 @@ const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
 const minTitleLength = 20
-const maxTitleLength = minTitleLength * 3
+const maxTitleLength = minTitleLength * 5
 const linkifyHtml = require('linkify-html')
 
 const cheerio = require('cheerio')
@@ -90,6 +90,12 @@ const xTwitter = async function ($, moduleCodesString) {
           newLinePos = title.indexOf('. ', minTitleLength) + 1
           //console.log('n4', newLinePos)
         }
+        if (newLinePos === 0 || newLinePos > maxTitleLength) {
+          
+          newLinePos = title.indexOf('? ', minTitleLength) + 1
+          //console.log('n4', newLinePos)
+        }
+        
         if (newLinePos === 0 || newLinePos > maxTitleLength) {
           
           newLinePos = title.indexOf(' ', minTitleLength)
