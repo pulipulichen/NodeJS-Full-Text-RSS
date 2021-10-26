@@ -55,7 +55,7 @@ const xFBLinkParser = function ($) {
       continue
     }
     
-    console.log(output.length, output.join('\n'))
+    //console.log(output.length, output.join('\n'))
     
     let aTag = aList.eq(j)
     let href = aTag.attr('href')
