@@ -113,6 +113,25 @@
                   onfocus="this.select()"></textarea>
 
         </template>
+      
+      <div class="ui action input"
+           v-if="subURL && subURL !== ''">
+        <input type="url" v-model="subURL" />
+        <button type="button" class="ui positive button"
+                v-on:click="copySubURL">
+          COPY
+        </button>
+        <a class="ui button"
+           v-bind:href="subURL"
+           target="_blank">
+          OPEN
+        </a>
+        <a class="ui button"
+           v-bind:href="addFeedlyURL"
+           target="_blank">
+          FEEDLY+
+        </a>
+      </div>
         <h2 v-if="subURL && subURL !== ''">
           <a v-bind:href="subURL" style="word-break: break-all;" target="_blank">{{ subURL }}</a>
         </h2>

@@ -41,11 +41,13 @@ module.exports = {
       queryTimer: null,
       autoPreview: true,
       
+      originalRSS: '',
       output: '',
       outputTitle: '',
       outputContent: '',
       preview: '',
       itemsPreview: [],
+      originalItemsPreview: [],
       subURL: ''
     }
   },
@@ -102,8 +104,12 @@ module.exports = {
       this.dataSave()
     },
   },
-//  computed: {
-//  },
+  computed: {
+    // https://feedly.com/i/discover/sources/search/feed/http%3A%2F%2Fpulipuli.myqnapcloud.com%2F304%2Ff%2Fhttps%253A%252F%252Fopeningsource.org%252Ffeed%252F
+    addFeedlyURL () {
+      return 'https://feedly.com/i/discover/sources/search/feed/' + encodeURIComponent(this.subURL)
+    }
+  },
   methods: {
     dataLoad () {
       let projectFileListData = localStorage.getItem(this.cacheKey)
@@ -401,7 +407,20 @@ module.exports = {
         })
       }
     },
-    
+    copyTextToClipboard (text) {
+      if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+      }
+      navigator.clipboard.writeText(text).then(function() {
+        //console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+      });
+    },
+    copySubURL () {
+      this.copyTextToClipboard(this.subURL)
+    },
     // -----------------------
     
     initDropdown () {
