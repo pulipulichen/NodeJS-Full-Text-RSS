@@ -19,6 +19,10 @@ const cTechbang = function (content) {
   if (content.indexOf('<p>') > -1) {
     let pos = content.indexOf('<p>')
     let beforePTag = content.slice(0, pos).trim()
+    if (beforePTag.endsWith('。')) {
+      beforePTag = beforePTag.slice(0, -1)
+    }
+    
     //console.log(beforePTag)
     let afterPTag = content.slice(pos + 3).trim()
     let afterPTagText = StripHTML(afterPTag)
