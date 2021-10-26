@@ -203,6 +203,7 @@ module.exports = {
                 || this.query.endsWith('.axd') 
                 || this.query.endsWith('.rss') 
                 || this.query.endsWith('/rss.php') 
+                || this.query.endsWith('/rss.aspx') 
                 || this.query.endsWith('/rss') 
                 || this.query.endsWith('/feed') 
                 || this.query.endsWith('/feed/') 

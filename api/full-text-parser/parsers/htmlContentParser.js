@@ -30,6 +30,7 @@ const htmlContentParser = async function (html, modules, url) {
     '#git-readme .file_content.markdown-body:first',
     '[itemprop="articleBody"] > div.section',
     '[itemprop="articleBody"]',
+    '[itemprop="articleBody mainEntityOfPage"]',
     'div.p_mainnew',
     'div.item-page.blog',
     'article.render-content:first',
@@ -68,7 +69,7 @@ const htmlContentParser = async function (html, modules, url) {
   content = RemoveComments(content)
   
   
-  content = DelazyLoadingImg(content)
+  content = DelazyLoadingImg(content, url)
   content = DesafeImg(content)
   
 //  

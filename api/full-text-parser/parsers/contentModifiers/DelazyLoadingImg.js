@@ -1,6 +1,6 @@
 const cheerio = require('cheerio')
 
-const DelazyLoadingImg = function (html) {
+const DelazyLoadingImg = function (html, url) {
   //console.log(html)
   
   let $
@@ -44,6 +44,21 @@ const DelazyLoadingImg = function (html) {
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
     img.attr('src', img.attr('data-src'))
+    img.removeAttr('srcset')
+  }
+  
+  
+  // -------------------
+  
+  imgList = $(`img[src$="/loading.svg"][data-src]`)
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    let src = img.attr('data-src')
+    if (src.startsWith('/')) {
+      let urlObject = new URL(url)
+      src = urlObject.origin + src
+    }
+    img.attr('src', src)
     img.removeAttr('srcset')
   }
   
