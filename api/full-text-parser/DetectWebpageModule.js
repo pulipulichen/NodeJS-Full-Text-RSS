@@ -12,6 +12,7 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   else if (url.startsWith('https://www.oschina.net/news/')) {
     addModules.push('cOSChinaNews')
   }
+  
   else if (url.startsWith('https://www.paddlepaddle.org.cn/documentation/docs/')) {
     addModules.push('cPaddlePaddleDocumentation')
   }
@@ -22,6 +23,10 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   else if (url.startsWith('https://www.4gamers.com.tw/news/detail/')) {
     addModules.push('cNoScript')
     addModules.push('tSH')
+  }
+  
+  if (url.startsWith('https://my.oschina.net/')) {
+    addModules.push('tOSChina')
   }
   
   if (url.startsWith('https://www.facebook.com/')) {

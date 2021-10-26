@@ -12,6 +12,7 @@ module.exports = function (html) {
   // -------------------
   
   $('.ads-bg').remove()
+  $('.ad-wrap').remove()
   
   //return $.html()
   return $
