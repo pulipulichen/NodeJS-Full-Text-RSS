@@ -21,6 +21,7 @@ const htmlContentParser = async function (html, modules, url) {
   let selectors = [
     'section.article-content__editor:first',
     'article .post-body',
+    'main.site-main div.card-body div.post-content',
     'div.articles',
     'div.article-content',
     '.post-body',
