@@ -17,6 +17,7 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   }
   else if (url.startsWith('https://www.solidot.org/')) {
     addModules.push('tSolidot')
+    addModules.push('cSolidot')
   }
   else if (url.startsWith('https://www.4gamers.com.tw/news/detail/')) {
     addModules.push('cNoScript')

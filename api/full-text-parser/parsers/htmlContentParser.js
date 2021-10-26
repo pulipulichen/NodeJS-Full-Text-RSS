@@ -21,6 +21,7 @@ const htmlContentParser = async function (html, modules, url) {
   let selectors = [
     'section.article-content__editor:first',
     'article .post-body',
+    'div.articles',
     '.post-body',
     '.article-detail > .content',
     '.user-comment-block',  // https://www.eprice.com.tw/mobile/talk/4693/5681359/1/
