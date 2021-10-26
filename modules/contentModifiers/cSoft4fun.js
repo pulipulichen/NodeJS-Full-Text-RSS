@@ -15,7 +15,7 @@ const cSoft4fun = function (content) {
     if (src.indexOf('?resize=') > -1) {
       src = src.slice(0, src.indexOf('?resize='))
     }
-    console.log(src)
+    //console.log(src)
     img.attr('src', src)
     img.removeAttr('style')
     img.removeAttr('loading')
