@@ -17,6 +17,7 @@ const DelazyLoadingImg = function (html) {
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
     img.attr('src', img.attr('data-original'))
+    img.removeAttr('srcset')
   }
   
   // -------------------
@@ -25,6 +26,7 @@ const DelazyLoadingImg = function (html) {
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
     img.attr('src', img.attr('data-original'))
+    img.removeAttr('srcset')
   }
   
   // -------------------
@@ -33,6 +35,7 @@ const DelazyLoadingImg = function (html) {
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
     img.attr('src', img.attr('data-src'))
+    img.removeAttr('srcset')
   }
   
   // -------------------
@@ -41,6 +44,7 @@ const DelazyLoadingImg = function (html) {
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
     img.attr('src', img.attr('data-src'))
+    img.removeAttr('srcset')
   }
   
   // ------------------------------

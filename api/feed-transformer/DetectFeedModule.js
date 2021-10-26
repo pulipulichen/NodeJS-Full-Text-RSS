@@ -58,6 +58,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink === 'https://www.techbang.com/') {
     addModules.push('cTechbang')
   }
+  if (channelLink === 'https://www.soft4fun.net') {
+    addModules.push('cSoft4fun')
+  }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }

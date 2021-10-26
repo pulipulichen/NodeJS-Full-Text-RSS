@@ -14,6 +14,7 @@ module.exports = function (html) {
   $('.ads-bg').remove()
   $('.ad-wrap').remove()
   $('.newsletter-subscribe').remove()
+  $('.adsbygoogle').remove()
   
   //return $.html()
   return $
