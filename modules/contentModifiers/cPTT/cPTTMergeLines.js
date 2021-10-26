@@ -5,7 +5,11 @@ let needle = `
 
 const cPTTMergeLines = function ($) {
   
-  let content = $('body > div').html().trim()
+  let content = $('body > div').html()
+  if (!content) {
+    return ''
+  }
+  content = content.trim()
   
   // --------------
   // add <br />
