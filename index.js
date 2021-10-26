@@ -53,6 +53,9 @@ GitPull(app)
 const OPMLParser = require('./api/opml-parser/route.js')
 OPMLParser(app)
 
+const OriginalRSSCrawler = require('./api/original-rss-crawler/route.js')
+OriginalRSSCrawler(app)
+
 app.get('/', async (req, res) => {
   res.redirect('/sub.html')
 })

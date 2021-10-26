@@ -105,89 +105,152 @@
       Output
     </label>
     
-    <template v-if='mode === "url"'>
-      <template v-if="output !== ''">
-        <textarea v-model="output"
-                  readonly
-                  id="output"
-                  onfocus="this.select()"></textarea>
-
-        </template>
-      
-      <div class="ui action input"
+    <!-- =============================== -->
+    
+    <div class="ui action input"
            v-if="subURL && subURL !== ''">
-        <input type="url" v-model="subURL" />
-        <button type="button" class="ui positive button"
-                v-on:click="copySubURL">
-          COPY
-        </button>
-        <a class="ui button"
-           v-bind:href="subURL"
-           target="_blank">
-          OPEN
-        </a>
-        <a class="ui button"
-           v-bind:href="addFeedlyURL"
-           target="_blank">
-          FEEDLY+
-        </a>
-      </div>
+      <input type="url" v-model="subURL" />
+      <button type="button" class="ui positive button"
+              v-on:click="copySubURL">
+        COPY
+      </button>
+      <a class="ui button"
+         v-bind:href="subURL"
+         target="_blank">
+        OPEN
+      </a>
+      <a class="ui button"
+         v-bind:href="addFeedlyURL"
+         target="_blank">
+        FEEDLY+
+      </a>
+    </div>
+    
+    <template v-if='mode === "url"'>
+      
+      
+      <!--
         <h2 v-if="subURL && subURL !== ''">
           <a v-bind:href="subURL" style="word-break: break-all;" target="_blank">{{ subURL }}</a>
         </h2>
+      -->
+      <div class="ui field">
+        <button type="button"
+                v-if="outputContent !== '' && preview === ''"
+                class="ui fluid button"
+                v-on:click="preview = outputContent">
+          PREVIEW PAGE
+        </button>
+
+        <button type="button"
+                v-if="output !== '' && itemsPreview.length === 0"
+                class="ui fluid button"
+                v-on:click="parseItemsPreview">
+          PREVIEW FEED
+        </button>
+      </div>
       
+      <!-- ============================ -->
       
-      <input type="text" 
-             v-model="outputTitle" 
-             readonly
-             class="output-title"
-             v-if="outputTitle !== ''"
-             onfocus="this.select()" />
-      <textarea v-model="outputContent"
-                v-if="outputContent !== ''"
+      <div class="ui grid">
+        <div class="eight wide column">
+          
+          <template v-if="originalRSS !== ''">
+            <textarea v-model="originalRSS"
+                readonly
+                id="originalRSS"
+                onfocus="this.select()"></textarea>
+            
+            <!-- ====================== -->
+            
+            <div class="ui secondary segment toc" v-if='originalItemsPreview.length > 0'
+                 id="toc_ori">
+              <strong>{{ OriginalChannelTitle }} ({{ originalItemsPreview.length }})</strong>
+              <ol>
+                <li v-for="{title, link} in originalItemsPreview">
+                  <a v-on:click="scrollIntoView('anchor_ori_' + encodeURIComponent(link))" >{{ title }}</a>
+                </li>
+              </ol>
+            </div>
+            
+            <div class="preview-list">
+              <div class="ui raised segment" 
+                   v-for="{title, link, content} in originalItemsPreview"
+                   v-bind:id="'anchor_ori_' + encodeURIComponent(link)">
+                <h1><a v-bind:href="link" target="_blank" v-html="title"></a></h1>
+                <div v-html="content" class="content"></div>
+                <a class="ui fluid button" href="#toc">[回到目錄]</a>
+              </div>
+            </div>
+          </template> <!-- <template v-if="output !== ''"> -->
+        </div> <!-- <div class="eight wide column"> -->
+        
+        <!-- ============================ -->
+        
+        <div class="eight wide column">
+          <template v-if="outputContent !== ''">
+            <input type="text" 
+                   v-model="outputTitle" 
+                   readonly
+                   class="output-title"
+                   v-if="outputTitle !== ''"
+                   onfocus="this.select()" />
+            <textarea v-model="outputContent"
+                      v-if="outputContent !== ''"
+                      readonly
+                      id="output"
+                      onfocus="this.select()"></textarea>
+
+            <!-- ========================= -->
+
+            <div class="ui raised segment preview"
+                 v-if="preview !== ''">
+              <h1>{{ outputTitle }}</h1>
+              <div v-html="preview"></div>
+            </div>
+          </template>
+          
+          <!-- ========================== -->
+          
+          
+          <template v-if="output !== ''">
+            <textarea v-model="output"
+                v-if="output !== ''"
                 readonly
                 id="output"
                 onfocus="this.select()"></textarea>
-      
-      
-      <button type="button"
-              v-if="outputContent !== '' && preview === ''"
-              class="ui fluid button"
-              v-on:click="preview = outputContent">
-        PREVIEW PAGE
-      </button>
-      <div class="ui raised segment preview"
-           v-if="preview !== ''">
-        <h1>{{ outputTitle }}</h1>
-        <div v-html="preview"></div>
+            
+            <!-- ====================== -->
+            
+            <div class="ui secondary segment toc" v-if='itemsPreview.length > 0'
+                 id="toc">
+              <strong>{{ ChannelTitle }} ({{ itemsPreview.length }})</strong>
+              <ol>
+                <li v-for="{title, link} in itemsPreview">
+                  <!-- <a v-bind:href="'#anchor' + encodeURIComponent(link)">{{ title }}</a> -->
+                  <a v-on:click="scrollIntoView('anchor' + encodeURIComponent(link))" >{{ title }}</a>
+                </li>
+              </ol>
+            </div>
+            
+            <div class="preview-list">
+              <div class="ui raised segment" 
+                   v-for="{title, link, content} in itemsPreview"
+                   v-bind:id="'anchor' + encodeURIComponent(link)">
+                <h1><a v-bind:href="link" target="_blank" v-html="title"></a></h1>
+                <div v-html="content" class="content"></div>
+                <a class="ui fluid button" href="#toc">[回到目錄]</a>
+              </div>
+            </div>
+          </template> <!-- <template v-if="output !== ''"> -->
+        </div>
       </div>
-      
+        
       <!-- ========================== -->
-      
-      <button type="button"
-              v-if="output !== '' && itemsPreview.length === 0"
-              class="ui fluid button"
-              v-on:click="parseItemsPreview">
-        PREVIEW FEED
-      </button>
-      <div class="ui secondary segment" v-if='itemsPreview.length > 0'
-           id="toc">
-        <ol>
-          <li v-for="{title, link} in itemsPreview">
-            <a v-bind:href="'#anchor' + encodeURIComponent(link)">{{ title }}</a>
-          </li>
-        </ol>
-      </div>
-      <hr v-if='itemsPreview.length > 0' />
-      <div class="ui raised segment" 
-           v-for="{title, link, content} in itemsPreview"
-           v-bind:id="'anchor' + encodeURIComponent(link)">
-        <h1><a v-bind:href="link" target="_blank" v-html="title"></a></h1>
-        <div v-html="content"></div>
-        <a class="ui fluid button" href="#toc">[回到目錄]</a>
-      </div>
-      
-    </template>
+    </template> <!-- <template v-if='mode === "url"'> -->
+    
+    <!-- =============================== -->
+    
     <template v-if="mode === 'feed'">
       <textarea v-model="output"
                 readonly

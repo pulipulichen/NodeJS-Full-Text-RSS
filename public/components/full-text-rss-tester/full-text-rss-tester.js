@@ -42,6 +42,8 @@ module.exports = {
       autoPreview: true,
       
       originalRSS: '',
+      ChannelTitle: '',
+      OriginalChannelTitle: '',
       output: '',
       outputTitle: '',
       outputContent: '',
@@ -167,10 +169,14 @@ module.exports = {
       }
       
       this.output = ''
+      this.OriginalChannelTitle = ''
+      this.ChannelTitle = ''
+      this.originalRSS = ''
       this.outputTitle = ''
       this.outputContent = ''
       this.preview = ''
       this.itemsPreview = []
+      this.originalItemsPreview = []
       this.subURL = ''
       
       clearTimeout(this.queryTimer)
@@ -227,6 +233,7 @@ module.exports = {
                 || this.query.indexOf('/feeds/videos.xml?channel_id=') > -1 // https://www.youtube.com/feeds/videos.xml?channel_id=UCiWXd0nmBjlKROwzMyPV-Nw
           ) {
           this.loadQueryFeedFromURL()
+          this.loadOriginalRSS()
         }
         else {
           this.loadQueryFullTextParser()
@@ -261,6 +268,7 @@ module.exports = {
       this.outputTitle = ''
       this.outputContent = ''
       
+      let queryAPI
       //this.output = this.feedXML
       if (this.modules === '') {
         queryAPI = './f/' + encodeURIComponent(this.query)
@@ -299,6 +307,37 @@ module.exports = {
           }
       });
     },
+    loadOriginalRSS () {
+      this.outputTitle = ''
+      this.outputContent = ''
+      let queryAPI = './original-rss-crawler/' + encodeURIComponent(this.query)
+      
+      let href = location.href
+      let baseURL = href.slice(0, href.indexOf('/test.html'))
+      let subURL = baseURL + queryAPI.slice(1)
+      
+      console.log(subURL)
+      //return 
+      
+      $.ajax({
+          type: "GET",
+          url: queryAPI,
+          cache: false,
+          dataType: "xml",
+          success: (xml) => {
+            //console.log('return')
+            //console.log(xml)
+            if (typeof(xml) === 'object') {
+              xml = (new XMLSerializer()).serializeToString(xml)
+            }
+            this.originalRSS = xml
+            //console.log(xml)
+            if (this.autoPreview) {
+              this.parseOriginalRSSItemsPreview()
+            }
+          }
+      });
+    },
     loadQueryFullTextParser () {
       let queryAPI
       if (this.modules === '') {
@@ -321,10 +360,10 @@ module.exports = {
     parseItemPreview () {
       this.preview = this.outputContent
     },
-    
-    parseItemsPreview () {
-      let feed = this.output
+    parseItemsPreviewFeedProcess (feed) {
+      let channelTitle
       
+      let output = []
       let xmlDoc = $.parseXML( feed )
       let $xml = $( xmlDoc )
       
@@ -332,6 +371,8 @@ module.exports = {
       if (entryList.length === 0) {
         entryList = $xml.find('channel > item')
       }
+      
+      channelTitle = $xml.find('title:first').text().trim()
       
       //console.log('entryList.length', entryList.length, this.itemsPreview.length)
       
@@ -381,7 +422,7 @@ module.exports = {
         
         //console.log(i, title, link)
         
-        this.itemsPreview.push({
+        output.push({
           title,
           content,
           link
@@ -399,13 +440,31 @@ module.exports = {
           let link = $item.find('link').text()
           //console.log(i, ele.innerHTML)
           //console.log(title, link)
-          this.itemsPreview.push({
+          output.push({
             title,
             content,
             link
           })
         })
       }
+      
+      return {
+        title: channelTitle,
+        previews: output
+      }
+    },
+    
+    parseItemsPreview () {
+      let feed = this.output
+      let {title, previews} = this.parseItemsPreviewFeedProcess(feed)
+      this.ChannelTitle = title
+      this.itemsPreview = this.itemsPreview.splice(0,0).concat(previews)
+    },
+    parseOriginalRSSItemsPreview () {
+      let feed = this.originalRSS
+      let {title, previews} = this.parseItemsPreviewFeedProcess(feed)
+      this.OriginalChannelTitle = title
+      this.originalItemsPreview = this.originalItemsPreview.splice(0,0).concat(previews)
     },
     copyTextToClipboard (text) {
       if (!navigator.clipboard) {
@@ -420,6 +479,13 @@ module.exports = {
     },
     copySubURL () {
       this.copyTextToClipboard(this.subURL)
+    },
+    
+    scrollIntoView (id) {
+      let element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      }
     },
     // -----------------------
     
