@@ -17,6 +17,7 @@ const fullTextParser = async function (url, modules) {
     }
   }
   
+  //console.log(modules)
   modules = DetectFeedModule(url, modules)
   
   //console.log(modules)
@@ -37,7 +38,12 @@ const fullTextParser = async function (url, modules) {
   }
   
   let title = await htmlTitleParser(html, modules)
+  
+  //console.log('html', html)
+  
   let content = await htmlContentParser(html, modules, url)
+  
+  //console.log('content', content)
 //  
 //  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
 //    console.log(content)
