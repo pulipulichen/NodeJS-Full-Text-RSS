@@ -13,6 +13,7 @@ module.exports = function (html) {
   
   $('.ads-bg').remove()
   $('.ad-wrap').remove()
+  $('.newsletter-subscribe').remove()
   
   //return $.html()
   return $

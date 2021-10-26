@@ -55,6 +55,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink === 'https://www.oschina.net/news/rss') {
     addModules.push('tOSChina')
   }
+  if (channelLink === 'https://www.techbang.com/') {
+    addModules.push('cTechbang')
+  }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }

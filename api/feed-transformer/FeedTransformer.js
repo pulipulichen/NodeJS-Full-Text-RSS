@@ -76,9 +76,9 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     }
     
     let content = FeedItemGetContent(item)
-    //console.log(content)
+    //console.log(i, content.slice(0, 100))
     let contentNew = await ModuleManager(content, moduleCodesString, 'c')
-    //console.log(contentNew.slice(0, 100))
+    //console.log(i, contentNew.slice(0, 100))
     if (content !== contentNew) {
       //item.find('content').text(contentNew)
       FeedItemSetContent(item, contentNew)
