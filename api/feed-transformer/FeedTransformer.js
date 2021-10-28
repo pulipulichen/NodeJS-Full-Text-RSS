@@ -16,6 +16,8 @@ const format = require('xml-formatter')
 
 const MailToBlogger = require('./../full-text-parser/parsers/titleModifiers/MailToBlogger.js')
 
+const RemoveControlCharacters = require('./../lib/stringUtils/RemoveControlCharacters.js')
+
 const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -------------------------------
@@ -125,6 +127,8 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     feedXML = $.html()
   }
   //console.log($(":root > div").length)
+  
+  feedXML = RemoveControlCharacters(feedXML)
   
   //console.log(feedXML.slice(0, 300))
   //console.log(feedXML.slice(-300))

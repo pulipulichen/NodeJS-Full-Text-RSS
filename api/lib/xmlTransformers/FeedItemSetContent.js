@@ -9,7 +9,7 @@ const FeedItemSetContent = function (item, content) {
   }
   
   //content = content.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
-  content = content.replace(/[\u0000-\u0008\u000B\u001F\u007F-\u009F]/g, "")  
+  //content = content.replace(/[\u0000-\u0008\u000B\u001F\u007F-\u009F]/g, "")  
   
   //console.log('============')
   //console.log(content)
