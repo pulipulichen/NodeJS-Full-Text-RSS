@@ -20,6 +20,7 @@ const asyncRequest = function (url) {
           return reject(false)
         }
 
+        body = body.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
         resolve(body)
     })
   })

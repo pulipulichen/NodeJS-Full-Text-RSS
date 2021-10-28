@@ -15,6 +15,10 @@ module.exports = function (html) {
   $('.ad-wrap').remove()
   $('.newsletter-subscribe').remove()
   $('.adsbygoogle').remove()
+  $('.shareaholic-canvas').remove()
+  
+  $('.extcsscode').remove()
+  
   
   //return $.html()
   return $
