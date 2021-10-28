@@ -294,7 +294,7 @@ module.exports = {
       let baseURL = href.slice(0, href.indexOf('/test.html'))
       this.subURL = baseURL + queryAPI.slice(1)
       
-      console.log(queryAPI)
+      //console.log(queryAPI)
 //      $.get(queryAPI, (xml) => {
 //        
 //      })
@@ -323,7 +323,7 @@ module.exports = {
               }
             }
             this.output = xml
-            console.log(xml)
+            //console.log(xml)
             if (this.autoPreview) {
               this.parseItemsPreview()
             }

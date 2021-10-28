@@ -5,11 +5,11 @@ const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 const cacheYear = 1
 const cacheTime = cacheYear * 365 * 24 * 60 * 60 * 1000
 
-const DetectDuplateItem = async function ($, item) {
+const DetectDuplateItem = async function (channelTitle, channelLink, item) {
   //return false
   
-  let channelTitle = FeedChannelTitle($)
-  let channelLink = FeedChannelLink($)
+  //let channelTitle = FeedChannelTitle($)
+  //let channelLink = FeedChannelLink($)
   
   //console.log(channelTitle)
   //console.log(channelLink)

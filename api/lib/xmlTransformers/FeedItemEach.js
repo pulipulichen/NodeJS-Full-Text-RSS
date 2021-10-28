@@ -3,6 +3,8 @@ const cheerio = require('cheerio')
 const FeedItemEach = async function ($, handler) {
   
   let items = $('channel > item')
+  //console.log('items.length', items.length)
+  
   if (items.length === 0) {
     items = $('feed > entry')
     //console.log(items.length)
@@ -16,9 +18,11 @@ const FeedItemEach = async function ($, handler) {
     //console.log(items.length)
   }
   
+  
   for (let i = 0; i < items.length; i++) {
     let item = items.eq(i)
     await handler(item, i)
+    //console.log(i)
   }
   
 //  if (items.length === 0) {
