@@ -83,6 +83,12 @@ const xTwitter = async function ($, moduleCodesString) {
         
         if (newLinePos === -1 || newLinePos > maxTitleLength) {
           newLinePos = title.indexOf('!', minTitleLength) + 1
+          if (title.slice(newLinePos, newLinePos+1) === ')') {
+            newLinePos++
+          }
+          if (title.slice(newLinePos, newLinePos+1) === '.') {
+            newLinePos++
+          }
           //console.log('n2', newLinePos)
         }
         if (newLinePos === 0 || newLinePos > maxTitleLength) {
@@ -104,8 +110,8 @@ const xTwitter = async function ($, moduleCodesString) {
         
         if (newLinePos === 0 || newLinePos > maxTitleLength) {
           
-          newLinePos = title.indexOf(' (', minTitleLength)
-          //console.log('n3', newLinePos)
+          newLinePos = title.indexOf(' (')
+          
         }
         
         if (newLinePos === -1 || newLinePos > maxTitleLength) {
