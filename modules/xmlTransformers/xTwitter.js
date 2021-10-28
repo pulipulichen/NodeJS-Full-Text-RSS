@@ -101,6 +101,13 @@ const xTwitter = async function ($, moduleCodesString) {
           newLinePos = title.indexOf(' ', minTitleLength)
           //console.log('n3', newLinePos)
         }
+        
+        if (newLinePos === 0 || newLinePos > maxTitleLength) {
+          
+          newLinePos = title.indexOf(' (', minTitleLength)
+          //console.log('n3', newLinePos)
+        }
+        
         if (newLinePos === -1 || newLinePos > maxTitleLength) {
           
           newLinePos = title.length
