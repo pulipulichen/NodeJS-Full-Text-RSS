@@ -284,7 +284,7 @@ module.exports = {
       let baseURL = href.slice(0, href.indexOf('/test.html'))
       this.subURL = baseURL + queryAPI.slice(1)
       
-//      console.log(queryAPI)
+      console.log(queryAPI)
 //      $.get(queryAPI, (xml) => {
 //        
 //      })
@@ -294,14 +294,26 @@ module.exports = {
           url: queryAPI,
           cache: false,
           dataType: "xml",
-          success: (xml) => {
+          complete: (xml) => {
             //console.log('return')
+            
+            if (xml.responseText) {
+              xml = xml.responseText
+            }
+            
             //console.log(xml)
+            
             if (typeof(xml) === 'object') {
-              xml = (new XMLSerializer()).serializeToString(xml)
+              try {
+                xml = (new XMLSerializer()).serializeToString(xml)
+              }
+              catch (e) {
+                console.error(e)
+                return false
+              }
             }
             this.output = xml
-            //console.log(xml)
+            console.log(xml)
             if (this.autoPreview) {
               this.parseItemsPreview()
             }
@@ -317,7 +329,7 @@ module.exports = {
       let baseURL = href.slice(0, href.indexOf('/test.html'))
       let subURL = baseURL + queryAPI.slice(1)
       
-      console.log(subURL)
+      //console.log(subURL)
       //return 
       
       $.ajax({
@@ -325,11 +337,24 @@ module.exports = {
           url: queryAPI,
           cache: false,
           dataType: "xml",
-          success: (xml) => {
+          complete: (xml) => {
+            
+            if (xml.responseText) {
+              xml = xml.responseText
+            }
+            
+            //console.log(xml)
+            
             //console.log('return')
             //console.log(xml)
             if (typeof(xml) === 'object') {
-              xml = (new XMLSerializer()).serializeToString(xml)
+              try {
+                xml = (new XMLSerializer()).serializeToString(xml)
+              }
+              catch (e) {
+                console.error(e)
+                return false
+              }
             }
             this.originalRSS = xml
             //console.log(xml)
@@ -365,7 +390,14 @@ module.exports = {
       let channelTitle
       
       let output = []
-      let xmlDoc = $.parseXML( feed )
+      let xmlDoc
+      try {
+        xmlDoc = $.parseXML( feed )
+      }
+      catch (e) {
+        console.error(e)
+        return false
+      }
       let $xml = $( xmlDoc )
       
       let entryList = $xml.find('feed > entry')
