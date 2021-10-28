@@ -1,3 +1,5 @@
+/* global __dirname */
+
 const FeedCrawler = require('./FeedCrawler.js')
 const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 
@@ -79,21 +81,21 @@ const route = function (app) {
     }
   })
   
-  app.get('/ft/20211019-2116/feeds/posts/default', async (req, res) => {
-    try {
-      setHeader(res)
-
-      let p = path.resolve(__dirname, './test/ori.xml')
-      let result = fs.readFileSync(p, 'utf8')
-
-
-
-      res.send(result)
-    }
-    catch (e) {
-      res.send(e)
-    }
-  })
+//  app.get('/ft/20211019-2116/feeds/posts/default', async (req, res) => {
+//    try {
+//      setHeader(res)
+//
+//      let p = path.resolve(__dirname, './test/ori.xml')
+//      let result = fs.readFileSync(p, 'utf8')
+//
+//
+//
+//      res.send(result)
+//    }
+//    catch (e) {
+//      res.send(e)
+//    }
+//  })
   
   app.get('/fc/:url', async (req, res) => {
     try {
