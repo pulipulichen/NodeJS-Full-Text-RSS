@@ -60,6 +60,12 @@ app.get('/', async (req, res) => {
   res.redirect('/sub.html')
 })
 
+//const AutoRestart = require('./api/auto-restart/AutoRestart.js')
+//AutoRestart()
+//
+//const RestartException = require('./api/auto-restart/route.js')
+//RestartException(app)
+
 // ------------------------------------------------
 
 app.listen(port, () => {
