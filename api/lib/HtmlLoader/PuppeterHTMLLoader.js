@@ -54,7 +54,8 @@ const validateReload = async function (url, result, validCond) {
     await page.goto(url, {waitUntil: 'load'})
     result = await page.evaluate(() => {
         return {
-          html: document.body.innerHTML.replace(/[\u0000-\u001F\u007F-\u009F]/g, ""),
+          //html: document.body.innerHTML.replace(/[\u0000-\u001F\u007F-\u009F]/g, ""),
+          html: document.body.innerHTML,
           href: location.href
         }
     })

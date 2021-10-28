@@ -1,4 +1,4 @@
-/* global ClipboardUtils, ipcRenderer, ElectronUtils, dayjs, FileUtils, shell */
+/* global ClipboardUtils, ipcRenderer, ElectronUtils, dayjs, FileUtils, shell, decodeURI */
 
 let decodeEntities = (function() {
   // this prevents any overhead from creating the object each time

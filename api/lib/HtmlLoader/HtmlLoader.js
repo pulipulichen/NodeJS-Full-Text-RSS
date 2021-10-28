@@ -20,7 +20,9 @@ const asyncRequest = function (url) {
           return reject(false)
         }
 
-        body = body.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
+        //body = body.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
+        //body = body.replace(/[\u0000-\u0009\u000B\u001F\u007F-\u009F]/g, "")
+        //body = body.replace(/[\u001A-\u001A]/g, "")
         resolve(body)
     })
   })
@@ -33,6 +35,7 @@ const htmlLoader = async function (url, cacheMS) {
   if (!cacheMS) {
     cacheMS = maxCacheTime
   }
+  //cacheMS = 10
   
   return await nodeCache.get('html-loader', url, async () => {
     return await asyncRequest(url)
