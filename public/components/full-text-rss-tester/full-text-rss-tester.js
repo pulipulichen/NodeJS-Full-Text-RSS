@@ -87,6 +87,16 @@ module.exports = {
   },
   watch: {
     query () {
+      if (this.query !== this.query.trim()) {
+        try {
+          new URL(this.query.trim())
+          this.query = this.query.trim()
+        }
+        catch (e) {
+          // do nothing
+        }
+      }
+      
       this.dataSave()
       this.loadOutput()
     },
