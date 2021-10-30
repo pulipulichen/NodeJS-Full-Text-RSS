@@ -1,6 +1,9 @@
 const cheerio = require('cheerio')
 
-module.exports = function (html) {
+const RemoveScripts = function (html) {
+  
+  //console.log(html)
+  
   let $
   if (typeof(html) === 'object' || typeof(html) === 'function') {
     $ = html
@@ -11,15 +14,9 @@ module.exports = function (html) {
   
   // -------------------
   
-  $('.ads-bg').remove()
-  $('.ad-wrap').remove()
-  $('.newsletter-subscribe').remove()
-  $('.adsbygoogle').remove()
-  $('.shareaholic-canvas').remove()
+  $.root().find('script').remove();
   
-  $('.extcsscode').remove()
-  
-  
-  //return $.html()
   return $
 }
+
+module.exports = RemoveScripts

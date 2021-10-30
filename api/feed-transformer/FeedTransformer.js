@@ -16,6 +16,11 @@ const format = require('xml-formatter')
 
 const MailToBlogger = require('./../full-text-parser/parsers/titleModifiers/MailToBlogger.js')
 
+const RemoveControlCharacters = require('./../lib/stringUtils/RemoveControlCharacters.js')
+
+const FeedChannelLink = require('./../lib/xmlTransformers/FeedChannelLink.js')
+const FeedChannelTitle = require('./../lib/xmlTransformers/FeedChannelTitle.js')
+
 const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -------------------------------
@@ -38,18 +43,21 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   moduleCodesString = DetectFeedModule($, moduleCodesString)
   //console.log(moduleCodesString)
   
+  let channelTitle = FeedChannelTitle($)
+  let channelLink = FeedChannelLink($)
+  
   // -----------------------------
   
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
-    
+    //console.log(i)
     //console.log('DetectDuplateItem', await DetectDuplateItem($, item))
-    if (await DetectDuplateItem($, item)) {
+    if (await DetectDuplateItem(channelTitle, channelLink, item)) {
       return item.remove()
     }
     
     // ------------------------
-    
+    //console.log(i, item.find('title').text())
     
     let match = await ModuleManager({
       item,
@@ -125,6 +133,8 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     feedXML = $.html()
   }
   //console.log($(":root > div").length)
+  
+  feedXML = RemoveControlCharacters(feedXML)
   
   //console.log(feedXML.slice(0, 300))
   //console.log(feedXML.slice(-300))

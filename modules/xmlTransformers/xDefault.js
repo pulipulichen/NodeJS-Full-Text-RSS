@@ -21,14 +21,23 @@ const xDefault = async function ($, moduleCodesString) {
     
     
     let link = FeedItemGetLink(item)
-    //console.log('xDefault', link)
+    //console.log('xDefault', i, link)
     let {content} = await fullTextParser(link, moduleCodesString)
     
     let title = item.find('title:first').text().trim()
     content = xDefaultRemoveTitle(content, title)
     //console.log(i, '<<<', content, '>>>')
-    FeedItemSetContent(item, content)
+    
+    //if (i === 4) {
+      //content = content.slice(content.indexOf('<p'), content.indexOf('</p>') + 3)
+      //content = content.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
+      FeedItemSetContent(item, content)
+      //console.log(i, '<<<', content, '>>>')
+    //}
+    
   })
+  
+  //console.log('ok')
   
   return $
 }

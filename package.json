@@ -26,6 +26,7 @@
     "express": "^4.17.1",
     "html-entities": "^2.3.2",
     "iconv-lite": "^0.6.3",
+    "jsdom": "^18.0.0",
     "linkify-html": "^3.0.3",
     "linkifyjs": "^3.0.3",
     "node-fetch": "^3.0.0",

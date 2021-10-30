@@ -3,6 +3,7 @@ const fNorge = function ({item, channel}) {
   
   channel('channel > title').text('呱吉：新資料夾')
   
+  //console.log(title)
   return (title.startsWith('【呱吉Podcast】新資料夾('))
 }
 

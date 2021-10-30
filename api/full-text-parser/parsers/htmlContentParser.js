@@ -8,6 +8,7 @@ const RemoveComments = require('./contentModifiers/RemoveComments.js')
 const DelazyLoadingImg = require('./contentModifiers/DelazyLoadingImg.js')
 const DesafeImg = require('./contentModifiers/DesafeImg.js')
 const RemoveAds = require('./contentModifiers/RemoveAds.js')
+const RemoveScripts = require('./contentModifiers/RemoveScripts.js')
 
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
@@ -23,7 +24,9 @@ const htmlContentParser = async function (html, modules, url) {
     'article .post-body',
     'main.site-main div.card-body div.post-content',
     'div.articles',
+    'div.grid__item--10-cols--gt-md',
     'div.article-content',
+    'article > div.entry-content',
     '.post-body',
     '.article-detail > .content',
     '.user-comment-block',  // https://www.eprice.com.tw/mobile/talk/4693/5681359/1/
@@ -67,6 +70,7 @@ const htmlContentParser = async function (html, modules, url) {
   
   
   content = RemoveComments(content)
+  content = RemoveScripts(content)
   
   
   content = DelazyLoadingImg(content, url)

@@ -1,3 +1,5 @@
+/* global __dirname */
+
 const FeedCrawler = require('./FeedCrawler.js')
 const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 
@@ -46,63 +48,89 @@ const route = function (app) {
   }
   
   app.get('/f/:url', async (req, res) => {
-    let url = req.params.url
-    url = urlFilter(url)
-    let result = await FeedCrawler(url)
-    
-    //if (isXML(url)) {
-    setHeader(res)
-    //}
-    
-    //console.log('a')
-    res.send(result)
+    try {
+      let url = req.params.url
+      url = urlFilter(url)
+      let result = await FeedCrawler(url)
+
+      //if (isXML(url)) {
+      setHeader(res)
+      //}
+
+      //console.log('a')
+      res.send(result)
+    }
+    catch (e) {
+      res.send(e)
+    }
   })
   
   app.get('/f/:modules/:url', async (req, res) => {
-    let url = req.params.url
-    url = urlFilter(url)
-    let modules = req.params.modules
-    let result = await FeedCrawler(url, modules)
-    //res.set('Content-Type', 'text/xml')
-    setHeader(res)
-    res.send(result)
+    try {
+      let url = req.params.url
+      url = urlFilter(url)
+      let modules = req.params.modules
+      let result = await FeedCrawler(url, modules)
+      //res.set('Content-Type', 'text/xml')
+      setHeader(res)
+      res.send(result)
+    }
+    catch (e) {
+      //throw e
+      res.send(e)
+    }
   })
   
-  app.get('/ft/20211019-2116/feeds/posts/default', async (req, res) => {
-    setHeader(res)
-    
-    let p = path.resolve(__dirname, './test/ori.xml')
-    let result = fs.readFileSync(p, 'utf8')
-    
-    
-    
-    res.send(result)
-  })
+//  app.get('/ft/20211019-2116/feeds/posts/default', async (req, res) => {
+//    try {
+//      setHeader(res)
+//
+//      let p = path.resolve(__dirname, './test/ori.xml')
+//      let result = fs.readFileSync(p, 'utf8')
+//
+//
+//
+//      res.send(result)
+//    }
+//    catch (e) {
+//      res.send(e)
+//    }
+//  })
   
   app.get('/fc/:url', async (req, res) => {
-    let url = req.params.url
-    url = urlFilter(url)
-    let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
-      return await FeedCrawler(url)
-    }, cacheExpireTime)
-    
-    setHeader(res)
-    
-    //console.log('a')
-    res.send(result)
+    try {
+      let url = req.params.url
+      url = urlFilter(url)
+      let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
+        return await FeedCrawler(url)
+      }, cacheExpireTime)
+
+      setHeader(res)
+
+      //console.log('a')
+      res.send(result)
+    }
+    catch (e) {
+      res.send(e)
+    }
   })
   
   app.get('/fc/:modules/:url', async (req, res) => {
-    let url = req.params.url
-    url = urlFilter(url)
-    let modules = req.params.modules
-    
-    let result = await NodeCacheSQLite.get('feed-crawler', url + modules, async () => {
-      return await FeedCrawler(url)
-    }, cacheExpireTime)
-    //res.set('Content-Type', 'text/xml')
-    setHeader(res)
-    res.send(result)
+    try {
+      let url = req.params.url
+      url = urlFilter(url)
+      let modules = req.params.modules
+
+      let result = await NodeCacheSQLite.get('feed-crawler', url + modules, async () => {
+        return await FeedCrawler(url)
+      }, cacheExpireTime)
+      //res.set('Content-Type', 'text/xml')
+      setHeader(res)
+      res.send(result)
+    }
+    catch (e) {
+      res.send(e)
+    }
   })
 }
 
