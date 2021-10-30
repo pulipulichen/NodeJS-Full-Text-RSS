@@ -216,6 +216,8 @@ module.exports = {
                 || (this.query.indexOf('rssfeed') > -1 )
                 || this.query.startsWith('http://feeds.feedburner.com/') 
                 || this.query.startsWith('http://feeds2.feedburner.com/') 
+                || this.query.startsWith('https://feeds.feedburner.com/') 
+                || this.query.startsWith('feeds.feedburner.com/') 
                 || this.query.startsWith('http://feedproxy.google.com/')
                 || this.query.startsWith('https://feedpress.me/')
                 || this.query.startsWith('http://feed.')
