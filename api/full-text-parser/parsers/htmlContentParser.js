@@ -25,6 +25,7 @@ const htmlContentParser = async function (html, modules, url) {
     'main.site-main div.card-body div.post-content',
     'div.articles',
     'div.grid__item--10-cols--gt-md',
+    'article > .post-inner > .entry > .entry-inner',
     'div.article-content',
     'article > div.entry-content',
     '.post-body',

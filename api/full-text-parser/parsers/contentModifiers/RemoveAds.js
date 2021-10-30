@@ -16,6 +16,7 @@ module.exports = function (html) {
   $('.newsletter-subscribe').remove()
   $('.adsbygoogle').remove()
   $('.shareaholic-canvas').remove()
+  $('.addtoany_share_save_container').remove()
   
   $('.extcsscode').remove()
   
