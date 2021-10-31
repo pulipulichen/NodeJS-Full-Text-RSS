@@ -73,6 +73,9 @@ const replaceTitleWithDesription = function (item) {
     if (title.indexOf('。') > 20) {
       title = title.slice(0, title.indexOf('。') + 1).trim()
     }
+    else if (title.indexOf('！') > 20) {
+      title = title.slice(0, title.indexOf('！') + 1).trim()
+    }
     else if (title.indexOf('...') > 20) {
       title = title.slice(0, title.indexOf('...') + 3).trim()
     }
