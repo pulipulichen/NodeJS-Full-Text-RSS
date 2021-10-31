@@ -9,7 +9,7 @@ const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
 const xDefaultRemoveTitle = require('./xDefault/xDefaultRemoveTitle.js')
 
-const needToLoadFullText = 1500
+const needToLoadFullText = 5000
 
 const xDefault = async function ($, moduleCodesString) {
   //console.log('xDefault')
@@ -21,9 +21,9 @@ const xDefault = async function ($, moduleCodesString) {
     
     
     let link = FeedItemGetLink(item)
-    //console.log('xDefault', i, link)
-    let {content} = await fullTextParser(link, moduleCodesString)
     
+    let {content} = await fullTextParser(link, moduleCodesString)
+    console.log('xDefault', i, link, content.length, content.slice(-200))
     let title = item.find('title:first').text().trim()
     content = xDefaultRemoveTitle(content, title)
     //console.log(i, '<<<', content, '>>>')

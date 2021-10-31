@@ -29,6 +29,10 @@ const DetectWebpageModule = function (url, moduleCodesString) {
     addModules.push('tOSChina')
   }
   
+  if (url.startsWith('https://www.iplaysoft.com/')) {
+    addModules.push('cIplaysoft')
+  }
+  
   if (url.startsWith('https://www.facebook.com/')) {
     addModules.push('hFB')
   }
