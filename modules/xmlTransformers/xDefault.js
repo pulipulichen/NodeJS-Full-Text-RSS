@@ -23,7 +23,7 @@ const xDefault = async function ($, moduleCodesString) {
     let link = FeedItemGetLink(item)
     
     let {content} = await fullTextParser(link, moduleCodesString)
-    console.log('xDefault', i, link, content.length, content.slice(-200))
+    //console.log('xDefault', i, link, content.length, content.slice(-200))
     let title = item.find('title:first').text().trim()
     content = xDefaultRemoveTitle(content, title)
     //console.log(i, '<<<', content, '>>>')
