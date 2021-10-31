@@ -32,7 +32,26 @@ const xUBFormatDescription = function (videoID, content) {
   content = output.join('<br />\n').trim()
   
   
-  let linkifyHTMLContent = linkifyHtml(content).trim()
+  let linkifyHTMLContent
+  if (content.startsWith('<html><head></head><body><div>')) {
+    content = content.slice(30)
+  }
+  
+  try {
+    linkifyHTMLContent = linkifyHtml(content)
+  }
+  catch (e) {
+    
+    content = content.split('&amp;').join('&')
+    try {
+      linkifyHTMLContent = linkifyHtml(content)
+    }
+    catch (e) {
+      console.error('Linkifiy error: ' + content)
+      linkifyHTMLContent = content
+    }
+  }
+  linkifyHTMLContent = linkifyHTMLContent.trim()
   
   
   
