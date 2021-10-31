@@ -16,6 +16,7 @@ const FeedChannelAppendTitle = function ($) {
     return setTitle(title)
   }
   
+  //console.log($.html())
   throw Error('Title is not found')
 }
 

@@ -4,6 +4,9 @@ const PuppeterHTMLLoader = require('./PuppeterHTMLLoader.js')
 const cheerio = require('cheerio')
 
 const NodeCacheSQLite = require('./../cache/node-cache-sqlite.js')
+const decode = require('html-entities').decode
+
+
 
 const XMLLoader = async function (url, cacheMS) {
   //console.log('XMLLoader')
@@ -26,6 +29,17 @@ const XMLLoader = async function (url, cacheMS) {
       if ($('rss:first').length === 1) {
         //feedXML = $('rss:first').prop('outerHTML')
         feedXML = feedXML.slice(feedXML.indexOf('<rss'), feedXML.indexOf('</rss>') + 6)
+      }
+      
+      if (feedXML.startsWith('<pre') && feedXML.endsWith('</pre>')) {
+        feedXML = feedXML.slice(feedXML.indexOf('>') + 1, - 6).trim()
+        feedXML = decode(feedXML)
+        
+        //feedXML = decode(feedXML)
+        //feedXML = feedXML.split('&nbsp;').join(' ')
+        //console.log(feedXML.split('&nbsp;').length)
+        feedXML = feedXML.split('&nbsp;').join(' ')
+        //feedXML = feedXML.split('&lt;').join('<')
       }
 
       //console.log('============')

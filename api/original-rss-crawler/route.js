@@ -23,7 +23,9 @@ const route = function (app) {
       }).pipe(res)
        */
       let content = await HtmlLoader(url)
-      
+      content = content.split('&nbsp;').join(' ')
+      //content = content.split('&lt;').join('<')
+        
       res.send(content)
     }
     catch (e) {

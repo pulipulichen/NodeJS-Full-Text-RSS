@@ -19,6 +19,7 @@ const FeedChannelTitle = function ($) {
     return removeAppendText(title)
   }
   
+  console.log($.html())
   throw Error('Title is not found')
 }
 

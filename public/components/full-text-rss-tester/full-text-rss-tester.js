@@ -237,6 +237,7 @@ module.exports = {
                 || (this.query.indexOf('/feeds/posts/') > -1)
                 || (this.query.indexOf('/posts/atom/') > -1)
                 || (this.query.indexOf('/posts/rss/') > -1)
+                || (this.query.indexOf('/showFeed?') > -1)
                 || (this.query.indexOf('rss2.php') > -1)
                 || (this.query.indexOf('/feeds/') > -1)
                 || (this.query.indexOf('/rssfeed/') > -1)
@@ -386,6 +387,8 @@ module.exports = {
       }
       $.getJSON(queryAPI, (data) => {
         this.output = ''
+        //console.log(data)
+        
         this.outputTitle = data.title
         this.outputContent = data.content
         
