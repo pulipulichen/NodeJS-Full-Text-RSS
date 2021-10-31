@@ -20,6 +20,15 @@ module.exports = function (html) {
   
   $('.extcsscode').remove()
   
+  // https://www.kocpc.com.tw/archives/409477
+  // https://wuangus.cc/go.php?url=https://useful.tools/karaoke
+  $('a[href^="https://wuangus.cc/go.php?url="]').each(function (){
+    let a = $(this)
+    let href = a.attr('href')
+    href = href.slice(href.indexOf('?url=') + 5)
+    a.attr('href', href)
+  })
+  
   
   //return $.html()
   return $
