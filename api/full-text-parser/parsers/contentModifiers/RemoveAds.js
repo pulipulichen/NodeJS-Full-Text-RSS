@@ -17,6 +17,7 @@ module.exports = function (html) {
   $('.adsbygoogle').remove()
   $('.shareaholic-canvas').remove()
   $('.addtoany_share_save_container').remove()
+  $('.board.board-article.clearfix.gpt-new').remove()
   
   $('.extcsscode').remove()
   
