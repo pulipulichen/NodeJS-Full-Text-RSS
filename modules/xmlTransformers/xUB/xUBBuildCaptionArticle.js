@@ -6,6 +6,7 @@ const appendPuncToSentence = function (sentence, punc) {
           || sentence.endsWith('~')
           || sentence.endsWith('～')
           || sentence.endsWith('！')
+          || sentence.endsWith('：')
           || sentence.endsWith('...')
           || sentence.endsWith('、')) {
     return sentence
