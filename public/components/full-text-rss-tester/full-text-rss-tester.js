@@ -232,6 +232,7 @@ module.exports = {
                 || this.query.startsWith('https://feedpress.me/')
                 || this.query.startsWith('http://feed.')
                 || this.query.startsWith('https://feed.')
+                || this.query.startsWith('.rdf')
                 || this.query.startsWith('http://rss.')
                 || this.query.startsWith('http://feeds.')
                 || (this.query.indexOf('/feeds/posts/') > -1)
