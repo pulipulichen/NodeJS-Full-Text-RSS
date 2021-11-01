@@ -64,6 +64,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.startsWith('https://www.linux-apps.com/')) {
     addModules.push('xLinuxAPP')
   }
+  if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCk25FUc8pLiP3A6Zniknxbg')) {
+    addModules.push('fScaryplayTTV')
+  }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }
