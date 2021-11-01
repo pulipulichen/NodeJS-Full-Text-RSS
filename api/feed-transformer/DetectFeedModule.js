@@ -61,6 +61,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink === 'https://www.soft4fun.net') {
     addModules.push('cSoft4fun')
   }
+  if (channelLink.startsWith('https://www.linux-apps.com/')) {
+    addModules.push('xLinuxAPP')
+  }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }

@@ -22,7 +22,7 @@ const htmlContentParser = async function (html, modules, url) {
   let selectors = [
     'section.article-content__editor:first',
     'article .post-body',
-    '#product-view-container .product-main-description article:first',
+    //'#product-view-container .product-main-description article:first',
     'main.site-main div.card-body div.post-content',
     'div.articles',
     'div#content > div.post > div.entry-content',

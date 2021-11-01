@@ -7,7 +7,7 @@ const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 
 const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 
-const xTwitter = async function ($, moduleCodesString) {
+const xPTT = async function ($, moduleCodesString) {
   await FeedItemEach($, async (item, i) => {
     //console.log(i, item.find('title').text())
     //item.remove()
@@ -24,13 +24,13 @@ const xTwitter = async function ($, moduleCodesString) {
     
     let content = FeedItemGetContent(item)
     
-    if (content.startsWith(title)) {
-      console.log(title)
-    }
+//    if (content.startsWith(title)) {
+//      console.log(title)
+//    }
     
   })
   
   return $
 }
 
-module.exports = xTwitter
+module.exports = xPTT
