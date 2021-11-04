@@ -296,7 +296,7 @@ module.exports = {
       //this.subURL = baseURL.origin + queryAPI
       let href = location.href
       let baseURL = href.slice(0, href.indexOf('/test.html'))
-      this.subURL = baseURL + queryAPI.slice(1)
+      this.subURL = baseURL + '/fc/' + queryAPI.slice(4)
       
       //console.log(queryAPI)
 //      $.get(queryAPI, (xml) => {
