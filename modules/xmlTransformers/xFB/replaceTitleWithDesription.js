@@ -1,6 +1,8 @@
 const GetFirstLine = require('./../../../api/lib/stringUtils/GetFirstLine.js')
 const linkifyHtml = require('linkify-html')
 
+const shortenTitle = require('./shortenTitle.js')
+
 const TransformDescriptionLink = function (description, item) {
   let linkifyDescription = linkifyHtml(description) 
   //console.log(linkifyDescription)
@@ -25,23 +27,7 @@ const replaceTitleWithDesription = function (item) {
   }
   
   //console.log(i, 'xFBTitle', 2, title)
-  
-  title = GetFirstLine(title)
-  
-  if (title.length > 40) {
-    if (title.indexOf('。') > 20) {
-      title = title.slice(0, title.indexOf('。') + 1).trim()
-    }
-    else if (title.indexOf('！') > 20) {
-      title = title.slice(0, title.indexOf('！') + 1).trim()
-    }
-    else if (title.indexOf('...') > 20) {
-      title = title.slice(0, title.indexOf('...') + 3).trim()
-    }
-    else if (title.indexOf('，', 20) > 20) {
-      title = title.slice(0, title.indexOf('，', 20) + 1).trim()
-    }
-  }
+  title = shortenTitle(title, description)
   
   //console.log(title, description.slice(0, 30))
   if (description.startsWith(title)) {

@@ -14,6 +14,7 @@ const FeedItemSetLink = require('./../../api/lib/xmlTransformers/FeedItemSetLink
 const DesafeImg = require('./xFB/xFBDesafeImg.js')
 
 const replaceTitleWithDesription = require('./xFB/replaceTitleWithDesription.js')
+const xFBVideoPost = require('./xFB/xFBVideoPost.js')
 
 const xFB = async function ($, moduleCodesString) {
   //console.log('xFB')
@@ -68,12 +69,8 @@ const xFB = async function ($, moduleCodesString) {
       //console.log(description)
     }
     else if (type === 'video') {
-      /*
-      let title = item.find('title').text().trim()
-      title = '[V]' + title
-      item.find('title').text(title)
-       */
-      replaceTitleWithDesription(item)
+      xFBVideoPost(item)
+      //replaceTitleWithDesription(item)
     }
     else if (type === 'post') {
       await xFBPost(item, i)

@@ -10,10 +10,10 @@ const fs = require('fs')
 const path = require('path')
 
 const route = function (app) {
-  let isXML = function (url) {
-    //console.log(url)
-    return (url.endsWith('.xml'))
-  }
+//  let isXML = function (url) {
+//    //console.log(url)
+//    return (url.endsWith('.xml'))
+//  }
   
   let urlFilter = function (url) {
 
@@ -61,7 +61,7 @@ const route = function (app) {
       res.send(result)
     }
     catch (e) {
-      //throw e
+      throw e
       res.send(e)
     }
   })
