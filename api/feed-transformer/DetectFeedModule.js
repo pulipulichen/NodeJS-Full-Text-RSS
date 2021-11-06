@@ -70,6 +70,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }
+
+  if (channelLink.startsWith('https://pcrookie.com')) {
+    addModules.push('cRemoveNoscript')
+  }
   
   //console.log(channelLink, addModules)
   
