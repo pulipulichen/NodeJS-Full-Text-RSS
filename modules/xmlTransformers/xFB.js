@@ -56,7 +56,12 @@ const xFB = async function ($, moduleCodesString) {
       if (content !== '') {
         if (description !== '') {
           description = DesafeImg(description)
-          content = '<![CDATA[' + `<a href="${fbLink}" target="_blank">Facebook Post</a><br>${description}` + '<hr />' + content + ']]>'
+          content = '<![CDATA[' 
+                  + description
+                  + `<br>`
+                  + `<a href="${fbLink}" target="_blank">Facebook Post</a>`
+                  + '<hr />' + content 
+                  + ']]>'
         }
         item.find('description').text(content)
       }

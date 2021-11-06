@@ -57,7 +57,7 @@ const xUB = async function ($, moduleCodesString) {
     else {
       content = setupContentWithCaption(formattedContent, sections, captions, videoID)
       let title = FeedItemGetTitle(item)
-      title = '[C]' + title
+      title = 'C]' + title
       item.find('title:first').text(title)
     }
     

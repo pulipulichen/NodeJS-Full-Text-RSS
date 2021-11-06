@@ -69,6 +69,9 @@ module.exports = {
       if (parameters.m) {
         this.modules = parameters.m
       }
+      else {
+        this.modules = ''
+      }
       this.inited = true
       this.dataSave()
       //setTimeout(() => {

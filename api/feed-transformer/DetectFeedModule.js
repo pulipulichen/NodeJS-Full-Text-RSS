@@ -50,6 +50,7 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('tGamker')
   }
   if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg') {
+    // 志祺七七 X 圖文不符
     addModules.push('tSH')
   }
   if (channelLink === 'https://www.oschina.net/news/rss') {
@@ -65,7 +66,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('xLinuxAPP')
   }
   if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCk25FUc8pLiP3A6Zniknxbg')) {
+    // 希治閣【遊戲情報科】++ (15)
     addModules.push('fScaryplayTTV')
+    //addModules.push('fHasCaptions')
   }
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
@@ -73,6 +76,28 @@ const DetectFeedModule = function ($, moduleCodesString) {
 
   if (channelLink.startsWith('https://pcrookie.com')) {
     addModules.push('cRemoveNoscript')
+  }
+  
+  if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UC9v3JGut2Z1PxrXEpGzgEAA')) {
+    // TESTV
+    addModules.push('fTESTVBuy')
+  }
+  
+  if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg'
+      // 志祺七七 X 圖文不符
+        || channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCCkMW93Am1pLfk2nZFKAmbQ'
+        // 敖厂长
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCk25FUc8pLiP3A6Zniknxbg')
+        // 希治閣【遊戲情報科】
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCLgGLSFMZQB8c0WGcwE49Gw')
+        // Gamker攻壳官方频道
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCpmx8TiMv9yR1ncyldGyyVA')
+        // Huan
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UC9v3JGut2Z1PxrXEpGzgEAA')
+        // TESTV
+    ) {
+    
+    addModules.push('fHasCaptions')
   }
   
   //console.log(channelLink, addModules)

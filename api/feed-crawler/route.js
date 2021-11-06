@@ -61,7 +61,7 @@ const route = function (app) {
       res.send(result)
     }
     catch (e) {
-      //throw e
+      throw e
       res.send(e)
     }
   })
