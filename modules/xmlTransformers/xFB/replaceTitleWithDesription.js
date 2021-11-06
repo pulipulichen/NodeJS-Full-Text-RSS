@@ -38,7 +38,7 @@ const replaceTitleWithDesription = function (item) {
   
   title = title.replace(/#/ig, '')
 
-  title = '[P]' + title
+  title = 'P] ' + title
   
   item.find('title').text(title)
   

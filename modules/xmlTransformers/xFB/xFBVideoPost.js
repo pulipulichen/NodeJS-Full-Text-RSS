@@ -34,7 +34,7 @@ const xFBVideoPost = function (item) {
 
   title = removeHash(title)
 
-  title = '[V]' + title
+  title = 'V] ' + title
   item.find('title:first').text(title)
 
 }
