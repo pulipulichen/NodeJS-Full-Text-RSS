@@ -69,6 +69,15 @@ module.exports = {
       if (parameters.m) {
         this.modules = parameters.m
       }
+      this.inited = true
+      this.dataSave()
+      //setTimeout(() => {
+        let url = location.href.slice(0, location.href.indexOf('?'))
+        //console.log(url)
+        //location.href = location.href.slice(0, location.href.indexOf('?'))
+        location.href = url
+      //}, 500)
+      return false
     }
     
     this.inited = true
@@ -91,10 +100,31 @@ module.exports = {
         try {
           new URL(this.query.trim())
           this.query = this.query.trim()
+          return false
         }
         catch (e) {
           // do nothing
         }
+      }
+      
+      if (!this.query.startsWith('https://') 
+              && !this.query.startsWith('http://')) {
+        this.query = 'https://' + this.query()
+        return false
+      }
+      
+      if (this.query.indexOf('/https%3A%2F%2F') > -1) {
+        let query = this.query.slice(this.query.indexOf('/https%3A%2F%2F') + 1)
+        query = decodeURIComponent(query)
+        this.query = query
+        return false
+      }
+      
+      if (this.query.indexOf('/http%3A%2F%2F') > -1) {
+        let query = this.query.slice(this.query.indexOf('/http%3A%2F%2F') + 1)
+        query = decodeURIComponent(query)
+        this.query = query
+        return false
       }
       
       this.dataSave()
@@ -266,10 +296,16 @@ module.exports = {
         queryAPI = queryAPI + '/' + this.modules
       }
       
+      let cacheFeed = this.feedXML
+      
       $.post(queryAPI, {
-        feedXML: this.feedXML
+        feedXML: cacheFeed
       },
         (data) => {
+          if (cacheFeed !== this.feedXML) {
+            return false
+          }
+          
           //console.log(data)
           this.output = data
           
@@ -303,12 +339,18 @@ module.exports = {
 //        
 //      })
       
+      let cacheQueryAPI = queryAPI
+      
       $.ajax({
           type: "GET",
           url: queryAPI,
           cache: false,
           dataType: "xml",
           complete: (xml) => {
+            if (cacheQueryAPI !== queryAPI) {
+              return false
+            }
+            
             //console.log('return')
             
             if (xml.responseText) {
@@ -346,12 +388,17 @@ module.exports = {
       //console.log(subURL)
       //return 
       
+      let cacheQueryAPI = queryAPI
+      
       $.ajax({
           type: "GET",
           url: queryAPI,
           cache: false,
           dataType: "xml",
           complete: (xml) => {
+            if (cacheQueryAPI !== queryAPI) {
+              return false
+            }
             
             if (xml.responseText) {
               xml = xml.responseText

@@ -57,7 +57,7 @@ const OriginalRSSCrawler = require('./api/original-rss-crawler/route.js')
 OriginalRSSCrawler(app)
 
 app.get('/', async (req, res) => {
-  res.redirect('/sub.html')
+  res.redirect('/test.html')
 })
 
 //const AutoRestart = require('./api/auto-restart/AutoRestart.js')
