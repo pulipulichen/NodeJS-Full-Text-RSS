@@ -78,6 +78,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('cRemoveNoscript')
   }
   
+  if (channelLink.startsWith('https://iamjoyhuang.com')) {
+    addModules.push('cIamjoyhuang')
+  }
+  
   if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UC9v3JGut2Z1PxrXEpGzgEAA')) {
     // TESTV
     addModules.push('fTESTVBuy')
@@ -95,6 +99,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
         // Huan
         || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UC9v3JGut2Z1PxrXEpGzgEAA')
         // TESTV
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UC2Zn5hlv7_hPsLlh_xwcH6g')
+        // 邦尼幫你
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg')
+        // SHIN LI
     ) {
     
     addModules.push('fHasCaptions')
