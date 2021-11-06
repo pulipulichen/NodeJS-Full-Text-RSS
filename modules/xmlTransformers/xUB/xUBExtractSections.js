@@ -23,6 +23,10 @@ const xUBExtractSections = function (description) {
     
     let header = parts[2].trim()
     
+    if (header.startsWith('- ')) {
+      header = header.slice(2).trim()
+    }
+    
     output.push({
       timestamp,
       start: second,
