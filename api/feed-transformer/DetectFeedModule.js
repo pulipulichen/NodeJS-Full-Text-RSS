@@ -94,6 +94,13 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('tSH')
   }
   
+  if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UC1BjrXqfmHmBkM2FjBTdg-w')) {
+    // https://www.youtube.com/channel/UC1BjrXqfmHmBkM2FjBTdg-w
+    // 低分少年 Low Score Boy
+    addModules.push('fLowScoreBoy')
+    addModules.push('fHasCaptions')
+  }
+  
   if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg'
       // 志祺七七 X 圖文不符
         || channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCCkMW93Am1pLfk2nZFKAmbQ'
