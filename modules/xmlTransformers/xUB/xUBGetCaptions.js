@@ -73,12 +73,19 @@ const xUBGetCaptions = async function (videoID) {
   let captions = []
   
   let lastEnd
+  
   for (let i = 0; i < captionsLines.length; i++) {
     let line = captionsLines.eq(i)
     let text = line.text().trim()
+    
     if (!text || text === '') {
-      continue
+      line.remove()
     }
+  }
+  
+  for (let i = 0; i < captionsLines.length; i++) {
+    let line = captionsLines.eq(i)
+    let text = line.text().trim()
     
     let info = {
       text: text,

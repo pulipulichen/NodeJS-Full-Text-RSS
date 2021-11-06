@@ -103,6 +103,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
         // 邦尼幫你
         || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg')
         // SHIN LI
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCZ4NwvuGYgFyjnRRJekdnHw')
+        // 想做教育家的Klaus++ (15)
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCdEpz2A4DzV__4C1x2quKLw')
+        // PAPAYA 電腦教室++ (15)
     ) {
     
     addModules.push('fHasCaptions')
