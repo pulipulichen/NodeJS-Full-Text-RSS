@@ -87,6 +87,13 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('fTESTVBuy')
   }
   
+  if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UC4D6eg7KWWiXNJVTXtuyZfA')) {
+    // Sky game++ (15)
+    addModules.push('fUBSky')
+    addModules.push('fHasCaptions')
+    addModules.push('tSH')
+  }
+  
   if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg'
       // 志祺七七 X 圖文不符
         || channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCCkMW93Am1pLfk2nZFKAmbQ'
