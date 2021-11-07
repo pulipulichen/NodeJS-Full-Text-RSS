@@ -101,6 +101,13 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('fHasCaptions')
   }
   
+  if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCU6nhA37pbvzw-JXhAB87Mg')) {
+    // 大閒者
+    addModules.push('tRecopapa')
+    addModules.push('tSH')
+  }
+  
+  
   if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg'
       // 志祺七七 X 圖文不符
         || channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCCkMW93Am1pLfk2nZFKAmbQ'

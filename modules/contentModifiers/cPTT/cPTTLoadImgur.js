@@ -12,7 +12,11 @@ const cPTTLoadImgur = function ($) {
       continue
     }
     
-    let id = link.slice(link.lastIndexOf('/')).trim()
+    let id = link.slice(link.lastIndexOf('/') + 1).trim()
+    if (id.indexOf('.') > -1) {
+      id = id.slice(0, id.indexOf('.'))
+    }
+    
     let src = 'https://i.imgur.com/' + id + '.png'
     
     aTag.html(`${link}<br /><img src="${src}" style="max-width: 100%; height: auto;" />`)
