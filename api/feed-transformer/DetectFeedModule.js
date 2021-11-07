@@ -132,6 +132,8 @@ const DetectFeedModule = function ($, moduleCodesString) {
         // 大閒者++ (15)
         || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCQkAUoa28FZfffFI8tTQ71g')
         // 帥狗 HandsomeDoge 
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCKPflKAE2Y1tm8VSi32iboQ')
+        // 老孫聊遊戲 https://www.youtube.com/channel/UCKPflKAE2Y1tm8VSi32iboQ
     ) {
     
     addModules.push('fHasCaptions')
