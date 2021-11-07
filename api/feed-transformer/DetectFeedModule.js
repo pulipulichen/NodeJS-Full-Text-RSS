@@ -130,6 +130,8 @@ const DetectFeedModule = function ($, moduleCodesString) {
         // PAPAYA 電腦教室++ (15)
         || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCU6nhA37pbvzw-JXhAB87Mg')
         // 大閒者++ (15)
+        || channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCQkAUoa28FZfffFI8tTQ71g')
+        // 帥狗 HandsomeDoge 
     ) {
     
     addModules.push('fHasCaptions')
