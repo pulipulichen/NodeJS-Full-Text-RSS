@@ -78,7 +78,9 @@ const xUBGetCaptions = async function (videoID) {
     let line = captionsLines.eq(i)
     let text = line.text().trim()
     
-    if (!text || text === '') {
+    if (!text 
+            || text === '' 
+            || text === '。') {
       line.remove()
     }
   }

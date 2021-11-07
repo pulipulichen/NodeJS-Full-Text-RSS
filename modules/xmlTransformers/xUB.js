@@ -27,7 +27,7 @@ const DesafeImg = require('./../../api/full-text-parser/parsers/contentModifiers
 
 
 const xUB = async function ($, moduleCodesString) {
-  //console.log('xUB')
+  console.log('xUB', moduleCodesString)
   await FeedItemEach($, async (item, i) => {
     //console.log(i, item.find('title').text())
     //item.remove()
@@ -49,6 +49,7 @@ const xUB = async function ($, moduleCodesString) {
     //console.log(sections)
     
     let captions = await xUBGetCaptions(videoID)
+    let title = FeedItemGetTitle(item)
     
     if (!captions || captions.length === 0) {
       //return item.remove()
@@ -56,9 +57,14 @@ const xUB = async function ($, moduleCodesString) {
     }
     else {
       content = setupContentWithCaption(formattedContent, sections, captions, videoID)
-      let title = FeedItemGetTitle(item)
+      
       title = 'C] ' + title
       item.find('title:first').text(title)
+    }
+    
+    if (moduleCodesString.indexOf('fHasCaptions') > -1 && !title.startsWith('C] ')) {
+      item.remove()
+      return false
     }
     
     FeedItemSetContent(item, content)
