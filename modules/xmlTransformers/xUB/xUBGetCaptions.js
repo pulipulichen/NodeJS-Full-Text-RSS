@@ -1,5 +1,5 @@
 
-const captionCacheHour = 24
+const captionCacheHour = 24 * 30
 const captionCacheTime = captionCacheHour * 60 * 60 * 1000
 
 const preferLang = [
@@ -196,7 +196,7 @@ const getSRT = async function (videoID) {
     }
     */
     return srtContent
-  })
+  }, captionCacheTime)
 }
 
 const getFirstFileInFolder = function (folder) {
