@@ -29,6 +29,7 @@ const path = require('path')
 const puppeteer = require('puppeteer');
 
 const nodeCache = require('./../../../api/lib/cache/node-cache-sqlite.js')
+const sleep = require('./../../../api/lib/async/sleep.js')
 
 // ------------------------
 
@@ -96,10 +97,17 @@ const determineLang = async function (page) {
   return false
 }
 
+let getSRTLock = false
+
 const getSRT = async function (videoID) {
   videoID = UBVideoIDParser(videoID)
   
   return await nodeCache.get('xUBGetCaptions', videoID, async () => {
+    if (getSRTLock) {
+      await sleep(1000)
+    }
+    
+    getSRTLock = true
     
     /*
     let key = await getDownsubKey(videoID)
@@ -180,7 +188,7 @@ const getSRT = async function (videoID) {
 //    })
 
     closeBrowser()
-
+    getSRTLock = false
     /*
     return {
       title,
