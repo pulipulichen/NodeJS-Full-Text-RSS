@@ -1,12 +1,12 @@
 const xUBCalcBaseInterval = require('./xUBCalcBaseInterval.js')
 
-const xUBBuildSectionFromCaptions = function (captions) {
+const xUBBuildSectionFromCaptions = function (captions, baseInterval = 5) {
   
   let newHeaderInterval = xUBCalcBaseInterval(captions)
   if (newHeaderInterval < 0.1) {
     newHeaderInterval = 0.1
   }
-  newHeaderInterval = newHeaderInterval * 5
+  newHeaderInterval = newHeaderInterval * baseInterval
   
   //console.log(newHeaderInterval)
   
@@ -25,6 +25,11 @@ const xUBBuildSectionFromCaptions = function (captions) {
     else {
       newCaptions.push(caption)
     }
+  }
+  
+  //console.log(sections.length, baseInterval)
+  if (sections.length > 10) {
+    return xUBBuildSectionFromCaptions(captions, baseInterval * 2)
   }
   
   //console.log(sections)

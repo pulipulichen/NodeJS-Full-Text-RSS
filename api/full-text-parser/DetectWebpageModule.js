@@ -37,13 +37,15 @@ const DetectWebpageModule = function (url, moduleCodesString) {
     addModules.push('hFB')
   }
   else if (url.startsWith('https://ani.gamer.com.tw/animeVideo.php?sn=')
-          || url.startsWith('https://www.youtube.com/watch?v=')
-          || url.startsWith('https://youtu.be/')
           || url.startsWith('https://www.emerald.com/')
           || url.startsWith('https://www.sciencedirect.com/science/article/')
           || url.startsWith('https://www.reddit.com/r/')
           || url.startsWith('https://www.plurk.com/')) {
     addModules.push('hSkip')
+  }
+  else if (url.startsWith('https://www.youtube.com/watch?v=')
+          || url.startsWith('https://youtu.be/')) {
+    addModules.push('hUB')
   }
   else if (url.startsWith('https://github.com/')) {
     addModules.push('hGitHub')

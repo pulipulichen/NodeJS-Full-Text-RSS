@@ -1,2 +1,3 @@
 *.sqlite
 restart-trigger.json
+.fuse_hidden*
