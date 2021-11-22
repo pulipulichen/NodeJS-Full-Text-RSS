@@ -103,8 +103,9 @@ const getSRT = async function (videoID) {
   videoID = UBVideoIDParser(videoID)
   
   return await nodeCache.get('xUBGetCaptions', videoID, async () => {
-    while (getSRTLock) {
-      await sleep(1000)
+    while (getSRTLock === true) {
+      console.log('wait', videoID)
+      await sleep(3000)
     }
     
     getSRTLock = true
@@ -196,6 +197,7 @@ const getSRT = async function (videoID) {
       srtContent
     }
     */
+    console.log(srtContent.slice(0, 200))
     return srtContent
   }, captionCacheTime)
 }
