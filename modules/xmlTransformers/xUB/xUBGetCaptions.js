@@ -115,14 +115,15 @@ const getSRT = async function (videoID) {
     console.log(subContent)
     */
 
-    console.log('initBrowser', videoID)
+    let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
+    console.log('initBrowser', downsubURL)
     await initBrowser()
 
     if (videoID.indexOf('=') > -1) {
       videoID = videoID.slice(videoID.lastIndexOf('=') + 1)
     }
 
-    let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
+    
     //console.log(downsubURL)
 
     await page.goto(
