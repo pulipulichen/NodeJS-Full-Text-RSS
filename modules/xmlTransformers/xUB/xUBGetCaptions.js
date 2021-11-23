@@ -127,7 +127,7 @@ const getSRT = async function (videoID) {
     }
 
     
-    //console.log(downsubURL)
+    console.log('downsubURL', downsubURL)
 
     await page.goto(
        downsubURL,
@@ -140,7 +140,7 @@ const getSRT = async function (videoID) {
 
     //console.log(`await page.waitForSelector('button')`)
     let selector = `button[data-title^="[SRT] "],i[aria-hidden="true"].v-icon.notranslate.pb-1.material-icons.theme--light.error--text`
-    //console.log(selector)
+    console.log('waitForSelector', videoID)
     await page.waitForSelector(selector, {
       timeout: 5000
     })
@@ -149,6 +149,7 @@ const getSRT = async function (videoID) {
     // Check languages
 
     let lang = await determineLang(page)
+    console.log('lang', videoID, lang)
 
     let srtContent = false
     if (lang !== false) {
