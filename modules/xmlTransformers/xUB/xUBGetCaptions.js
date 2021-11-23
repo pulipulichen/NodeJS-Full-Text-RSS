@@ -200,7 +200,9 @@ const getSRT = async function (videoID) {
       srtContent
     }
     */
-    console.log(srtContent.slice(0, 200))
+    if (srtContent) {
+      console.log(srtContent.slice(0, 200))
+    }
     return srtContent
   }, captionCacheTime)
 }
