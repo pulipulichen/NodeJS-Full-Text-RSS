@@ -107,7 +107,7 @@ const getSRT = async function (videoID) {
   return await nodeCache.get('xUBGetCaptions', videoID, async () => {
     while (getSRTLock === true) {
       console.log('wait', videoID)
-      await sleep(3000)
+      await sleep(10000)
     }
     
     getSRTLock = true
