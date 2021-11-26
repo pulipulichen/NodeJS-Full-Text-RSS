@@ -103,117 +103,122 @@ let getSRTLock = false
 
 const getSRT = async function (videoID) {
   videoID = UBVideoIDParser(videoID)
-  
-  return await nodeCache.get('xUBGetCaptions', videoID, async () => {
-    let waitCount = 0
-    while (getSRTLock === true) {
-      console.log('wait', videoID)
-      waitCount++
-      if (waitCount > 20) {
-        break
+  try {
+    return await nodeCache.get('xUBGetCaptions', videoID, async () => {
+      let waitCount = 0
+      while (getSRTLock === true) {
+        console.log('wait', videoID)
+        waitCount++
+        if (waitCount > 20) {
+          break
+        }
+        await sleep(10000)
       }
-      await sleep(10000)
-    }
-    
-    getSRTLock = true
-    
-    /*
-    let key = await getDownsubKey(videoID)
-    let subContent = await getSubContent(key)
-    console.log(subContent)
-    */
 
-    let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
-    console.log('initBrowser', downsubURL)
-    await initBrowser()
+      getSRTLock = true
 
-    if (videoID.indexOf('=') > -1) {
-      videoID = videoID.slice(videoID.lastIndexOf('=') + 1)
-    }
+      /*
+      let key = await getDownsubKey(videoID)
+      let subContent = await getSubContent(key)
+      console.log(subContent)
+      */
 
-    
-    console.log('downsubURL', downsubURL)
+      let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
+      console.log('initBrowser', downsubURL)
+      await initBrowser()
 
-    await page.goto(
-       downsubURL,
-        { 
-          waitUntil: 'load',
-          timeout: 1000
-        },
-    );
+      if (videoID.indexOf('=') > -1) {
+        videoID = videoID.slice(videoID.lastIndexOf('=') + 1)
+      }
 
 
-    await page.waitForTimeout(1000);
+      console.log('downsubURL', downsubURL)
 
-    let downloadPath = './cache/downloadsub/' + videoID
+      await page.goto(
+         downsubURL,
+          { 
+            waitUntil: 'load',
+            timeout: 1000
+          },
+      );
 
-    //console.log(`await page.waitForSelector('button')`)
-    let selector = `button[data-title^="[SRT] "],i[aria-hidden="true"].v-icon.notranslate.pb-1.material-icons.theme--light.error--text`
-    console.log('waitForSelector', videoID)
-    await page.waitForSelector(selector, {
-      timeout: 5000
-    })
 
-    // -----------------------
-    // Check languages
+      await page.waitForTimeout(1000);
 
-    let lang = await determineLang(page)
-    console.log('lang', videoID, lang)
+      let downloadPath = './cache/downloadsub/' + videoID
 
-    let srtContent = false
-    if (lang !== false) {
+      //console.log(`await page.waitForSelector('button')`)
+      let selector = `button[data-title^="[SRT] "],i[aria-hidden="true"].v-icon.notranslate.pb-1.material-icons.theme--light.error--text`
+      console.log('waitForSelector', videoID)
+      await page.waitForSelector(selector, {
+        timeout: 5000
+      })
 
       // -----------------------
+      // Check languages
 
-      const client = await page.target().createCDPSession();
+      let lang = await determineLang(page)
+      console.log('lang', videoID, lang)
 
-      await client.send('Page.setDownloadBehavior', {
-        behavior: 'allow', 
-        downloadPath: downloadPath
-      });
+      let srtContent = false
+      if (lang !== false) {
 
-      fs.mkdirSync(downloadPath, { recursive: true })
+        // -----------------------
 
-      await page.click(`button[data-title^="[SRT] ${lang}"]`)
+        const client = await page.target().createCDPSession();
 
-      await page.waitForTimeout(5000)
+        await client.send('Page.setDownloadBehavior', {
+          behavior: 'allow', 
+          downloadPath: downloadPath
+        });
 
-      let filename = getFirstFileInFolder(downloadPath)
-      if (!filename) {
-        fs.rmSync(downloadPath, { recursive: true })
-        closeBrowser()
-        return false
+        fs.mkdirSync(downloadPath, { recursive: true })
+
+        await page.click(`button[data-title^="[SRT] ${lang}"]`)
+
+        await page.waitForTimeout(5000)
+
+        let filename = getFirstFileInFolder(downloadPath)
+        if (!filename) {
+          fs.rmSync(downloadPath, { recursive: true })
+          closeBrowser()
+          return false
+        }
+
+        console.log(filename, path.resolve(downloadPath, filename))
+
+        srtContent = fs.readFileSync(path.resolve(downloadPath, filename), 'utf8')
+        srtContent = srtContent.trim()
+
+        //console.log('Complete')
+
+        //try {
+        fs.rmSync(downloadPath, { recursive: true });
+        //} catch (e) {}
       }
-      
-      console.log(filename, path.resolve(downloadPath, filename))
 
-      srtContent = fs.readFileSync(path.resolve(downloadPath, filename), 'utf8')
-      srtContent = srtContent.trim()
+  //    let title = await page.evaluate(() => {
+  //        return $(`div.v-card__title > a[target="_blank"][href^="https://www.youtube.com/watch?v="]`).text()
+  //    })
 
-      //console.log('Complete')
-
-      //try {
-      fs.rmSync(downloadPath, { recursive: true });
-      //} catch (e) {}
-    }
-    
-//    let title = await page.evaluate(() => {
-//        return $(`div.v-card__title > a[target="_blank"][href^="https://www.youtube.com/watch?v="]`).text()
-//    })
-
-    closeBrowser()
-    getSRTLock = false
-    /*
-    return {
-      title,
-      srtContent
-    }
-    */
-    if (srtContent) {
-      console.log(srtContent.slice(0, 200))
-    }
-    return srtContent
-  }, captionCacheTime)
+      closeBrowser()
+      getSRTLock = false
+      /*
+      return {
+        title,
+        srtContent
+      }
+      */
+      if (srtContent) {
+        console.log(srtContent.slice(0, 200))
+      }
+      return srtContent
+    }, captionCacheTime)
+  }
+  catch (e) {
+    console.error(e)
+    return false
+  }
 }
 
 const getFirstFileInFolder = function (folder) {
