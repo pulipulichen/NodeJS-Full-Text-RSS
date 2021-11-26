@@ -187,7 +187,13 @@ _this.set = async function (databaseName, key, value, expire = null) {
 
   let type = typeof (value)
   if (type === 'function') {
-    value = await value()
+    try {
+      value = await value()
+    }
+    catch (e) {
+      console.error(e)
+      throw e
+    }
     type = typeof(value)
   }
   
