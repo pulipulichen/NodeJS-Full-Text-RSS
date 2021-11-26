@@ -105,8 +105,13 @@ const getSRT = async function (videoID) {
   videoID = UBVideoIDParser(videoID)
   
   return await nodeCache.get('xUBGetCaptions', videoID, async () => {
+    let waitCount = 0
     while (getSRTLock === true) {
       console.log('wait', videoID)
+      waitCount++
+      if (waitCount > 20) {
+        break
+      }
       await sleep(10000)
     }
     
