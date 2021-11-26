@@ -138,7 +138,7 @@ const getSRT = async function (videoID) {
          downsubURL,
           { 
             waitUntil: 'load',
-            timeout: 1000
+            timeout: 30000
           },
       );
 
