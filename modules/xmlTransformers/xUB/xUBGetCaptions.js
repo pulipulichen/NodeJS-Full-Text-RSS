@@ -217,6 +217,8 @@ const getSRT = async function (videoID) {
   }
   catch (e) {
     console.error(e)
+    closeBrowser()
+    getSRTLock = false
     return false
   }
 }
