@@ -134,19 +134,14 @@ const getSRT = async function (videoID) {
     
     console.log('downsubURL', downsubURL)
 
-    try {
-      await page.goto(
-         downsubURL,
-          { 
-            waitUntil: 'load',
-            timeout: 10000
-          },
-      );
-    }
-    catch (e) {
-      console.error(e)
-      return await this.getSRT(videoID)
-    }
+    await page.goto(
+       downsubURL,
+        { 
+          waitUntil: 'load',
+          timeout: 30000
+        },
+    );
+
 
     await page.waitForTimeout(1000);
 
