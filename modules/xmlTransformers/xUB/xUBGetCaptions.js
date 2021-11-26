@@ -59,7 +59,7 @@ const closeBrowser = function () {
       browser.close()
     }
     browser = undefined
-  }, 30000)
+  }, 0)
   
 }
 
