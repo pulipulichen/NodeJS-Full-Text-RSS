@@ -45,7 +45,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('xUB')
   }
   
-  
+  if (channelLink === 'http://www.linuxeden.com') {
+    addModules.push('fLinuxEden')
+  }
   if (channelLink.endsWith('videos.xml?channel_id=UCLgGLSFMZQB8c0WGcwE49Gw')) {
     addModules.push('tGamker')
   }
