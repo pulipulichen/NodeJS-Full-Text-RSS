@@ -65,10 +65,10 @@ const DelazyLoadingImg = function (html, url) {
   // -------------------
   // 20211130-0007 
   
-  imgList = $(`img[src^="data:image/svg+xml,"][data-lazy-src]`)
+  imgList = $(`img[src^="data:image/svg+xml,"][data-lazy-src][data-orig-file]`)
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
-    let src = img.attr('data-lazy-src')
+    let src = img.attr('data-orig-file')
     if (src.startsWith('/')) {
       let urlObject = new URL(url)
       src = urlObject.origin + src
