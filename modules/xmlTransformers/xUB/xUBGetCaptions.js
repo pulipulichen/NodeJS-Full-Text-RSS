@@ -196,7 +196,7 @@ const getSRT = async function (videoID) {
           filename = getFirstFileInFolder(downloadPath)
           if (!filename) {
             console.log('file not found.', downloadPath)
-            if (downloadCounter < 12) {
+            if (downloadCounter < 11) {
               downloadCounter++
               //if (downloadCounter % 5 === 0) {
               //  console.log('try to click again.', videoID, downloadPath)
