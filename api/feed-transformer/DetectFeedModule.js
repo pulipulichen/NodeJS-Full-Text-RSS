@@ -73,6 +73,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.startsWith('https://www.facebook.com/emuse.com.tw')) {
     addModules.push('tSH')
   }
+  if (channelLink.startsWith('https://www.ptt.cc/atom/Hearthstone.xml')) {
+    addModules.push('fPTTInfo')
+  }
+  
   if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCk25FUc8pLiP3A6Zniknxbg')) {
     // 希治閣【遊戲情報科】++ (15)
     addModules.push('fScaryplayTTV')
