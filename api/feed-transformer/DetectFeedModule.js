@@ -76,6 +76,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.startsWith('https://www.facebook.com/udngame')) {
     addModules.push('tSH')
   }
+  if (channelLink.startsWith('href="http://www.youtube.com/feeds/videos.xml?channel_id=UCvijahEyGtvMpmMHBu4FS2w')) {
+    addModules.push('tSH')
+  }
+  
   
   if (channelLink.startsWith('https://www.ptt.cc/atom/Hearthstone.xml')) {
     addModules.push('fPTTInfo')
