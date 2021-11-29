@@ -190,6 +190,7 @@ const getSRT = async function (videoID) {
         if (!filename) {
           console.log('download failed', videoID, downloadPath)
           fs.rmSync(downloadPath, { recursive: true })
+          getSRTLock = false
           closeBrowser()
           return false
         }
