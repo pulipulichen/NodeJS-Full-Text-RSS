@@ -180,7 +180,7 @@ const getSRT = async function (videoID) {
       let lang = await determineLang(page)
       console.log('lang', videoID, lang)
 
-      let srtContent = false
+      let srtContent = ''
       if (lang !== false) {
 
         // -----------------------
