@@ -184,10 +184,12 @@ const getSRT = async function (videoID) {
 
         fs.mkdirSync(downloadPath, { recursive: true })
 
+        console.log('try to click', videoID, downloadPath)
         await page.click(`button[data-title^="[SRT] ${lang}"]`)
 
         let downloadCounter = 0
         while (downloadCounter < 12) {
+          console.log('wait for download', videoID, downloadPath)
           await page.waitForTimeout(5000)
 
           let filename = getFirstFileInFolder(downloadPath)
