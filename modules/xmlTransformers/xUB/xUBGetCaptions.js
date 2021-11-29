@@ -191,9 +191,11 @@ const getSRT = async function (videoID) {
 
           let filename = getFirstFileInFolder(downloadPath)
           if (!filename) {
+            console.log('file not found.', downloadPath)
             if (downloadCounter < 12) {
               downloadCounter++
               if (downloadCounter % 5 === 0) {
+                console.log('try to click again.', videoID, downloadPath)
                 await page.click(`button[data-title^="[SRT] ${lang}"]`)
               }
               continue
