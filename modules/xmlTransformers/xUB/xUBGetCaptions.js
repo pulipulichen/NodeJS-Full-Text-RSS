@@ -20,7 +20,7 @@ const preferLang = [
 
 const UBVideoIDParser = require('./UBVideoIDParser.js')
 
-let page
+//let page
 
 const fs = require('fs')
 const path = require('path')
@@ -108,6 +108,7 @@ let queueList = []
 
 const getSRT = async function (videoID, retry = 0) {
   videoID = UBVideoIDParser(videoID)
+  let page, browser
   try {
     if (queueList.indexOf(videoID) > -1) {
       throw Error('queued ' + videoID)
@@ -147,7 +148,9 @@ const getSRT = async function (videoID, retry = 0) {
 
       let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
       console.log('initBrowser', downsubURL)
-      let {browser, page} = await initBrowser()
+      let init = await initBrowser()
+      browser = init.browser
+      page = init.page
 
       if (videoID.indexOf('=') > -1) {
         videoID = videoID.slice(videoID.lastIndexOf('=') + 1)
@@ -218,9 +221,10 @@ const getSRT = async function (videoID, retry = 0) {
             
             //console.log('download failed', videoID, downloadPath)
             fs.rmSync(downloadPath, { recursive: true })
+            
+            closeBrowser(browser)
             getSRTLock = false
-            closeBrowser()
-            console.log('download failed. retry again ' + videoID + ' ' + downloadPath)
+            console.log('download failed. retry again ' + videoID + ' retry ' + retry + ' ' + downloadPath)
             await sleep(5000)
             retry++
             if (retry === 3) {
@@ -266,7 +270,7 @@ const getSRT = async function (videoID, retry = 0) {
   }
   catch (e) {
     console.error(e)
-    closeBrowser()
+    closeBrowser(browser)
     getSRTLock = false
     return false
   }
