@@ -211,6 +211,9 @@ const getSRT = async function (videoID) {
             throw Error('download failed ' + videoID + ' ' + downloadPath)
             return false
           }
+          else {
+            break
+          }
         }
 
         console.log(filename, path.resolve(downloadPath, filename))
