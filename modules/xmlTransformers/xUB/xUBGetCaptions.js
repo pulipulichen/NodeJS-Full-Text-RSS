@@ -107,6 +107,7 @@ const getSRT = async function (videoID) {
   videoID = UBVideoIDParser(videoID)
   try {
     if (queueList.indexOf(videoID)) {
+      throw Error('queued', videoID)
       return false
     }
     
@@ -188,10 +189,11 @@ const getSRT = async function (videoID) {
 
         let filename = getFirstFileInFolder(downloadPath)
         if (!filename) {
-          console.log('download failed', videoID, downloadPath)
+          //console.log('download failed', videoID, downloadPath)
           fs.rmSync(downloadPath, { recursive: true })
           getSRTLock = false
           closeBrowser()
+          throw Error('download failed', videoID, downloadPath)
           return false
         }
 
