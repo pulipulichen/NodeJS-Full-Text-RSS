@@ -256,6 +256,7 @@ const getSRT = async function (videoID, retry = 0) {
 
       closeBrowser(browser)
       getSRTLock = false
+      await sleep(1000)
       /*
       return {
         title,
@@ -263,13 +264,14 @@ const getSRT = async function (videoID, retry = 0) {
       }
       */
       if (srtContent) {
-        console.log(srtContent.slice(0, 200))
+        console.log(srtContent.slice(0, 100))
       }
       return srtContent
     }, captionCacheTime)
   }
   catch (e) {
     console.error(e)
+    
     closeBrowser(browser)
     getSRTLock = false
     return false
