@@ -106,7 +106,7 @@ let getSRTLock = false
 
 let queueList = []
 
-const getSRT = async function (videoID) {
+const getSRT = async function (videoID, retry = 0) {
   videoID = UBVideoIDParser(videoID)
   try {
     if (queueList.indexOf(videoID) > -1) {
@@ -222,7 +222,12 @@ const getSRT = async function (videoID) {
             closeBrowser()
             console.log('download failed. retry again ' + videoID + ' ' + downloadPath)
             await sleep(5000)
-            return getSRT(videoID)
+            retry++
+            if (retry === 3) {
+              return ''
+            }
+            
+            return getSRT(videoID, retry)
           }
           else {
             break
