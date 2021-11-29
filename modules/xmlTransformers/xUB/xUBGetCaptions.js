@@ -185,16 +185,24 @@ const getSRT = async function (videoID) {
 
         await page.click(`button[data-title^="[SRT] ${lang}"]`)
 
-        await page.waitForTimeout(5000)
+        let downloadCounter = 0
+        while (downloadCounter < 3) {
+          await page.waitForTimeout(5000)
 
-        let filename = getFirstFileInFolder(downloadPath)
-        if (!filename) {
-          //console.log('download failed', videoID, downloadPath)
-          fs.rmSync(downloadPath, { recursive: true })
-          getSRTLock = false
-          closeBrowser()
-          throw Error('download failed ' + videoID + ' ' + downloadPath)
-          return false
+          let filename = getFirstFileInFolder(downloadPath)
+          if (!filename) {
+            if (downloadCounter < 3) {
+              downloadCounter++
+              continue
+            }
+            
+            //console.log('download failed', videoID, downloadPath)
+            fs.rmSync(downloadPath, { recursive: true })
+            getSRTLock = false
+            closeBrowser()
+            throw Error('download failed ' + videoID + ' ' + downloadPath)
+            return false
+          }
         }
 
         console.log(filename, path.resolve(downloadPath, filename))
