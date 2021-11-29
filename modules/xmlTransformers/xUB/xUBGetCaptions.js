@@ -122,6 +122,7 @@ const getSRT = async function (videoID) {
         waitCount++
         queueList.push(videoID)
         if (waitCount > 20) {
+          throw Error('Timeout ' + videoID)
           break
         }
         await sleep(10000)
