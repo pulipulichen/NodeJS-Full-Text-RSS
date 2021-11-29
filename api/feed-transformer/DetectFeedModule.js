@@ -75,6 +75,8 @@ const DetectFeedModule = function ($, moduleCodesString) {
   }
   if (channelLink.startsWith('https://www.ptt.cc/atom/Hearthstone.xml')) {
     addModules.push('fPTTInfo')
+    addModules.push('tPTT')
+    addModules.push('cPTT')
   }
   
   if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCk25FUc8pLiP3A6Zniknxbg')) {
