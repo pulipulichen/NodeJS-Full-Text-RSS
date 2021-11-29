@@ -101,14 +101,22 @@ const determineLang = async function (page) {
 
 let getSRTLock = false
 
+let queueList = []
+
 const getSRT = async function (videoID) {
   videoID = UBVideoIDParser(videoID)
   try {
+    if (queueList.indexOf(videoID)) {
+      return false
+    }
+    
     return await nodeCache.get('xUBGetCaptions', videoID, async () => {
       let waitCount = 0
+      
       while (getSRTLock === true) {
         console.log('wait', videoID)
         waitCount++
+        queueList.push(videoID)
         if (waitCount > 20) {
           break
         }
@@ -180,6 +188,7 @@ const getSRT = async function (videoID) {
 
         let filename = getFirstFileInFolder(downloadPath)
         if (!filename) {
+          console.log('download failed', videoID, downloadPath)
           fs.rmSync(downloadPath, { recursive: true })
           closeBrowser()
           return false
