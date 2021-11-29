@@ -20,7 +20,6 @@ const preferLang = [
 
 const UBVideoIDParser = require('./UBVideoIDParser.js')
 
-let browser
 let page
 
 const fs = require('fs')
@@ -34,6 +33,8 @@ const sleep = require('./../../../api/lib/async/sleep.js')
 // ------------------------
 
 const initBrowser = async function () {
+  
+  let browser
   if (browser) {
     return true
   }
@@ -48,10 +49,12 @@ const initBrowser = async function () {
   await page.setUserAgent(
            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36'
   )
+  
+  return {browser, page}
 }
 
 let closeBrowserTimer
-const closeBrowser = function () {
+const closeBrowser = function (browser) {
   clearTimeout(closeBrowserTimer)
   
   closeBrowserTimer = setTimeout(() => {
@@ -134,12 +137,11 @@ const getSRT = async function (videoID) {
 
       let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
       console.log('initBrowser', downsubURL)
-      await initBrowser()
+      let {browser, page} = await initBrowser()
 
       if (videoID.indexOf('=') > -1) {
         videoID = videoID.slice(videoID.lastIndexOf('=') + 1)
       }
-
 
       console.log('downsubURL', downsubURL)
 
@@ -150,7 +152,6 @@ const getSRT = async function (videoID) {
             timeout: 30000
           },
       );
-
 
       await page.waitForTimeout(1000);
 
@@ -226,7 +227,7 @@ const getSRT = async function (videoID) {
   //        return $(`div.v-card__title > a[target="_blank"][href^="https://www.youtube.com/watch?v="]`).text()
   //    })
 
-      closeBrowser()
+      closeBrowser(browser)
       getSRTLock = false
       /*
       return {
