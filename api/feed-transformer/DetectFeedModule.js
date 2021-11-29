@@ -73,6 +73,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.startsWith('https://www.facebook.com/emuse.com.tw')) {
     addModules.push('tSH')
   }
+  if (channelLink.startsWith('https://www.facebook.com/udngame')) {
+    addModules.push('tSH')
+  }
+  
   if (channelLink.startsWith('https://www.ptt.cc/atom/Hearthstone.xml')) {
     addModules.push('fPTTInfo')
     addModules.push('tPTT')
