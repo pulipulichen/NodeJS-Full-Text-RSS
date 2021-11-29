@@ -120,12 +120,21 @@ const getSRT = async function (videoID) {
       while (getSRTLock === true) {
         console.log('wait', videoID)
         waitCount++
-        queueList.push(videoID)
+        if (queueList.indexOf(videoID) === -1) {
+          queueList.push(videoID)
+        }
+        
         if (waitCount > 20) {
           throw Error('Timeout ' + videoID)
           break
         }
-        await sleep(10000)
+        await sleep(30000)
+      }
+      
+      queueList.indexOf(videoID)
+      var index = queueList.indexOf(videoID);
+      if (index !== -1) {
+        queueList.splice(index, 1);
       }
 
       getSRTLock = true
@@ -190,14 +199,15 @@ const getSRT = async function (videoID) {
 
         let downloadCounter = 0
         let filename
-        while (downloadCounter < 12) {
+        let maxRetry = 3
+        while (downloadCounter < maxRetry) {
           console.log('wait for download', videoID, downloadPath)
-          await page.waitForTimeout(5000)
+          await sleep(5000)
 
           filename = getFirstFileInFolder(downloadPath)
           if (!filename) {
             console.log('file not found.', downloadPath)
-            if (downloadCounter < 11) {
+            if (downloadCounter < maxRetry - 1) {
               downloadCounter++
               //if (downloadCounter % 5 === 0) {
               //  console.log('try to click again.', videoID, downloadPath)
@@ -210,8 +220,9 @@ const getSRT = async function (videoID) {
             fs.rmSync(downloadPath, { recursive: true })
             getSRTLock = false
             closeBrowser()
-            throw Error('download failed ' + videoID + ' ' + downloadPath)
-            return false
+            //throw Error('download failed ' + videoID + ' ' + downloadPath)
+            await sleep(5000)
+            return getSRT(videoID)
           }
           else {
             break

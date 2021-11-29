@@ -43,6 +43,7 @@ const xUBFormatDescription = function (videoID, content) {
   catch (e) {
     
     content = content.split('&amp;').join('&')
+    
     try {
       linkifyHTMLContent = linkifyHtml(content)
     }
