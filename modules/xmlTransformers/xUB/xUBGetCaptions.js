@@ -186,13 +186,16 @@ const getSRT = async function (videoID) {
         await page.click(`button[data-title^="[SRT] ${lang}"]`)
 
         let downloadCounter = 0
-        while (downloadCounter < 3) {
+        while (downloadCounter < 12) {
           await page.waitForTimeout(5000)
 
           let filename = getFirstFileInFolder(downloadPath)
           if (!filename) {
-            if (downloadCounter < 3) {
+            if (downloadCounter < 12) {
               downloadCounter++
+              if (downloadCounter % 5 === 0) {
+                await page.click(`button[data-title^="[SRT] ${lang}"]`)
+              }
               continue
             }
             
