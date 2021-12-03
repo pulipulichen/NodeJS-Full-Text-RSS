@@ -108,14 +108,16 @@ let queueList = []
 
 const getSRT = async function (videoID, retry = 0) {
   videoID = UBVideoIDParser(videoID)
+  
   let page, browser
   try {
     if (queueList.indexOf(videoID) > -1) {
-      throw Error('queued ' + videoID)
+      console.log('queued ' + videoID)
       return false
     }
-    
+    console.log('getSRT', videoID, getSRTLock, retry)
     return await nodeCache.get('xUBGetCaptions', videoID, async () => {
+      // 為什麼這邊沒有讀取到？
       let waitCount = 0
       
       while (getSRTLock === true) {

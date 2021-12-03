@@ -84,8 +84,17 @@
   </div>
   
   <div class="field">
-    <label for="modules">Modules</label>
-    <input type="text" v-model="modules" id="modules" />
+    <label for="modules">
+      Modules
+    </label>
+    <div class="ui action input">
+      <input type="text" v-model="modules" id="modules" />
+      
+      <button type="button" class="ui button"
+              v-on:click="addRandomToken">
+        Add Random Token
+      </button>
+    </div>
   </div>
   
   <div class="field">

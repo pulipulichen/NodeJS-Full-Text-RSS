@@ -35,6 +35,7 @@
       "context": "div"
     },
     "v-for": {},
+    "v-on:clcik": {},
     "v-model": {
       "context": "input"
     }
