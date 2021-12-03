@@ -49,6 +49,12 @@ const xUB = async function ($, moduleCodesString) {
     //console.log(sections)
     
     let captions = await xUBGetCaptions(videoID)
+    if (captions === false) {
+      // 表示還在讀取中 20211203-1157 
+      item.remove() // 先不要顯示
+      return false
+    }
+    
     let title = FeedItemGetTitle(item)
     
     if (!captions || captions.length === 0) {

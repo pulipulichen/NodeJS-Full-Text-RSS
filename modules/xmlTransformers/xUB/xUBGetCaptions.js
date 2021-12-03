@@ -160,7 +160,7 @@ const getSRT = async function (videoID) {
       let lang = await determineLang(page)
       console.log('lang', videoID, lang)
 
-      let srtContent = false
+      let srtContent = ''
       if (lang !== false) {
 
         // -----------------------
@@ -311,7 +311,19 @@ const timemarkToSecond = function (timemark) {
 }
 
 const xUBGetCaptions = async function (videoID) {
+  // 先確定看看有沒有快取
+  if ((await nodeCache.isExists('xUBGetCaptions', videoID)) === false) {
+    getSRT(videoID) // 不用await，因為不想卡死在這裡
+    return false
+    // 表示還在讀取中
+  }
+  
   let srtContent = await getSRT(videoID)
+  
+  if (srtContent === "") {
+    // 表示沒有字幕
+    return ''
+  }
   
   if (srtContent === false) {
     return false

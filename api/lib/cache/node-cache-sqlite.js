@@ -320,6 +320,10 @@ _this.getExists = async function (databaseName, key, value, expire) {
   return result
 }
 
+_this.isExists = async function (databaseName, key) {
+  return ((await this.get(databaseName, key)) !== undefined)
+}
+
 /**
  * 
  * @param {type} databaseName
@@ -327,6 +331,7 @@ _this.getExists = async function (databaseName, key, value, expire) {
  * @param {type} value
  * @param {Number} expire 單位是MS
  * @returns {undefined|_this.get.cachedValue|Array|Object|_this.get.cachedProcessedValue|cache.value|.database@call;findOne.value|nm$_node-cache-sqlite._this.set.originalValue|nm$_node-cache-sqlite._this.set.value|_this.set.originalValue|_this.set.value|_this.get.result}
+ * 如果回傳undefined，表示沒有快取
  */
 _this.get = async function (databaseName, key, value, expire) {
   await _this.init()

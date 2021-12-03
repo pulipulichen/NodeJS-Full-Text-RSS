@@ -29,6 +29,12 @@ const xFB = async function ($, moduleCodesString) {
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
     let type = await xFBType(item, moduleCodesString)
+    if (type === false) {
+      // 表示還在讀取中 20211203-1202 
+      item.remove()
+      return false
+    }
+    
     let fbLink = FeedItemGetLink(item)
     
     //console.log(i, type, fbLink, item.find('title').text())
