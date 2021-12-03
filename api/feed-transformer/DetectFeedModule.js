@@ -45,7 +45,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('xUB')
   }
   
-  
+  if (channelLink === 'http://www.linuxeden.com') {
+    addModules.push('fLinuxEden')
+  }
   if (channelLink.endsWith('videos.xml?channel_id=UCLgGLSFMZQB8c0WGcwE49Gw')) {
     addModules.push('tGamker')
   }
@@ -65,6 +67,26 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.startsWith('https://www.linux-apps.com/')) {
     addModules.push('xLinuxAPP')
   }
+  if (channelLink.startsWith('https://www.facebook.com/tomchun.tw')) {
+    addModules.push('tSH')
+  }
+  if (channelLink.startsWith('https://www.facebook.com/emuse.com.tw')) {
+    addModules.push('tSH')
+  }
+  if (channelLink.startsWith('https://www.facebook.com/udngame')) {
+    addModules.push('tSH')
+  }
+  if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCvijahEyGtvMpmMHBu4FS2w')) {
+    addModules.push('tSH')
+  }
+  
+  
+  if (channelLink.startsWith('https://www.ptt.cc/atom/Hearthstone.xml')) {
+    addModules.push('fPTTInfo')
+    addModules.push('tPTT')
+    addModules.push('cPTT')
+  }
+  
   if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UCk25FUc8pLiP3A6Zniknxbg')) {
     // 希治閣【遊戲情報科】++ (15)
     addModules.push('fScaryplayTTV')

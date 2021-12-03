@@ -20,8 +20,7 @@ const preferLang = [
 
 const UBVideoIDParser = require('./UBVideoIDParser.js')
 
-let browser
-let page
+//let page
 
 const fs = require('fs')
 const path = require('path')
@@ -34,6 +33,8 @@ const sleep = require('./../../../api/lib/async/sleep.js')
 // ------------------------
 
 const initBrowser = async function () {
+  
+  let browser
   if (browser) {
     return true
   }
@@ -48,10 +49,12 @@ const initBrowser = async function () {
   await page.setUserAgent(
            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36'
   )
+  
+  return {browser, page}
 }
 
 let closeBrowserTimer
-const closeBrowser = function () {
+const closeBrowser = function (browser) {
   clearTimeout(closeBrowserTimer)
   
   closeBrowserTimer = setTimeout(() => {
@@ -101,18 +104,38 @@ const determineLang = async function (page) {
 
 let getSRTLock = false
 
-const getSRT = async function (videoID) {
+let queueList = []
+
+const getSRT = async function (videoID, retry = 0) {
   videoID = UBVideoIDParser(videoID)
+  let page, browser
   try {
+    if (queueList.indexOf(videoID) > -1) {
+      throw Error('queued ' + videoID)
+      return false
+    }
+    
     return await nodeCache.get('xUBGetCaptions', videoID, async () => {
       let waitCount = 0
+      
       while (getSRTLock === true) {
         console.log('wait', videoID)
         waitCount++
+        if (queueList.indexOf(videoID) === -1) {
+          queueList.push(videoID)
+        }
+        
         if (waitCount > 20) {
+          throw Error('Timeout ' + videoID)
           break
         }
-        await sleep(10000)
+        await sleep(30000)
+      }
+      
+      queueList.indexOf(videoID)
+      var index = queueList.indexOf(videoID);
+      if (index !== -1) {
+        queueList.splice(index, 1);
       }
 
       getSRTLock = true
@@ -125,12 +148,13 @@ const getSRT = async function (videoID) {
 
       let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
       console.log('initBrowser', downsubURL)
-      await initBrowser()
+      let init = await initBrowser()
+      browser = init.browser
+      page = init.page
 
       if (videoID.indexOf('=') > -1) {
         videoID = videoID.slice(videoID.lastIndexOf('=') + 1)
       }
-
 
       console.log('downsubURL', downsubURL)
 
@@ -141,7 +165,6 @@ const getSRT = async function (videoID) {
             timeout: 30000
           },
       );
-
 
       await page.waitForTimeout(1000);
 
@@ -174,15 +197,45 @@ const getSRT = async function (videoID) {
 
         fs.mkdirSync(downloadPath, { recursive: true })
 
+        console.log('try to click', videoID, downloadPath)
         await page.click(`button[data-title^="[SRT] ${lang}"]`)
 
-        await page.waitForTimeout(5000)
+        let downloadCounter = 0
+        let filename
+        let maxRetry = 3
+        while (downloadCounter < maxRetry) {
+          console.log('wait for download', videoID, downloadPath)
+          await sleep(5000)
 
-        let filename = getFirstFileInFolder(downloadPath)
-        if (!filename) {
-          fs.rmSync(downloadPath, { recursive: true })
-          closeBrowser()
-          return false
+          filename = getFirstFileInFolder(downloadPath)
+          if (!filename) {
+            console.log('file not found.', downloadPath)
+            if (downloadCounter < maxRetry - 1) {
+              downloadCounter++
+              //if (downloadCounter % 5 === 0) {
+              //  console.log('try to click again.', videoID, downloadPath)
+              //  await page.click(`button[data-title^="[SRT] ${lang}"]`)
+              //}
+              continue
+            }
+            
+            //console.log('download failed', videoID, downloadPath)
+            fs.rmSync(downloadPath, { recursive: true })
+            
+            closeBrowser(browser)
+            getSRTLock = false
+            console.log('download failed. retry again ' + videoID + ' retry ' + retry + ' ' + downloadPath)
+            await sleep(5000)
+            retry++
+            if (retry === 3) {
+              return ''
+            }
+            
+            return getSRT(videoID, retry)
+          }
+          else {
+            break
+          }
         }
 
         console.log(filename, path.resolve(downloadPath, filename))
@@ -201,8 +254,9 @@ const getSRT = async function (videoID) {
   //        return $(`div.v-card__title > a[target="_blank"][href^="https://www.youtube.com/watch?v="]`).text()
   //    })
 
-      closeBrowser()
+      closeBrowser(browser)
       getSRTLock = false
+      await sleep(1000)
       /*
       return {
         title,
@@ -210,14 +264,15 @@ const getSRT = async function (videoID) {
       }
       */
       if (srtContent) {
-        console.log(srtContent.slice(0, 200))
+        console.log(srtContent.slice(0, 100))
       }
       return srtContent
     }, captionCacheTime)
   }
   catch (e) {
     console.error(e)
-    closeBrowser()
+    
+    closeBrowser(browser)
     getSRTLock = false
     return false
   }

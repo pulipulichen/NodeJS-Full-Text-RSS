@@ -3,7 +3,8 @@
 const FeedCrawler = require('./FeedCrawler.js')
 const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 
-const cacheExpireHour = require('./../../mount/config.js').FeedCrawler.cacheLimitHour
+const config = require('./../../mount/config.js')
+const cacheExpireHour = config.FeedCrawler.cacheLimitHour
 const cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
 
 const fs = require('fs')
@@ -62,6 +63,9 @@ const route = function (app) {
     }
     catch (e) {
       //throw e
+      if (config.debug) {
+        throw e
+      }
       res.send(e)
     }
   })
@@ -77,7 +81,9 @@ const route = function (app) {
       res.send(result)
     }
     catch (e) {
-      //throw e
+      if (config.debug) {
+        throw e
+      }
       res.send(e)
     }
   })
@@ -112,6 +118,9 @@ const route = function (app) {
       res.send(result)
     }
     catch (e) {
+      if (config.debug) {
+        throw e
+      }
       res.send(e)
     }
   })
@@ -130,6 +139,9 @@ const route = function (app) {
       res.send(result)
     }
     catch (e) {
+      if (config.debug) {
+        throw e
+      }
       res.send(e)
     }
   })

@@ -62,6 +62,31 @@ const DelazyLoadingImg = function (html, url) {
     img.removeAttr('srcset')
   }
   
+  // -------------------
+  // 20211130-0007 
+  
+  /*
+  imgList = $(`img[src^="data:image/svg+xml,"][data-lazy-src][data-orig-file]`)
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    let src = img.attr('data-orig-file')
+    if (src.startsWith('/')) {
+      let urlObject = new URL(url)
+      src = urlObject.origin + src
+    }
+    img.attr('src', src)
+    img.removeAttr('srcset')
+  }
+  */
+  
+  let figures = $(`figure.wp-block-image`)
+  for (let i = 0; i < figures.length; i++) {
+    let figure = figures.eq(i)
+    let noscript = figure.children('noscript')
+    figure.after(noscript.text())
+    figure.remove()
+  }
+  
   // ------------------------------
   
   return $

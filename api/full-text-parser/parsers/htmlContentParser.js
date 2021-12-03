@@ -13,6 +13,11 @@ const RemoveScripts = require('./contentModifiers/RemoveScripts.js')
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
 const htmlContentParser = async function (html, modules, url) {
+  if (!html) {
+    console.error('No html', url, modules)
+    return ''
+  }
+  
   if (typeof(html) === 'object' && typeof(html.content) === 'string') {
     html = html.content
   }
