@@ -22,6 +22,7 @@ const replaceTitleWithDesription = function (item) {
     if ( (title.startsWith('photos from ') && title.endsWith(`'s post`))
              || (title === 'timeline photos')
              || (title.endsWith('timeline photos'))
+             || (title.endsWith(`'s cover photo`))
              || title.endsWith('.mp4')
             ) {
       title = description
