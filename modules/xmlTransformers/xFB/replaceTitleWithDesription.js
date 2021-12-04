@@ -12,16 +12,16 @@ const TransformDescriptionLink = function (description, item) {
 }
 
 const replaceTitleWithDesription = function (item) {
-  let title = item.find('title').text().trim()
+  let title = item.find('title').text().trim().toLowerCase()
   
   //console.log(i, 'xFBTitle', 1, title)
   let description = item.find('description').text().trim()
   //console.log(title)
   if (description !== '') {
-    console.log('replaceTitleWithDesription', title)
-    if ( (title.startsWith('Photos from ') && title.endsWith(`'s post`))
-             || (title.toLowerCase() === 'timeline photos')
-             || (title.toLowerCase().endsWith('timeline photos'))
+    //console.log('replaceTitleWithDesription', title)
+    if ( (title.startsWith('photos from ') && title.endsWith(`'s post`))
+             || (title === 'timeline photos')
+             || (title.endsWith('timeline photos'))
              || title.endsWith('.mp4')
             ) {
       title = description
