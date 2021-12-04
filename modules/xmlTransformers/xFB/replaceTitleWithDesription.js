@@ -18,6 +18,7 @@ const replaceTitleWithDesription = function (item) {
   let description = item.find('description').text().trim()
   //console.log(title)
   if (description !== '') {
+    console.log('replaceTitleWithDesription', title)
     if ( (title.startsWith('Photos from ') && title.endsWith(`'s post`))
              || (title === 'Timeline Photos')
              || (title.endsWith('Timeline Photos'))
