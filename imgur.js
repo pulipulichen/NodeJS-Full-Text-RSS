@@ -1,3 +1,5 @@
+/* global __dirname */
+
 var imgur = require('imgur-upload'),
 path = require('path');
 
