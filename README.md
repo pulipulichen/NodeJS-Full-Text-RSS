@@ -23,3 +23,6 @@ sudo sysctl fs.inotify.max_user_watches=582222 && sudo sysctl -p
 ----
 
 
+Private Document
+
+https://docs.google.com/document/d/1MZxjE5HVp7SiPItnApA_1p7wpPy3DsoZ4Bx5rlIF1eg/edit
