@@ -36,7 +36,7 @@ const xUB = async function ($, moduleCodesString) {
     //let {content} = await fullTextParser(link, moduleCodesString)
     //let title = item.find('title').text().trim()
     let content = FeedItemGetContent(item)
-    content = DesafeImg(content)
+    content = await DesafeImg(content)
     //console.log('content', content)
     let link = FeedItemGetLink(item)
     let videoID = UBVideoIDParser(link)
