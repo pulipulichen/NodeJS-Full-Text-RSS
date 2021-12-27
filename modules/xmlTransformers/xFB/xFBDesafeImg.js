@@ -51,7 +51,9 @@ const DesafeImg = async function (html) {
       return await urlToImgur(src)
     })
     console.log(imgurURL)
-    img.attr('src', imgurURL)
+    if (imgurURL) {
+      img.attr('src', imgurURL)
+    }
   }
   
   let output = $('body > div').html()
