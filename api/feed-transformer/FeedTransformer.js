@@ -84,11 +84,9 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
       itemRemoved = true
     }
 
-    NodeCacheSQLite.get('FeedTransformer', cacheKey, async function () {
-      //console.log(i, title)
-      
+    setTimeout(async () => {
       let titleNew = await ModuleManager(title, moduleCodesString, 't')
-      
+        
       titleNew = MailToBlogger(titleNew)
       
       //console.log(title, '||==||', titleNew)
@@ -104,8 +102,11 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
         //item.find('content').text(contentNew)
         FeedItemSetContent(item, contentNew)
       }
-    }, cacheTime)
 
+      NodeCacheSQLite.get('FeedTransformer', cacheKey, async function () {
+        return (new Date()).getTime()
+      }, cacheTime)
+    }, 0)
   })
   
   //console.log($('channel > item > title').text())
