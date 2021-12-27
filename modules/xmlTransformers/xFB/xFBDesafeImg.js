@@ -6,6 +6,8 @@ var path = require('path');
 var fs = require('fs')
 var request = require('request');
 
+const NodeCacheSqlite = require('./../../../api/lib/cache/node-cache-sqlite.js')
+
 var config = require('./../../../mount/config.js')
 
 imgur.setClientID(config.Imgur.ClientID);
@@ -42,7 +44,11 @@ const DesafeImg = async function (html) {
   for (let i = 0; i < imgList2.length; i++) {
     let img = imgList.eq(i)
     let src = img.attr('src')
-    img.attr('src', await urlToImgur(src))
+    let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
+      return await urlToImgur(src)
+    })
+
+    img.attr('src', imgurURL)
   }
   
   let output = $('body > div').html()
