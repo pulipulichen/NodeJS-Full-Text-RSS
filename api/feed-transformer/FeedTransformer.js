@@ -21,6 +21,11 @@ const RemoveControlCharacters = require('./../lib/stringUtils/RemoveControlChara
 const FeedChannelLink = require('./../lib/xmlTransformers/FeedChannelLink.js')
 const FeedChannelTitle = require('./../lib/xmlTransformers/FeedChannelTitle.js')
 
+const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
+
+const cacheYear = 1
+const cacheTime = cacheYear * 365 * 24 * 60 * 60 * 1000
+
 const FeedTransformer = async function (feedXML, moduleCodesString) {
   
   // -------------------------------
@@ -72,25 +77,35 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     
     let title = item.find('title').text()
     
-    //console.log(i, title)
-    
-    let titleNew = await ModuleManager(title, moduleCodesString, 't')
-    
-    titleNew = MailToBlogger(titleNew)
-    
-    //console.log(title, '||==||', titleNew)
-    if (title !== titleNew) {
-      item.find('title').text(titleNew)
+    let cacheKey = channelLink + title
+    let itemRemoved = false
+    if ((await NodeCacheSQLite.isExists('FeedTransformer', cacheKey)) === false) {
+      item.remove()
+      itemRemoved = true
     }
-    
-    let content = FeedItemGetContent(item)
-    //console.log(i, content.slice(0, 100))
-    let contentNew = await ModuleManager(content, moduleCodesString, 'c')
-    //console.log(i, contentNew.slice(0, 100))
-    if (content !== contentNew) {
-      //item.find('content').text(contentNew)
-      FeedItemSetContent(item, contentNew)
-    }
+
+    NodeCacheSQLite.get('FeedTransformer', cacheKey, async function () {
+      //console.log(i, title)
+      
+      let titleNew = await ModuleManager(title, moduleCodesString, 't')
+      
+      titleNew = MailToBlogger(titleNew)
+      
+      //console.log(title, '||==||', titleNew)
+      if (title !== titleNew && !itemRemoved) {
+        item.find('title').text(titleNew)
+      }
+      
+      let content = FeedItemGetContent(item)
+      //console.log(i, content.slice(0, 100))
+      let contentNew = await ModuleManager(content, moduleCodesString, 'c')
+      //console.log(i, contentNew.slice(0, 100))
+      if (content !== contentNew && !itemRemoved) {
+        //item.find('content').text(contentNew)
+        FeedItemSetContent(item, contentNew)
+      }
+    }, cacheTime)
+
   })
   
   //console.log($('channel > item > title').text())
