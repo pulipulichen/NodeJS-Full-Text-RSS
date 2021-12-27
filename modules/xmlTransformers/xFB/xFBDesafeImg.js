@@ -44,7 +44,7 @@ const DesafeImg = async function (html) {
   console.log('img list 2', imgList2.length)
   for (let i = 0; i < imgList2.length; i++) {
     //break
-    let img = imgList.eq(i)
+    let img = imgList2.eq(i)
     let src = img.attr('src')
     if (!src) {
       continue
