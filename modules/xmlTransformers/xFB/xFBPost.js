@@ -27,7 +27,7 @@ const wrapCDATA = function (item) {
 
 const DesafeImg = require('./xFBDesafeImg')
 
-const trimBR = function (item) {
+const trimBR = async function (item) {
   let description = item.find('description').text().trim()
   let originalDescription = description
   //let descriptionModified = false
@@ -40,7 +40,7 @@ const trimBR = function (item) {
     //descriptionModified = true
   }
   
-  description = DesafeImg(description)
+  description = await DesafeImg(description)
   
   //console.log(descriptionModified)
   if (originalDescription !== description) {
@@ -79,7 +79,7 @@ const xFBPost = async function (item, i) {
   replaceTitleWithDesription(item)
   
   // ----------------------------
-  trimBR(item)
+  await trimBR(item)
   
   // ------------------------------
   wrapCDATA(item)

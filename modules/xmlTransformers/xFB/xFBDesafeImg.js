@@ -1,6 +1,16 @@
 const cheerio = require('cheerio')
 
-const DesafeImg = function (html) {
+var imgur = require('imgur-upload')
+var path = require('path');
+
+var fs = require('fs')
+var request = require('request');
+
+var config = require('./../../../mount/config.js')
+
+imgur.setClientID(config.Imgur.ClientID);
+
+const DesafeImg = async function (html) {
   //console.log(html)
   
   let $
@@ -27,11 +37,40 @@ const DesafeImg = function (html) {
     
     img.attr('src', url)
   }
+
+  let imgList2 = $(`img[src]`)
+  for (let i = 0; i < imgList2.length; i++) {
+    let img = imgList.eq(i)
+    let src = img.attr('src')
+    img.attr('src', await urlToImgur(src))
+  }
   
   let output = $('body > div').html()
   //console.log(output)
   
   return output
 }
+
+
+async function urlToImgur(url) {
+  let tmpFilePath = '/tmp/' + (new Date()).getTime() + '.jpg'
+  return new Promise(resolve => {
+	download(url, tmpFilePath, function(){
+		imgur.upload(tmpFilePath,function(err, res){
+		  //console.log(res.data.link); //log the imgur url
+		  resolve(res.data.link)
+		});
+	})
+  })
+}
+
+var download = function(uri, filename, callback){
+	request.head(uri, function(err, res, body){
+	  console.log('content-type:', res.headers['content-type']);
+	  console.log('content-length:', res.headers['content-length']);
+  
+	  request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+	});
+};
 
 module.exports = DesafeImg
