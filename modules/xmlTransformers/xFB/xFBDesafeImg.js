@@ -47,7 +47,7 @@ const DesafeImg = async function (html) {
     let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
       return await urlToImgur(src)
     })
-
+    console.log(imgurURL)
     img.attr('src', imgurURL)
   }
   
