@@ -1,6 +1,6 @@
 /* global __dirname */
 
-var imgur = require('imgur-upload'),
+var imgur = require('imgur-upload')
 var path = require('path');
 
 var fs = require('fs')
