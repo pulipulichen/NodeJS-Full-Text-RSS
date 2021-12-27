@@ -41,10 +41,12 @@ const DesafeImg = async function (html) {
   }
 
   let imgList2 = $(`img[src]`)
+  console.log('img list 2', imgList2.length)
   for (let i = 0; i < imgList2.length; i++) {
-    break
+    //break
     let img = imgList.eq(i)
     let src = img.attr('src')
+    console.log(src)
     let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
       return await urlToImgur(src)
     })
