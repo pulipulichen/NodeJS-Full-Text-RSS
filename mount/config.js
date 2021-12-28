@@ -1,6 +1,6 @@
 module.exports = {
   FeedCrawler: {
-    cacheLimitHour: 2
+    cacheLimitHour: 1
   },
   debug: false
 }
