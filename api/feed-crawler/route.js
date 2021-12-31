@@ -10,6 +10,17 @@ const cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
 const fs = require('fs')
 const path = require('path')
 
+let restartTimer
+const setupRestarter = function () {
+  if (restartTimer) {
+    return false
+  }
+
+  restartTimer = setTimeout(() => {
+    fs.writeFileSync(path.resolve('./restart.json'), (new Date()).toString())
+  }, 12 * 60 * 60 * 1000)
+}
+
 const route = function (app) {
 //  let isXML = function (url) {
 //    //console.log(url)
@@ -50,6 +61,8 @@ const route = function (app) {
   
   app.get('/f/:url', async (req, res) => {
     try {
+      setupRestarter()
+
       let url = req.params.url
       url = urlFilter(url)
       let result = await FeedCrawler(url)
@@ -72,6 +85,8 @@ const route = function (app) {
   
   app.get('/f/:modules/:url', async (req, res) => {
     try {
+      setupRestarter()
+
       let url = req.params.url
       url = urlFilter(url)
       let modules = req.params.modules
@@ -106,6 +121,8 @@ const route = function (app) {
   
   app.get('/fc/:url', async (req, res) => {
     try {
+      setupRestarter()
+
       let url = req.params.url
       url = urlFilter(url)
       let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
@@ -127,6 +144,8 @@ const route = function (app) {
   
   app.get('/fc/:modules/:url', async (req, res) => {
     try {
+      setupRestarter()
+
       let url = req.params.url
       url = urlFilter(url)
       let modules = req.params.modules
