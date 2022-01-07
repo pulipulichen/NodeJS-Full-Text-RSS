@@ -1,4 +1,5 @@
 const cheerio = require('cheerio')
+const sleep = require('./../async/sleep.js')
 
 const FeedItemEach = async function ($, handler) {
   
@@ -24,6 +25,7 @@ const FeedItemEach = async function ($, handler) {
     await handler(item, i)
     //console.log(i)
   }
+  await sleep(50)
   
 //  if (items.length === 0) {
 //    console.log($.html())

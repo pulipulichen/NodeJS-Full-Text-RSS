@@ -18,7 +18,7 @@ const replaceTitleWithDesription = function (item) {
   let description = item.find('description').text().trim()
   //console.log(title)
   if (description !== '') {
-    //console.log('replaceTitleWithDesription', title)
+    //console.log('replaceTitleWithDesription', title, description)
     if ( (title.startsWith('photos from ') && title.endsWith(`'s post`))
              || (title === 'timeline photos')
              || (title.endsWith('timeline photos'))
@@ -42,7 +42,7 @@ const replaceTitleWithDesription = function (item) {
   title = title.replace(/#/ig, '')
 
   title = 'P] ' + title
-  
+  console.log(title)
   item.find('title').text(title)
   
   TransformDescriptionLink(description, item)

@@ -18,6 +18,8 @@ const DesafeImg = require('./xFB/xFBDesafeImg.js')
 const replaceTitleWithDesription = require('./xFB/replaceTitleWithDesription.js')
 const xFBVideoPost = require('./xFB/xFBVideoPost.js')
 
+const sleep = require('./../../api/lib/async//sleep.js')
+
 const cacheYear = 1
 const cacheTime = cacheYear * 365 * 24 * 60 * 60 * 1000
 
@@ -30,6 +32,8 @@ const xFB = async function ($, moduleCodesString) {
 //  })
   
   // -----------------------------
+  
+  let hasItemRemoved = false
   
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
@@ -48,6 +52,8 @@ const xFB = async function ($, moduleCodesString) {
       item.remove()
       item = cacheItem
       itemRemoved = true
+      hasItemRemoved = true
+      console.log('itemRemoved type')
       //return false
     }
     
@@ -56,9 +62,11 @@ const xFB = async function ($, moduleCodesString) {
       item.remove()
       item = cacheItem
       itemRemoved = true
+      hasItemRemoved = true
+      console.log('itemRemoved not loaded')
     }
     
-    //console.log(i, type, fbLink, item.find('title').text())
+    console.log(i, type, fbLink, item.find('title').text())
     
     setTimeout(async () => {
 
@@ -73,7 +81,7 @@ const xFB = async function ($, moduleCodesString) {
 
         let {title, content} = await fullTextParser(type, moduleCodesString)
 
-        if (title !== '' && !itemRemoved) {
+        if (title !== '' && itemRemoved === false) {
           item.find('title').text(title)
         }
 
@@ -107,7 +115,7 @@ const xFB = async function ($, moduleCodesString) {
       else if (type === 'post') {
         await xFBPost(item, i)
 
-        //console.log(i, title)
+        //console.log(i, item.find('title').text())
       }
 
       NodeCacheSQLite.get('item-loaded', cacheKey, async function () {
@@ -124,6 +132,7 @@ const xFB = async function ($, moduleCodesString) {
     }, 0) // setTimeout(async () => {
   })
   
+  //await sleep(50)
   //console.log($('channel > item > title').text())
   
   // ---------------------------

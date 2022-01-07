@@ -77,7 +77,7 @@ const removeTitleBracket = function (item) {
 
 const xFBPost = async function (item, i) {
   replaceTitleWithDesription(item)
-  
+  //console.log('xFBPost', item.find('title').text())
   // ----------------------------
   await trimBR(item)
   
