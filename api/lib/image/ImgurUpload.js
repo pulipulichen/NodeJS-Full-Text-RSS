@@ -13,12 +13,26 @@ const sleep = require('./../async/sleep.js')
 
 imgur.setClientID(config.Imgur.ClientID)
 
-const ImgurUpload = async function (src) {
-  let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
-    return await urlToImgur(src)
-  })
+let cacheOnErrorHour = 4
+let cacheOnErrorMS = cacheOnErrorHour * 60 * 60 * 1000
 
-  return imgurURL
+const ImgurUpload = async function (src) {
+  try {
+    let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
+      return await urlToImgur(src)
+    })
+
+    return imgurURL
+  }
+  catch (e) {
+    console.error(src)
+    console.error(e)
+    
+    let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
+      return src
+    }, cacheOnErrorMS)
+    return imgurURL
+  }
 }
 
 async function urlToImgur(url) {

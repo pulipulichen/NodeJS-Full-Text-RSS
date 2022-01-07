@@ -13,6 +13,8 @@ const sleep = require('./../../../api/lib/async/sleep.js')
 
 var config = require('./../../../mount/config.js')
 
+const ImgurUpload = require('./../../../api/lib/image/ImgurUpload.js')
+
 imgur.setClientID(config.Imgur.ClientID);
 
 const DesafeImg = async function (html) {
@@ -53,9 +55,7 @@ const DesafeImg = async function (html) {
       continue
     }
     //console.log('src', src)
-    let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
-      return await urlToImgur(src)
-    })
+    let imgurURL = await ImgurUpload(src)
     //console.log('imgurURL', imgurURL)
     if (imgurURL) {
       img.attr('src', imgurURL)
