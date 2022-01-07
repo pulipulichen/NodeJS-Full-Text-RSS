@@ -76,15 +76,19 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     // ------------------------
     
     let title = item.find('title').text()
+    let content = FeedItemGetContent(item)
     
     let cacheKey = channelLink + title
     let itemRemoved = false
-    if ((await NodeCacheSQLite.isExists('FeedTransformer', cacheKey)) === false) {
+    if ((await NodeCacheSQLite.isExists('item-loaded', cacheKey)) === false) {
       item.remove()
       itemRemoved = true
     }
 
+    
     setTimeout(async () => {
+      //console.log('讀取嗎？', cacheKey)
+      
       let titleNew = await ModuleManager(title, moduleCodesString, 't')
         
       titleNew = MailToBlogger(titleNew)
@@ -94,7 +98,6 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
         item.find('title').text(titleNew)
       }
       
-      let content = FeedItemGetContent(item)
       //console.log(i, content.slice(0, 100))
       let contentNew = await ModuleManager(content, moduleCodesString, 'c')
       //console.log(i, contentNew.slice(0, 100))
@@ -103,11 +106,15 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
         FeedItemSetContent(item, contentNew)
       }
 
-      NodeCacheSQLite.get('FeedTransformer', cacheKey, async function () {
+      NodeCacheSQLite.get('item-loaded', cacheKey, async function () {
         return (new Date()).getTime()
       }, cacheTime)
+      
+      //console.log('讀取完成')
     }, 0)
   })
+  
+  //console.log('結束？')
   
   //console.log($('channel > item > title').text())
   

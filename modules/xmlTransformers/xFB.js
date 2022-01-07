@@ -3,6 +3,8 @@
 const FeedItemEach = require('./../../api/lib/xmlTransformers/FeedItemEach.js')
 const ModuleManager = require('./../../api/lib/ModuleManager/ModuleManager.js')
 
+const NodeCacheSQLite = require('./../../api/lib/cache/node-cache-sqlite.js')
+
 const xFBType = require('./xFB/xFBType.js')
 const xFBPost = require('./xFB/xFBPost.js')
 
@@ -16,6 +18,9 @@ const DesafeImg = require('./xFB/xFBDesafeImg.js')
 const replaceTitleWithDesription = require('./xFB/replaceTitleWithDesription.js')
 const xFBVideoPost = require('./xFB/xFBVideoPost.js')
 
+const cacheYear = 1
+const cacheTime = cacheYear * 365 * 24 * 60 * 60 * 1000
+
 const xFB = async function ($, moduleCodesString) {
   //console.log('xFB')
   
@@ -28,74 +33,95 @@ const xFB = async function ($, moduleCodesString) {
   
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
+    let fbLink = FeedItemGetLink(item)
+    
+    let cacheKey = fbLink
+    
     let type = await xFBType(item, moduleCodesString)
+    
+    let description = item.find('description').text().trim()
+    let itemRemoved = false
+    
     if (type === false) {
       // 表示還在讀取中 20211203-1202 
+      let cacheItem = item.clone()
       item.remove()
-      return false
+      item = cacheItem
+      itemRemoved = true
+      //return false
     }
     
-    let fbLink = FeedItemGetLink(item)
+    if ((await NodeCacheSQLite.isExists('item-loaded', cacheKey)) === false) {
+      let cacheItem = item.clone()
+      item.remove()
+      item = cacheItem
+      itemRemoved = true
+    }
     
     //console.log(i, type, fbLink, item.find('title').text())
     
-    
-    if (type !== 'video' && type !== 'post') {
-      // 讀取全文
-      //let {title, content} = await fullTextParser(type, moduleCodesString)
-      //let fbLink = item.find('link').text().trim()
-      
-      
-      item.find('link').text(type)
-      FeedItemSetLink(item, type)
-      
-      let description = item.find('description').text().trim()
-      
-      let {title, content} = await fullTextParser(type, moduleCodesString)
-      
-      
-      
-      if (title !== '') {
-        item.find('title').text(title)
-      }
-      
-      if (content !== '') {
-        if (description !== '') {
-          description = DesafeImg(description)
-          content = '<![CDATA[' 
-                  + description
-                  + `<br>`
-                  + `<a href="${fbLink}" target="_blank">Facebook Post</a>`
-                  + '<hr />' + content 
-                  + ']]>'
+    setTimeout(async () => {
+
+      if (type !== 'video' && type !== 'post') {
+        // 讀取全文
+        //let {title, content} = await fullTextParser(type, moduleCodesString)
+        //let fbLink = item.find('link').text().trim()
+
+
+        item.find('link').text(type)
+        FeedItemSetLink(item, type)
+
+        let {title, content} = await fullTextParser(type, moduleCodesString)
+
+        if (title !== '' && !itemRemoved) {
+          item.find('title').text(title)
         }
-        item.find('description').text(content)
+
+        if (content !== '') {
+          if (description !== '') {
+            description = DesafeImg(description)
+            content = '<![CDATA[' 
+                    + description
+                    + `<br>`
+                    + `<a href="${fbLink}" target="_blank">Facebook Post</a>`
+                    + '<hr />' + content 
+                    + ']]>'
+          }
+          
+          if (!itemRemoved) {
+            item.find('description').text(content)
+          }
+        }
+        else {
+          //item.find('description').html(description)
+          await xFBPost(item, i)
+        }
+
+        //console.log(i, content.slice(0, 200))
+        //console.log(description)
       }
-      else {
-        //item.find('description').html(description)
+      else if (type === 'video') {
+        xFBVideoPost(item)
+        //replaceTitleWithDesription(item)
+      }
+      else if (type === 'post') {
         await xFBPost(item, i)
+
+        //console.log(i, title)
       }
-      
-      //console.log(i, content.slice(0, 200))
-      //console.log(description)
-    }
-    else if (type === 'video') {
-      xFBVideoPost(item)
-      //replaceTitleWithDesription(item)
-    }
-    else if (type === 'post') {
-      await xFBPost(item, i)
-      
-      //console.log(i, title)
-    }
-    
-    // 要怎麼決定要不要取代Item?
-    
-//    let title = item.find('title').text()
-//    let titleNew = await ModuleManager(title, moduleCodesString, 't')
-//    if (title !== titleNew) {
-//      item.find('title').text(titleNew)
-//    }
+
+      NodeCacheSQLite.get('item-loaded', cacheKey, async function () {
+        return (new Date()).getTime()
+      }, cacheTime)
+
+      // 要怎麼決定要不要取代Item?
+
+  //    let title = item.find('title').text()
+  //    let titleNew = await ModuleManager(title, moduleCodesString, 't')
+  //    if (title !== titleNew) {
+  //      item.find('title').text(titleNew)
+  //    }
+    }, 0) // setTimeout(async () => {
   })
   
   //console.log($('channel > item > title').text())

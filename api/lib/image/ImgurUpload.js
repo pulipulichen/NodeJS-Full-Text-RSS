@@ -21,6 +21,9 @@ let uploadLock = false
 const ImgurUpload = async function (src) {
   
   try {
+    //console.log('開始圖片', src)
+    //await sleep(10000)
+    
     let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
       while (uploadLock) {
         await sleep()
