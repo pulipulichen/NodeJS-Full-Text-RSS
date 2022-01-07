@@ -12,7 +12,15 @@ const XMLLoader = async function (url, cacheMS) {
   //console.log('XMLLoader')
   return await NodeCacheSQLite.get('xml-loader', url, async () => {
     
-    let feedXML = await HtmlLoader(url, cacheMS)
+    let feedXML
+    try {
+      feedXML = await HtmlLoader(url, cacheMS)
+    }
+    catch (e) {
+      console.error('XMLLoader Error ' + e + ' ' + url)
+      feedXML = await PuppeterHTMLLoader(url, cacheMS)
+      //console.log(feedXML)
+    }
     let $ = cheerio.load(feedXML)
     //console.log('~~~', feedXML, '~~~')
     //console.log('need puppeter', ($('rss').length === 0

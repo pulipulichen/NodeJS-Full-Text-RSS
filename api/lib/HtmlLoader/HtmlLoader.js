@@ -17,7 +17,12 @@ const asyncRequest = function (url) {
         isLoading = false
         if (error) {
           console.error(error)
-          return reject(false)
+          return reject(error)
+        }
+        if (response.statusCode !== 200) {
+          let message = 'StatusCode is not 200: ' + response.statusCode + ' ' + url
+          console.log(message)
+          return reject(message)
         }
 
         //body = body.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")

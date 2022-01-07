@@ -93,6 +93,7 @@ const PuppeterHTMLLoader = async function (url, cacheMS) {
             }
         })
         html = result.html
+        html = XMLfilter(html)
         href = result.href
 
         let validConfList = [
@@ -127,6 +128,26 @@ const PuppeterHTMLLoader = async function (url, cacheMS) {
     isLoading = false
     return html
   }, cacheMS)
+}
+
+const XMLfilter = function (body) {
+  let key = `</div><div xmlns="http://www.w3.org/1999/xhtml" class="header"><span>This XML file does not appear to have any style information associated with it. The document tree is shown below.</span><br /></div>`
+  let pos = body.indexOf(key)
+  if (pos === -1) {
+    return body
+  }
+  
+  body = body.slice(0, pos)
+  
+  key = 'id="webkit-xml-viewer-source-xml">'
+  pos = body.indexOf(key)
+ 
+  if (pos === -1) {
+    return body
+  }
+  body = body.slice(pos + key.length)
+  
+  return body
 }
 
 module.exports = PuppeterHTMLLoader

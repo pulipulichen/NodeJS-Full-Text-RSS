@@ -2,6 +2,7 @@ const request = require('request');
 
 const FeedURLFilter = require('./../feed-crawler/FeedURLFilter.js')
 const HtmlLoader = require('./../lib/HtmlLoader/HtmlLoader.js')
+const PuppeterHTMLLoader = require('./../lib/HtmlLoader/PuppeterHTMLLoader.js')
 
 
 const route = function (app) {
@@ -9,7 +10,7 @@ const route = function (app) {
     try {
       let url = req.params.url
       url = FeedURLFilter(url)
-      
+      //console.log('original-rss-crawler', url)
       /*
       req.pipe(request(url).on('error', function(e) {
           console.error(e);
@@ -22,7 +23,14 @@ const route = function (app) {
         }
       }).pipe(res)
        */
-      let content = await HtmlLoader(url)
+      let content
+      try {
+        content = await HtmlLoader(url)
+      }
+      catch (e) {
+        console.error(e)
+        content = await PuppeterHTMLLoader(url)
+      }
       content = content.split('&nbsp;').join(' ')
       //content = content.split('&lt;').join('<')
         

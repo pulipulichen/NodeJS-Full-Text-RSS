@@ -8,12 +8,13 @@ RAM 4128
 
 30480 300
 
-local dir
-/app/NodeJS-Full-Text-RSS/mount
-
 tmp dir
 304-full-text-rss-cache
 /app/NodeJS-Full-Text-RSS/cache
+
+local dir
+/app/NodeJS-Full-Text-RSS/mount
+
 
 ----
 
