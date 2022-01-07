@@ -13,9 +13,14 @@ const cImgur = async function (content) {
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
     let src = img.attr('src')
-    let imgurURL = await ImgurUpload(src)
-    //console.log('cImgur', src, imgurURL)
-    img.attr('src', imgurURL)
+    try {
+      let imgurURL = await ImgurUpload(src)
+      //console.log('cImgur', src, imgurURL)
+      img.attr('src', imgurURL)
+    } catch (e) {
+      console.error(e)
+      return content
+    }
   }
   
   content = $('body').html()

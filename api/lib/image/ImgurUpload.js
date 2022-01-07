@@ -9,6 +9,8 @@ var path = require('path');
 var fs = require('fs')
 var request = require('request');
 
+const sleep = require('./../async/sleep.js')
+
 imgur.setClientID(config.Imgur.ClientID)
 
 const ImgurUpload = async function (src) {
@@ -29,7 +31,9 @@ async function urlToImgur(url) {
 
   let tmpFilePath = path.resolve(os.tmpdir() , (new Date()).getTime() + ext)
   return new Promise((resolve, reject) => {
-    download(url, tmpFilePath, function () {
+    download(url, tmpFilePath, async function () {
+      await sleep(10000)
+      
       imgur.upload(tmpFilePath, function (err, res) {
         //console.log(res.data.link); //log the imgur url
         if (!res.data) {
