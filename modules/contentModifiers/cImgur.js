@@ -18,6 +18,7 @@ const cImgur = async function (content) {
       //console.log('cImgur', src, imgurURL)
       img.attr('src', imgurURL)
     } catch (e) {
+      console.error(src)
       console.error(e)
       return content
     }
