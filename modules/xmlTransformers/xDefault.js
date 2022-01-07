@@ -11,33 +11,57 @@ const xDefaultRemoveTitle = require('./xDefault/xDefaultRemoveTitle.js')
 
 const needToLoadFullText = 5000
 
+const FeedChannelLink = require('./../../api/lib/xmlTransformers/FeedChannelLink.js')
+const NodeCacheSQLite = require('./../../api/lib/cache/node-cache-sqlite.js')
+const sleep = require('./../../api/lib/async/sleep.js')
+
+const cacheYear = 1
+const cacheTime = cacheYear * 365 * 24 * 60 * 60 * 1000
+
 const xDefault = async function ($, moduleCodesString) {
   //console.log('xDefault')
   //console.log($.html())
+  
+  let channelLink = FeedChannelLink($)
+  
   await FeedItemEach($, async (item, i) => {
     if (FeedItemGetContent(item).length > needToLoadFullText) {
       return true
     }
-    
-    
-    let link = FeedItemGetLink(item)
-    
-    let {content} = await fullTextParser(link, moduleCodesString)
-    //console.log('xDefault', i, link, content.length, content.slice(-200))
-    //console.log(content)
-    
     let title = item.find('title:first').text().trim()
-    content = xDefaultRemoveTitle(content, title)
-    //console.log(i, '<<<', content, '>>>')
+    let cacheKey = channelLink + title
+    let itemRemoved = false
+    if ((await NodeCacheSQLite.isExists('item-loaded-xDefault', cacheKey)) === false) {
+      item.remove()
+      itemRemoved = true
+    }
     
-    //if (i === 4) {
-      //content = content.slice(content.indexOf('<p'), content.indexOf('</p>') + 3)
-      //content = content.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
-      FeedItemSetContent(item, content)
+    setTimeout(async () => {
+      let link = FeedItemGetLink(item)
+
+      let {content} = await fullTextParser(link, moduleCodesString)
+      //console.log('xDefault', i, link, content.length, content.slice(-200))
+      //console.log(content)
+
+
+      content = xDefaultRemoveTitle(content, title)
       //console.log(i, '<<<', content, '>>>')
-    //}
-    
+
+      //if (i === 4) {
+        //content = content.slice(content.indexOf('<p'), content.indexOf('</p>') + 3)
+        //content = content.replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
+        if (itemRemoved === false) {
+          FeedItemSetContent(item, content)
+        }
+        //console.log(i, '<<<', content, '>>>')
+      //}
+
+      NodeCacheSQLite.get('item-loaded-xDefault', cacheKey, async function () {
+        return (new Date()).getTime()
+      }, cacheTime)
+    }, 0) // setTimeout(async () => {
   })
+  await sleep(50)
   
   //console.log('ok')
   
