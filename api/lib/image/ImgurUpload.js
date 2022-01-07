@@ -28,10 +28,13 @@ async function urlToImgur(url) {
   }
 
   let tmpFilePath = path.resolve(os.tmpdir() , (new Date()).getTime() + ext)
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     download(url, tmpFilePath, function () {
       imgur.upload(tmpFilePath, function (err, res) {
         //console.log(res.data.link); //log the imgur url
+        if (!res.data) {
+          return reject(res)
+        }
         resolve(res.data.link)
       });
     })
