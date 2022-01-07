@@ -1,13 +1,15 @@
+/* global __dirname */
 
 const { exec } = require("child_process");
 const path = require('path')
 
-const gitPullComment = `cd ${path.resolve(__dirname, './../../')}; git pull`
+const gitPullCommand = `cd ${path.resolve(__dirname, './../../')}; git pull`
 
 const route = function (app) {
   app.get('/git-pull', async (req, res) => {
     try {
-      exec(gitPullComment, (error, stdout, stderr) => {
+      console.log(gitPullCommand)
+      exec(gitPullCommand, (error, stdout, stderr) => {
         let message
           if (error) {
             //console.log(`error: ${error.message}`);
@@ -19,8 +21,9 @@ const route = function (app) {
             //return;
             message = `stderr: ${stderr}`
           }
-          //console.log(`stdout: ${stdout}`);
+          
           message = `stdout: ${stdout}`
+          console.log(message)
 
           res.send(message)
       });
