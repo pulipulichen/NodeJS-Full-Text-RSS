@@ -87,7 +87,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
 
     
     setTimeout(async () => {
-      console.log('讀取嗎？', cacheKey)
+      //console.log('讀取嗎？', cacheKey)
       
       let titleNew = await ModuleManager(title, moduleCodesString, 't')
         
@@ -114,7 +114,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     }, 0)
   })
   
-  console.log('結束？')
+  //console.log('結束？')
   
   //console.log($('channel > item > title').text())
   
