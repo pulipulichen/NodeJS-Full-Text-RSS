@@ -9,6 +9,7 @@ var fs = require('fs')
 var request = require('request');
 
 const NodeCacheSqlite = require('./../../../api/lib/cache/node-cache-sqlite.js')
+const sleep = require('./../../../api/lib/async/sleep.js')
 
 var config = require('./../../../mount/config.js')
 
@@ -71,11 +72,12 @@ const DesafeImg = async function (html) {
 async function urlToImgur(url) {
   let tmpFilePath = path.resolve(os.tmpdir() , (new Date()).getTime() + '.jpg')
   return new Promise(resolve => {
-	download(url, tmpFilePath, function(){
-		imgur.upload(tmpFilePath,function(err, res){
-		  //console.log(res.data.link); //log the imgur url
-		  resolve(res.data.link)
-		});
+	download(url, tmpFilePath, async function(){
+          await sleep(10000)
+          imgur.upload(tmpFilePath,function(err, res){
+            //console.log(res.data.link); //log the imgur url
+            resolve(res.data.link)
+          });
 	})
   })
 }
