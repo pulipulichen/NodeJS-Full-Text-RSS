@@ -1,6 +1,8 @@
 const cheerio = require('cheerio')
 const sleep = require('./../async/sleep.js')
 
+const config = require('./../../../mount/config.js')
+
 const FeedItemEach = async function ($, handler) {
   
   let items = $('channel > item')
@@ -19,10 +21,19 @@ const FeedItemEach = async function ($, handler) {
     //console.log(items.length)
   }
   
+  let len = items.length
+  if (len > config.FeedItemEach.limit) {
+    len = config.FeedItemEach.limit
+  }
   
-  for (let i = 0; i < items.length; i++) {
+  for (let i = 0; i < len; i++) {
     let item = items.eq(i)
     await handler(item, i)
+    //console.log(i)
+  }
+  for (let i = len; i < items.length; i++) {
+    let item = items.eq(i)
+    item.remove()
     //console.log(i)
   }
   await sleep(50)
