@@ -11,17 +11,30 @@ var request = require('request');
 
 const sleep = require('./../async/sleep.js')
 
-imgur.setClientID(config.Imgur.ClientID)
-
 let cacheOnErrorHour = 4
 let cacheOnErrorMS = cacheOnErrorHour * 60 * 60 * 1000
 
+let clientIDIndex = 0
+
+let uploadLock = false
+
 const ImgurUpload = async function (src) {
+  
   try {
     let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
-      return await urlToImgur(src)
-    })
+      while (uploadLock) {
+        await sleep()
+      }
+      uploadLock = true
 
+      console.log('Prepare to ImgurUpload', src)
+      let url = await urlToImgur(src)
+      console.log('ImgurUpload', src, url)
+      
+      uploadLock = false
+      return url
+    })
+    
     return imgurURL
   }
   catch (e) {
@@ -31,6 +44,7 @@ const ImgurUpload = async function (src) {
     let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
       return src
     }, cacheOnErrorMS)
+    uploadLock = false
     return imgurURL
   }
 }
@@ -48,9 +62,13 @@ async function urlToImgur(url) {
     download(url, tmpFilePath, async function () {
       await sleep(10000)
       
+      imgur.setClientID(config.Imgur.ClientID[clientIDIndex])
+
       imgur.upload(tmpFilePath, function (err, res) {
         //console.log(res.data.link); //log the imgur url
         if (!res.data) {
+          clientIDIndex = (clientIDIndex + 1) % config.Imgur.ClientID.length
+          console.error('switch client id to ' + clientIDIndex)
           return reject(res)
         }
         resolve(res.data.link)

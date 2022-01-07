@@ -1,21 +1,10 @@
 const cheerio = require('cheerio')
 
-var imgur = require('imgur-upload')
-var path = require('path');
-
-const os = require('os');
-
-var fs = require('fs')
-var request = require('request');
-
-const NodeCacheSqlite = require('./../../../api/lib/cache/node-cache-sqlite.js')
-const sleep = require('./../../../api/lib/async/sleep.js')
-
-var config = require('./../../../mount/config.js')
+//var config = require('./../../../mount/config.js')
 
 const ImgurUpload = require('./../../../api/lib/image/ImgurUpload.js')
 
-imgur.setClientID(config.Imgur.ClientID);
+//imgur.setClientID(config.Imgur.ClientID);
 
 const DesafeImg = async function (html) {
   //console.log(html)
@@ -67,28 +56,5 @@ const DesafeImg = async function (html) {
   
   return output
 }
-
-
-async function urlToImgur(url) {
-  let tmpFilePath = path.resolve(os.tmpdir() , (new Date()).getTime() + '.jpg')
-  return new Promise(resolve => {
-	download(url, tmpFilePath, async function(){
-          await sleep(10000)
-          imgur.upload(tmpFilePath,function(err, res){
-            //console.log(res.data.link); //log the imgur url
-            resolve(res.data.link)
-          });
-	})
-  })
-}
-
-var download = function(uri, filename, callback){
-	request.head(uri, function(err, res, body){
-	  //console.log('content-type:', res.headers['content-type']);
-	  //console.log('content-length:', res.headers['content-length']);
-  
-	  request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-	});
-};
 
 module.exports = DesafeImg
