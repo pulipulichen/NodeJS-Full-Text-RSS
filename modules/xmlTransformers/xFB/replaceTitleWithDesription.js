@@ -42,7 +42,7 @@ const replaceTitleWithDesription = function (item) {
   title = title.replace(/#/ig, '')
 
   title = 'P] ' + title
-  console.log(title)
+  //console.log(title)
   item.find('title').text(title)
   
   TransformDescriptionLink(description, item)
