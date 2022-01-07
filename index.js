@@ -1,3 +1,5 @@
+/* global process */
+
 const express = require('express')
 const compression = require('compression')
 
@@ -14,6 +16,7 @@ const bodyParser = require('body-parser');
 app.use(express.static('public'));
 app.use(bodyParser.json({limit : '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+process.setMaxListeners(0)
 
 //app.get('/', async (req, res) => {
 //  
