@@ -3,6 +3,8 @@ const cheerio = require('cheerio')
 var imgur = require('imgur-upload')
 var path = require('path');
 
+const os = require('os');
+
 var fs = require('fs')
 var request = require('request');
 
@@ -41,7 +43,7 @@ const DesafeImg = async function (html) {
   }
 
   let imgList2 = $(`img[src]`)
-  console.log('img list 2', imgList2.length)
+  //console.log('img list 2', imgList2.length)
   for (let i = 0; i < imgList2.length; i++) {
     //break
     let img = imgList2.eq(i)
@@ -49,11 +51,11 @@ const DesafeImg = async function (html) {
     if (!src) {
       continue
     }
-    console.log('src', src)
+    //console.log('src', src)
     let imgurURL = await NodeCacheSqlite.get('imgur', src, async () => {
       return await urlToImgur(src)
     })
-    console.log('imgurURL', imgurURL)
+    //console.log('imgurURL', imgurURL)
     if (imgurURL) {
       img.attr('src', imgurURL)
     }
@@ -67,7 +69,7 @@ const DesafeImg = async function (html) {
 
 
 async function urlToImgur(url) {
-  let tmpFilePath = '/tmp/' + (new Date()).getTime() + '.jpg'
+  let tmpFilePath = path.resolve(os.tmpdir() , (new Date()).getTime() + '.jpg')
   return new Promise(resolve => {
 	download(url, tmpFilePath, function(){
 		imgur.upload(tmpFilePath,function(err, res){
@@ -80,8 +82,8 @@ async function urlToImgur(url) {
 
 var download = function(uri, filename, callback){
 	request.head(uri, function(err, res, body){
-	  console.log('content-type:', res.headers['content-type']);
-	  console.log('content-length:', res.headers['content-length']);
+	  //console.log('content-type:', res.headers['content-type']);
+	  //console.log('content-length:', res.headers['content-length']);
   
 	  request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
 	});

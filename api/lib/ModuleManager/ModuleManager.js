@@ -46,10 +46,10 @@ const ModuleManager = async function (data, moduleCodesString, prefix) {
     
     let module = require(requirePath)
     if (!code.startsWith('f')) {
-      data = module(data, moduleCodesString)
+      data = await module(data, moduleCodesString)
     }
     else {
-      let matched = module(data, moduleCodesString)
+      let matched = await module(data, moduleCodesString)
       if (matched === false) {
         return false
       }
