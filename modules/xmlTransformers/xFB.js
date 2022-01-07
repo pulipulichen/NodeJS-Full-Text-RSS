@@ -33,7 +33,7 @@ const xFB = async function ($, moduleCodesString) {
   
   // -----------------------------
   
-  let hasItemRemoved = false
+  //let hasItemRemoved = false
   
   //$('title').text('new')
   await FeedItemEach($, async (item, i) => {
@@ -52,8 +52,8 @@ const xFB = async function ($, moduleCodesString) {
       item.remove()
       item = cacheItem
       itemRemoved = true
-      hasItemRemoved = true
-      console.log('itemRemoved type')
+      //hasItemRemoved = true
+      //console.log('itemRemoved type')
       //return false
     }
     
@@ -62,11 +62,11 @@ const xFB = async function ($, moduleCodesString) {
       item.remove()
       item = cacheItem
       itemRemoved = true
-      hasItemRemoved = true
-      console.log('itemRemoved not loaded')
+      //hasItemRemoved = true
+      //console.log('itemRemoved not loaded')
     }
     
-    console.log(i, type, fbLink, item.find('title').text())
+    //console.log(i, type, fbLink, item.find('title').text())
     
     setTimeout(async () => {
 
