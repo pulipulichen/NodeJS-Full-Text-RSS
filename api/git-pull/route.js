@@ -3,7 +3,7 @@
 const { exec } = require("child_process");
 const path = require('path')
 
-const gitPullCommand = `cd ${path.resolve(__dirname, './../../')}; git pull`
+const gitPullCommand = `cd ${path.resolve(__dirname, './../../')}; git reset --hard; git pull`
 
 const route = function (app) {
   app.get('/git-pull', async (req, res) => {
