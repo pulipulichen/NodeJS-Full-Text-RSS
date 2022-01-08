@@ -110,7 +110,7 @@ const delazy20220101 = async function ($) {
     imgEle.attr('src', imgurlFile)
     */
     let figure = imgList.eq(i)
-    let noscript = figure.children('noscript')
+    let noscript = figure.next('noscript')
     figure.after(noscript.text())
     figure.remove()
   }
