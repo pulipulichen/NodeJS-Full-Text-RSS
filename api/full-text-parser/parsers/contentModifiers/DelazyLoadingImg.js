@@ -111,7 +111,18 @@ const delazy20220101 = async function ($) {
     */
     let figure = imgList.eq(i)
     let noscript = figure.next('noscript')
-    figure.after(noscript.text())
+
+    let imgEle = $(noscript.text())
+    imgEle.removeAttr('srcset')
+    let src = imgEle.attr('src')
+
+    if (src.startsWith('https://www.inote.tw/') && src.indexOf('/wp-content/') > -1) {
+      let uploadsURI = src.slice(src.indexOf('/wp-content/'))
+      let i2URL = `https://i2.wp.com/www.inote.tw${uploadsURI}?resize=640%2C279&ssl=1`
+      imgEle.attr('src', i2URL)
+    }
+
+    figure.after(imgEle)
     figure.remove()
   }
 
