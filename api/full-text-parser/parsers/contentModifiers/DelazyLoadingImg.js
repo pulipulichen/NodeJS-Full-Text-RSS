@@ -1,4 +1,5 @@
 const cheerio = require('cheerio')
+const ImgurUpload = require('./../..lib/image/ImgurUpload.js')
 
 const DelazyLoadingImg = function (html, url) {
   //console.log(html)
@@ -91,11 +92,14 @@ const DelazyLoadingImg = function (html, url) {
   // 20211130-0007 
   
   (function () {
-    let imgList = $('img[data-orig-file][style="display:none;visibility:hidden;"]')
+    let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
     for (let i = 0; i < imgList.length; i++) {
       let imgEle = imgList.eq(i)
       imgEle.removeAttr('style')
-      imgEle.attr('src', imgEle.attr('https://www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg'))
+
+      let origFile = imgEle.attr('data-orig-file')
+      let imgurlFile = await ImgurUpload(origFile)
+      imgEle.attr('src', imgurlFile)
     }
   })()
 
