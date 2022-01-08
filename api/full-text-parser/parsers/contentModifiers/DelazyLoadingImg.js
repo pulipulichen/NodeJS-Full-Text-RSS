@@ -101,13 +101,25 @@ const DelazyLoadingImg = async function (html, url) {
 const delazy20220101 = async function ($) {
   let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
   for (let i = 0; i < imgList.length; i++) {
+    /*
     let imgEle = imgList.eq(i)
     imgEle.removeAttr('style')
 
     let origFile = imgEle.attr('data-orig-file')
     let imgurlFile = await ImgurUpload(origFile)
     imgEle.attr('src', imgurlFile)
+    */
+    let figure = imgList.eq(i)
+    let noscript = figure.children('noscript')
+    figure.after(noscript.text())
+    figure.remove()
   }
+
+  $('img[srcset]').removeAttr('srcset')
+
+  // https://www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg
+  // https://i2.wp.com/www.inote.tw/wp-content/uploads/2017/08/notepad-plus-plus-3.jpg?resize=640%2C279&ssl=1
+  // https://i2.wp.com/www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg?resize=640%2C279&ssl=1
 }
 
 module.exports = DelazyLoadingImg
