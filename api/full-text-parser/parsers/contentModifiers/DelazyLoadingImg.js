@@ -91,7 +91,7 @@ const DelazyLoadingImg = function (html, url) {
   // -------------------
   // 20211130-0007 
   
-  (function () {
+  await (async function () {
     let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
     for (let i = 0; i < imgList.length; i++) {
       let imgEle = imgList.eq(i)
