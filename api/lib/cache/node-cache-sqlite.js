@@ -167,6 +167,8 @@ _this.adjustExpire = function (expire) {
   return expire
 }
 
+let setLock = false
+
 /**
  * 
  * @param {type} key
@@ -225,6 +227,11 @@ _this.set = async function (databaseName, key, value, expire = null) {
   
   let database = await this.getDatabase(databaseName)
   
+  while (setLock === true) {
+    await sleep()
+  }
+  setLock = true
+
   const [cache, created] = await database.findOrCreate({
     where: {key},
     defaults: {
@@ -235,6 +242,8 @@ _this.set = async function (databaseName, key, value, expire = null) {
     }
   })
   
+  setLock = false
+
   //console.log(cache)  
   
 //  isLoading = false
@@ -245,7 +254,13 @@ _this.set = async function (databaseName, key, value, expire = null) {
     cache.createdTime = (new Date()).getTime()
     cache.type = type
     tryToRestartServer(async () => {
+
+      while (setLock === true) {
+        await sleep()
+      }
+      setLock = true
       await cache.save()
+      setLock = false
     })
   }
 
@@ -255,6 +270,8 @@ _this.set = async function (databaseName, key, value, expire = null) {
   return originalValue
 }
 
+
+let autoCleanLock = false
 _this.autoClean = async function (databaseName) {
   let time = (new Date()).getTime()
 
@@ -264,13 +281,17 @@ _this.autoClean = async function (databaseName) {
   /*
   
   */
-  while (isLoading === true) {
+  while (autoCleanLock === true) {
     //console.log('cache wait while autoClean')
     await sleep()
   }
+
+  autoCleanLock = true
   //console.log('cache load by autoClean')
   //isLoading = true
   
+
+
   let database = await this.getDatabase(databaseName)
   await database.destroy({
     where: {
@@ -284,7 +305,7 @@ _this.autoClean = async function (databaseName) {
       ]
     }
   })
-  isLoading = false
+  autoCleanLock = false
 
   _this.lastCleanTime = time
   
@@ -353,10 +374,10 @@ _this.get = async function (databaseName, key, value, expire) {
   await _this.autoClean(databaseName)
 
   
-  while (isLoading === true) {
+  //while (isLoading === true) {
     //console.log('cache wait while get')
-    await sleep()
-  }
+  //  await sleep()
+  //}
   //console.log('cache load by get')
   //isLoading = true
   
@@ -369,7 +390,7 @@ _this.get = async function (databaseName, key, value, expire) {
       }
     })
   }
-  isLoading = false
+  //isLoading = false
   /*
   if (key === '["LocalFolder","harry-potter-and-the-sorcerers-stone","items"]') {
     console.log([
@@ -427,6 +448,8 @@ _this.get = async function (databaseName, key, value, expire) {
   return cachedValue
 }
 
+let destroyLock = false
+
 _this.clear = async function (databaseName, key) {
   await _this.init()
 
@@ -445,6 +468,12 @@ _this.clear = async function (databaseName, key) {
   //console.log('cache load by get')
   //isLoading = true
   
+  while (destroyLock === true) {
+    await sleep()
+  }
+
+  destroyLock = true
+
   let database = await this.getDatabase(databaseName)
   await database.destroy({
     where: {
@@ -453,6 +482,8 @@ _this.clear = async function (databaseName, key) {
   })
   //isLoading[databaseName] = false
   
+  destroyLock = false
+
   console.log('[CACHE] clear cache: ' + databaseName + ': ' + key)
   return true
 }
