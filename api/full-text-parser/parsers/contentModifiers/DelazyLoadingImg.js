@@ -90,22 +90,24 @@ const DelazyLoadingImg = function (html, url) {
   
   // -------------------
   // 20220108-0007 
-  /*
-  await (async function () {
-    let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
-    for (let i = 0; i < imgList.length; i++) {
-      let imgEle = imgList.eq(i)
-      imgEle.removeAttr('style')
-
-      let origFile = imgEle.attr('data-orig-file')
-      let imgurlFile = await ImgurUpload(origFile)
-      imgEle.attr('src', imgurlFile)
-    }
-  })()
-  */
+  
+  await delazy20220101($)
+  
   // ------------------------------
   
   return $
+}
+
+const delazy20220101 = async function ($) {
+  let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
+  for (let i = 0; i < imgList.length; i++) {
+    let imgEle = imgList.eq(i)
+    imgEle.removeAttr('style')
+
+    let origFile = imgEle.attr('data-orig-file')
+    let imgurlFile = await ImgurUpload(origFile)
+    imgEle.attr('src', imgurlFile)
+  }
 }
 
 module.exports = DelazyLoadingImg
