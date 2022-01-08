@@ -36,7 +36,7 @@ const xDefault = async function ($, moduleCodesString) {
       itemRemoved = true
     }
     
-    setTimeout(async () => {
+    let setupItem = async () => {
       let link = FeedItemGetLink(item)
 
       let {content} = await fullTextParser(link, moduleCodesString)
@@ -56,10 +56,19 @@ const xDefault = async function ($, moduleCodesString) {
         //console.log(i, '<<<', content, '>>>')
       //}
 
-      NodeCacheSQLite.get('item-loaded-xDefault', cacheKey, async function () {
+      await NodeCacheSQLite.get('item-loaded-xDefault', cacheKey, async function () {
         return (new Date()).getTime()
       }, cacheTime)
-    }, 0) // setTimeout(async () => {
+    }
+
+    if (itemRemoved === true) {
+      setTimeout(() => {
+        setupItem()
+      }, 0) // setTimeout(async () => {
+    }
+    else {
+      await setupItem()
+    }
   })
   await sleep(50)
   

@@ -85,8 +85,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
       itemRemoved = true
     }
 
-    
-    setTimeout(async () => {
+    let setupItem = async () => {
       //console.log('讀取嗎？', cacheKey)
       
       let titleNew = await ModuleManager(title, moduleCodesString, 't')
@@ -106,12 +105,22 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
         FeedItemSetContent(item, contentNew)
       }
 
-      NodeCacheSQLite.get('item-loaded', cacheKey, async function () {
+      await NodeCacheSQLite.get('item-loaded', cacheKey, async function () {
         return (new Date()).getTime()
       }, cacheTime)
       
       //console.log('讀取完成')
-    }, 0)
+    }
+    
+    if (itemRemoved === true) {
+      setTimeout(() => {
+        setupItem()
+      }, 0)
+    }
+    else {
+      await setupItem()
+    }
+
   })
   
   //console.log('結束？')

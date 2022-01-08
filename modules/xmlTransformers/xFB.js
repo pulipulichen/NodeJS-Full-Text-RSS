@@ -68,7 +68,7 @@ const xFB = async function ($, moduleCodesString) {
     
     //console.log(i, type, fbLink, item.find('title').text())
     
-    setTimeout(async () => {
+    let setupItem = async () => {
 
       if (type !== 'video' && type !== 'post') {
         // 讀取全文
@@ -118,7 +118,7 @@ const xFB = async function ($, moduleCodesString) {
         //console.log(i, item.find('title').text())
       }
 
-      NodeCacheSQLite.get('item-loaded', cacheKey, async function () {
+      await NodeCacheSQLite.get('item-loaded', cacheKey, async function () {
         return (new Date()).getTime()
       }, cacheTime)
 
@@ -129,7 +129,16 @@ const xFB = async function ($, moduleCodesString) {
   //    if (title !== titleNew) {
   //      item.find('title').text(titleNew)
   //    }
-    }, 0) // setTimeout(async () => {
+    }
+
+    if (itemRemoved === true) {
+      setTimeout(() => {
+        setupItem()
+      }, 0) // setTimeout(async () => {
+    }
+    else {
+      await setupItem()
+    }
   })
   
   //await sleep(50)
