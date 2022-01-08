@@ -89,8 +89,8 @@ const DelazyLoadingImg = function (html, url) {
   }
   
   // -------------------
-  // 20211130-0007 
-  
+  // 20220108-0007 
+  /*
   await (async function () {
     let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
     for (let i = 0; i < imgList.length; i++) {
@@ -102,7 +102,7 @@ const DelazyLoadingImg = function (html, url) {
       imgEle.attr('src', imgurlFile)
     }
   })()
-
+  */
   // ------------------------------
   
   return $
