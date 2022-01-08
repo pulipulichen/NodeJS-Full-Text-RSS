@@ -99,7 +99,7 @@ const DelazyLoadingImg = async function (html, url) {
 }
 
 const delazy20220101 = async function ($) {
-  let imgList = $('img[data-orig-file][data-permalink][data-attachment-id]')
+  let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
   for (let i = 0; i < imgList.length; i++) {
     /*
     let imgEle = imgList.eq(i)
@@ -125,6 +125,43 @@ const delazy20220101 = async function ($) {
     figure.after(imgEle)
     figure.remove()
     noscript.remove()
+  }
+
+  let imgList2 = $('img[data-orig-file][data-permalink][data-attachment-id]')
+  for (let i = 0; i < imgList2.length; i++) {
+    /*
+    let imgEle = imgList.eq(i)
+    imgEle.removeAttr('style')
+
+    let origFile = imgEle.attr('data-orig-file')
+    let imgurlFile = await ImgurUpload(origFile)
+    imgEle.attr('src', imgurlFile)
+    */
+    let figure = imgList2.eq(i)
+    let noscript = figure.next('noscript')
+
+    let imgEle
+    if (noscript.length > 1) {
+      imgEle = $(noscript.text())
+    }
+    else {
+      imgEle = figure
+    }
+    
+    imgEle.removeAttr('srcset')
+    let src = imgEle.attr('src')
+
+    if (src.startsWith('https://www.inote.tw/') && src.indexOf('/wp-content/') > -1) {
+      let uploadsURI = src.slice(src.indexOf('/wp-content/'))
+      let i2URL = `https://i2.wp.com/www.inote.tw${uploadsURI}?resize=640%2C279&ssl=1`
+      imgEle.attr('src', i2URL)
+    }
+
+    if (noscript.length > 1) {
+      figure.after(imgEle)
+      figure.remove()
+      noscript.remove()
+    }
   }
 
   $('img[srcset]').removeAttr('srcset')
