@@ -85,7 +85,7 @@ const htmlContentParser = async function (html, modules, url) {
   content = RemoveScripts(content)
   
   
-  content = DelazyLoadingImg(content, url)
+  content = await DelazyLoadingImg(content, url)
   content = DesafeImg(content)
   
 //  

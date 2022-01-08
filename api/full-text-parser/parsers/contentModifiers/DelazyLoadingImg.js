@@ -1,7 +1,7 @@
 const cheerio = require('cheerio')
 const ImgurUpload = require('./../../../lib/image/ImgurUpload.js')
 
-const DelazyLoadingImg = function (html, url) {
+const DelazyLoadingImg = async function (html, url) {
   //console.log(html)
   
   let $
