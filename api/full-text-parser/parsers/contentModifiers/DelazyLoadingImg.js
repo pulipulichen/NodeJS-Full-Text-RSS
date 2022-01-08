@@ -99,7 +99,7 @@ const DelazyLoadingImg = async function (html, url) {
 }
 
 const delazy20220101 = async function ($) {
-  let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
+  let imgList = $('img[data-orig-file][data-permalink][data-attachment-id]')
   for (let i = 0; i < imgList.length; i++) {
     /*
     let imgEle = imgList.eq(i)
