@@ -87,6 +87,18 @@ const DelazyLoadingImg = function (html, url) {
     figure.remove()
   }
   
+  // -------------------
+  // 20211130-0007 
+  
+  (function () {
+    let imgList = $('img[data-orig-file][style="display:none;visibility:hidden;"]')
+    for (let i = 0; i < imgList.length; i++) {
+      let imgEle = imgList.eq(i)
+      imgEle.removeAttr('style')
+      imgEle.attr('src', imgEle.attr('https://www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg'))
+    }
+  })()
+
   // ------------------------------
   
   return $
