@@ -124,6 +124,7 @@ const delazy20220101 = async function ($) {
 
     figure.after(imgEle)
     figure.remove()
+    noscript.remove()
   }
 
   $('img[srcset]').removeAttr('srcset')
