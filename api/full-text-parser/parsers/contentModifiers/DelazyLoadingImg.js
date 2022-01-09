@@ -112,6 +112,13 @@ const delazy20220101 = async function ($) {
     let figure = imgList.eq(i)
     let noscript = figure.next('noscript')
 
+    let prevEle = figure.prev()
+    let parent = figure.parent()
+    if (parent.prop('tagName').toLowerCase() === 'picture'
+            && prevEle.prop('tagName').toLowerCase() === 'source') {
+      prevEle.remove()
+    }
+
     let imgEle = $(noscript.text())
     imgEle.removeAttr('srcset')
     let src = imgEle.attr('src')
