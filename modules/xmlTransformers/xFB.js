@@ -87,7 +87,7 @@ const xFB = async function ($, moduleCodesString) {
 
         if (content !== '') {
           if (description !== '') {
-            description = DesafeImg(description)
+            description = await DesafeImg(description)
             content = '<![CDATA[' 
                     + description
                     + `<br>`
