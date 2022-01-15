@@ -190,6 +190,7 @@ const delazy20220115 = async function ($) {
     img.attr('src', img.attr('data-cfsrc'))
     img.removeAttr('data-cfsrc')
     img.removeAttr('loading')
+    img.removeAttr('sizes')
 
     let next = img.next()
     if (next.prop('tagName').toLowerCase() === 'noscript') {

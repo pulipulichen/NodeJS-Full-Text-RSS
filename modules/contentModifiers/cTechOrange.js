@@ -4,7 +4,7 @@ const cheerio = require('cheerio')
 const cTechbang = function (content) {
   const $ = cheerio.load(content)
   
-  let thumb = $('.entry-thumb.single-entry-thumb:first')
+  let thumb = $('.entry-thumb.single-entry-thumb:first img')
   //let body = $('.single-content__wrap:first')
   let body = $('.single-body--content .single-content__wrap:first')
   
