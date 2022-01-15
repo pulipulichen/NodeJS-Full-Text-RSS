@@ -13,13 +13,13 @@ const cTechbang = function (content) {
     body = body.children().eq(0)
   }
 
-  console.log(thumb.length, body.length)
+  //console.log(thumb.length, body.length)
   if (thumb.length > 0 && body.length > 0) {
-    thumb.prop("className", "")
+    thumb.prop("class", "")
     body.prepend(thumb)
 
     content = body.html().trim()
-    console.log(content.slice(0, 100) , '...', content.slice(-100))
+    //console.log(content.slice(0, 100) , '...', content.slice(-100))
   }
   
   return content
