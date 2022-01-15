@@ -1,5 +1,5 @@
 const cheerio = require('cheerio')
-const StripHTML = require('./../../api/lib/stringUtils/StripHTML.js')
+//const StripHTML = require('./../../api/lib/stringUtils/StripHTML.js')
 
 const cTechbang = function (content) {
   const $ = cheerio.load(content)
@@ -7,6 +7,7 @@ const cTechbang = function (content) {
   let thumb = $('.entry-thumb.single-entry-thumb:first')
   let body = $('.single-body--content:first > .single-content__wrap:first')
 
+  console.log(thumb.length, 0 && body.length)
   if (thumb.length > 0 && body.length > 0) {
     body.prepend(thumb)
     content = body.html().trim()
