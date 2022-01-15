@@ -16,7 +16,8 @@ const cTechbang = function (content) {
   //console.log(thumb.length, body.length)
   if (thumb.length > 0 && body.length > 0) {
     thumb.prop("class", "")
-    body.prepend(thumb)
+    body.find('blockquote').after(thumb)
+    //body.prepend(thumb)
 
     content = body.html().trim()
     //console.log(content.slice(0, 100) , '...', content.slice(-100))
