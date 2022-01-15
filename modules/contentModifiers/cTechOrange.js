@@ -17,7 +17,9 @@ const cTechbang = function (content) {
   if (thumb.length > 0 && body.length > 0) {
     thumb.prop("className", "")
     body.prepend(thumb)
+
     content = body.html().trim()
+    console.log(content.slice(0, 100) , '...', content.slice(-100))
   }
   
   return content
