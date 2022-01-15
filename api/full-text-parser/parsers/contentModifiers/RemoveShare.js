@@ -14,7 +14,8 @@ const RemoveShare = async function (html, url) {
   // -------------------
   
   let removeClassNameList = [
-    '.js-sticky-sidebar'
+    '.js-sticky-sidebar',
+    '.ceris-mobile-share-socials'
   ]
 
   removeClassNameList.forEach(cn => {
