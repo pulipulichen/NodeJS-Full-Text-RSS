@@ -83,7 +83,7 @@ const htmlContentParser = async function (html, modules, url) {
   
   
   content = RemoveComments(content)
-  content = RemoveShare(content)
+  content = await RemoveShare(content)
   content = RemoveScripts(content)
   
   
