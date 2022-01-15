@@ -5,7 +5,9 @@ const cTechbang = function (content) {
   const $ = cheerio.load(content)
   
   let thumb = $('.entry-thumb.single-entry-thumb:first')
-  let body = $('.single-content__wrap:first')
+  //let body = $('.single-content__wrap:first')
+  let body = $('.single-body--content .single-content__wrap:first')
+  
 
   if (body.children().length === 1) {
     body = body.children().eq(0)
@@ -13,6 +15,7 @@ const cTechbang = function (content) {
 
   console.log(thumb.length, body.length)
   if (thumb.length > 0 && body.length > 0) {
+    thumb.prop("className", "")
     body.prepend(thumb)
     content = body.html().trim()
   }

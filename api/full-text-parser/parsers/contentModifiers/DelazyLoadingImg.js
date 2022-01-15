@@ -189,6 +189,12 @@ const delazy20220115 = async function ($) {
     let img = imgList.eq(i)
     img.attr('src', img.attr('data-cfsrc'))
     img.removeAttr('data-cfsrc')
+    img.removeAttr('loading')
+
+    let next = img.next()
+    if (next.prop('tagName').toLowerCase() === 'noscript') {
+      next.remove()
+    }
   }
 
   // https://www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg
