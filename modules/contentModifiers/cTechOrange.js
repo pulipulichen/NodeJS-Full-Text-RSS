@@ -5,7 +5,7 @@ const cTechbang = function (content) {
   const $ = cheerio.load(content)
   
   let thumb = $('.entry-thumb.single-entry-thumb:first')
-  let body = $('.single-body--content:first > .single-content__wrap:first')
+  let body = $('.single-content__wrap:first')
 
   console.log(thumb.length, 0 && body.length)
   if (thumb.length > 0 && body.length > 0) {
