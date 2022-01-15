@@ -7,7 +7,11 @@ const cTechbang = function (content) {
   let thumb = $('.entry-thumb.single-entry-thumb:first')
   let body = $('.single-content__wrap:first')
 
-  console.log(thumb.length, 0 && body.length)
+  if (body.children().length === 1) {
+    body = body.children().eq(0)
+  }
+
+  console.log(thumb.length, body.length)
   if (thumb.length > 0 && body.length > 0) {
     body.prepend(thumb)
     content = body.html().trim()
