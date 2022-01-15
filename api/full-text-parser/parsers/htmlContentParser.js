@@ -9,6 +9,7 @@ const DelazyLoadingImg = require('./contentModifiers/DelazyLoadingImg.js')
 const DesafeImg = require('./contentModifiers/DesafeImg.js')
 const RemoveAds = require('./contentModifiers/RemoveAds.js')
 const RemoveScripts = require('./contentModifiers/RemoveScripts.js')
+const RemoveShare = require('./contentModifiers/RemoveShare.js')
 
 const ModuleManager = require('./../../lib/ModuleManager/ModuleManager.js')
 
@@ -82,6 +83,7 @@ const htmlContentParser = async function (html, modules, url) {
   
   
   content = RemoveComments(content)
+  content = RemoveShare(content)
   content = RemoveScripts(content)
   
   

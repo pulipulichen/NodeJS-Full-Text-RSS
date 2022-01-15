@@ -92,6 +92,7 @@ const DelazyLoadingImg = async function (html, url) {
   // 20220108-0007 
   
   await delazy20220101($)
+  await delazy20220115($)
   
   // ------------------------------
   
@@ -170,6 +171,19 @@ const delazy20220101 = async function ($) {
       noscript.remove()
     }
   }
+
+  $('img[srcset]').removeAttr('srcset')
+
+  // https://www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg
+  // https://i2.wp.com/www.inote.tw/wp-content/uploads/2017/08/notepad-plus-plus-3.jpg?resize=640%2C279&ssl=1
+  // https://i2.wp.com/www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg?resize=640%2C279&ssl=1
+}
+
+
+const delazy20220115 = async function ($) {
+  let imgList = $('img[data-cfsrc][loading="lazy"]')
+  imgList.css('display', '')
+  imgList.css('visibility', '')
 
   $('img[srcset]').removeAttr('srcset')
 
