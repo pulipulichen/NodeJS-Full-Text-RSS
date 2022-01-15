@@ -1,8 +1,8 @@
-const cheerio = require('cheerio')
+//const cheerio = require('cheerio')
 const StripHTML = require('./../../api/lib/stringUtils/StripHTML.js')
 
 const cTechbang = function (content) {
-  const $ = cheerio.load(content)
+  //const $ = cheerio.load(content)
   
   /*
   let icon = $('div.talk_time > .icon_float > a').clone()

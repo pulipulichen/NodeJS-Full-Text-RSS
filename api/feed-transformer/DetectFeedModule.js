@@ -45,9 +45,9 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('xUB')
   }
   
-  //if (channelLink === 'https://buzzorange.com/techorange') {
-  //  addModules.push('cImgur')
-  //}
+  if (channelLink === 'https://buzzorange.com/techorange') {
+    addModules.push('cTechOrange')
+  }
   if (channelLink === 'http://www.linuxeden.com') {
     addModules.push('fLinuxEden')
   }
