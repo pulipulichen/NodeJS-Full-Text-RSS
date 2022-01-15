@@ -185,7 +185,11 @@ const delazy20220115 = async function ($) {
   imgList.css('display', '')
   imgList.css('visibility', '')
 
-  $('img[srcset]').removeAttr('srcset')
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    img.attr('src', img.attr('data-cfsrc'))
+    img.removeAttr('data-cfsrc')
+  }
 
   // https://www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg
   // https://i2.wp.com/www.inote.tw/wp-content/uploads/2017/08/notepad-plus-plus-3.jpg?resize=640%2C279&ssl=1
