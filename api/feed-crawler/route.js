@@ -66,7 +66,7 @@ const route = function (app) {
       let url = req.params.url
       url = urlFilter(url)
       let result = await FeedCrawler(url)
-
+      
       //if (isXML(url)) {
       setHeader(res)
       //}

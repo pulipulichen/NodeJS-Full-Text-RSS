@@ -4,6 +4,16 @@ const FeedURLFilter = require('./../feed-crawler/FeedURLFilter.js')
 const HtmlLoader = require('./../lib/HtmlLoader/HtmlLoader.js')
 const PuppeterHTMLLoader = require('./../lib/HtmlLoader/PuppeterHTMLLoader.js')
 
+function cleanString(input) {
+  var output = "";
+  for (var i=0; i<input.length; i++) {
+      if (input.charCodeAt(i) <= 127) {
+          output += input.charAt(i);
+      }
+  }
+  return output;
+}
+
 
 const route = function (app) {
   app.get('/original-rss-crawler/:url', async (req, res) => {
@@ -32,6 +42,8 @@ const route = function (app) {
         content = await PuppeterHTMLLoader(url)
       }
       content = content.split('&nbsp;').join(' ')
+      content = cleanString(content)
+
       //content = content.split('&lt;').join('<')
         
       res.send(content)
