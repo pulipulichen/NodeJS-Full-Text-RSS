@@ -16,6 +16,8 @@ local dir
 /app/NodeJS-Full-Text-RSS/mount
 
 
+必須要Node 12.22.7以上
+
 ----
 
 express.js startup
