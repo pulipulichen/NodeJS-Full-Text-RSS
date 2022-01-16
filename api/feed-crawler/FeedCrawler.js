@@ -18,6 +18,16 @@ const FeedTransformer = require('./../feed-transformer/FeedTransformer.js')
 const FeedURLFilter = require('./FeedURLFilter.js')
 const RepairXML = require('./RepairXML.js')
 
+function cleanString(input) {
+  var output = "";
+  for (var i=0; i<input.length; i++) {
+      if (input.charCodeAt(i) <= 127) {
+          output += input.charAt(i);
+      }
+  }
+  return output;
+}
+
 /**
  * feedURL: https://blog.pulipuli.info/feeds/posts/default
  */
@@ -35,8 +45,9 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   //feedXML = feedXML.replace(/[\x00-\x1F\x7F]/g , '')
   //var re = /(?![\x00-\x7F]|[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80-\xBF]{3})./g;
   //feedXML = feedXML.replace(re, "")
-  var bytelike= unescape(encodeURIComponent(feedXML));
-  feedXML= decodeURIComponent(escape(bytelike));
+  //var bytelike= unescape(encodeURIComponent(feedXML));
+  //feedXML= decodeURIComponent(escape(bytelike));
+  feedXML = cleanString(feedXML)
 
   let output = await FeedTransformer(feedXML, moduleCodesString)
   
