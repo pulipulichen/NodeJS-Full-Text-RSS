@@ -47,7 +47,8 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   //feedXML = feedXML.replace(re, "")
   //var bytelike= unescape(encodeURIComponent(feedXML));
   //feedXML= decodeURIComponent(escape(bytelike));
-  feedXML = cleanString(feedXML)
+  //feedXML = cleanString(feedXML)
+  feedXML = feedXML.split('').join(' ')
 
   let output = await FeedTransformer(feedXML, moduleCodesString)
   

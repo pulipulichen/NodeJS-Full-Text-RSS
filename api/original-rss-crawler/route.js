@@ -43,7 +43,7 @@ const route = function (app) {
       }
       content = content.split('&nbsp;').join(' ')
       content = content.split('').join(' ')
-      content = cleanString(content)
+      //content = cleanString(content)
 
       //content = content.split('&lt;').join('<')
         

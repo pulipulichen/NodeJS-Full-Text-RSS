@@ -27,7 +27,8 @@ const XMLLoader = async function (url, cacheMS) {
     //var bytelike= unescape(encodeURIComponent(feedXML));
     //feedXML= decodeURIComponent(escape(bytelike));
     //feedXML = feedXML.replace(/[\x00-\x1F\x7F]/g , '')
-    feedXML = feedXML.replace(/\x1D/g,' ');
+    //feedXML = feedXML.replace(/\x1D/g,' ');
+    feedXML = feedXML.split('').join(' ')
 
 
     let $ = cheerio.load(feedXML)
