@@ -425,6 +425,10 @@ module.exports = {
             if (this.autoPreview) {
               this.parseOriginalRSSItemsPreview()
             }
+          },
+          error: (jqXHR, exception) => {
+            window.alert('Error: ' + jqXHR.responseText)
+            return false
           }
       });
     },
@@ -437,6 +441,12 @@ module.exports = {
         queryAPI = './full-text-parser/' + this.modules + '/' + encodeURIComponent(this.query)
       }
       $.getJSON(queryAPI, (data) => {
+        if (!data) {
+          window.alert('Full text data error')
+          console.error('Full text data error', queryAPI)
+          return false
+        }
+
         this.output = ''
         //console.log(data)
         
