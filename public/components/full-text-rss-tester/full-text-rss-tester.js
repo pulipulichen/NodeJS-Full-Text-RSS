@@ -376,6 +376,11 @@ module.exports = {
             if (this.autoPreview) {
               this.parseItemsPreview()
             }
+          },
+          error: (jqXHR, exception) => {
+            window.alert('Error: ' + jqXHR.responseText)
+            console.error(jqXHR.responseText)
+            return false
           }
       });
     },
@@ -428,6 +433,7 @@ module.exports = {
           },
           error: (jqXHR, exception) => {
             window.alert('Error: ' + jqXHR.responseText)
+            console.error(jqXHR.responseText)
             return false
           }
       });
