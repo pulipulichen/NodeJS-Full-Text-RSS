@@ -24,8 +24,9 @@ const XMLLoader = async function (url, cacheMS) {
     
     // 移除非UTF8的內容
     //feedXML = feedXML.normalize('NFD').replace(/([\u0300-\u036f]|[\u001d])/g, ' ');
-    var bytelike= unescape(encodeURIComponent(feedXML));
-    feedXML= decodeURIComponent(escape(bytelike));
+    //var bytelike= unescape(encodeURIComponent(feedXML));
+    //feedXML= decodeURIComponent(escape(bytelike));
+    feedXML = feedXML.replace(/\uFFFD/g, '')
 
     let $ = cheerio.load(feedXML)
     //console.log('~~~', feedXML, '~~~')
