@@ -632,6 +632,7 @@ module.exports = {
         let m = modulesParts[i]
         if (m.startsWith('$') && m.endsWith('$')) {
           m = '$' + this.getMMDDHHMM() + '$'
+          modulesParts[i] = m
           hasRandomToken = true
         }
       }

@@ -1,19 +1,26 @@
 let appendText = '++'
 
-const setTitle = function (title) {
+const GetModuleRandomToken = require('./../ModuleManager/GetModuleRandomToken.js')
+
+const setTitle = function (title, randomToken = '') {
   let titleText = title.text().trim()
-  title.text(titleText + appendText)
+
+  if (titleText.indexOf(appendText) === -1) {
+    title.text(titleText + appendText + randomToken)
+  }
 }
 
-const FeedChannelAppendTitle = function ($) {
+const FeedChannelAppendTitle = function ($, moduleCodesString = []) {
   let title = $('channel > title:first')
+  let randomToken = GetModuleRandomToken(moduleCodesString)
+
   if (title.length === 1) {
-    return setTitle(title)
+    return setTitle(title, randomToken)
   }
   
   title = $('feed > title:first')
   if (title.length === 1) {
-    return setTitle(title)
+    return setTitle(title, randomToken)
   }
   
   //console.log($.html())

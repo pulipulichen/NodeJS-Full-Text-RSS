@@ -38,7 +38,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
     decodeEntities: false
   })
   
-  FeedChannelAppendTitle($)
+  FeedChannelAppendTitle($, moduleCodesString)
   
   //console.log($.html())
   
