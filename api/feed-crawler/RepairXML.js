@@ -8,6 +8,7 @@ const RepairXML = async function (xml) {
   // -------------
   
   xml = xml.split('&nbsp;').join(' ')
+  xml = xml.split('').join(' ')
 
   return xml
 }
