@@ -42,6 +42,7 @@ const route = function (app) {
         content = await PuppeterHTMLLoader(url)
       }
       content = content.split('&nbsp;').join(' ')
+      content = content.split('').join(' ')
       content = cleanString(content)
 
       //content = content.split('&lt;').join('<')
