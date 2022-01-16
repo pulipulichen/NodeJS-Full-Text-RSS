@@ -23,7 +23,7 @@ const XMLLoader = async function (url, cacheMS) {
     }
     
     // 移除非UTF8的內容
-    feedXML = feedXML.replace(/[\u0300-\u036f]/g, ' ');
+    feedXML = feedXML.replace(/([\u0300-\u036f]|[\u001d])/g, ' ');
 
     let $ = cheerio.load(feedXML)
     //console.log('~~~', feedXML, '~~~')
