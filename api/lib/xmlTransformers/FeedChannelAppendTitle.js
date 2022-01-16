@@ -15,7 +15,7 @@ const FeedChannelAppendTitle = function ($, moduleCodesString = []) {
   let randomToken = GetModuleRandomToken(moduleCodesString)
 
   let link = $('channel > link:first')
-  $('channel > link:first').text('https://buzzorange.com/techorange?test=0116-1456')
+  //$('channel > link:first').text('https://buzzorange.com/techorange?test=0116-1456')
 
   if (title.length === 1) {
     return setTitle(title, randomToken)
