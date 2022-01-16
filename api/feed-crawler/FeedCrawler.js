@@ -32,7 +32,8 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   //console.log(feedURL)
   let feedXML = await XMLLoader(feedURL, 10000)
   //console.log(feedXML)
-  
+  feedXML = feedXML.replace(/\x1D/g,' ');
+
   let output = await FeedTransformer(feedXML, moduleCodesString)
   
   output = await RepairXML(output)
