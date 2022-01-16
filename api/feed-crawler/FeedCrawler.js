@@ -32,7 +32,9 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   //console.log(feedURL)
   let feedXML = await XMLLoader(feedURL, 10000)
   //console.log(feedXML)
-  feedXML = feedXML.replace(/[\x00-\x1F\x7F]/g , '')
+  //feedXML = feedXML.replace(/[\x00-\x1F\x7F]/g , '')
+  var re = /(?![\x00-\x7F]|[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80-\xBF]{3})./g;
+  feedXML = feedXML.replace(re, "")
 
   let output = await FeedTransformer(feedXML, moduleCodesString)
   
