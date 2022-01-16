@@ -26,7 +26,7 @@ const XMLLoader = async function (url, cacheMS) {
     //feedXML = feedXML.normalize('NFD').replace(/([\u0300-\u036f]|[\u001d])/g, ' ');
     //var bytelike= unescape(encodeURIComponent(feedXML));
     //feedXML= decodeURIComponent(escape(bytelike));
-    feedXML = feedXML.replace(/[\uFFFD|\u0x1d]/g, '')
+    feedXML = feedXML.replace(/\u0x1d/g, '')
 
     let $ = cheerio.load(feedXML)
     //console.log('~~~', feedXML, '~~~')
