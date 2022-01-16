@@ -93,7 +93,9 @@ const DelazyLoadingImg = async function (html, url) {
   
   await delazy20220101($)
   await delazy20220115($)
+  await delazy20220117($)
   
+
   // ------------------------------
   
   return $
@@ -191,6 +193,24 @@ const delazy20220115 = async function ($) {
     img.removeAttr('data-cfsrc')
     img.removeAttr('loading')
     img.removeAttr('sizes')
+
+    let next = img.next()
+    if (next.prop('tagName').toLowerCase() === 'noscript') {
+      next.remove()
+    }
+  }
+
+  // https://www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg
+  // https://i2.wp.com/www.inote.tw/wp-content/uploads/2017/08/notepad-plus-plus-3.jpg?resize=640%2C279&ssl=1
+  // https://i2.wp.com/www.inote.tw/wp-content/uploads/2020/02/mp3DirectCut.jpg?resize=640%2C279&ssl=1
+}
+
+const delazy20220117 = async function ($) {
+  let imgList = $('img[data-lazy-src]')
+
+  for (let i = 0; i < imgList.length; i++) {
+    let img = imgList.eq(i)
+    img.attr('src', img.attr('data-lazy-src'))
 
     let next = img.next()
     if (next.prop('tagName').toLowerCase() === 'noscript') {
