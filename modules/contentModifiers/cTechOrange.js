@@ -16,7 +16,15 @@ const cTechbang = function (content) {
   //console.log(thumb.length, body.length)
   if (thumb.length > 0 && body.length > 0) {
     thumb.prop("class", "")
-    body.find('blockquote').after(thumb)
+    
+    let anchor = body.find('blockquote:first')
+    if (anchor.length === 0) {
+      anchor = body.find('p:first')
+    }
+    if (anchor.length === 0) {
+      anchor = body.find('div:first')
+    }
+    anchor.after(thumb)
     //body.prepend(thumb)
 
     content = body.html().trim()
