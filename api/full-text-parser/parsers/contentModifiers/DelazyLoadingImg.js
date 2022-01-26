@@ -218,6 +218,13 @@ const delazy20220117 = async function ($) {
         if (next.prop('tagName').toLowerCase() === 'noscript') {
           next.remove()
         }
+        else if (next.prop('tagName').toLowerCase() === 'img') {
+          // https://i0.wp.com/www.inote.tw/wp-content/uploads/2022/01/中原素麵食_18.jpg?fit=1200%2C900&ssl=1
+          // https://i0.wp.com/www.inote.tw/wp-content/uploads/2022/01/中原素麵食_18.jpg?fit=1200%2C900&ssl=1
+          if (img.attr('data-orig-file') === next.attr('data-orig-file')) {
+            next.remove()
+          }
+        }
       }
       catch (e) {
         console.error(e)
