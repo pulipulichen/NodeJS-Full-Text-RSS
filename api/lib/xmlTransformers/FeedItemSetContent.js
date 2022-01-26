@@ -196,7 +196,7 @@ const FeedItemSetContent = function (item, content) {
     }
     
     //console.log(1)
-    return element.text(content)
+    element.text(content)
   } 
   
   element = item.find('item > description:first')
