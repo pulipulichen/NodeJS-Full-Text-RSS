@@ -213,8 +213,13 @@ const delazy20220117 = async function ($) {
     img.attr('src', img.attr('data-lazy-src'))
 
     let next = img.next()
-    if (next.prop('tagName').toLowerCase() === 'noscript') {
-      next.remove()
+    try {
+      if (next.prop('tagName').toLowerCase() === 'noscript') {
+        next.remove()
+      }
+    }
+    catch (e) {
+      console.error(e)
     }
   }
 
