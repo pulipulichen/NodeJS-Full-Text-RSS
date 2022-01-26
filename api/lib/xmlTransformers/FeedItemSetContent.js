@@ -185,6 +185,19 @@ const FeedItemSetContent = function (item, content) {
     //console.log(1)
     return element.text(content)
   } 
+
+  element = item.find('content\\:encoded:first')
+  if (element.length === 1) {
+    if (!content.startsWith('<![CDATA[')) {
+      content = '<![CDATA[' + content
+    }
+    if (!content.endsWith(']]>')) {
+      content = content + ']]>'
+    }
+    
+    //console.log(1)
+    return element.text(content)
+  } 
   
   element = item.find('item > description:first')
   if (element.length === 1) {
