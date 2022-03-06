@@ -21,6 +21,29 @@ const cPTTLoadImgur = function ($) {
     
     aTag.html(`${link}<br /><img src="${src}" style="max-width: 100%; height: auto;" />`)
   }
+  
+  cPTTLoadImgur20220306($)
+}
+
+const cPTTLoadImgur20220306 = function ($) {
+  let imgurList = $('a[href^="https://i.imgur.com/"]')
+  
+  //console.log(imgurList.length)
+  
+  for (let i = 0; i < imgurList.length; i++) {
+    let aTag = imgurList.eq(i)
+    
+    let link = aTag.attr('href')
+    if (link !== aTag.text().trim()) {
+      continue
+    }
+    
+    let id = link.slice(link.lastIndexOf('/') + 1).trim()
+    
+    let src = 'https://i.imgur.com/' + id
+    
+    aTag.html(`${link}<br /><img src="${src}" style="max-width: 100%; height: auto;" />`)
+  }
 }
 
 module.exports = cPTTLoadImgur
