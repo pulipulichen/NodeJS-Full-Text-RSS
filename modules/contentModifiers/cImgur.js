@@ -3,6 +3,8 @@ const cheerio = require('cheerio')
 const ImgurUpload = require('./../../api/lib/image/ImgurUpload.js')
 
 const cImgur = async function (content) {
+  return content  // 先放棄使用
+  
 //  console.log('================')
 //  console.log(content)
 //  console.log('================')
