@@ -43,6 +43,8 @@ const DesafeImg = async function (html) {
     if (!src) {
       continue
     }
+    
+    continue // 先放棄使用imgur
     //console.log('src', src)
     let imgurURL = await ImgurUpload(src)
     //console.log('imgurURL', imgurURL)
