@@ -122,7 +122,7 @@ const delazy20220101 = async function ($) {
       prevEle.remove()
     }
 
-    let imgEle = $(noscript.text())
+    imgEle = $(noscript.text())
     imgEle.removeAttr('srcset')
     let src = imgEle.attr('src')
 
@@ -150,7 +150,7 @@ const delazy20220101 = async function ($) {
     let figure = imgList2.eq(i)
     let noscript = figure.next('noscript')
 
-    let imgEle
+    //let imgEle
     if (noscript.length > 1) {
       imgEle = $(noscript.text())
     }

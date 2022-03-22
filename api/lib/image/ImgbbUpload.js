@@ -84,7 +84,7 @@ async function urlToImgbb(url) {
    */
   
   const options = {
-    apiKey: config.Imgbb.IMGBB_API_KEY, // MANDATORY
+    apiKey: config.Imgbb.IMGBB_API_KEY[0], // MANDATORY
 
     //imagePath: "./your/image/path", // OPTIONAL: pass a local file (max 32Mb)
 
