@@ -16,7 +16,7 @@ const cPulipuliBlog = function (content) {
   }
   
   text = text.join('\n\n')
-  console.log(text)
+  //console.log(text)
   
   return text
 }
