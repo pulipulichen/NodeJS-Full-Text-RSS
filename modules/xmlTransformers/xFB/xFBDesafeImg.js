@@ -2,7 +2,7 @@ const cheerio = require('cheerio')
 
 //var config = require('./../../../mount/config.js')
 
-const ImgurUpload = require('./../../../api/lib/image/ImgurUpload.js')
+const ImgurUpload = require('./../../../api/lib/image/ImgbbUpload.js')
 
 //imgur.setClientID(config.Imgur.ClientID);
 
@@ -44,7 +44,7 @@ const DesafeImg = async function (html) {
       continue
     }
     
-    continue // 先放棄使用imgur
+    //continue // 先放棄使用imgur
     //console.log('src', src)
     let imgurURL = await ImgurUpload(src)
     //console.log('imgurURL', imgurURL)
