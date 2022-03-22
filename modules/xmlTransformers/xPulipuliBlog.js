@@ -13,16 +13,6 @@ const xSkip = async function ($, moduleCodesString) {
     thumbnail.attr('url', url)
   }
   
-  let contents = $(`content[type="html"]`)
-  for (let i = 0; i < contents.length; i++) {
-    let content = contents.eq(i)
-    
-    let container = cheerio.load(content);
-    let text = container('p:first').text()
-    content.text(text)
-    content.attr('type', 'text')
-  }
-
   return $
 }
 
