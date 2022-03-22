@@ -5,7 +5,7 @@ const cPulipuliBlog = function (content) {
   let text = []
   let pList = container('p')
   for (let i = 0; i < pList.length; i++) {
-    let p = pList.eq(0)
+    let p = pList.eq(i)
     let t = p.text().trim()
     
     text.push(t)
