@@ -1,5 +1,5 @@
 const cheerio = require('cheerio')
-const ImgurUpload = require('./../../../lib/image/ImgurUpload.js')
+const ImgbbUpload = require('./../../../lib/image/ImgbbUpload.js')
 
 const DelazyLoadingImg = async function (html, url) {
   //console.log(html)
@@ -104,14 +104,14 @@ const DelazyLoadingImg = async function (html, url) {
 const delazy20220101 = async function ($) {
   let imgList = $('img[data-orig-file][data-permalink][data-attachment-id][style="display:none;visibility:hidden;"]')
   for (let i = 0; i < imgList.length; i++) {
-    /*
+    
     let imgEle = imgList.eq(i)
     imgEle.removeAttr('style')
 
     let origFile = imgEle.attr('data-orig-file')
-    let imgurlFile = await ImgurUpload(origFile)
+    let imgurlFile = await ImgbbUpload(origFile)
     imgEle.attr('src', imgurlFile)
-    */
+    
     let figure = imgList.eq(i)
     let noscript = figure.next('noscript')
 
@@ -139,14 +139,14 @@ const delazy20220101 = async function ($) {
 
   let imgList2 = $('img[data-orig-file][data-permalink][data-attachment-id]')
   for (let i = 0; i < imgList2.length; i++) {
-    /*
+    
     let imgEle = imgList.eq(i)
     imgEle.removeAttr('style')
 
     let origFile = imgEle.attr('data-orig-file')
-    let imgurlFile = await ImgurUpload(origFile)
+    let imgurlFile = await ImgurlUpload(origFile)
     imgEle.attr('src', imgurlFile)
-    */
+    
     let figure = imgList2.eq(i)
     let noscript = figure.next('noscript')
 
