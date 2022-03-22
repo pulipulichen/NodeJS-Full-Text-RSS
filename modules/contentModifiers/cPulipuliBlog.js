@@ -10,7 +10,7 @@ const cPulipuliBlog = function (content) {
     
     text.push(t)
     
-    if (text.join('').length > 250) {
+    if (text.join('').length > 50) {
       break
     }
   }
