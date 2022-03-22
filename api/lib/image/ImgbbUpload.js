@@ -106,7 +106,7 @@ async function urlToImgbb(url) {
     */
   };
 
-  return new Promise(({resolve, reject}) => {
+  return new Promise((resolve, reject) => {
     imgbbUploader(options)
       .then((response) => {
         resolve(response.url)
