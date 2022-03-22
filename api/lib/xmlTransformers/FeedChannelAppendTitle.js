@@ -14,7 +14,7 @@ const FeedChannelAppendTitle = function ($, moduleCodesString = []) {
   let title = $('channel > title:first')
   let randomToken = GetModuleRandomToken(moduleCodesString)
 
-  let link = $('channel > link:first')
+  //let link = $('channel > link:first')
   //$('channel > link:first').text('https://buzzorange.com/techorange?test=0116-1456')
 
   if (title.length === 1) {
@@ -27,7 +27,9 @@ const FeedChannelAppendTitle = function ($, moduleCodesString = []) {
   }
   
   //console.log($.html())
-  throw Error('Title is not found')
+  //throw Error('Title is not found')
+  console.error('Title is not found')
+  return false
 }
 
 module.exports = FeedChannelAppendTitle
