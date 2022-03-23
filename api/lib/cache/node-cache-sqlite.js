@@ -232,15 +232,22 @@ _this.set = async function (databaseName, key, value, expire = null) {
   }
   setLock = true
 
-  const [cache, created] = await database.findOrCreate({
-    where: {key},
-    defaults: {
-      value: processedValue,
-      createdTime: (new Date()).getTime(),
-      expireTime: _this.calcExpire(expire),
-      type
-    }
-  })
+  try {
+    const [cache, created] = await database.findOrCreate({
+      where: {key},
+      defaults: {
+        value: processedValue,
+        createdTime: (new Date()).getTime(),
+        expireTime: _this.calcExpire(expire),
+        type
+      }
+    })
+  }
+  catch (e) {
+    console.trace(e)
+    setLock = false
+    return await _this.set(databaseName, key, value, expire)
+  }
   
   setLock = false
 
@@ -291,20 +298,35 @@ _this.autoClean = async function (databaseName) {
   //isLoading = true
   
 
+  while (setLock === true) {
+    await sleep()
+  }
+  setLock = true
 
   let database = await this.getDatabase(databaseName)
-  await database.destroy({
-    where: {
-      [Op.and]: [
-        {expireTime: {
-            [Op.not]: null
-          }},
-        {expireTime: {
-            [Op.lt]: time
-          }}
-      ]
-    }
-  })
+  
+  try {
+    await database.destroy({
+      where: {
+        [Op.and]: [
+          {expireTime: {
+              [Op.not]: null
+            }},
+          {expireTime: {
+              [Op.lt]: time
+            }}
+        ]
+      }
+    })
+  }
+  catch (e) {
+    console.trace(e)
+    setLock = false
+    autoCleanLock = false
+    return await _this.autoClean(databaseName)
+  } 
+  
+  setLock = false
   autoCleanLock = false
 
   _this.lastCleanTime = time
@@ -468,21 +490,28 @@ _this.clear = async function (databaseName, key) {
   //console.log('cache load by get')
   //isLoading = true
   
-  while (destroyLock === true) {
+  while (setLock === true) {
     await sleep()
   }
 
-  destroyLock = true
+  setLock = true
 
-  let database = await this.getDatabase(databaseName)
-  await database.destroy({
-    where: {
-      key
-    }
-  })
+  try {
+    let database = await this.getDatabase(databaseName)
+    await database.destroy({
+      where: {
+        key
+      }
+    })
+  }
+  catch (e) {
+    console.trace(e)
+    setLock = false
+    return await _this.clear(databaseName, key)
+  }
   //isLoading[databaseName] = false
   
-  destroyLock = false
+  setLock = false
 
   console.log('[CACHE] clear cache: ' + databaseName + ': ' + key)
   return true
