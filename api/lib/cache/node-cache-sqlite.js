@@ -232,8 +232,10 @@ _this.set = async function (databaseName, key, value, expire = null) {
   }
   setLock = true
 
+  let cache
+  let created
   try {
-    const [cache, created] = await database.findOrCreate({
+    const result = await database.findOrCreate({
       where: {key},
       defaults: {
         value: processedValue,
@@ -242,6 +244,8 @@ _this.set = async function (databaseName, key, value, expire = null) {
         type
       }
     })
+    cache = result[0]
+    created = result[1]
   }
   catch (e) {
     console.trace(e)
