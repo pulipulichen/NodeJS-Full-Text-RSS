@@ -381,6 +381,10 @@ _this.isExists = async function (databaseName, key) {
  * 如果回傳undefined，表示沒有快取
  */
 _this.get = async function (databaseName, key, value, expire) {
+  if (!databaseName || !key) {
+    console.trace(`databaseName or key is undefined: ${databaseName} ${key}`);
+    return undefined
+  }
   await _this.init()
 
 
