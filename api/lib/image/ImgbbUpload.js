@@ -20,6 +20,11 @@ let clientIDIndex = 0
 let uploadLock = false
 
 const ImgbbUpload = async function (src) {
+  if (typeof(src) !== 'string') {
+    console.error('src is not string', src)
+    return false
+  }
+
   
   try {
     //console.log('開始圖片', src)
