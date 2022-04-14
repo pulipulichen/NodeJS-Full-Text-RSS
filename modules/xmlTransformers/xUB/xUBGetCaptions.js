@@ -394,7 +394,8 @@ const xUBGetCaptions = async function (videoID) {
   }
   
   if (srtContent === false) {
-    return false
+    // 這裡表示已經有快取，但是快取內容是false
+    return ''
   }
   
   //console.error('[TODO] parse srt')
