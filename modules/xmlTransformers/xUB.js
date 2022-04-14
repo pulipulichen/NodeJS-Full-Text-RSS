@@ -22,6 +22,7 @@ const xUBBuildSectionFromCaptions = require('./xUB/xUBBuildSectionFromCaptions.j
 const DesafeImg = require('./../../api/full-text-parser/parsers/contentModifiers/DesafeImg.js')
 
 
+const dayjs = require('dayjs')
 //const newHeaderInterval = 0.5
 //const newParagraphInterval = 0.3
 
@@ -31,56 +32,62 @@ const xUB = async function ($, moduleCodesString) {
   await FeedItemEach($, async (item, i) => {
     //console.log(i, item.find('title').text())
     //item.remove()
-    
-    //let link = FeedItemGetLink(item)
-    //let {content} = await fullTextParser(link, moduleCodesString)
-    //let title = item.find('title').text().trim()
-    let content = FeedItemGetContent(item)
-    content = await DesafeImg(content)
-    //console.log('content', content)
-    let link = FeedItemGetLink(item)
-    let videoID = UBVideoIDParser(link)
-    
-    let formattedContent = xUBFormatDescription(videoID, content)
-    //console.log(formattedContent)
-    //throw Error('todo')
-    
-    let sections = xUBExtractSections(content)
-    //console.log(sections)
-    
-    let captions = await xUBGetCaptions(videoID)
-    if (captions === false) {
-      // 表示還在讀取中 20211203-1157 
-      console.log('還在讀取中', videoID)
-      item.remove() // 先不要顯示
-      return false
-    }
-    
-    let title = FeedItemGetTitle(item)
-    
-    if (!captions || captions.length === 0) {
-      //return item.remove()
-      content = buildThumbnails(videoID) + '<br /><hr /><br />' + formattedContent
-    }
-    else {
-      content = setupContentWithCaption(formattedContent, sections, captions, videoID)
+    try {
+//let link = FeedItemGetLink(item)
+      //let {content} = await fullTextParser(link, moduleCodesString)
+      //let title = item.find('title').text().trim()
+      let content = FeedItemGetContent(item)
+      content = await DesafeImg(content)
+      //console.log('content', content)
+      let link = FeedItemGetLink(item)
+      let videoID = UBVideoIDParser(link)
       
-      title = 'C] ' + title
-      item.find('title:first').text(title)
-    }
+      let formattedContent = xUBFormatDescription(videoID, content)
+      //console.log(formattedContent)
+      //throw Error('todo')
+      
+      let sections = xUBExtractSections(content)
+      //console.log(sections)
+      
+      let captions = await xUBGetCaptions(videoID)
+      if (captions === false) {
+        // 表示還在讀取中 20211203-1157 
+        console.log('還在讀取中', videoID)
+        item.remove() // 先不要顯示
+        return false
+      }
+      
+      let title = FeedItemGetTitle(item)
+      
+      if (!captions || capxUBtions.length === 0) {
+        //return item.remove()
+        content = buildThumbnails(videoID) + '<br /><hr /><br />' + formattedContent
+      }
+      else {
+        content = setupContentWithCaption(formattedContent, sections, captions, videoID)
+        
+        title = 'C] ' + title
+        item.find('title:first').text(title)
+      }
 
-    if (typeeof(moduleCodesString) !== 'string') {
-      console.error('moduleCodesString is not string: ' + moduleCodesString)
-      item.remove()
-      return false
+      if (typeeof(moduleCodesString) !== 'string') {
+        console.error('moduleCodesString is not string: ' + moduleCodesString)
+        item.remove()
+        return false
+      }
+      
+      if (moduleCodesString.indexOf('fHasCaptions') > -1 && !title.startsWith('C] ')) {
+        item.remove()
+        return false
+      }
+      
+      FeedItemSetContent(item, content)
     }
-    
-    if (moduleCodesString.indexOf('fHasCaptions') > -1 && !title.startsWith('C] ')) {
-      item.remove()
-      return false
+    catch (e) {
+      console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'xUB error: ')
+      console.log(e)
+      console.log('================================')
     }
-    
-    FeedItemSetContent(item, content)
     
 //    let title = item.find('title').text()
 //    let titleNew = await ModuleManager(title, moduleCodesString, 't')
