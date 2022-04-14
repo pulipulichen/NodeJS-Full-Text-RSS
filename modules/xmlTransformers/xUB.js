@@ -52,7 +52,7 @@ const xUB = async function ($, moduleCodesString) {
       let captions = await xUBGetCaptions(videoID)
       if (captions === false) {
         // 表示還在讀取中 20211203-1157 
-        console.log('還在讀取中', videoID)
+        console.log(`[${dayjs().format('MMDD-HHmm')}] ` + '還在讀取中', videoID)
         item.remove() // 先不要顯示
         return false
       }
