@@ -68,6 +68,12 @@ const xUB = async function ($, moduleCodesString) {
       title = 'C] ' + title
       item.find('title:first').text(title)
     }
+
+    if (typeeof(moduleCodesString) !== 'string') {
+      console.error('moduleCodesString is not string: ' + moduleCodesString)
+      item.remove()
+      return false
+    }
     
     if (moduleCodesString.indexOf('fHasCaptions') > -1 && !title.startsWith('C] ')) {
       item.remove()
