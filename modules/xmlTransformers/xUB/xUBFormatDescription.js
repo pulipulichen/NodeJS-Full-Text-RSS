@@ -3,6 +3,7 @@ const timestampify = require('./timestampify.js')
 const linkifyHtml = require('linkify-html')
 
 const cheerio = require('cheerio')
+const dayjs = require('dayjs')
 
 const xUBFormatDescription = function (videoID, content) {
   content = timestampify(content)
@@ -44,13 +45,22 @@ const xUBFormatDescription = function (videoID, content) {
     
     content = content.split('&amp;').join('&')
     
-    try {
-      linkifyHTMLContent = linkifyHtml(content)
-    }
-    catch (e) {
-      console.error('Linkifiy error: ' + content)
+    if (linkifyHTMLContent.indexOf('class="timestamp-link"') > -1) {
       linkifyHTMLContent = content
     }
+    else {
+      try {
+        linkifyHTMLContent = linkifyHtml(content)
+      }
+      catch (e) {
+        console.error(`[${dayjs.format('MMDD-HHmm')}] ` + 'Linkifiy error: ')
+        console.log(`====
+${content}
+====`)
+        linkifyHTMLContent = content
+      }
+    }
+      
   }
   linkifyHTMLContent = linkifyHTMLContent.trim()
   

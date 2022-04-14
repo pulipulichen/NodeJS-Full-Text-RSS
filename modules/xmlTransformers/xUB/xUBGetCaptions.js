@@ -31,6 +31,8 @@ const puppeteer = require('puppeteer');
 const nodeCache = require('./../../../api/lib/cache/node-cache-sqlite.js')
 const sleep = require('./../../../api/lib/async/sleep.js')
 
+const dayjs = require('dayjs')
+
 // ------------------------
 
 const initBrowser = async function () {
@@ -113,16 +115,16 @@ const getSRT = async function (videoID, retry = 0) {
   let page, browser
   try {
     if (queueList.indexOf(videoID) > -1) {
-      console.log('queued ' + videoID)
+      console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'queued ' + videoID)
       return false
     }
-    console.log('getSRT', videoID, getSRTLock, retry)
+    console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'getSRT', videoID, getSRTLock, retry)
     return await nodeCache.get('xUBGetCaptions', videoID, async () => {
       // 為什麼這邊沒有讀取到？
       let waitCount = 0
       
-      while (getSRTLock === true) {
-        console.log('wait', videoID)
+      while (getSRTLock !== false) {
+        console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'wait', videoID)
         waitCount++
         if (queueList.indexOf(videoID) === -1) {
           queueList.push(videoID)
@@ -141,7 +143,7 @@ const getSRT = async function (videoID, retry = 0) {
         queueList.splice(index, 1);
       }
 
-      getSRTLock = true
+      getSRTLock = videoID
 
       /*
       let key = await getDownsubKey(videoID)
@@ -159,7 +161,7 @@ const getSRT = async function (videoID, retry = 0) {
         videoID = videoID.slice(videoID.lastIndexOf('=') + 1)
       }
 
-      console.log('downsubURL', downsubURL)
+      console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'downsubURL', downsubURL)
 
       await page.goto(
          downsubURL,
@@ -175,7 +177,7 @@ const getSRT = async function (videoID, retry = 0) {
 
       //console.log(`await page.waitForSelector('button')`)
       let selector = `button[data-title^="[SRT] "],i[aria-hidden="true"].v-icon.notranslate.pb-1.material-icons.theme--light.error--text`
-      console.log('waitForSelector', videoID)
+      console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'waitForSelector', videoID)
       await page.waitForSelector(selector, {
         timeout: 5000
       })
@@ -184,7 +186,7 @@ const getSRT = async function (videoID, retry = 0) {
       // Check languages
 
       let lang = await determineLang(page)
-      console.log('lang', videoID, lang)
+      console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'lang', videoID, lang)
 
       let srtContent = ''
       if (lang !== false) {
@@ -200,14 +202,14 @@ const getSRT = async function (videoID, retry = 0) {
 
         fs.mkdirSync(downloadPath, { recursive: true })
 
-        console.log('try to click', videoID, downloadPath)
+        console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'try to click', videoID, downloadPath)
         await page.click(`button[data-title^="[SRT] ${lang}"]`)
 
         let downloadCounter = 0
         let filename
         let maxRetry = 3
         while (downloadCounter < maxRetry) {
-          console.log('wait for download', videoID, downloadPath)
+          console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'wait for download', videoID, downloadPath)
           await sleep(5000)
 
           filename = getFirstFileInFolder(downloadPath)
@@ -267,13 +269,18 @@ const getSRT = async function (videoID, retry = 0) {
       }
       */
       if (srtContent) {
+        console.log(`[${dayjs.format('MMDD-HHmm')}] ` + 'strContent output:')
+        console.log('===========')
         console.log(srtContent.slice(0, 100))
+        console.log('===========')
       }
       return srtContent
     }, captionCacheTime)
   }
   catch (e) {
+    console.error(`[${dayjs.format('MMDD-HHmm')}] ` + 'Str error: ')
     console.error(e)
+    console.log('===========')
     
     closeBrowser(browser)
     getSRTLock = false
