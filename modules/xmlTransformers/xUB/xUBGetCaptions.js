@@ -119,7 +119,7 @@ const getSRT = async function (videoID, retry = 0) {
       return false
     }
     
-    console.log(`[${dayjs().format('MMDD-HHmm')}] ` + '進入 Cache前：getSRT', videoID, getSRTLock, retry, queueList.join(','))
+    //console.log(`[${dayjs().format('MMDD-HHmm')}] ` + '進入 Cache前：getSRT', videoID, getSRTLock, retry, queueList.join(','))
     return await nodeCache.get('xUBGetCaptions', videoID, async () => {
       console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'getSRT', videoID, getSRTLock, retry, queueList.join(','))
 
