@@ -204,12 +204,12 @@ const getSRT = async function (videoID, retry = 0) {
 
         const client = await page.target().createCDPSession();
 
+        fs.mkdirSync(downloadPath, { recursive: true })
+
         await client.send('Page.setDownloadBehavior', {
           behavior: 'allow', 
           downloadPath: downloadPath
         });
-
-        fs.mkdirSync(downloadPath, { recursive: true })
 
         console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'try to click', videoID, downloadPath)
         await page.click(`button[data-title^="[SRT] ${lang}"]`)
