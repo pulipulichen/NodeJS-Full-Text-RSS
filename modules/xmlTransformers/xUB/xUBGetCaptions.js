@@ -176,7 +176,7 @@ const getSRT = async function (videoID, retry = 0) {
 
       await page.waitForTimeout(1000);
 
-      let downloadPath = '/tmp/cache/downloadsub/' + videoID
+      let downloadPath = '/tmp/NodeJS-Full-Text-RSS/cache/downloadsub/' + videoID
 
       //console.log(`await page.waitForSelector('button')`)
       let selector = `button[data-title^="[SRT] "],i[aria-hidden="true"].v-icon.notranslate.pb-1.material-icons.theme--light.error--text`
