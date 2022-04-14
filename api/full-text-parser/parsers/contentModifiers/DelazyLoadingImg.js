@@ -109,8 +109,10 @@ const delazy20220101 = async function ($) {
     imgEle.removeAttr('style')
 
     let origFile = imgEle.attr('data-orig-file')
-    let imgurlFile = await ImgbbUpload(origFile)
-    imgEle.attr('src', imgurlFile)
+    if (typeof(origFile) === 'string') {
+      let imgurlFile = await ImgbbUpload(origFile)
+      imgEle.attr('src', imgurlFile)
+    }
     
     let figure = imgList.eq(i)
     let noscript = figure.next('noscript')
@@ -144,8 +146,10 @@ const delazy20220101 = async function ($) {
     imgEle.removeAttr('style')
 
     let origFile = imgEle.attr('data-orig-file')
-    let imgurlFile = await ImgbbUpload(origFile)
-    imgEle.attr('src', imgurlFile)
+    if (typeof(origFile) === 'string') {
+      let imgurlFile = await ImgbbUpload(origFile)
+      imgEle.attr('src', imgurlFile)
+    }
     
     let figure = imgList2.eq(i)
     let noscript = figure.next('noscript')

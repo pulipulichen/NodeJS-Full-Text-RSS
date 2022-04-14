@@ -23,7 +23,7 @@ const dayjs = require('dayjs')
 
 const ImgbbUpload = async function (src) {
   if (typeof(src) !== 'string') {
-    console.error('src is not string', src)
+    console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'src is not string', src)
     return false
   }
 
