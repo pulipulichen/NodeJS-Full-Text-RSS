@@ -19,6 +19,8 @@ let clientIDIndex = 0
 
 let uploadLock = false
 
+const dayjs = require('dayjs')
+
 const ImgbbUpload = async function (src) {
   if (typeof(src) !== 'string') {
     console.error('src is not string', src)
@@ -36,9 +38,9 @@ const ImgbbUpload = async function (src) {
       }
       uploadLock = true
 
-      console.log('Prepare to ImgbbUpload', src)
+      //console.log('Prepare to ImgbbUpload', src)
       let url = await urlToImgbb(src)
-      console.log('ImgbbURL', src, url)
+      //console.log('ImgbbURL', src, url)
       
       uploadLock = false
       return url
@@ -47,8 +49,8 @@ const ImgbbUpload = async function (src) {
     return imgbbURL
   }
   catch (e) {
-    console.error(src)
-    console.error(e)
+    console.error(`[${dayjs().format('MMDD-HHmm')}] ` + `ImgbbUpload error : ` + src)
+    console.log(e)
     
     let imgbbURL = await NodeCacheSqlite.get('imgbb', src, async () => {
       return src

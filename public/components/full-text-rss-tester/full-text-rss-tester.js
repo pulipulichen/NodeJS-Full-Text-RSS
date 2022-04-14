@@ -657,7 +657,7 @@ module.exports = {
         modulesParts.push('$' + this.getMMDDHHMM() + '$')
       }
       
-      console.log(modulesParts)
+      //console.log(modulesParts)
       
       this.modules = modulesParts.join(',')
     },
