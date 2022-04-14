@@ -8,9 +8,11 @@ const DetectFeedModule = require('./DetectWebpageModule.js')
 const ModuleManager = require('./../lib/ModuleManager/ModuleManager.js')
 const IsURL = require('./../lib/stringUtils/IsURL.js')
 
+const dayjs = require('dayjs')
+
 const fullTextParser = async function (url, modules) {
   if (IsURL(url) === false) {
-    console.error('Not a URL: ' + url)
+    console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'Not a URL: ' + url)
     return {
       title: '',
       content: '',

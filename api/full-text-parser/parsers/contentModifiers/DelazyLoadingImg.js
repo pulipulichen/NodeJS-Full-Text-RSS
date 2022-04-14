@@ -1,5 +1,6 @@
 const cheerio = require('cheerio')
 const ImgbbUpload = require('./../../../lib/image/ImgbbUpload.js')
+const IsURL = require('./../../lib/stringUtils/IsURL.js')
 
 const DelazyLoadingImg = async function (html, url) {
   //console.log(html)
@@ -109,7 +110,7 @@ const delazy20220101 = async function ($) {
     imgEle.removeAttr('style')
 
     let origFile = imgEle.attr('data-orig-file')
-    if (typeof(origFile) === 'string') {
+    if (typeof(origFile) === 'string' && IsURL(origFile)) {
       let imgurlFile = await ImgbbUpload(origFile)
       imgEle.attr('src', imgurlFile)
     }
@@ -146,7 +147,7 @@ const delazy20220101 = async function ($) {
     imgEle.removeAttr('style')
 
     let origFile = imgEle.attr('data-orig-file')
-    if (typeof(origFile) === 'string') {
+    if (typeof(origFile) === 'string' && IsURL(origFile)) {
       let imgurlFile = await ImgbbUpload(origFile)
       imgEle.attr('src', imgurlFile)
     }
