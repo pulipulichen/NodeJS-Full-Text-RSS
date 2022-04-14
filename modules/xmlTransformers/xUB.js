@@ -70,7 +70,7 @@ const xUB = async function ($, moduleCodesString) {
         item.find('title:first').text(title)
       }
 
-      if (typeeof(moduleCodesString) !== 'string') {
+      if (typeof(moduleCodesString) !== 'string') {
         console.error('moduleCodesString is not string: ' + moduleCodesString)
         item.remove()
         return false
