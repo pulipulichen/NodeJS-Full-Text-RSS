@@ -45,7 +45,10 @@ const xUBFormatDescription = function (videoID, content) {
     
     content = content.split('&amp;').join('&')
     
-    if (linkifyHTMLContent.indexOf('class="timestamp-link"') > -1) {
+    if (typeof(linkifyHTMLContent) !== 'string') {
+      return ''
+    }
+    else if (linkifyHTMLContent.indexOf('class="timestamp-link"') > -1) {
       linkifyHTMLContent = content
     }
     else {
