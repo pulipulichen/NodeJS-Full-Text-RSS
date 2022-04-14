@@ -118,8 +118,10 @@ const getSRT = async function (videoID, retry = 0) {
       console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'queued ' + videoID)
       return false
     }
-    console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'getSRT', videoID, getSRTLock, retry)
+    
     return await nodeCache.get('xUBGetCaptions', videoID, async () => {
+      console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'getSRT', videoID, getSRTLock, retry, queueList.join(','))
+      
       // 為什麼這邊沒有讀取到？
       let waitCount = 0
       
@@ -152,7 +154,7 @@ const getSRT = async function (videoID, retry = 0) {
       */
 
       let downsubURL = `https://downsub.com/?url=https%3A%2F%2Fwww.yo` + `utu` + `be.com%2Fwatch%3Fv%3D` + videoID
-      console.log('initBrowser', downsubURL)
+      console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'initBrowser', downsubURL)
       let init = await initBrowser()
       browser = init.browser
       page = init.page
