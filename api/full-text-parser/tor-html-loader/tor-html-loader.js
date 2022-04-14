@@ -28,7 +28,7 @@ const { platform } = require('os');
 let pid
 //let TorAgent = require('toragent');
 
-const { exec } = require("child_process");
+const { exec } = require("child_process")
 
 let startTorLinux = async function () {
   var child = spawn('your-command', {detached: true});

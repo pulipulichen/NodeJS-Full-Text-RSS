@@ -33,6 +33,8 @@ const sleep = require('./../../../api/lib/async/sleep.js')
 
 const dayjs = require('dayjs')
 
+const { exec } = require("child_process")
+
 // ------------------------
 
 const initBrowser = async function () {
@@ -63,6 +65,8 @@ const closeBrowser = function (browser) {
   closeBrowserTimer = setTimeout(() => {
     if (browser) {    
       browser.close()
+      exec('rmdir -rf /tmp/puppeteer*', () => {})
+      exec('rm -f /tmp/*.jpg', () => {})
     }
     browser = undefined
   }, 0)
