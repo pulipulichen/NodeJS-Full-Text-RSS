@@ -3,6 +3,9 @@ const nodeCache = require('./../cache/node-cache-sqlite.js')
 const sleep = require('./../async/sleep.js')
 
 let isLoading = false
+
+const dayjs = require('dayjs')
+
 const asyncRequest = function (url) {
   
   return new Promise(async (resolve, reject) => {
@@ -21,7 +24,7 @@ const asyncRequest = function (url) {
         }
         if (response.statusCode !== 200) {
           let message = 'StatusCode is not 200: ' + response.statusCode + ' ' + url
-          console.log(message)
+          console.error(`[${dayjs().format('MMDD-HHmm')}] ` + message)
           return reject(message)
         }
 
