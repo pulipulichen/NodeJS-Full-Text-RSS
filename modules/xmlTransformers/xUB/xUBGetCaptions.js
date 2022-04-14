@@ -219,12 +219,13 @@ const getSRT = async function (videoID, retry = 0) {
         let maxRetry = 3
         while (downloadCounter < maxRetry) {
           console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'wait for download', videoID, downloadPath)
-          await sleep(5000)
+          await sleep(5000 * (downloadCounter + 1))
 
           filename = getFirstFileInFolder(downloadPath)
           if (!filename) {
             console.log('file not found.', downloadPath)
             if (downloadCounter < maxRetry - 1) {
+              console.log('Retry wait...' + downloadCounter)
               downloadCounter++
               //if (downloadCounter % 5 === 0) {
               //  console.log('try to click again.', videoID, downloadPath)
@@ -238,11 +239,11 @@ const getSRT = async function (videoID, retry = 0) {
             
             closeBrowser(browser)
             getSRTLock = false
-            console.log('download failed. retry again ' + videoID + ' retry ' + retry + ' ' + downloadPath)
+            console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'download failed. retry again ' + videoID + ' retry ' + retry + ' ' + downloadPath)
             await sleep(5000)
             retry++
             if (retry === 3) {
-              return ''
+              return false
             }
             
             return getSRT(videoID, retry)
@@ -252,7 +253,7 @@ const getSRT = async function (videoID, retry = 0) {
           }
         }
 
-        console.log(filename, path.resolve(downloadPath, filename))
+        console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'download completed: ', filename, path.resolve(downloadPath, filename))
 
         srtContent = fs.readFileSync(path.resolve(downloadPath, filename), 'utf8')
         srtContent = srtContent.trim()
