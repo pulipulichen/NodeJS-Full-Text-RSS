@@ -70,16 +70,16 @@ const xUB = async function ($, moduleCodesString) {
         item.find('title:first').text(title)
       }
 
-      if (typeof(moduleCodesString) !== 'string') {
-        console.error('moduleCodesString is not string: ' + moduleCodesString)
-        item.remove()
-        return false
-      }
+      // if (typeof(moduleCodesString) !== 'string') {
+      //   console.error('moduleCodesString is not string: ' + moduleCodesString)
+      //   item.remove()
+      //   return false
+      // }
       
-      if (moduleCodesString.indexOf('fHasCaptions') > -1 && !title.startsWith('C] ')) {
-        item.remove()
-        return false
-      }
+      // if (moduleCodesString.indexOf('fHasCaptions') > -1 && !title.startsWith('C] ')) {
+      //   item.remove()
+      //   return false
+      // }
       
       FeedItemSetContent(item, content)
     }
