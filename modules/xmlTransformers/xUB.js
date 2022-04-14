@@ -59,7 +59,7 @@ const xUB = async function ($, moduleCodesString) {
       
       let title = FeedItemGetTitle(item)
       
-      if (!captions || capxUBtions.length === 0) {
+      if (!captions || captions.length === 0) {
         //return item.remove()
         content = buildThumbnails(videoID) + '<br /><hr /><br />' + formattedContent
       }
