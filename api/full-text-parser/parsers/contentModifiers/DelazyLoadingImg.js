@@ -1,6 +1,6 @@
 const cheerio = require('cheerio')
 const ImgbbUpload = require('./../../../lib/image/ImgbbUpload.js')
-const IsURL = require('./../../lib/stringUtils/IsURL.js')
+const IsURL = require('./../../../lib/stringUtils/IsURL.js')
 
 const DelazyLoadingImg = async function (html, url) {
   //console.log(html)
