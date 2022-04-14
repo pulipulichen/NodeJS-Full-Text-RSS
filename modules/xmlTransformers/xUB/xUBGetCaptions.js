@@ -211,7 +211,11 @@ const getSRT = async function (videoID, retry = 0) {
           downloadPath: downloadPath
         });
 
-        console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'try to click', videoID, downloadPath)
+        console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'try to click', videoID, downloadPath, `button[data-title^="[SRT] ${lang}"]`)
+        await page.waitForSelector(`button[data-title^="[SRT] ${lang}"]`, {
+          timeout: 5000
+        })
+
         await page.click(`button[data-title^="[SRT] ${lang}"]`)
 
         let downloadCounter = 0
