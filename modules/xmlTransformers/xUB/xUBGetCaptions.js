@@ -247,7 +247,8 @@ const getSRT = async function (videoID, retry = 0) {
             await sleep(5000)
             retry++
             if (retry === 3) {
-              return false
+              //return false  // 表示之後還要嘗試讀取
+              return '' // 表示就當作沒有字幕了
             }
             
             return getSRT(videoID, retry)
