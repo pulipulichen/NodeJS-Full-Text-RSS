@@ -53,7 +53,7 @@ const xUBFormatDescription = function (videoID, content) {
         linkifyHTMLContent = linkifyHtml(content)
       }
       catch (e) {
-        console.error(`[${dayjs.format('MMDD-HHmm')}] ` + 'Linkifiy error: ')
+        console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'Linkifiy error: ')
         console.log(`====
 ${content}
 ====`)
