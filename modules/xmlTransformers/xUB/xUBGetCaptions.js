@@ -287,7 +287,7 @@ const getSRT = async function (videoID, retry = 0) {
     
     closeBrowser(browser)
     getSRTLock = false
-    return false
+    return ''
   }
 }
 
