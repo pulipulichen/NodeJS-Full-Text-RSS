@@ -65,8 +65,10 @@ const closeBrowser = function (browser) {
   closeBrowserTimer = setTimeout(() => {
     if (browser) {    
       browser.close()
-      exec('rmdir -rf /tmp/puppeteer*', () => {})
+      exec('rm -rf /tmp/puppeteer*', () => {})
       exec('rm -f /tmp/*.jpg', () => {})
+      exec('rm -f /tmp/*.gif', () => {})
+      exec('rm -f /tmp/*.png', () => {})
     }
     browser = undefined
   }, 0)
