@@ -31,9 +31,10 @@ module.exports = async function (videoID) {
           })
         }
         else {
-          reject('Download failed: ' + videoID)
+          console.error('Download failed: ' + videoID)
+          return resolve('')
         }
       })
-  })
+    })
   })
 }

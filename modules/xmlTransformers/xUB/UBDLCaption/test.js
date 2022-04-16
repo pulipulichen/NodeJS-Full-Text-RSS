@@ -1,0 +1,1 @@
+const UBDLCaption = require('./UBDLCaption.js').UBD
