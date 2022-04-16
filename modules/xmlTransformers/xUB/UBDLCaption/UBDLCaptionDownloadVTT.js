@@ -5,11 +5,29 @@ const fs = require("fs")
 
 const NodeCacheSQLite = require('./../../../../api/lib/cache/node-cache-sqlite.js')
 
+let downloadLock = false
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 module.exports = async function (videoID) {
   let lang = await UBDLCaptionPreferLang(videoID)
   if (lang === false) {
     return ''
   }
+ 
+  if (downloadLock === true) {
+    setTimeout(() => {
+      downloadLock = false
+    }, 3 * 60 * 1000)
+  }
+
+  while (downloadLock === true) {
+    await sleep(10000)
+  }
+
+  downloadLock = true
 
   return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID + ',' + lang), () => {
     let oPath = '/tmp/ubdl/' + videoID
@@ -19,6 +37,7 @@ module.exports = async function (videoID) {
     console.log(cmd)
     return new Promise((resolve, reject) => {
       exec(cmd, (err, stdout, stderr) => {
+        downloadLock = false
         if (fs.existsSync(targetPath)) {
           fs.readFile(targetPath, 'utf8', function(err, data) {
             fs.unlinkSync(targetPath)

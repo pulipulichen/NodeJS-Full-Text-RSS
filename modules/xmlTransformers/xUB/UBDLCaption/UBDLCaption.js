@@ -1,5 +1,5 @@
 const UBDLCaptionDownloadVTT = require('./UBDLCaptionDownloadVTT.js')
-
+const NodeCacheSQLite = require('./../../../../api/lib/cache/node-cache-sqlite.js')
 
 const convertSRTToCaptions = function (srtContent) {
   let captions = []
@@ -82,6 +82,15 @@ const timemarkToSecond = function (timemark) {
 
 
 module.exports = async function (videoID) {
+  if (await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID + ',' + lang)) === false) {
+    // 尚未取得快取
+
+    // 後臺慢慢下載
+    await UBDLCaptionDownloadVTT(videoID)
+    console.log('[UBDL] 放到後臺慢慢下載', videoID)
+    return false
+  }
+  
   let vtt = await UBDLCaptionDownloadVTT(videoID)
 
   if (vtt === false) {
