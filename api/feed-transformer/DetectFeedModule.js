@@ -58,8 +58,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
   if (channelLink.endsWith('videos.xml?channel_id=UCLgGLSFMZQB8c0WGcwE49Gw')) {
     addModules.push('tGamker')
   }
-  if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg') {
+  if (channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UCK-qc_POQZwWrMg-Pr-oYtg'
+    || channelLink === 'http://www.youtube.com/feeds/videos.xml?channel_id=UC6OeJCR9gHsJPVyNhXfK4tA') {
     // 志祺七七 X 圖文不符
+    // 四處觀察
     addModules.push('tSH')
   }
   if (channelLink === 'https://www.oschina.net/news/rss') {
