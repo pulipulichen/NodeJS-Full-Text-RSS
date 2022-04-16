@@ -248,6 +248,7 @@ const getSRT = async function (videoID, retry = 0) {
             retry++
             if (retry === 3) {
               //return false  // 表示之後還要嘗試讀取
+              console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'no caption ' + videoID + ' retry ' + retry + ' ' + downloadPath)
               return '' // 表示就當作沒有字幕了
             }
             
