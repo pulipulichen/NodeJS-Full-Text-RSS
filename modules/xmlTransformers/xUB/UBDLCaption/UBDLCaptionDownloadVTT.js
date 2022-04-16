@@ -13,6 +13,7 @@ module.exports = async function (videoID) {
   let targetPath = '/tmp/ubdl/' + videoID + '.' + lang + '.vtt'
 
   let cmd = 'yo' + 'utu' + 'be-dl --write-sub --sub-lang ' + lang + ' --skip-download -o "' + oPath + '" https://www.yo' + 'utu' + 'be.com/watch?v=' + videoID
+  console.log(cmd)
   return new Promise((resolve, reject) => {
     exec(cmd, (err, stdout, stderr) => {
       if (fs.existsSync(targetPath)) {
