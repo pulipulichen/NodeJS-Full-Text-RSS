@@ -13,7 +13,7 @@ const preferLang = [
   '中国語',
   'Chinese Simplified',
   'Chinese (Simplified)',
-  'zh-Hant',
+  'zh-CN',
   'Chinese',
   'zh',
   'English',
