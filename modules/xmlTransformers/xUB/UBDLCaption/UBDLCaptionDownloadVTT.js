@@ -11,7 +11,7 @@ module.exports = async function (videoID) {
     return ''
   }
 
-  return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', videoID + ',' + lang), () => {
+  return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID + ',' + lang), () => {
     let oPath = '/tmp/ubdl/' + videoID
     let targetPath = '/tmp/ubdl/' + videoID + '.' + lang + '.vtt'
 
@@ -34,6 +34,6 @@ module.exports = async function (videoID) {
           reject('Download failed: ' + videoID)
         }
       })
-    })
+  })
   })
 }
