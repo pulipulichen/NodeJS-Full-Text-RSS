@@ -29,7 +29,7 @@ module.exports = async function (videoID) {
 
   downloadLock = true
 
-  return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID + ',' + lang), () => {
+  return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID), () => {
     let oPath = '/tmp/ubdl/' + videoID
     let targetPath = '/tmp/ubdl/' + videoID + '.' + lang + '.vtt'
 
