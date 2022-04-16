@@ -11,7 +11,7 @@ const fullTextParser = require('./../../api/full-text-parser/fullTextParser.js')
 const GetJSON = require('./../../api/lib/HtmlLoader/GetJSON.js')
 
 const UBVideoIDParser = require('./xUB/UBVideoIDParser.js')
-const xUBGetCaptions = require('./xUB/xUBGetCaptions.js')
+const xUBGetCaptions = require('./xUB/UBDLCaption/UBDLCaption.js')
 const xUBFormatDescription = require('./xUB/xUBFormatDescription.js')
 const xUBExtractSections = require('./xUB/xUBExtractSections.js')
 const xUBGroupCaptionsToSections = require('./xUB/xUBGroupCaptionsToSections.js')

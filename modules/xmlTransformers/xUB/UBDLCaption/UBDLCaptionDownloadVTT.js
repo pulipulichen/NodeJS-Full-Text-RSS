@@ -24,7 +24,7 @@ module.exports = async function (videoID) {
             return reject(err)
           }
           //console.log(data);
-          return resolve(data)
+          return resolve(data.trim())
         })
       }
       else {

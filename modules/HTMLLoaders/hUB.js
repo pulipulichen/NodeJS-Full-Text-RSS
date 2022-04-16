@@ -3,7 +3,7 @@ const xUBGetCaptions = require('./../xmlTransformers/xUB/xUBGetCaptions.js')
 
 const hUB = async function (url, modules) {
   //console.log('hUB', url)
-  let html = await xUBGetCaptions(url)
+  //let html = await xUBGetCaptions(url)
   
   return false
 }
