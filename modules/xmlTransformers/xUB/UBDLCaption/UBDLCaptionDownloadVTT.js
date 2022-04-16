@@ -17,6 +17,7 @@ module.exports = async function (videoID) {
     exec(cmd, (err, stdout, stderr) => {
       if (fs.existsSync(targetPath)) {
         fs.readFile(targetPath, 'utf8', function(err, data) {
+          fs.unlinkSync(targetPath)
           if (err) {
             //throw err;
             return reject(err)
