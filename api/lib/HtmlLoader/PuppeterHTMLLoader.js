@@ -29,10 +29,11 @@ const closeBrowser = function () {
   clearTimeout(closeBrowserTimer)
   
   closeBrowserTimer = setTimeout(() => {
-    browser.close()
+    if (browser) {
+      browser.close()
+    }
     browser = undefined
   }, 30000)
-  
 }
 
 let maxCacheYear = 1
