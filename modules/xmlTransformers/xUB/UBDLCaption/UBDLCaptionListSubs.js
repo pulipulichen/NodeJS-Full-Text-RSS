@@ -18,7 +18,7 @@ module.exports = function (videoID) {
         }
 
         if (nextIsLang) {
-          let parts = line.split('\t')
+          let parts = line.split(' ')
           let lang = parts[0].trim()
 
           langs.push(lang)
