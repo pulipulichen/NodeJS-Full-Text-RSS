@@ -1,0 +1,43 @@
+<form class="ui form grid">
+
+  <div class="eight wide column">
+    <div class="ui segment">
+        <div class="field">
+          <label>
+            Load OPML
+          </label>
+          <textarea v-model="inputOPML"></textarea>
+        </div>
+    </div>
+  </div>
+  <div class="eight wide column">
+    <div class="ui segment">
+        <div class="field">
+          <label>
+            Ouptut Table
+          </label>
+          <textarea v-model="outputTable"></textarea>
+        </div>
+    </div>
+  </div>
+
+  <table class="ui table" v-if="pingResult.length > 0">
+    <thead>
+      <tr>
+        <th>URL</th>
+        <th>Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="result in pingResult">
+        <td>
+          <a v-bind:href="result.url" v-bind:target="result.url">{{ result.url }}</a>
+        </td>
+        <td>
+          {{ result.response }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</form>
