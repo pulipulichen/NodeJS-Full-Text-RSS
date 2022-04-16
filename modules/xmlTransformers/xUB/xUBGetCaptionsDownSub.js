@@ -28,8 +28,8 @@ const path = require('path')
 
 const puppeteer = require('puppeteer');
 
-const nodeCache = require('./../../../api/lib/cache/node-cache-sqlite.js')
-const sleep = require('./../../../api/lib/async/sleep.js')
+const nodeCache = require('../../../api/lib/cache/node-cache-sqlite.js')
+const sleep = require('../../../api/lib/async/sleep.js')
 
 const dayjs = require('dayjs')
 
