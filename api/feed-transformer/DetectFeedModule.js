@@ -109,7 +109,8 @@ const DetectFeedModule = function ($, moduleCodesString) {
 //    addModules.push('xPTT')
 //  }
 
-  if (channelLink.startsWith('https://pcrookie.com')) {
+  if (channelLink.startsWith('https://pcrookie.com')
+    || channelLink.startsWith('https://funtop.tw')) {
     addModules.push('cRemoveNoscript')
   }
   
