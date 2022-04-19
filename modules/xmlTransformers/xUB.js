@@ -51,9 +51,9 @@ const xUB = async function ($, moduleCodesString) {
       let sections = xUBExtractSections(content)
       //console.log(sections)
      
-      console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'xUBGetCaptions start', videoID)
+      //console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'xUBGetCaptions start', videoID)
       let captions = await xUBGetCaptions(videoID)
-      console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'xUBGetCaptions end', videoID)
+      //console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'xUBGetCaptions end', videoID)
       if (captions === false) {
         // 表示還在讀取中 20211203-1157 
         console.log(`[${dayjs().format('MMDD-HHmm')}] ` + '還在讀取中', videoID)

@@ -91,7 +91,7 @@ module.exports = async function (videoID) {
     return false
   }
   
-  console.log('[UBDL] 已有快取，直接下載', videoID)
+  //console.log('[UBDL] 已有快取，直接下載', videoID)
   let vtt = await UBDLCaptionDownloadVTT(videoID)
 
   if (vtt === false) {

@@ -30,7 +30,7 @@ module.exports = async function (videoID) {
     }
   
 
-    console.log('鎖定下載', videoID)
+    //console.log('鎖定下載', videoID)
     downloadLock = true
 
     let oPath = '/tmp/ubdl/' + videoID
@@ -40,7 +40,7 @@ module.exports = async function (videoID) {
     console.log(cmd)
     return new Promise((resolve, reject) => {
       exec(cmd, (err, stdout, stderr) => {
-        console.log('解除鎖定下載', videoID)
+        //console.log('解除鎖定下載', videoID)
         downloadLock = false
         if (fs.existsSync(targetPath)) {
           fs.readFile(targetPath, 'utf8', function(err, data) {
