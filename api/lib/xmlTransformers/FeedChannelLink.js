@@ -19,7 +19,7 @@ const FeedChannelLink = function ($) {
   }
   
   //console.log($.html())
-  throw Error('Link is not found')
+  console.error('Link is not found')
 }
 
 module.exports = FeedChannelLink
