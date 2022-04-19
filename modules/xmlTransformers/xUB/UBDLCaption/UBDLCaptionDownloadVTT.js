@@ -17,7 +17,7 @@ module.exports = async function (videoID) {
     return ''
   }
  
-  return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID), () => {
+  return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID), async () => {
 
     if (downloadLock === true) {
       setTimeout(() => {
