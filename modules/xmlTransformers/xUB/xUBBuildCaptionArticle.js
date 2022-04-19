@@ -100,7 +100,7 @@ const xUBBuildCaptionArticle = function (sections, videoID) {
     sections[i].paragraphs = buildCaptionParagraph(captions)
     //console.log(section.header, captions.length, sections[i].paragraphs.length)
   }
-
+  // sas
   return mergeArticle(sections, videoID)
 }
 
