@@ -92,7 +92,7 @@ const mergeArticle = function (sections, videoID) {
   }).join('\n')
 }
 
-const xUBBuildCaptionArticle = async function (sections, videoID) {
+const xUBBuildCaptionArticle = function (sections, videoID) {
   for (let i = 0; i < sections.length; i++) {
     let section = sections[i]
     let captions = section.captions

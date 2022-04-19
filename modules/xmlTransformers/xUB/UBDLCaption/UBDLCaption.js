@@ -99,7 +99,7 @@ module.exports = async function (videoID) {
   }
   //console.log(vtt)
   let result = convertSRTToCaptions(vtt)
-  console.log(result)
+  //console.log(result)
 
   return result
 }
