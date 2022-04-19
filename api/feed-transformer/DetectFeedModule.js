@@ -110,6 +110,13 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('fScaryplayTTV')
     //addModules.push('fHasCaptions')
   }
+
+  if (channelLink.startsWith('http://www.youtube.com/feeds/videos.xml?channel_id=UClkSKv9-Geah2gwYu7e9jFw')) {
+    // 希治閣【遊戲情報科】++ (15)
+    addModules.push('fUBJer')
+    //addModules.push('fHasCaptions')
+  }
+
 //  if (channelLink.startsWith('https://www.ptt.cc/')) {
 //    addModules.push('xPTT')
 //  }
