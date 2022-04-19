@@ -105,8 +105,8 @@ const xUB = async function ($, moduleCodesString) {
 }
 
 const setupContentWithCaption = async function (formattedContent, sections, captions, videoID) {
-  return await NodeCacheSQLite.get('setupContentWithCaption', videoID, () => {
-    console.log(`[${dayjs().format('MMDD-HHmm')}] ` + `setupContentWithCaption start`, videoID)
+  return await NodeCacheSQLite.get('setupContentWithCaption', videoID, async () => {
+    //console.log(`[${dayjs().format('MMDD-HHmm')}] ` + `setupContentWithCaption start`, videoID)
     if (sections.length < 2) {
       let result = xUBBuildSectionFromCaptions(captions)
       sections = result.sections
@@ -137,7 +137,7 @@ const setupContentWithCaption = async function (formattedContent, sections, capt
     }
     content = content.join('\n')
     
-    console.log(`[${dayjs().format('MMDD-HHmm')}] ` + `setupContentWithCaption finish`, videoID)
+    //console.log(`[${dayjs().format('MMDD-HHmm')}] ` + `setupContentWithCaption finish`, videoID)
     return content
   })
 }
