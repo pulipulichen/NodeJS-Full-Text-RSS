@@ -21,7 +21,7 @@ const xUBBuildSectionFromCaptions = require('./xUB/xUBBuildSectionFromCaptions.j
 
 const DesafeImg = require('./../../api/full-text-parser/parsers/contentModifiers/DesafeImg.js')
 
-const NodeCacheSQLite = require('./../../api/cache/node-cache-sqlite.js')
+const NodeCacheSQLite = require('./../../api/lib/cache/node-cache-sqlite.js')
 
 
 const dayjs = require('dayjs')
