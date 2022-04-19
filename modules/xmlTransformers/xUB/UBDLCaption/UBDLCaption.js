@@ -97,6 +97,6 @@ module.exports = async function (videoID) {
   if (vtt === false) {
     return ''
   }
-  console.log(vtt[0])
+  console.log(vtt)
   return convertSRTToCaptions(vtt)
 }
