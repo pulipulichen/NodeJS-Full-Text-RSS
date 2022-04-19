@@ -82,7 +82,7 @@ const timemarkToSecond = function (timemark) {
 
 
 module.exports = async function (videoID) {
-  if (await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID)) === false) {
+  if ((await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID))) === false) {
     // 尚未取得快取
 
     // 後臺慢慢下載
@@ -91,6 +91,7 @@ module.exports = async function (videoID) {
     return false
   }
   
+  console.log('[UBDL] 已有快取，直接下載', videoID)
   let vtt = await UBDLCaptionDownloadVTT(videoID)
 
   if (vtt === false) {
