@@ -4,6 +4,11 @@ const FeedFeedGeneratorURI = require('./../lib/xmlTransformers/FeedFeedGenerator
 
 const DetectFeedModule = function ($, moduleCodesString) {
   let channelLink = FeedChannelLink($)
+  if (typeof(channelLink) !== 'string') {
+    console.error('channelLink is not a link', moduleCodesString)
+    return moduleCodesString
+  }
+  
   let feedGeneratorURI = FeedFeedGeneratorURI($)
   //console.log(channelLink)
   // $('channel > link:first').text().trim()
