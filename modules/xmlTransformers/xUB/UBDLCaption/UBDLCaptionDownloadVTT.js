@@ -27,10 +27,10 @@ module.exports = async function (videoID) {
     await sleep(10000)
   }
 
-  console.log('鎖定下載', videoID)
-  downloadLock = true
-
   return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID), () => {
+    console.log('鎖定下載', videoID)
+    downloadLock = true
+
     let oPath = '/tmp/ubdl/' + videoID
     let targetPath = '/tmp/ubdl/' + videoID + '.' + lang + '.vtt'
 
