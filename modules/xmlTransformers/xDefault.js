@@ -23,6 +23,10 @@ const xDefault = async function ($, moduleCodesString) {
   //console.log($.html())
   
   let channelLink = FeedChannelLink($)
+  if (typeof(channelLink) !== 'string') {
+    console.error('channelLink is not a string', moduleCodesString)
+    return false
+  }
   
   await FeedItemEach($, async (item, i) => {
     if (FeedItemGetContent(item).length > needToLoadFullText) {
