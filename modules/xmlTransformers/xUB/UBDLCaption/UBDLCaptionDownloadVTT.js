@@ -17,17 +17,19 @@ module.exports = async function (videoID) {
     return ''
   }
  
-  if (downloadLock === true) {
-    setTimeout(() => {
-      downloadLock = false
-    }, 3 * 60 * 1000)
-  }
-
-  while (downloadLock === true) {
-    await sleep(10000)
-  }
-
   return await NodeCacheSQLite.get('UBDLCaptionDownloadVTT', (videoID), () => {
+
+    if (downloadLock === true) {
+      setTimeout(() => {
+        downloadLock = false
+      }, 3 * 60 * 1000)
+    }
+  
+    while (downloadLock === true) {
+      await sleep(10000)
+    }
+  
+
     console.log('鎖定下載', videoID)
     downloadLock = true
 
