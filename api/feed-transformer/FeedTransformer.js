@@ -51,6 +51,13 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   let channelTitle = FeedChannelTitle($)
   let channelLink = FeedChannelLink($)
   
+  if (typeof(channelLink) !== 'string') {
+    console.error('channelLink is not a link', moduleCodesString)
+    console.log(feedXML)
+    console.log('=============')
+    return false
+  }
+  
   // -----------------------------
   
   //$('title').text('new')
