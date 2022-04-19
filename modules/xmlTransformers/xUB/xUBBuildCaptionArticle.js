@@ -1,3 +1,5 @@
+//const NodeCacheSQLite = require('./../../../api/lib/cache/node-cache-sqlite.js')
+
 const xUBCalcBaseInterval = require('./xUBCalcBaseInterval.js')
 
 const appendPuncToSentence = function (sentence, punc) {
@@ -90,9 +92,7 @@ const mergeArticle = function (sections, videoID) {
   }).join('\n')
 }
 
-const xUBBuildCaptionArticle = function (sections, videoID) {
-  //console.log(sections.length, videoID)
-  
+const xUBBuildCaptionArticle = async function (sections, videoID) {
   for (let i = 0; i < sections.length; i++) {
     let section = sections[i]
     let captions = section.captions
@@ -102,7 +102,6 @@ const xUBBuildCaptionArticle = function (sections, videoID) {
   }
 
   return mergeArticle(sections, videoID)
-  
 }
 
 module.exports = xUBBuildCaptionArticle

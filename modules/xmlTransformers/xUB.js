@@ -21,6 +21,8 @@ const xUBBuildSectionFromCaptions = require('./xUB/xUBBuildSectionFromCaptions.j
 
 const DesafeImg = require('./../../api/full-text-parser/parsers/contentModifiers/DesafeImg.js')
 
+const NodeCacheSQLite = require('./../../api/cache/node-cache-sqlite.js')
+
 
 const dayjs = require('dayjs')
 //const newHeaderInterval = 0.5
@@ -64,7 +66,7 @@ const xUB = async function ($, moduleCodesString) {
         content = buildThumbnails(videoID) + '<br /><hr /><br />' + formattedContent
       }
       else {
-        content = setupContentWithCaption(formattedContent, sections, captions, videoID)
+        content = await setupContentWithCaption(formattedContent, sections, captions, videoID)
         
         title = 'C] ' + title
         item.find('title:first').text(title)
@@ -100,8 +102,8 @@ const xUB = async function ($, moduleCodesString) {
   return $
 }
 
-const setupContentWithCaption = function (formattedContent, sections, captions, videoID) {
-  
+const setupContentWithCaption = async function (formattedContent, sections, captions, videoID) {
+  return await NodeCacheSQLite.get('setupContentWithCaption', videoID, () => {
     if (sections.length < 2) {
       let result = xUBBuildSectionFromCaptions(captions)
       sections = result.sections
@@ -133,6 +135,7 @@ const setupContentWithCaption = function (formattedContent, sections, captions, 
     content = content.join('\n')
     
     return content
+  })
 }
 
 const buildThumbnails = function (videoID) {
