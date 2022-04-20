@@ -48,9 +48,9 @@ const ModuleManager = async function (data, moduleCodesString, prefix) {
     if (!code.startsWith('f')) {
       try {
         //console.log(moduleCodesString)
-        console.log(code)
+        console.log(`#====================#` + code)
         data = await module(data, code)
-        console.log(data)
+        console.log(data.slice(0, 100))
       }
       catch (e) {
         console.error(requirePath + ' ' + e)
