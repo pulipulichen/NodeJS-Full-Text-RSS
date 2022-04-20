@@ -23,6 +23,8 @@ const cNCCUMailGatesNotification = function (content) {
     return '(No data)'
   }
   
+  console.log(items)
+
   let itemsLi = items.map(item => {
     return `<li><b>${item.sender}</b>: <br /> <u>${item.title}</u> <br />(${item.date})</li>`
   })
