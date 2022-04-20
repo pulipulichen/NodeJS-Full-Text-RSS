@@ -9,6 +9,7 @@ const cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
 
 const fs = require('fs')
 const path = require('path')
+const dayjs = require('dayjs')
 
 let restartTimer
 const setupRestarter = function () {
@@ -37,7 +38,16 @@ const route = function (app) {
       url = 'https://' + url
     }
 
+    if (config.FeedCrawler.blockList.indexOf(url) > -1) {
+      return false
+    }
+
     return url
+  }
+
+  let reportSource = function (req) {
+    let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress 
+    console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'block ip: ' + ip + ', request: ' + req.params.url)
   }
   
   let setHeader = function (res) {
@@ -65,6 +75,11 @@ const route = function (app) {
 
       let url = req.params.url
       url = urlFilter(url)
+      if (!url) {
+        reportSource(req)
+        return res.send(false)
+      }
+
       let result = await FeedCrawler(url)
       
       //if (isXML(url)) {
@@ -89,6 +104,11 @@ const route = function (app) {
 
       let url = req.params.url
       url = urlFilter(url)
+      if (!url) {
+        reportSource(req)
+        return res.send(false)
+      }
+
       let modules = req.params.modules
       let result = await FeedCrawler(url, modules)
       //res.set('Content-Type', 'text/xml')
@@ -125,6 +145,11 @@ const route = function (app) {
 
       let url = req.params.url
       url = urlFilter(url)
+      if (!url) {
+        reportSource(req)
+        return res.send(false)
+      }
+
       let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
         return await FeedCrawler(url)
       }, cacheExpireTime)
@@ -148,6 +173,11 @@ const route = function (app) {
 
       let url = req.params.url
       url = urlFilter(url)
+      if (!url) {
+        reportSource(req)
+        return res.send(false)
+      }
+
       let modules = req.params.modules
 
       let result = await NodeCacheSQLite.get('feed-crawler', url + modules, async () => {
