@@ -52,6 +52,7 @@ const DetectFeedModule = function ($, moduleCodesString) {
 
   if (channelLink.startsWith('https://sub-nccu-cc-2016.blogspot.com/')) {
     addModules.push('cNCCUMailGatesNotification')
+    addModules.push('xSkip')
   }
   
   if (channelLink.startsWith('https://blog.pulipuli.info/')) {
