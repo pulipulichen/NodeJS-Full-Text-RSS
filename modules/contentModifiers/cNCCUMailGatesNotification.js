@@ -12,6 +12,10 @@ const cNCCUMailGatesNotification = function (content) {
     let title = item.children("td:eq(3)").text().trim()
     let date = item.children("td:eq(4)").text().trim()
 
+    if (sender === '') {
+      continue
+    }
+
     items.push({
       sender: sender,
       title: title,
