@@ -4,7 +4,7 @@ const cNCCUMailGatesNotification = function (content) {
   const $ = cheerio.load(content)
   const collection = $('table tbody table tbody table tbody > tr')
 
-  console.trace(collection.length)
+  //console.trace(collection.length)
   let items = []
   for (let i = 0; i < collection.length; i++) {
     let item = collection.eq(i)
@@ -27,7 +27,7 @@ const cNCCUMailGatesNotification = function (content) {
     return '(No data)'
   }
   
-  console.log(items)
+  //console.log(items)
 
   let itemsLi = items.map(item => {
     return `<li><b>${item.sender}</b>: <br /> <u>${item.title}</u> <br />(${item.date})</li>`
