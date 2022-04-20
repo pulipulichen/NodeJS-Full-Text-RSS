@@ -49,6 +49,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
           || channelLink.startsWith('http://www.y' + 'out' + 'ube.com/')) {
     addModules.push('xUB')
   }
+
+  if (channelLink.startsWith('https://sub-nccu-cc-2016.blogspot.com/')) {
+    addModules.push('cNCCUMailGatesNotification')
+  }
   
   if (channelLink.startsWith('https://blog.pulipuli.info/')) {
     addModules.push('xPulipuliBlog')
