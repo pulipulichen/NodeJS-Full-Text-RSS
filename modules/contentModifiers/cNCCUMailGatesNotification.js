@@ -4,7 +4,7 @@ const cNCCUMailGatesNotification = function (content) {
   const $ = cheerio.load(content)
   const collection = $('table table table tr')
 
-  console.log(collection.length)
+  console.trace(collection.length)
   let items = []
   for (let i = 0; i < collection.length; i++) {
     let item = collection.eq(i)
