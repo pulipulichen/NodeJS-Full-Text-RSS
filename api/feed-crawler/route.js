@@ -48,6 +48,7 @@ const route = function (app) {
   let reportSource = function (req) {
     let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress 
     console.log(`[${dayjs().format('MMDD-HHmm')}] ` + 'block ip: ' + ip + ', request: ' + req.params.url)
+    console.log(req.useragent)
   }
   
   let setHeader = function (res) {
