@@ -2,7 +2,7 @@ const cheerio = require('cheerio')
 
 const cNCCUMailGatesNotification = function (content) {
   const $ = cheerio.load(content)
-  const collection = $('table table table tr')
+  const collection = $('table tbody table tbody table tbody > tr')
 
   console.trace(collection.length)
   let items = []
