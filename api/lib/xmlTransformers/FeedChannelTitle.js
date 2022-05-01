@@ -26,7 +26,8 @@ const FeedChannelTitle = function ($) {
   }
   
   //console.log($.html())
-  throw Error('Title is not found')
+  //throw Error('Title is not found')
+  console.error('Title is not found')
 }
 
 module.exports = FeedChannelTitle
