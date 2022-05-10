@@ -4,6 +4,10 @@ const RepairXML = async function (xml) {
   if (await checkXML(xml)) {
     return xml 
   }
+
+  if (typeof(xml) !== 'string') {
+    return ''
+  }
   
   // -------------
   
