@@ -121,7 +121,10 @@ async function urlToImgbb(url) {
        })
       .catch((error) => {
         //console.error(error)
-        reject(error)
+        
+        // 20220624 取消發生錯誤，直接回傳空網址
+        //reject(error)
+        resolve(undefined)
        });
   })
     
