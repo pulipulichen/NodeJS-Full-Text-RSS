@@ -13,7 +13,8 @@ const cNCCUMailGatesNotification = function (content) {
     let title = item.children("td:eq(3)").text().trim()
     let date = item.children("td:eq(4)").text().trim()
 
-    if (sender === '') {
+    if (sender === '' || 
+        sender === '寄件人') {
       continue
     }
 
