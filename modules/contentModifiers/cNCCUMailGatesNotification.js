@@ -10,6 +10,10 @@ function replaceTag(tag) {
   return tagsToReplace[tag] || tag;
 }
 
+function safe_tags_replace(str) {
+  return str.replace(/[&<>]/g, replaceTag);
+}
+
 const cNCCUMailGatesNotification = function (content) {
   const $ = cheerio.load(content)
   const collection = $('table tbody table tbody table tbody > tr')
@@ -29,8 +33,8 @@ const cNCCUMailGatesNotification = function (content) {
     }
 
     items.push({
-      sender: replaceTag(sender),
-      title: replaceTag(title),
+      sender: safe_tags_replace(sender),
+      title: safe_tags_replace(title),
       date: date
     })
   }
