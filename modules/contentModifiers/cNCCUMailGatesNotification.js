@@ -1,5 +1,15 @@
 const cheerio = require('cheerio')
 
+var tagsToReplace = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;'
+};
+
+function replaceTag(tag) {
+  return tagsToReplace[tag] || tag;
+}
+
 const cNCCUMailGatesNotification = function (content) {
   const $ = cheerio.load(content)
   const collection = $('table tbody table tbody table tbody > tr')
@@ -19,8 +29,8 @@ const cNCCUMailGatesNotification = function (content) {
     }
 
     items.push({
-      sender: sender,
-      title: title,
+      sender: replaceTag(sender),
+      title: replaceTag(title),
       date: date
     })
   }
