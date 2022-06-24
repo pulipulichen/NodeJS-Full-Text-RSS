@@ -6,7 +6,8 @@ const cNCCUMailGatesNotification = function (content) {
 
   //console.trace(collection.length)
   let items = []
-  for (let i = 0; i < collection.length; i++) {
+  for (let i = 1; i < collection.length; i++) {
+    
     let item = collection.eq(i)
     let sender = item.children("td:eq(2)").text().trim()
     let title = item.children("td:eq(3)").text().trim()
