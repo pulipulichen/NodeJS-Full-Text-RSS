@@ -32,6 +32,10 @@ const DetectWebpageModule = function (url, moduleCodesString) {
   if (url.startsWith('https://www.iplaysoft.com/')) {
     addModules.push('cIplaysoft')
   }
+
+  if (url.startsWith('https://agirls.aotter.net/')) {
+    addModules.push('cAgirlsAotterNet')
+  }
   
   if (url.startsWith('https://www.facebook.com/')) {
     addModules.push('hFB')
