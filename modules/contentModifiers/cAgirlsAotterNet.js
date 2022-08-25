@@ -5,8 +5,17 @@ const imgNoLazyLoad = function (postContent) {
 
   for (let i = 0; i < imgList.length; i++) {
     let img = imgList.eq(i)
+    let src = img.attr('data-src')
 
-    img.attr('src', img.attr('data-src'))
+    if (src.startsWith('/')) {
+      src = 'https://agirls.aotter.net' + src
+      // /media/557f14b4-f7a9-4610-bdfe-72854b0850a6.jpg
+      // https://agirls.aotter.net
+      // https://agirls.aotter.net/media/557f14b4-f7a9-4610-bdfe-72854b0850a6.jpg
+    }
+
+    img.attr('src', src)
+    img.removeAttr('data-src')
   }
 }
 
