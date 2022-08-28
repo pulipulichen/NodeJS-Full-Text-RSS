@@ -12,7 +12,7 @@ const dayjs = require('dayjs')
 
 const fullTextParser = async function (url, modules) {
   if (IsURL(url) === false) {
-    console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'Not a URL: ' + url)
+    // console.error(`[${dayjs().format('MMDD-HHmm')}] ` + 'Not a URL: ' + url)
     return {
       title: '',
       content: '',
