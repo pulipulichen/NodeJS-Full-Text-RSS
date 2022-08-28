@@ -1,5 +1,5 @@
 #!/bin/bash 
-ps auxw | grep nodemon1 | grep -v grep > /dev/null
+ps auxw | grep node | grep -v grep > /dev/null
 
 if [ $? != 0 ] 
 then 
