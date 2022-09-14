@@ -76,3 +76,14 @@ app.listen(port, () => {
   console.log(dateString)
   console.log(`http://localhost:${port}` )
 })
+
+
+
+const fs = require('fs')
+const path = require('path')
+
+let resolve = fs.readFileSync('/etc/resolv.conf', 'utf-8')
+if (resolve.indexOf('nameserver 8.8.8.8') === -1) {
+  resolve = resolve + '\nnameserver 8.8.8.8'
+  fs.writeFileSync('/etc/resolv.conf', resolve, 'utf-8')
+}
