@@ -8,9 +8,9 @@ const options = {
 
   //name: "yourCustomFilename", // OPTIONAL: pass a custom filename to imgBB API
 
-  expiration: 15552000 /* OPTIONAL: pass a numeric value in seconds.
+  expiration: 15552000, /* OPTIONAL: pass a numeric value in seconds.
   It must be in the 60-15552000 range (POSIX time ftw).
-  Enable this to force your image to be deleted after that time. */,
+  Enable this to force your image to be deleted after that time. */
 
   imageUrl: "https://scontent-dus1-1.xx.fbcdn.net/v/t39.30808-6/275489146_4869244733163013_3241124188010721274_n.jpg?stp=dst-jpg_p720x720&_nc_cat=103&ccb=1-5&_nc_sid=110474&_nc_ohc=5SmljJfIWHMAX9LRolf&_nc_ht=scontent-dus1-1.xx&edm=AJdBtusEAAAA&oh=00_AT9C92RVwu_KVpbbu5-TGBPi6H7ZCidt-3Us4iRSJT1Y4w&oe=623D4BEB", // OPTIONAL: pass an URL to imgBB (max 32Mb)
 

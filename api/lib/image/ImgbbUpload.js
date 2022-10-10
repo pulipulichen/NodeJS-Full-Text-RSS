@@ -61,6 +61,8 @@ const ImgbbUpload = async function (src) {
 }
 
 async function urlToImgbb(url) {
+  return url  // 暫時停用 20221011-0235 
+
   /*
   let ext = '.jpg'
   if (url.endsWith('.gif')) {
