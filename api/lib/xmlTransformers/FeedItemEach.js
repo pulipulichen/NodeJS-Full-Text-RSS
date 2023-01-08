@@ -25,25 +25,15 @@ const FeedItemEach = async function ($, handler) {
   if (len > config.FeedItemEach.limit) {
     len = config.FeedItemEach.limit
   }
-
-  // $('title:first').html('items: ' + len)
-  // $('title').html('items: ' + len)
   
   for (let i = 0; i < len; i++) {
     let item = items.eq(i)
-    try {
-      await handler(item, i)
-    }
-    catch (e) {
-      // $('title').html(e.toString())
-      // item.find('title').html(e.toString())
-    }
-    // item.find('title').html('passed?')
+    await handler(item, i)
     //console.log(i)
   }
   for (let i = len; i < items.length; i++) {
     let item = items.eq(i)
-    // item.remove()
+    item.remove()
     //console.log(i)
   }
   await sleep(50)
