@@ -67,8 +67,10 @@ const cPulipuliBlog = function (content, code, $) {
 
   // ------------
   
-  let img = $.find('img:first').parent()
-  text.push(img.attr('href'))
+  let imgSrc = ''
+  let img = $.find('img:first')
+  // let img = $.find('img:first').parent()
+  text.unshift(imgSrc)
 
   // ------------
   
