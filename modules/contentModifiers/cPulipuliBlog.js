@@ -3,10 +3,11 @@ const cheerio = require('cheerio')
 
 const cPulipuliBlog = function (content, code, $) {
 
-  if (typeof($.find) === 'function') {
-    $ = $.find
-  }
-  let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+  // if (typeof($.find) === 'function') {
+  //   $ = $.find
+  // }
+  // let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+  let url = typeof($) + typeof($.find)
 
   // -------------
 
