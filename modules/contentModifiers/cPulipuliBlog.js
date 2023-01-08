@@ -22,7 +22,7 @@ const cPulipuliBlog = function (content, code, $) {
   text = text.join('\n<br />\n<br />')
   //console.log(text)
 
-  text = typeof($) + text
+  text = $.html() + text
   
   return text
 }
