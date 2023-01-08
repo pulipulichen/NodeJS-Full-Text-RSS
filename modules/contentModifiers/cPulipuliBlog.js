@@ -53,12 +53,18 @@ const cPulipuliBlog = function (content, code, $) {
       } 
       categories.push(term)
     }
+
+    categories = categories.filter((v, i, a) => a.indexOf(v) === i)
+
+    if (categories.length > 0) {
+      text.push('#' + categories.join(' #'))
+    }
   }
   catch (e) {
     // categories = e.toString()
   }
   
-  text.push(categories.join(', '))
+  
   // try {
   //   let categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
   //   let terms = []
