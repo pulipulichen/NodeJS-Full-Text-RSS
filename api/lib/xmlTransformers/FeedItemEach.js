@@ -33,8 +33,6 @@ const FeedItemEach = async function ($, handler) {
 
       titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
     }
-
-    
   }
   // $('title').html('測試1')
 

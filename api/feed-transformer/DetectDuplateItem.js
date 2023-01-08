@@ -5,7 +5,7 @@ const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 const cacheYear = 1
 const cacheTime = cacheYear * 365 * 24 * 60 * 60 * 1000
 
-const DetectDuplateItem = async function (channelTitle, channelLink, item) {
+const DetectDuplateItem = async function (channelTitle, channelLink, item, moduleCodesString) {
   //return false // for test
   
   //let channelTitle = FeedChannelTitle($)
@@ -18,12 +18,12 @@ const DetectDuplateItem = async function (channelTitle, channelLink, item) {
   let title = item.find('title:first').text().trim()
   
   let cachedChannelLinkTitle = await NodeCacheSQLite.get('duplate-item', title, () => {
-    return channelLink + channelTitle
+    return channelLink + channelTitle + moduleCodesString
   }, cacheTime)
   
   //console.log(title, (cachedChannelLinkTitle !== channelLink + channelTitle), channelLink + channelTitle, cachedChannelLinkTitle)
   
-  return (cachedChannelLinkTitle !== channelLink + channelTitle)
+  return (cachedChannelLinkTitle !== channelLink + channelTitle + moduleCodesString)
 }
 
 module.exports = DetectDuplateItem
