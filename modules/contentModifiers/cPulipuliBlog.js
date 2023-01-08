@@ -45,14 +45,14 @@ const cPulipuliBlog = function (content, code, $) {
     // categories = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
     let html = $.html()
     html = html.slice(0, html.indexOf('<title '))
-    let parts = html.split(`<category scheme="http://www.blogger.com/atom/ns#" term="`)
-    for (let i = 1; i < parts.length; i++) {
-      let term = part[i].slice(0, part[i].indexOf('"'))
-      if (term.indexOf('/') > -1) {
-        term = term.slice(term.lastIndexOf('/') + 1).trim()
-      } 
-      categories.push(term)
-    }
+    // let parts = html.split(`<category scheme="http://www.blogger.com/atom/ns#" term="`)
+    // for (let i = 1; i < parts.length; i++) {
+    //   let term = part[i].slice(0, part[i].indexOf('"'))
+    //   if (term.indexOf('/') > -1) {
+    //     term = term.slice(term.lastIndexOf('/') + 1).trim()
+    //   } 
+    //   categories.push(term)
+    // }
   }
   catch (e) {
     categories = e.toString()
