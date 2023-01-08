@@ -1,6 +1,6 @@
 const cheerio = require("cheerio")
 
-const xSkip = async function ($, moduleCodesString) {
+const xPulipuliBlog = async function ($, moduleCodesString) {
   
   let thumbnails = $(`media\\:thumbnail[url$="=s72-c"][height="72"][width="72"]`)
   for (let i = 0; i < thumbnails.length; i++) {
@@ -12,8 +12,12 @@ const xSkip = async function ($, moduleCodesString) {
     url = url.slice(0, -6)
     thumbnail.attr('url', url)
   }
+
+  await FeedItemEach($, async (item, i) => {
+    FeedItemSetContent(item, 'ok')
+  })
   
   return $
 }
 
-module.exports = xSkip
+module.exports = xPulipuliBlog
