@@ -21,6 +21,11 @@ const FeedItemEach = async function ($, handler) {
     //console.log(items.length)
   }
   
+  let titleElements = $('title')
+  for (let i = 0; i < titleElements.length; i++) {
+    titleElements.eq(i).html(titleElements.eq(i).text())
+  }
+
   let len = items.length
   if (len > config.FeedItemEach.limit) {
     len = config.FeedItemEach.limit
