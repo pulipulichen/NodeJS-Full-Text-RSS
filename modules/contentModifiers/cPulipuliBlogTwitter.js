@@ -4,7 +4,7 @@ const cheerio = require('cheerio')
 // const textLimit = 5000
 const textLimit = 180
 
-const cPulipuliBlog = function (content, code, $) {
+const cPulipuliBlogTwitter = function (content, code, $) {
   
 
   // if (typeof($.find) === 'function') {
@@ -192,4 +192,4 @@ const cPulipuliBlog = function (content, code, $) {
   return text
 }
 
-module.exports = cPulipuliBlog
+module.exports = cPulipuliBlogTwitter
