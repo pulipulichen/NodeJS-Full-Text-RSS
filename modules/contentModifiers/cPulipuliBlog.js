@@ -80,7 +80,8 @@ const cPulipuliBlog = function (content, code, $) {
         text = text.slice(0, -1)
       }
 
-      text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title + '\n<br />' + url)
+      // text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title + '\n<br />' + url)
+      text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title)
       isOverflowed = true
       break
     }
@@ -91,7 +92,8 @@ const cPulipuliBlog = function (content, code, $) {
       text = text.slice(0, -1)
     }
 
-    text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title + '\n<br />' + url)
+    // text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title + '\n<br />' + url)
+    text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title)
   }
   
   // -------------------
