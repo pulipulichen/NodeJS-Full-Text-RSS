@@ -1,7 +1,8 @@
 // https://blog.pulipuli.info/feeds/posts/default
 const cheerio = require('cheerio')
 
-const textLimit = 5000
+// const textLimit = 5000
+const textLimit = 1000
 
 const cPulipuliBlog = function (content, code, $) {
   
