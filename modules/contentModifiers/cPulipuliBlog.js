@@ -109,7 +109,7 @@ const cPulipuliBlog = function (content, code, $) {
     categories = categories.filter((v, i, a) => a.indexOf(v) === i)
 
     if (categories.length > 0) {
-      text.push('#' + categories.join(' #'))
+      text.push('\n<br />----\n<br />#' + categories.join(' #'))
     }
   }
   catch (e) {
@@ -125,11 +125,11 @@ const cPulipuliBlog = function (content, code, $) {
     }
 
     // text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title + '\n<br />' + url)
-    text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title + '\n<br />')
+    text.push('\n<br />看看網頁版全文 ⇨ ' + title + '\n<br />')
   }
   else {
     // text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title + '\n<br />' + url)
-    text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title + '\n<br />')
+    text.push('\n<br />繼續閱讀 ⇨ ' + title + '\n<br />')
   }
   
   // ------------
