@@ -5,7 +5,7 @@ const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 
 const config = require('./../../mount/config.js')
 const cacheExpireHour = config.FeedCrawler.cacheLimitHour
-const cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
+let cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
 
 const fs = require('fs')
 const path = require('path')
