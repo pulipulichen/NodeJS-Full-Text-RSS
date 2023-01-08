@@ -45,7 +45,7 @@ const cPulipuliBlog = function (content, code, $) {
     // categories = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
     let html = $.html()
     html = html.slice(0, html.indexOf('<title '))
-    // let parts = html.split(`<category scheme="http://www.blogger.com/atom/ns#" term="`)
+    let parts = html.split(`<category scheme="http://www.blogger.com/atom/ns#" term="`)
     // for (let i = 1; i < parts.length; i++) {
     //   let term = part[i].slice(0, part[i].indexOf('"'))
     //   if (term.indexOf('/') > -1) {
@@ -55,7 +55,7 @@ const cPulipuliBlog = function (content, code, $) {
     // }
   }
   catch (e) {
-    categories = e.toString()
+    // categories = e.toString()
   }
   
   text.push(categories.join(', '))
