@@ -24,7 +24,7 @@ const FeedItemEach = async function ($, handler) {
   let titleElements = $('title')
   for (let i = 0; i < titleElements.length; i++) {
     // titleElements.eq(i).html(titleElements.eq(i).text())
-    if (i < 2) {
+    if (i < 1) {
       titleElements.eq(i).text('測試' + i)
     }
     else {
