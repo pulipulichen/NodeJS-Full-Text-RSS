@@ -187,6 +187,7 @@ const cPulipuliBlog = function (content, code, $) {
   //console.log(text)
 
   // text = '<textarea>' + $.html() + '</textarea>' + text
+  text = code + '|' + text
 
   return text
 }
