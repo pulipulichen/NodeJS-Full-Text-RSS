@@ -28,7 +28,8 @@ const FeedItemEach = async function ($, handler) {
       titleElements.eq(i).text('測試' + i)
     }
     else {
-      titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
+      // titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
+      titleElements.eq(i).text(titleElements.eq(i).text())
     }
 
     
