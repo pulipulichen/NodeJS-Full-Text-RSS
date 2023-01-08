@@ -1,5 +1,8 @@
 /* global __dirname */
 
+let disableCache = false
+disableCache = true
+
 const FeedCrawler = require('./FeedCrawler.js')
 const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 
@@ -151,6 +154,10 @@ const route = function (app) {
         return res.send(false)
       }
 
+      if (disableCache) {
+        cacheExpireTime = 1000
+      }
+
       // cacheExpireTime = 1000
       let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
         return await FeedCrawler(url)
@@ -182,6 +189,10 @@ const route = function (app) {
       }
 
       let modules = req.params.modules
+
+      if (disableCache) {
+        cacheExpireTime = 1000
+      }
 
       // cacheExpireTime = 1000
       let result = await NodeCacheSQLite.get('feed-crawler', url + modules, async () => {
