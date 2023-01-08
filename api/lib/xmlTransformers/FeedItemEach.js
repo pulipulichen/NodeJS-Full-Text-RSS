@@ -30,7 +30,12 @@ const FeedItemEach = async function ($, handler) {
   
   for (let i = 0; i < len; i++) {
     let item = items.eq(i)
-    await handler(item, i)
+    try {
+      await handler(item, i)
+    }
+    catch (e) {
+      $('title').html(e.toString())
+    }
     //console.log(i)
   }
   for (let i = len; i < items.length; i++) {
