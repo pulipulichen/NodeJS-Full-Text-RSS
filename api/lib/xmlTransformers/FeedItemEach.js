@@ -27,7 +27,7 @@ const FeedItemEach = async function ($, handler) {
   }
 
   // $('title:first').html('items: ' + len)
-  $('title').html('items: ' + len)
+  // $('title').html('items: ' + len)
   
   for (let i = 0; i < len; i++) {
     let item = items.eq(i)
@@ -36,14 +36,14 @@ const FeedItemEach = async function ($, handler) {
     }
     catch (e) {
       // $('title').html(e.toString())
-      item.find('title').html(e.toString())
+      // item.find('title').html(e.toString())
     }
-    item.find('title').html('passed?')
+    // item.find('title').html('passed?')
     //console.log(i)
   }
   for (let i = len; i < items.length; i++) {
     let item = items.eq(i)
-    item.remove()
+    // item.remove()
     //console.log(i)
   }
   await sleep(50)
