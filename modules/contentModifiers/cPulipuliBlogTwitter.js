@@ -39,7 +39,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
 
     let tagName = p.prop('tagName').toLowerCase()
     if (tagName === 'hr') {
-      text.push('----')
+      text.push('--')
 
       continue
     }
@@ -78,7 +78,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
     if (text.join('').length > textLimit) {
       text = text.slice(0, -1)
 
-      while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
+      while (text[(text.length - 1)].trim() === '--' || text[(text.length - 1)].trim().startsWith('#')) {
         text = text.slice(0, -1)
       }
       isOverflowed = true
@@ -87,7 +87,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
   }
 
   if (!isOverflowed) {
-    while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
+    while (text[(text.length - 1)].trim() === '--' || text[(text.length - 1)].trim().startsWith('#')) {
       text = text.slice(0, -1)
     }
   }
@@ -111,7 +111,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
     categories = categories.filter((v, i, a) => a.indexOf(v) === i)
 
     if (categories.length > 0) {
-      text.push('\n<br />----\n<br />#' + categories.join(' #'))
+      text.push('\n--\n#' + categories.join(' #'))
     }
   }
   catch (e) {
@@ -122,7 +122,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
   // -----------------
 
   if (!isOverflowed) {
-    while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
+    while (text[(text.length - 1)].trim() === '--' || text[(text.length - 1)].trim().startsWith('#')) {
       text = text.slice(0, -1)
     }
 
@@ -137,17 +137,17 @@ const cPulipuliBlogTwitter = function (content, code, $) {
   // ------------
   
   
-  let img = container('img:first')
-  let imgSrc = img.attr('src')
-  let sizePos = imgSrc.lastIndexOf('=s')
-  if (sizePos > -1 && sizePos > imgSrc.length - 10) {
-    imgSrc = imgSrc.slice(0, sizePos) + '=s1080'
-    img.attr('src', imgSrc)
-  }
-  else {
-    imgSrc = imgSrc + '=s1080'
-    img.attr('src', imgSrc)
-  }
+  // let img = container('img:first')
+  // let imgSrc = img.attr('src')
+  // let sizePos = imgSrc.lastIndexOf('=s')
+  // if (sizePos > -1 && sizePos > imgSrc.length - 10) {
+  //   imgSrc = imgSrc.slice(0, sizePos) + '=s1080'
+  //   img.attr('src', imgSrc)
+  // }
+  // else {
+  //   imgSrc = imgSrc + '=s1080'
+  //   img.attr('src', imgSrc)
+  // }
 
   // imgSrc = typeof(img.length)
 
@@ -186,7 +186,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
 
   text = text.filter(t => (t + '').trim() !== '')
 
-  text = text.join('\n<br />')
+  text = text.join('\n')
   //console.log(text)
 
   // text = code + text
