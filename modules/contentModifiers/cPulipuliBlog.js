@@ -56,7 +56,7 @@ const cPulipuliBlog = function (content, code, $) {
         }
         liTextList.push(liText)
       }
-      text.push(liTextList.join('\n'))
+      text.push(liTextList.join('\n<br />'))
       continue
     }
 
@@ -79,7 +79,7 @@ const cPulipuliBlog = function (content, code, $) {
         text = text.slice(0, -1)
       }
 
-      text.push('繼續閱讀 ⇨ ' + title + '\n' + url)
+      text.push('繼續閱讀 ⇨ ' + title + '\n<br />' + url)
       isOverflowed = true
       break
     }
@@ -90,7 +90,7 @@ const cPulipuliBlog = function (content, code, $) {
       text = text.slice(0, -1)
     }
 
-    text.push('看看網頁版全文 ⇨ ' + title + '\n' + url)
+    text.push('看看網頁版全文 ⇨ ' + title + '\n<br />' + url)
   }
   
   // -------------------
