@@ -187,7 +187,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
   text = text.join('\n<br />')
   //console.log(text)
 
-  text = code + text
+  // text = code + text
   // text = '<textarea>' + $.html() + '</textarea>' + text
   
   return text
