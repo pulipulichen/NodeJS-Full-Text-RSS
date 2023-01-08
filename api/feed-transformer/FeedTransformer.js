@@ -105,7 +105,7 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
       }
       
       //console.log(i, content.slice(0, 100))
-      let contentNew = await ModuleManager(content, moduleCodesString, 'c')
+      let contentNew = await ModuleManager(content, moduleCodesString, 'c', item)
       //console.log(i, contentNew.slice(0, 100))
       if (content !== contentNew && !itemRemoved) {
         //item.find('content').text(contentNew)
