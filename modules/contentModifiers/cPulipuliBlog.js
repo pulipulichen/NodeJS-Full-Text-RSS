@@ -8,12 +8,12 @@ const cPulipuliBlog = function (content, code, $) {
   // }
   // let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
   let url = ''
-  // try {
-  //   url = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
-  // }
-  // catch (e) {
-  //   url = e
-  // }
+  try {
+    url = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+  }
+  catch (e) {
+    url = e
+  }
 
   // -------------
 
