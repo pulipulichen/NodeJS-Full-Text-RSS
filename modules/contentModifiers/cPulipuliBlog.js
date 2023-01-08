@@ -76,7 +76,7 @@ const cPulipuliBlog = function (content, code, $) {
     text.push(t)
     
     if (text.join('').length > textLimit) {
-      if (text[(text.length - 1)] === '----') {
+      while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
         text = text.slice(0, -1)
       }
 
@@ -87,7 +87,7 @@ const cPulipuliBlog = function (content, code, $) {
   }
 
   if (!isOverflowed) {
-    if (text[(text.length - 1)] === '----') {
+    while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
       text = text.slice(0, -1)
     }
 
