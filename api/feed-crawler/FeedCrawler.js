@@ -41,7 +41,7 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   
   //console.log(feedURL)
   // let feedXML = await XMLLoader(feedURL, 10000)
-  // cacheExpireTime = 1000
+  cacheExpireTime = 1000
   let feedXML = await XMLLoader(feedURL, cacheExpireTime)
   
   //console.log(feedXML)
