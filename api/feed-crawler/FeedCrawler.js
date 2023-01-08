@@ -10,7 +10,7 @@ let cacheExpireHour = require('./../../config.js').cacheLimitHour.inputRSSParser
 */
 const nodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
 const cacheExpireHour = require('./../../mount/config.js').FeedCrawler.cacheLimitHour
-const cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
+let cacheExpireTime = cacheExpireHour * 60 * 60 * 1000
 
 const XMLLoader = require('./../lib/HtmlLoader/XMLLoader.js')
 const FeedTransformer = require('./../feed-transformer/FeedTransformer.js')
@@ -40,7 +40,10 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   feedURL = FeedURLFilter(feedURL)
   
   //console.log(feedURL)
-  let feedXML = await XMLLoader(feedURL, 10000)
+  // let feedXML = await XMLLoader(feedURL, 10000)
+  cacheExpireTime = 1000
+  let feedXML = await XMLLoader(feedURL, cacheExpireTime)
+  
   //console.log(feedXML)
   //feedXML = feedXML.replace(/[\x00-\x1F\x7F]/g , '')
   //var re = /(?![\x00-\x7F]|[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80-\xBF]{3})./g;
