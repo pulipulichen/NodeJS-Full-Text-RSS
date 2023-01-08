@@ -47,7 +47,7 @@ const cPulipuliBlog = function (content, code, $) {
     categories = categories.length
   }
   catch (e) {
-    categories = e
+    categories = e.toString()
   }
   
   text.push(categories)
