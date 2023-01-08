@@ -7,7 +7,7 @@ const cPulipuliBlog = function (content, code, $) {
   //   $ = $.find
   // }
   // let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
-  let url = typeof($) + typeof($.find)
+  let url = typeof($) + typeof($.find) + $('link[rel="alternate"][type="text/html"][href]:first').length
 
   // -------------
 
