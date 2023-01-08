@@ -54,8 +54,9 @@ const cPulipuliBlog = function (content, code, $) {
         else {
           liText = '- ' + liText
         }
+        liTextList.push(liText)
       }
-      text.push(liText.join('\n'))
+      text.push(liTextList.join('\n'))
       continue
     }
 
