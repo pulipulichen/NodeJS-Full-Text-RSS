@@ -68,7 +68,7 @@ const cPulipuliBlog = function (content, code, $) {
   // ------------
   
   let imgSrc = ''
-  let img = $.find('img')
+  let img = container('img')
   // imgSrc = typeof(img.length)
   imgSrc = img.length + ''
   // imgSrc = img.eq(0).attr('src')
@@ -103,7 +103,7 @@ const cPulipuliBlog = function (content, code, $) {
   
   // -------------------
 
-  text = text.filter(t => t.trim() !== '')
+  text = text.filter(t => (t + '').trim() !== '')
 
   text = text.join('\n<br />\n<br />')
   //console.log(text)
