@@ -69,7 +69,7 @@ const cPulipuliBlog = function (content, code, $) {
   
   let imgSrc = ''
   let img = $.find('img:first')
-  imgSrc = img[0].attr('src')
+  imgSrc = img.eq(0).attr('src')
   // let img = $.find('img:first').parent()
   text.unshift(imgSrc)
 
