@@ -26,7 +26,8 @@ const FeedItemEach = async function ($, handler) {
     len = config.FeedItemEach.limit
   }
 
-  $('title:first').html('items: ' + len)
+  // $('title:first').html('items: ' + len)
+  $('title').html('items: ' + len)
   
   for (let i = 0; i < len; i++) {
     let item = items.eq(i)
