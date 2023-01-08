@@ -1,7 +1,7 @@
 // https://blog.pulipuli.info/feeds/posts/default
 const cheerio = require('cheerio')
 
-const cPulipuliBlog = function (content) {
+const cPulipuliBlog = function (content, code) {
   let container = cheerio.load(content);
   let text = []
   let pList = container('p')
@@ -17,8 +17,12 @@ const cPulipuliBlog = function (content) {
     }
   }
   
+  text = text.filter(t => t.trim() !== '')
+
   text = text.join('\n<br />\n<br />')
   //console.log(text)
+
+  text = code + text
   
   return text
 }
