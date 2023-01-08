@@ -134,14 +134,21 @@ const cPulipuliBlog = function (content, code, $) {
   
   // ------------
   
-  let imgSrc = ''
+  
   let img = container('img:first')
+  let imgSrc = img.attr('src')
+  let sizePos = imgSrc.lastIndexOf('=s')
+  if (sizePos > -1 && sizePos > imgSrc.length - 10) {
+    imgSrc = imgSrc.slice(0, sizePos) + '=s1080'
+  }
+
   // imgSrc = typeof(img.length)
-  imgSrc = img.parent().prop('outerHTML')
+
+  // imgSrc = img.parent().prop('outerHTML')
   // imgSrc = img.eq(0).attr('src')
   // imgSrc = img.length
   // let img = $.find('img:first').parent()
-  text.unshift(imgSrc)
+  text.unshift(img.prop('outerHTML'))
 
   // ------------
   
