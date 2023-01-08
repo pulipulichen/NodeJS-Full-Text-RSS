@@ -28,15 +28,22 @@ const cPulipuliBlog = function (content, code, $) {
 
   let container = cheerio.load(content);
   let text = []
-  let pList = container('p')
+  let pList = container('p,hr')
   let isOverflowed = false
   for (let i = 0; i < pList.length; i++) {
     let p = pList.eq(i)
+
+    if (p.prop('tagName').toLowerCase() === 'hr') {
+      text.push('----')
+
+      continue
+    }
+
     let t = p.text().trim()
     
     text.push(t)
     
-    if (text.join('').length > 50) {
+    if (text.join('').length > 500) {
       text.push('繼續閱讀 ⇨ ' + title + '\n' + url)
       isOverflowed = true
       break
@@ -44,7 +51,7 @@ const cPulipuliBlog = function (content, code, $) {
   }
 
   if (!isOverflowed) {
-    text.push('看看網頁版全文 ⇨ ' + title + '\n'  + url)
+    text.push('看看網頁版全文 ⇨ ' + title + '\n' + url)
   }
   
   // -------------------
