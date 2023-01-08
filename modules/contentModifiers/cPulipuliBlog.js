@@ -23,7 +23,7 @@ const cPulipuliBlog = function (content, code, $) {
   }
   
   // -------------------
-  /*
+  
   let categories = $('category[scheme="http://www.blogger.com/atom/ns#"][term]')
   let terms = []
   for (let i = 0; i < categories.length; i) {
@@ -39,8 +39,7 @@ const cPulipuliBlog = function (content, code, $) {
   if (terms.length > 0) {
     text.push('#' + terms.join(' #'))
   }
-  */
-
+  
   // -------------------
 
   text = text.filter(t => t.trim() !== '')
