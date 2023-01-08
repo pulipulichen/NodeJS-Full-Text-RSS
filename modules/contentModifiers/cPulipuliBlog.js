@@ -3,7 +3,7 @@ const cheerio = require('cheerio')
 
 const cPulipuliBlog = function (content, code, $) {
 
-  let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+  // let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
 
   // -------------
 
@@ -17,7 +17,7 @@ const cPulipuliBlog = function (content, code, $) {
     text.push(t)
     
     if (text.join('').length > 50) {
-      text.push('繼續閱讀 ⇨' + url)
+      text.push('繼續閱讀 ⇨')
       break
     }
   }
