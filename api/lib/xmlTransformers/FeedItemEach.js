@@ -21,12 +21,12 @@ const FeedItemEach = async function ($, handler) {
     //console.log(items.length)
   }
   
-  let titleElements = $('title')
-  for (let i = 0; i < titleElements.length; i++) {
-    // titleElements.eq(i).html(titleElements.eq(i).text())
-    titleElements.eq(i).html('測試')
-  }
-  // $('title').html('測試')
+  // let titleElements = $('title')
+  // for (let i = 0; i < titleElements.length; i++) {
+  //   // titleElements.eq(i).html(titleElements.eq(i).text())
+  //   titleElements.eq(i).html('測試')
+  // }
+  $('title').html('測試1')
 
   let len = items.length
   if (len > config.FeedItemEach.limit) {
