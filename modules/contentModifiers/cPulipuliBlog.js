@@ -140,6 +140,7 @@ const cPulipuliBlog = function (content, code, $) {
   let sizePos = imgSrc.lastIndexOf('=s')
   if (sizePos > -1 && sizePos > imgSrc.length - 10) {
     imgSrc = imgSrc.slice(0, sizePos) + '=s1080'
+    img.attr('src', imgSrc)
   }
 
   // imgSrc = typeof(img.length)
