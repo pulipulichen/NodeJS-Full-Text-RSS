@@ -34,9 +34,9 @@ const cPulipuliBlog = function (content, code, $) {
     }
   }
 
-  // if (!isOverflowed) {
-  //   text.push('看看網頁版全文 ⇨ ' + url)
-  // }
+  if (!isOverflowed) {
+    text.push('看看網頁版全文 ⇨ ' + url)
+  }
   
   // -------------------
   
