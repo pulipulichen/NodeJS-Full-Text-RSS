@@ -8,12 +8,12 @@ const cPulipuliBlog = function (content, code, $) {
   // }
   // let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
   let url = ''
-  try {
-    url = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
-  }
-  catch (e) {
-    url = e
-  }
+  // try {
+  //   url = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+  // }
+  // catch (e) {
+  //   url = e
+  // }
 
   // -------------
 
@@ -34,20 +34,20 @@ const cPulipuliBlog = function (content, code, $) {
     }
   }
 
-  if (!isOverflowed) {
-    text.push('看看網頁版全文 ⇨ ' + url)
-  }
+  // if (!isOverflowed) {
+  //   text.push('看看網頁版全文 ⇨ ' + url)
+  // }
   
   // -------------------
   
-  try {
-    let categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
-    let terms = []
-    text.push(categories.length)
-  }
-  catch (e) {
-    text.push(e)
-  }
+  // try {
+  //   let categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
+  //   let terms = []
+  //   text.push(categories.length)
+  // }
+  // catch (e) {
+  //   text.push(e)
+  // }
     
   // for (let i = 0; i < categories.length; i) {
   //   let term = categories[i].attr('term')
