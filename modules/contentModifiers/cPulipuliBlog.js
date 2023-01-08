@@ -79,9 +79,6 @@ const cPulipuliBlog = function (content, code, $) {
       while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
         text = text.slice(0, -1)
       }
-
-      // text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title + '\n<br />' + url)
-      text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title)
       isOverflowed = true
       break
     }
@@ -91,11 +88,8 @@ const cPulipuliBlog = function (content, code, $) {
     while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
       text = text.slice(0, -1)
     }
-
-    // text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title + '\n<br />' + url)
-    text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title)
   }
-  
+
   // -------------------
   
   let categories = []
@@ -122,6 +116,22 @@ const cPulipuliBlog = function (content, code, $) {
     // categories = e.toString()
   }
 
+
+  // -----------------
+
+  if (!isOverflowed) {
+    while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
+      text = text.slice(0, -1)
+    }
+
+    // text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title + '\n<br />' + url)
+    text.push('----\n<br />\n<br />看看網頁版全文 ⇨ ' + title)
+  }
+  else {
+    // text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title + '\n<br />' + url)
+    text.push('----\n<br />\n<br />繼續閱讀 ⇨ ' + title)
+  }
+  
   // ------------
   
   let imgSrc = ''
