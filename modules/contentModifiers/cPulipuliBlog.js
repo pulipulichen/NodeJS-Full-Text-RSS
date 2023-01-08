@@ -1,7 +1,7 @@
 // https://blog.pulipuli.info/feeds/posts/default
 const cheerio = require('cheerio')
 
-const textLimit = 1000
+const textLimit = 5000
 
 const cPulipuliBlog = function (content, code, $) {
   
@@ -31,7 +31,7 @@ const cPulipuliBlog = function (content, code, $) {
 
   let container = cheerio.load(content);
   let text = []
-  let pList = container('p,hr,h2,h3,h4')
+  let pList = container('p,hr,h2,h3,h4,ul,ol')
   let isOverflowed = false
   for (let i = 0; i < pList.length; i++) {
     let p = pList.eq(i)
@@ -40,6 +40,22 @@ const cPulipuliBlog = function (content, code, $) {
     if (tagName === 'hr') {
       text.push('----')
 
+      continue
+    }
+    else if (tagName === 'ol' || tagName === 'ul') {
+      let liElementList = p.children('li')
+
+      let liTextList = []
+      for (let i = 0; i < liElementList.length; i++) {
+        let liText = liElementList.eq(i).text().trim()
+        if (tagName === 'ol') {
+          liText = i + '. ' + liText
+        }
+        else {
+          liText = '- ' + liText
+        }
+      }
+      text.push(liText.join('\n'))
       continue
     }
 
