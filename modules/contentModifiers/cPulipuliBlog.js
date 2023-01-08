@@ -2,7 +2,7 @@
 const cheerio = require('cheerio')
 
 // const textLimit = 5000
-const textLimit = 500
+const textLimit = 1000
 
 const cPulipuliBlog = function (content, code, $) {
   
