@@ -6,8 +6,6 @@ const textLimit = 130
 
 const cPulipuliBlogTwitter = function (content, code, $) {
     
-  try {
-
   // if (typeof($.find) === 'function') {
   //   $ = $.find
   // }
@@ -192,11 +190,6 @@ const cPulipuliBlogTwitter = function (content, code, $) {
 
   // text = code + text
   // text = '<textarea>' + $.html() + '</textarea>' + text
-  }
-  catch (e) {
-    text = e.toString()
-  }
-
   return text
 }
 
