@@ -155,7 +155,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
   // imgSrc = img.eq(0).attr('src')
   // imgSrc = img.length
   // let img = $.find('img:first').parent()
-  text.unshift(img.prop('outerHTML'))
+  // text.unshift(img.prop('outerHTML'))
 
   // ------------
   
