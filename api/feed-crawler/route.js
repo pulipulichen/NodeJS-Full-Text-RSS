@@ -152,10 +152,10 @@ const route = function (app) {
       }
 
       // cacheExpireTime = 1000
-      // let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
-      //   return await FeedCrawler(url)
-      // }, cacheExpireTime)
-      let result = await FeedCrawler(url)
+      let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
+        return await FeedCrawler(url)
+      }, cacheExpireTime)
+      // let result = await FeedCrawler(url)
 
       setHeader(res)
 
@@ -183,6 +183,7 @@ const route = function (app) {
 
       let modules = req.params.modules
 
+      cacheExpireTime = 1000
       let result = await NodeCacheSQLite.get('feed-crawler', url + modules, async () => {
         return await FeedCrawler(url)
       }, cacheExpireTime)
