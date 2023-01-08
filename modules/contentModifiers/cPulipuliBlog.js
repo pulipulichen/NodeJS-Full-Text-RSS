@@ -1,7 +1,10 @@
 // https://blog.pulipuli.info/feeds/posts/default
 const cheerio = require('cheerio')
 
+const textLimit = 1000
+
 const cPulipuliBlog = function (content, code, $) {
+  
 
   // if (typeof($.find) === 'function') {
   //   $ = $.find
@@ -28,22 +31,37 @@ const cPulipuliBlog = function (content, code, $) {
 
   let container = cheerio.load(content);
   let text = []
-  let pList = container('p,hr')
+  let pList = container('p,hr,h2,h3,h4')
   let isOverflowed = false
   for (let i = 0; i < pList.length; i++) {
     let p = pList.eq(i)
 
-    if (p.prop('tagName').toLowerCase() === 'hr') {
+    let tagName = p.prop('tagName').toLowerCase()
+    if (tagName === 'hr') {
       text.push('----')
 
       continue
     }
 
     let t = p.text().trim()
+
+    if (tagName === 'h2') {
+      t = '# ' + t
+    }
+    else if (tagName === 'h3') {
+      t = '## ' + t
+    }
+    else if (tagName === 'h4') {
+      t = '### ' + t
+    }
     
     text.push(t)
     
-    if (text.join('').length > 500) {
+    if (text.join('').length > textLimit) {
+      if (text[(text.length - 1)] === '----') {
+        text = text.slice(0, -1)
+      }
+
       text.push('繼續閱讀 ⇨ ' + title + '\n' + url)
       isOverflowed = true
       break
@@ -51,6 +69,10 @@ const cPulipuliBlog = function (content, code, $) {
   }
 
   if (!isOverflowed) {
+    if (text[(text.length - 1)] === '----') {
+      text = text.slice(0, -1)
+    }
+
     text.push('看看網頁版全文 ⇨ ' + title + '\n' + url)
   }
   
