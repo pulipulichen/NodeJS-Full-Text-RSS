@@ -25,6 +25,10 @@ const FeedItemEach = async function ($, handler) {
   for (let i = 0; i < titleElements.length; i++) {
     // titleElements.eq(i).html(titleElements.eq(i).text())
     titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
+
+    if (i == 10) {
+      break
+    }
   }
   // $('title').html('測試1')
 
