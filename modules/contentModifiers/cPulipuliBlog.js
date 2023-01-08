@@ -3,7 +3,10 @@ const cheerio = require('cheerio')
 
 const cPulipuliBlog = function (content, code, $) {
 
-  // let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+  if (typeof($.find) === 'function') {
+    $ = $.find
+  }
+  let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
 
   // -------------
 
@@ -17,28 +20,28 @@ const cPulipuliBlog = function (content, code, $) {
     text.push(t)
     
     if (text.join('').length > 50) {
-      text.push('繼續閱讀 ⇨')
+      text.push('繼續閱讀 ⇨' + url)
       break
     }
   }
   
   // -------------------
   
-  let categories = $('category[scheme="http://www.blogger.com/atom/ns#"][term]')
-  let terms = []
-  for (let i = 0; i < categories.length; i) {
-    let term = categories[i].attr('term')
-    if (term.indexOf('/') > -1) {
-      term = term.slice(term.lastIndexOf('/') + 1).trim()
-    }
-    terms.push(term)
-  }
+  // let categories = $('category[scheme="http://www.blogger.com/atom/ns#"][term]')
+  // let terms = []
+  // for (let i = 0; i < categories.length; i) {
+  //   let term = categories[i].attr('term')
+  //   if (term.indexOf('/') > -1) {
+  //     term = term.slice(term.lastIndexOf('/') + 1).trim()
+  //   }
+  //   terms.push(term)
+  // }
 
-  terms = terms.filter((v, i, a) => a.indexOf(v) === i)
+  // terms = terms.filter((v, i, a) => a.indexOf(v) === i)
 
-  if (terms.length > 0) {
-    text.push('#' + terms.join(' #'))
-  }
+  // if (terms.length > 0) {
+  //   text.push('#' + terms.join(' #'))
+  // }
   
   // -------------------
 
