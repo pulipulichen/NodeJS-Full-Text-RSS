@@ -20,7 +20,7 @@ const DetectDuplateItem = async function (channelTitle, channelLink, item, modul
   let cachedChannelLinkTitle = await NodeCacheSQLite.get('duplate-item', title, () => {
     return channelLink + channelTitle + moduleCodesString
   }, cacheTime)
-  
+   
   //console.log(title, (cachedChannelLinkTitle !== channelLink + channelTitle), channelLink + channelTitle, cachedChannelLinkTitle)
   
   return (cachedChannelLinkTitle !== channelLink + channelTitle + moduleCodesString)
