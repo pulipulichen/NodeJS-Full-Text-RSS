@@ -110,7 +110,7 @@ const htmlContentParser = async function (html, modules, url) {
 //  }
   
   
-  content = await ModuleManager(content, modules, 'c')
+  content = await ModuleManager(content, modules, 'c', cheerio.load(html))
 
 //  if (url === 'https://www.eprice.com.tw/mobile/talk/4541/5682493/1/') {
 //    console.log(content)

@@ -4,7 +4,7 @@ const moduleRelativePath = './../../../modules/'
 const fs = require('fs')
 const path = require('path')
 
-const ModuleManager = async function (data, moduleCodesString, prefix) {
+const ModuleManager = async function (data, moduleCodesString, prefix, $) {
   
   let moduleCodes = moduleCodesString.split(',')
   
@@ -49,7 +49,7 @@ const ModuleManager = async function (data, moduleCodesString, prefix) {
       try {
         //console.log(moduleCodesString)
         //console.log(`#====================#` + code)
-        data = await module(data, code)
+        data = await module(data, code, $)
         //console.log(data.slice(0, 100))
       }
       catch (e) {
