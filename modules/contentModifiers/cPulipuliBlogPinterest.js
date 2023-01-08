@@ -6,7 +6,7 @@ const textLimit = 1000
 
 const cPulipuliBlog = function (content, code, $) {
   
-
+  try {
   // -------------
 
   let container = cheerio.load(content);
@@ -148,7 +148,11 @@ const cPulipuliBlog = function (content, code, $) {
   //console.log(text)
 
   // text = '<textarea>' + $.html() + '</textarea>' + text
-  
+  }
+  catch (e) {
+    text = e.toString()
+  }
+
   return text
 }
 
