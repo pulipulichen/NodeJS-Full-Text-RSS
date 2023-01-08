@@ -68,7 +68,7 @@ const cPulipuliBlog = function (content, code, $) {
   // ------------
   
   let imgSrc = ''
-  let img = $.find('img:first')
+  let img = $.find('img:eq(0)')
   // imgSrc = img.eq(0).attr('src')
   imgSrc = img.length
   // let img = $.find('img:first').parent()
