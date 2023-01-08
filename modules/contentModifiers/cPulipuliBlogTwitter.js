@@ -57,7 +57,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
         }
         liTextList.push(liText)
       }
-      text.push(liTextList.join('\n<br />'))
+      text.concat(liTextList)
       continue
     }
 
