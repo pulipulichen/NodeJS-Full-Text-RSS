@@ -151,6 +151,7 @@ const route = function (app) {
         return res.send(false)
       }
 
+      cacheExpireTime = 1000
       let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
         return await FeedCrawler(url)
       }, cacheExpireTime)
