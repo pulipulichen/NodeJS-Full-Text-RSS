@@ -14,6 +14,7 @@ const cPulipuliBlog = function (content, code, $) {
   let container = cheerio.load(content);
   let text = []
   let pList = container('p')
+  let isOverflowed = false
   for (let i = 0; i < pList.length; i++) {
     let p = pList.eq(i)
     let t = p.text().trim()
@@ -21,28 +22,33 @@ const cPulipuliBlog = function (content, code, $) {
     text.push(t)
     
     if (text.join('').length > 50) {
-      text.push('繼續閱讀 ⇨' + url)
+      text.push('繼續閱讀 ⇨ ' + url)
+      isOverflowed = true
       break
     }
+  }
+
+  if (!isOverflowed) {
+    text.push('看看網頁版全文 ⇨ ' + url)
   }
   
   // -------------------
   
-  // let categories = $('category[scheme="http://www.blogger.com/atom/ns#"][term]')
-  // let terms = []
-  // for (let i = 0; i < categories.length; i) {
-  //   let term = categories[i].attr('term')
-  //   if (term.indexOf('/') > -1) {
-  //     term = term.slice(term.lastIndexOf('/') + 1).trim()
-  //   }
-  //   terms.push(term)
-  // }
+  let categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
+  let terms = []
+  for (let i = 0; i < categories.length; i) {
+    let term = categories[i].attr('term')
+    if (term.indexOf('/') > -1) {
+      term = term.slice(term.lastIndexOf('/') + 1).trim()
+    }
+    terms.push(term)
+  }
 
-  // terms = terms.filter((v, i, a) => a.indexOf(v) === i)
+  terms = terms.filter((v, i, a) => a.indexOf(v) === i)
 
-  // if (terms.length > 0) {
-  //   text.push('#' + terms.join(' #'))
-  // }
+  if (terms.length > 0) {
+    text.push('#' + terms.join(' #'))
+  }
   
   // -------------------
 
