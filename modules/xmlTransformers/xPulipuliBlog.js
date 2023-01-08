@@ -2,7 +2,7 @@ const cheerio = require("cheerio")
 
 const xSkip = async function ($, moduleCodesString) {
   
-  $('title').html('測試')
+  // $('title').html('測試')
 
   let thumbnails = $(`media\\:thumbnail[url$="=s72-c"][height="72"][width="72"]`)
   for (let i = 0; i < thumbnails.length; i++) {
