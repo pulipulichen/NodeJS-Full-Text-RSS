@@ -1,7 +1,7 @@
 /* global __dirname */
 
 let disableCache = false
-// disableCache = true
+disableCache = true
 
 const FeedCrawler = require('./FeedCrawler.js')
 const NodeCacheSQLite = require('./../lib/cache/node-cache-sqlite.js')
