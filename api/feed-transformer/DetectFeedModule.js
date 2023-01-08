@@ -55,11 +55,10 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('xSkip')
   }
   
-  if (channelLink.startsWith('https://blog.pulipuli.info/') || 
-      channelLink.startsWith('https://blog.pulipuli.info/feeds/posts/default?alt=rss')) {
-    addModules.push('xPulipuliBlog')
-    addModules.push('cPulipuliBlog')
-  }
+  // if (channelLink.startsWith('https://blog.pulipuli.info/')) {
+  //   addModules.push('xPulipuliBlog')
+  //   addModules.push('cPulipuliBlog')
+  // }
   if (channelLink === 'https://buzzorange.com/techorange') {
     addModules.push('cTechOrange')
   }
