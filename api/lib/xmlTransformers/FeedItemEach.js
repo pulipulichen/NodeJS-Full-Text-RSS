@@ -21,19 +21,19 @@ const FeedItemEach = async function ($, handler) {
     //console.log(items.length)
   }
   
-  let titleElements = $('title')
-  for (let i = 0; i < titleElements.length; i++) {
-    // // titleElements.eq(i).html(titleElements.eq(i).text())
-    if (i < 1) {
-      titleElements.eq(i).text('測試' + i)
-    }
-    else {
-      // titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
-      // titleElements.eq(i).text(encodeURIComponent(titleElements.eq(i).text()))
+  // let titleElements = $('title')
+  // for (let i = 0; i < titleElements.length; i++) {
+  //   // // titleElements.eq(i).html(titleElements.eq(i).text())
+  //   if (i < 1) {
+  //     titleElements.eq(i).text('測試' + i)
+  //   }
+  //   else {
+  //     // titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
+  //     // titleElements.eq(i).text(encodeURIComponent(titleElements.eq(i).text()))
 
-      titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
-    }
-  }
+  //     titleElements.eq(i).text('測試' + i + titleElements.eq(i).text())
+  //   }
+  // }
   // $('title').html('測試1')
 
   let len = items.length
