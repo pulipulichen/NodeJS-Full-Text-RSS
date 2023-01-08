@@ -142,6 +142,10 @@ const cPulipuliBlog = function (content, code, $) {
     imgSrc = imgSrc.slice(0, sizePos) + '=s1080'
     img.attr('src', imgSrc)
   }
+  else {
+    imgSrc = imgSrc + '=s1080'
+    img.attr('src', imgSrc)
+  }
 
   // imgSrc = typeof(img.length)
 
