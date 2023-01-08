@@ -57,10 +57,7 @@ const DetectFeedModule = function ($, moduleCodesString) {
   
   if (channelLink.startsWith('https://blog.pulipuli.info/')) {
     addModules.push('xPulipuliBlog')
-    if (moduleCodesString.indexOf('cPulipuliBlogPinterest') === -1) {
-      addModules.push('cPulipuliBlog')
-    }
-      
+    addModules.push('cPulipuliBlog')
   }
   if (channelLink === 'https://buzzorange.com/techorange') {
     addModules.push('cTechOrange')
