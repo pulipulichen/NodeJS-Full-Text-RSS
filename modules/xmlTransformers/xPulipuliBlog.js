@@ -14,7 +14,7 @@ const xPulipuliBlog = async function ($, moduleCodesString) {
   // }
 
   await FeedItemEach($, async (item, i) => {
-    FeedItemSetContent(item, 'ok')
+    FeedItemSetContent(item, 'ok ' + i)
   })
   
   return $
