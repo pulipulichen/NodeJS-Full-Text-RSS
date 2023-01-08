@@ -160,7 +160,7 @@ const cPulipuliBlog = function (content, code, $) {
 
   text = text.filter(t => (t + '').trim() !== '')
 
-  text = text.join('\n<br />\n<br />')
+  text = text.join('\n<br />')
   //console.log(text)
 
   // text = '<textarea>' + $.html() + '</textarea>' + text
