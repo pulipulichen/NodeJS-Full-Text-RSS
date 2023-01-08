@@ -42,7 +42,9 @@ const cPulipuliBlog = function (content, code, $) {
   
   let categories = 'ok'
   try {
-    categories = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+    // categories = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+    categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
+    categories = categories.length
   }
   catch (e) {
     categories = e
