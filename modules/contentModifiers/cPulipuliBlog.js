@@ -40,7 +40,7 @@ const cPulipuliBlog = function (content, code, $) {
   
   // -------------------
   
-  let categories = $.find('p')
+  let categories = 'ok'
   text.push(categories.length)
   // try {
   //   let categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
