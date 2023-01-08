@@ -1,5 +1,5 @@
-let disableCache = false
-disableCache = true
+// let disableCache = false
+// disableCache = true
 
 /*
 const Parser = require('rss-parser')
@@ -45,11 +45,14 @@ const FeedCrawler = async function (feedURL, moduleCodesString) {
   //console.log(feedURL)
   // let feedXML = await XMLLoader(feedURL, 10000)
   // cacheExpireTime = 1000
-  if (disableCache) {
-    cacheExpireTime = 1000
-  }
+  // if (disableCache) {
+  //   cacheExpireTime = 1000
+  // }
 
-  let feedXML = await XMLLoader(feedURL, cacheExpireTime)
+  // let feedXML = await XMLLoader(feedURL, cacheExpireTime)
+
+  // 這是為了提供測試而做的，所以快取時間固定都很短
+  let feedXML = await XMLLoader(feedURL, 10000)
   
   //console.log(feedXML)
   //feedXML = feedXML.replace(/[\x00-\x1F\x7F]/g , '')
