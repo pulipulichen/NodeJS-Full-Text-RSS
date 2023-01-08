@@ -15,7 +15,7 @@ let path = require('path')
 
 
 let _this = {}
-let enableCache = false
+let enableCache = true
 
 let tryToRestartServer = (() => {
   let counter = 10
