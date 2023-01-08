@@ -15,6 +15,14 @@ const cPulipuliBlog = function (content, code, $) {
     url = e
   }
 
+  let title = ''
+  try {
+    title = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('title')
+  }
+  catch (e) {
+    title = e
+  }
+
 
   // -------------
 
@@ -29,14 +37,14 @@ const cPulipuliBlog = function (content, code, $) {
     text.push(t)
     
     if (text.join('').length > 50) {
-      text.push('繼續閱讀 ⇨ ' + url)
+      text.push('繼續閱讀 ⇨ ' + title + '\n' + url)
       isOverflowed = true
       break
     }
   }
 
   if (!isOverflowed) {
-    text.push('看看網頁版全文 ⇨ ' + url)
+    text.push('看看網頁版全文 ⇨ ' + title + '\n'  + url)
   }
   
   // -------------------
