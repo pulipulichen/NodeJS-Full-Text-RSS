@@ -55,7 +55,8 @@ const DetectFeedModule = function ($, moduleCodesString) {
     addModules.push('xSkip')
   }
   
-  if (channelLink.startsWith('https://blog.pulipuli.info/')) {
+  if (channelLink.startsWith('https://blog.pulipuli.info/') || 
+      channelLink.startsWith('https://blog.pulipuli.info/feeds/posts/default?alt=rss')) {
     addModules.push('xPulipuliBlog')
     addModules.push('cPulipuliBlog')
   }
