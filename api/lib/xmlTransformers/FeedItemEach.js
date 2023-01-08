@@ -34,8 +34,10 @@ const FeedItemEach = async function ($, handler) {
       await handler(item, i)
     }
     catch (e) {
-      $('title').html(e.toString())
+      // $('title').html(e.toString())
+      item.find('title').html(e.toString())
     }
+    item.find('title').html('passed?')
     //console.log(i)
   }
   for (let i = len; i < items.length; i++) {
