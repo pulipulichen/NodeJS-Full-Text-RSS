@@ -152,9 +152,10 @@ const route = function (app) {
       }
 
       // cacheExpireTime = 1000
-      let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
-        return await FeedCrawler(url)
-      }, cacheExpireTime)
+      // let result = await NodeCacheSQLite.get('feed-crawler', url, async () => {
+      //   return await FeedCrawler(url)
+      // }, cacheExpireTime)
+      let result = await FeedCrawler(url)
 
       setHeader(res)
 
