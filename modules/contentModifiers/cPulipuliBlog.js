@@ -1,3 +1,4 @@
+// https://blog.pulipuli.info/feeds/posts/default
 const cheerio = require('cheerio')
 
 const cPulipuliBlog = function (content) {
@@ -11,11 +12,12 @@ const cPulipuliBlog = function (content) {
     text.push(t)
     
     if (text.join('').length > 50) {
+      text.push('繼續閱讀 ⇨')
       break
     }
   }
   
-  text = text.join('\n\n')
+  text = text.join('\n<br />\n<br />')
   //console.log(text)
   
   return text
