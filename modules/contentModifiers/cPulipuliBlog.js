@@ -15,6 +15,7 @@ const cPulipuliBlog = function (content, code, $) {
     url = e
   }
 
+
   // -------------
 
   let container = cheerio.load(content);
@@ -63,7 +64,13 @@ const cPulipuliBlog = function (content, code, $) {
   catch (e) {
     // categories = e.toString()
   }
+
+  // ------------
   
+  let img = $.find('img:first').parent()
+  text.push(img.attr('href'))
+
+  // ------------
   
   // try {
   //   let categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
