@@ -71,7 +71,7 @@ const cPulipuliBlog = function (content, code, $) {
     else if (tagName === 'h4') {
       t = '### ' + t
     }
-    
+
     // text.push(t)
     // 20230109-1126 再分句看看
     if (t.length > 20) {
@@ -81,7 +81,7 @@ const cPulipuliBlog = function (content, code, $) {
           s = s + '。'
         }
         return s
-      })
+      }).filter(s => s !== '')
       text = text.concat(sentence)
     }
     else {

@@ -59,7 +59,7 @@ const cPulipuliBlog = function (content, code, $) {
           s = s + '。'
         }
         return s
-      })
+      }).filter(s => s !== '')
       // text = text.concat(sentence)
       text.push(sentence.join('\n<br />'))
     }
