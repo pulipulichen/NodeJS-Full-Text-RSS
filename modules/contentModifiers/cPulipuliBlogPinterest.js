@@ -60,7 +60,8 @@ const cPulipuliBlog = function (content, code, $) {
         }
         return s
       })
-      text = text.concat(sentence)
+      // text = text.concat(sentence)
+      text.push(sentence.join('\n<br />'))
     }
     else {
       text.push(t)
@@ -156,7 +157,7 @@ const cPulipuliBlog = function (content, code, $) {
 
   text = text.filter(t => (t + '').trim() !== '')
 
-  text = text.join('\n<br />')
+  text = text.join('\n<br />\n<br />')
   //console.log(text)
 
   // text = code + '|' + text
