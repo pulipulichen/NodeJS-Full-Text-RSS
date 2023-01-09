@@ -64,6 +64,9 @@ const FeedTransformer = async function (feedXML, moduleCodesString) {
   await FeedItemEach($, async (item, i) => {
     //console.log(i)
     //console.log('DetectDuplateItem', await DetectDuplateItem($, item))
+
+
+    // 暫時先關閉，反正用到機會也不多 20230109-0413 
     // if (await DetectDuplateItem(channelTitle, channelLink, item, moduleCodesString)) {
     //   return item.remove()
     // }

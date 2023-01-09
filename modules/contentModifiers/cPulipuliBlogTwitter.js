@@ -72,7 +72,15 @@ const cPulipuliBlogTwitter = function (content, code, $) {
       t = '### ' + t
     }
     
-    text.push(t)
+    // text.push(t)
+    // 20230109-1126 再分句看看
+    if (t.length > 20) {
+      let sentence = t.split('。').map(s => s.trim() + '。')
+      text = text.concat(sentence)
+    }
+    else {
+      text.push(t)
+    }
     
     if (text.join('').length > textLimit) {
       text = text.slice(0, -1)
