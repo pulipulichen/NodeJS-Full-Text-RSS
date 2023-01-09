@@ -75,7 +75,13 @@ const cPulipuliBlogTwitter = function (content, code, $) {
     // text.push(t)
     // 20230109-1126 再分句看看
     if (t.length > 20) {
-      let sentence = t.split('。').map(s => s.trim() + '。')
+      let sentence = t.split('。').map(s => {
+        s = s.trim()
+        if (s !== '') {
+          s = s + '。'
+        }
+        return s
+      })
       text = text.concat(sentence)
     }
     else {
