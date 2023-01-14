@@ -56,7 +56,7 @@ const cPulipuliBlog = function (content, code, $) {
         }
         liTextList.push(liText)
       }
-      text.concat(liTextList)
+      text = text.concat(liTextList)
       continue
     }
 
