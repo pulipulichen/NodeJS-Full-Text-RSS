@@ -9,6 +9,22 @@ const mediaThumbnailToContent = function ($) {
     thumbnailHTML = thumbnailHTML.replace(/media:thumbnail/g, 'media:content')
     thumbnailHTML = thumbnailHTML.replace(/\/>/g, 'type="image/png" medium="image" />')
     thumbnail.after(thumbnailHTML)
+
+    let enclosureHTML = thumbnailHTML
+    enclosureHTML = enclosureHTML.replace(/media:content/g, 'enclosure')
+    thumbnail.after(enclosureHTML)
+
+    // let imageHTML = thumbnailHTML
+    // let thumbnailContainer = cheerio.load(thumbnailHTML);
+    let url = thumbnail.attr('url')
+    let title = thumbnail.parent().find('title:first').text()
+    let link = thumbnail.parent().find('link:first').text()
+
+    thumbnail.after(`<image>
+    <url>${url}</url>
+    <title>${title}</title>
+    <link>${link}</link>
+  </image>`)
   }
   
   return $
