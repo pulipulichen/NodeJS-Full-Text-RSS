@@ -49,7 +49,7 @@ const cPulipuliBlog = function (content, code, $) {
       for (let i = 0; i < liElementList.length; i++) {
         let liText = liElementList.eq(i).text().trim()
         if (tagName === 'ol') {
-          liText = i + '. ' + liText
+          liText = (i+1) + '. ' + liText
         }
         else {
           liText = '- ' + liText
