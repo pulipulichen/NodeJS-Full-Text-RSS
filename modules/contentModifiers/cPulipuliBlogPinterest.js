@@ -148,10 +148,10 @@ const cPulipuliBlog = function (content, code, $) {
   
   let terms = []  
   for (let i = 0; i < categories.length; i) {
-    let term = categories[i].attr('term')
-    if (term.indexOf('/') > -1) {
-      term = term.slice(term.lastIndexOf('/') + 1).trim()
-    }
+    // let term = categories[i].attr('term')
+    // if (term.indexOf('/') > -1) {
+    //   term = term.slice(term.lastIndexOf('/') + 1).trim()
+    // }
     terms.push(term)
   }
 
