@@ -26,7 +26,7 @@ const cPulipuliBlog = function (content, code, $) {
 
     let tagName = p.prop('tagName').toLowerCase()
     if (tagName === 'hr') {
-      text.push('----')
+      // text.push('----')
 
       continue
     }
