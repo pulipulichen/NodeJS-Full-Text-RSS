@@ -31,14 +31,14 @@ const cPulipuliBlogTwitter = function (content, code, $) {
 
   let container = cheerio.load(content);
   let text = []
-  let pList = container('p,hr,h2,h3,h4,ul,ol')
+  let pList = container('p,hr,h2,h3,h4,ul,ol,pre')
   let isOverflowed = false
   for (let i = 0; i < pList.length; i++) {
     let p = pList.eq(i)
 
     let tagName = p.prop('tagName').toLowerCase()
     if (tagName === 'hr') {
-      text.push('--')
+      text.push('----')
 
       continue
     }
@@ -49,15 +49,25 @@ const cPulipuliBlogTwitter = function (content, code, $) {
       for (let i = 0; i < liElementList.length; i++) {
         let liText = liElementList.eq(i).text().trim()
         if (tagName === 'ol') {
-          liText = i + '. ' + liText
+          liText = (i+1) + '. ' + liText
         }
         else {
           liText = '- ' + liText
         }
         liTextList.push(liText)
       }
-      text.concat(liTextList)
+      // liTextList = [
+      //   '\n<br />',
+      //   ...liTextList,
+      //   '\n<br />'
+      // ]
+      text = text.concat(liTextList)
       continue
+    }
+    else if (tagName === 'pre') {
+      if (p.find('code').length > 0) {
+        text.push('[Code...]')
+      }
     }
 
     let t = p.text().trim()
@@ -82,7 +92,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
         }
         return s
       }).filter(s => s !== '')
-      
+
       text = text.concat(liTextList)
     }
     else {

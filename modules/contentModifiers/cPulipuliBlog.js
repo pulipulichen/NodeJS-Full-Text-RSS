@@ -31,7 +31,7 @@ const cPulipuliBlog = function (content, code, $) {
 
   let container = cheerio.load(content);
   let text = []
-  let pList = container('p,hr,h2,h3,h4,ul,ol')
+  let pList = container('p,hr,h2,h3,h4,ul,ol,pre')
   let isOverflowed = false
   for (let i = 0; i < pList.length; i++) {
     let p = pList.eq(i)
@@ -63,6 +63,11 @@ const cPulipuliBlog = function (content, code, $) {
       // ]
       text = text.concat(liTextList)
       continue
+    }
+    else if (tagName === 'pre') {
+      if (p.find('code').length > 0) {
+        text.push('[Code...]')
+      }
     }
 
     let t = p.text().trim()
