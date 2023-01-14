@@ -104,6 +104,9 @@ const cPulipuliBlog = function (content, code, $) {
     html = html.slice(0, html.indexOf('<title '))
     let parts = html.split(`<category scheme="http://www.blogger.com/atom/ns#" term="`)
     for (let i = 1; i < parts.length; i++) {
+      if (parts[i].indexOf('"') === -1) {
+        continue
+      }
       let term = parts[i].slice(0, parts[i].indexOf('"'))
       if (term.indexOf('/') > -1) {
         term = term.slice(term.lastIndexOf('/') + 1).trim()
@@ -111,11 +114,11 @@ const cPulipuliBlog = function (content, code, $) {
       categories.push(term)
     }
 
-    categories = categories.filter((v, i, a) => a.indexOf(v) === i)
+    // categories = categories.filter((v, i, a) => a.indexOf(v) === i)
 
-    if (categories.length > 0) {
-      text.push('\n<br />----\n<br />#' + categories.join(' #'))
-    }
+    // if (categories.length > 0) {
+    //   text.push('\n<br />----\n<br />#' + categories.join(' #'))
+    // }
   }
   catch (e) {
     // categories = e.toString()
