@@ -56,11 +56,11 @@ const cPulipuliBlog = function (content, code, $) {
         }
         liTextList.push(liText)
       }
-      liTextList = [
-        '\n<br />',
-        ...liTextList,
-        '\n<br />'
-      ]
+      // liTextList = [
+      //   '\n<br />',
+      //   ...liTextList,
+      //   '\n<br />'
+      // ]
       text = text.concat(liTextList)
       continue
     }
