@@ -143,15 +143,7 @@ const cPulipuliBlog = function (content, code, $) {
 
   // ------------
   
-  try {
-    let categories = $.find('category[scheme="http://www.blogger.com/atom/ns#"][term]')
-    let terms = []
-    text.push(categories.length)
-  }
-  catch (e) {
-    text.push(e)
-  }
-    
+  let terms = []  
   for (let i = 0; i < categories.length; i) {
     let term = categories[i].attr('term')
     if (term.indexOf('/') > -1) {
