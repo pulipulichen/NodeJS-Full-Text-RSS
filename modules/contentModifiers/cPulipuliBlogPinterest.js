@@ -19,7 +19,7 @@ const cPulipuliBlog = function (content, code, $) {
 
   let container = cheerio.load(content);
   let text = []
-  let pList = container('p,hr,h2,h3,h4,ul,ol,pre')
+  let pList = container('p,hr,h2,h3,h4,ul,ol,pre,blockquote')
   let isOverflowed = false
   for (let i = 0; i < pList.length; i++) {
     let p = pList.eq(i)
@@ -56,6 +56,13 @@ const cPulipuliBlog = function (content, code, $) {
       if (p.find('code').length > 0) {
         text.push('[Code...]')
       }
+      continue
+    }
+    else if (tagName === 'blockquote') {
+      let quote = p.text().trim()
+      quote = '| ' + quote
+      text.push(quote)
+      continue
     }
 
     let t = p.text().trim()
