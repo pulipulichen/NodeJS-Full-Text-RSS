@@ -32,4 +32,4 @@ const xPulipuliBlogPinterest = async function ($, moduleCodesString) {
   return $
 }
 
-module.exports = xSkipxPulipuliBlogPinterest
+module.exports = xPulipuliBlogPinterest
