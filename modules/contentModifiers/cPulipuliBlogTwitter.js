@@ -82,7 +82,8 @@ const cPulipuliBlogTwitter = function (content, code, $) {
         }
         return s
       }).filter(s => s !== '')
-      text = text.concat(sentence)
+      
+      text = text.concat(liTextList)
     }
     else {
       text.push(t)

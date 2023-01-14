@@ -2,7 +2,7 @@
 const cheerio = require('cheerio')
 
 // const textLimit = 5000
-const textLimit = 500
+const textLimit = 200
 
 const cPulipuliBlog = function (content, code, $) {
   
@@ -34,7 +34,7 @@ const cPulipuliBlog = function (content, code, $) {
         }
         liTextList.push(liText)
       }
-      text.concat(liTextList)
+      text = text.concat(liTextList)
       continue
     }
 
