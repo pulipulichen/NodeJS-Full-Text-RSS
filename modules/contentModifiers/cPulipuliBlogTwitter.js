@@ -117,12 +117,21 @@ const cPulipuliBlogTwitter = function (content, code, $) {
       }
 
       if (tagName === 'h2') {
+        if (t.indexOf(' / ') > -1) {
+          t = t.slice(0, t.indexOf(' / '))
+        } 
         t = '# ' + t
       }
       else if (tagName === 'h3') {
+        if (t.indexOf(' / ') > -1) {
+          t = t.slice(0, t.indexOf(' / '))
+        } 
         t = '## ' + t
       }
       else if (tagName === 'h4') {
+        if (t.indexOf(' / ') > -1) {
+          t = t.slice(0, t.indexOf(' / '))
+        } 
         t = '### ' + t
       }
       
