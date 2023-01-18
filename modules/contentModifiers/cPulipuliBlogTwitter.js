@@ -2,7 +2,7 @@
 const cheerio = require('cheerio')
 
 // const textLimit = 5000
-const textLimit = 100
+const textLimit = 130
 
 const isURL = function (str) {
   var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
