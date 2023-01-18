@@ -4,7 +4,7 @@ const cheerio = require('cheerio')
 // const textLimit = 5000
 const textLimit = 130
 
-const isURL = function (str) {
+function isURL (str) {
   str = decodeHTMLEntities(str)
   var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
           '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
@@ -41,6 +41,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
   //   $ = $.find
   // }
   // let url = $('link[rel="alternate"][type="text/html"][href]:first').attr('href')
+  
   let url = ''
   try {
     url = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
