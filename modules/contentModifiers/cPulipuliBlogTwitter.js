@@ -137,7 +137,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
           return s
         }).filter(s => s !== '')
 
-        text = text.concat(liTextList)
+        text = text.concat(sentence)
       }
       else {
         text.push(t)
