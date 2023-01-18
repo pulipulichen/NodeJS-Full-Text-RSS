@@ -213,7 +213,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
     //   // text.push('繼續閱讀 ⇨ ' + title + '\n<br />')
     // }
 
-    while (text[(text.length - 1)].trim() === '--' || 
+    while (text[(text.length - 1)].trim().startsWith('----') || 
       text[(text.length - 1)].trim().startsWith('#') || 
       text[(text.length - 1)].trim().startsWith('[URL: ')) {
       text = text.slice(0, -1)
