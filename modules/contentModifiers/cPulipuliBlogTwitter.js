@@ -190,7 +190,9 @@ const cPulipuliBlogTwitter = function (content, code, $) {
     // -----------------
 
     if (!isOverflowed) {
-      while (text[(text.length - 1)].trim() === '--' || text[(text.length - 1)].trim().startsWith('#')) {
+      while (text[(text.length - 1)].trim() === '--' || 
+        text[(text.length - 1)].trim().startsWith('#') || 
+        text[(text.length - 1)].trim().startsWith('[URL: ')) {
         text = text.slice(0, -1)
       }
 
