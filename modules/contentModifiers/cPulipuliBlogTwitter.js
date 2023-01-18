@@ -4,6 +4,16 @@ const cheerio = require('cheerio')
 // const textLimit = 5000
 const textLimit = 130
 
+const isURL = function (str) {
+  var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+          '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+          '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+          '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+  return !!pattern.test(str);
+}
+
 const cPulipuliBlogTwitter = function (content, code, $) {
     
   // if (typeof($.find) === 'function') {
@@ -78,6 +88,11 @@ const cPulipuliBlogTwitter = function (content, code, $) {
     }
 
     let t = p.text().trim()
+
+    if (isURL(t)) {
+      let domain = (new URL(t))
+      t = `[URL: ${domain.hostname}]`
+    }
 
     if (tagName === 'h2') {
       t = '# ' + t
