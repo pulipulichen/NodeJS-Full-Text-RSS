@@ -279,7 +279,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
     return text
   }
   catch (e) {
-    return e.toString()
+    return e.toString() + e.stack
   } 
 }
 
