@@ -112,8 +112,13 @@ const cPulipuliBlogTwitter = function (content, code, $) {
       let t = p.text().trim()
 
       if (isURL(t)) {
-        let domain = (new URL(t))
-        t = `[URL: ${domain.hostname}]`
+        try {
+          let domain = (new URL(t))
+          t = `[URL: ${domain.hostname}]`
+        }
+        catch (e) {
+          
+        }
       }
 
       if (tagName === 'h2') {
