@@ -2,7 +2,7 @@
 const cheerio = require('cheerio')
 
 // const textLimit = 5000
-const textLimit = 130
+const textLimit = 100
 
 function isURL (str) {
   str = decodeHTMLEntities(str)
@@ -47,7 +47,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
       url = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('href')
     }
     catch (e) {
-      url = e
+      // url = e
     }
 
     let title = ''
@@ -55,7 +55,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
       title = $.find('link[rel="alternate"][type="text/html"][href]:first').attr('title')
     }
     catch (e) {
-      title = e
+      // title = e
     }
 
 
