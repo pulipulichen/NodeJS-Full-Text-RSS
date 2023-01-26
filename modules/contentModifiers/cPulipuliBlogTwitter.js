@@ -117,7 +117,7 @@ const cPulipuliBlogTwitter = function (content, code, $) {
           t = `[URL: ${domain.hostname}]`
         }
         catch (e) {
-          
+
         }
       }
 
@@ -167,6 +167,12 @@ const cPulipuliBlogTwitter = function (content, code, $) {
         break
       }
     }
+
+    while (text.length > 1 && text.join('').length > textLimit) {
+      text = text.slice(0, -1)
+      isOverflowed = true
+    }
+
 
     if (!isOverflowed) {
       while (text[(text.length - 1)].trim() === '--' || text[(text.length - 1)].trim().startsWith('#')) {
