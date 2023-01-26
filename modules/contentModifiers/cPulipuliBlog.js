@@ -114,7 +114,7 @@ const cPulipuliBlog = function (content, code, $) {
     }
   }
 
-  while (text.join('').length > textLimit) {
+  while (text.length > 1 && text.join('').length > textLimit) {
     text = text.slice(0, -1)
     isOverflowed = true
   }
