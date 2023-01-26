@@ -114,6 +114,11 @@ const cPulipuliBlog = function (content, code, $) {
     }
   }
 
+  while (text.join('').length > textLimit) {
+    text = text.slice(0, -1)
+    isOverflowed = true
+  }
+
   if (!isOverflowed) {
     while (text[(text.length - 1)] === '----' || text[(text.length - 1)].startsWith('#')) {
       text = text.slice(0, -1)
